@@ -13,7 +13,7 @@ import UserNotifications
 
 class NewReminderTableViewController: UITableViewController {
 
-    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var titleField: UITextField! //
     
     @IBOutlet weak var noteField: UITextView!
     
