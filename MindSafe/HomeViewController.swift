@@ -11,6 +11,19 @@ import UserNotifications
 
 class HomeViewController: UIViewController, UNUserNotificationCenterDelegate {
 
+    @IBOutlet weak var trackerSwitch: UISwitch!
+    @IBOutlet weak var pendingReminders: UILabel!
+    
+    @IBAction func OnTrackerSwitched(_ sender: UISwitch) {
+        if sender.isOn {
+            //tracker switched ON
+        }
+        if !sender.isOn {
+            //tracker switched OFF
+        }
+    }
+    
+    
     @IBAction func action(_ sender: AnyObject) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
         // track notification status in reference to user
@@ -51,8 +64,20 @@ class HomeViewController: UIViewController, UNUserNotificationCenterDelegate {
 
         // Do any additional setup after loading the view.
         UNUserNotificationCenter.current().delegate = self
+        
+        //get and display number of pending/upcoming reminders
+        let numReminders = 78
+        pendingReminders.text = "\(numReminders) pending"
+        
+        // This code below sets the mindsafe logo in the top navbar
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "ms4-1.png")
+        imageView.image = image
+        self.navigationItem.titleView = imageView
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
