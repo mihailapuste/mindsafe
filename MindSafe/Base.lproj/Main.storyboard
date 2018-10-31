@@ -81,9 +81,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Tracker"/>
-                                <connections>
-                                    <segue destination="EJs-sn-4mY" kind="showDetail" id="Xc3-iv-v5P"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoW-H3-2HF">
                                 <rect key="frame" x="16" y="364" width="343" height="114"/>
@@ -564,7 +561,4 @@
         <image name="icons8-notification-filled-25" width="25" height="25"/>
         <image name="ms4" width="1000" height="1000"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Xc3-iv-v5P"/>
-    </inferredMetricsTieBreakers>
 </document>
