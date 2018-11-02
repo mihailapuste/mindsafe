@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2727B9D5DFD93DAA44F7AE22 /* Pods_MindSafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0EE7A5B5B27D77ED9D8B06 /* Pods_MindSafeTests.framework */; };
-		415A4CFF218CE6EE009297CD /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A4CFE218CE6EE009297CD /* Database.swift */; };
+		415A4CFF218CE6EE009297CD /* SemanticEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A4CFE218CE6EE009297CD /* SemanticEx.swift */; };
 		7490046FF92C86FDDC89143D /* Pods_MindSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132CAB6DD9EB32BD0A8D8354 /* Pods_MindSafe.framework */; };
 		960D24FD41E49DB73F07DDC3 /* Pods_MindSafeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F991F66847D54447102CE2 /* Pods_MindSafeUITests.framework */; };
 		C409A641218C4689001FA6BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C409A640218C4689001FA6BF /* GoogleService-Info.plist */; };
@@ -47,7 +47,7 @@
 		132CAB6DD9EB32BD0A8D8354 /* Pods_MindSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1587A348ABD0224860FCED0E /* Pods-MindSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafe/Pods-MindSafe.release.xcconfig"; sourceTree = "<group>"; };
 		1EF8AF4DB114E37FE202BB26 /* Pods-MindSafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafeTests/Pods-MindSafeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		415A4CFE218CE6EE009297CD /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		415A4CFE218CE6EE009297CD /* SemanticEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticEx.swift; sourceTree = "<group>"; };
 		4A0EE7A5B5B27D77ED9D8B06 /* Pods_MindSafeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSafeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D37ACEEB45995B8D626581A /* Pods-MindSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafe/Pods-MindSafe.debug.xcconfig"; sourceTree = "<group>"; };
 		7634D7E36808DDE650B461E6 /* Pods-MindSafeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafeTests/Pods-MindSafeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,13 +153,13 @@
 				E7CD8BAF2184EB7600525AE8 /* HomeViewController.swift */,
 				E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */,
 				E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */,
+				415A4CFE218CE6EE009297CD /* SemanticEx.swift */,
 				E76961A2218111F0005AC2EB /* Main.storyboard */,
 				E76961A8218111F0005AC2EB /* Assets.xcassets */,
 				E76961AA218111F0005AC2EB /* LaunchScreen.storyboard */,
 				E76961AD218111F0005AC2EB /* Info.plist */,
 				E76961A5218111F0005AC2EB /* MindSafe.xcdatamodeld */,
 				C409A640218C4689001FA6BF /* GoogleService-Info.plist */,
-				415A4CFE218CE6EE009297CD /* Database.swift */,
 			);
 			path = MindSafe;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				415A4CFF218CE6EE009297CD /* Database.swift in Sources */,
+				415A4CFF218CE6EE009297CD /* SemanticEx.swift in Sources */,
 				E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */,
 				E76961A7218111F0005AC2EB /* MindSafe.xcdatamodeld in Sources */,
 				E769619F218111F0005AC2EB /* AppDelegate.swift in Sources */,

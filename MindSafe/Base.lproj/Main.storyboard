@@ -172,6 +172,16 @@
                     <view key="view" contentMode="scaleToFill" id="wo8-W2-Xdo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUn-xz-VaA">
+                                <rect key="frame" x="124" y="67" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Semantic Exercise"/>
+                                <connections>
+                                    <segue destination="8p9-mP-QzF" kind="show" id="Ysd-u0-mtY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Activities" image="icons8-intelligence-filled-25" id="bXN-Wm-MrS"/>
@@ -179,7 +189,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3p-Em-v7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-167" y="2418"/>
+            <point key="canvasLocation" x="-158" y="2434"/>
+        </scene>
+        <!--Semantic Ex-->
+        <scene sceneID="zaZ-8f-L6q">
+            <objects>
+                <viewController id="8p9-mP-QzF" customClass="SemanticEx" customModule="MindSafe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KYj-ic-oeO"/>
+                        <viewControllerLayoutGuide type="bottom" id="iaD-2s-AgO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ieF-rP-hkh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTd-SS-2Iv">
+                                <rect key="frame" x="139" y="67" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKh-JE-UzQ">
+                                <rect key="frame" x="150" y="122" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save Word"/>
+                                <connections>
+                                    <action selector="saveWord:" destination="8p9-mP-QzF" eventType="touchUpInside" id="a1N-jl-Ao9"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nYQ-0v-OpV">
+                                <rect key="frame" x="0.0" y="256" width="375" height="411"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Yr1-6H-WBn">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yr1-6H-WBn" id="s55-Dg-2NX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8p9-mP-QzF" id="w7O-Lz-JEp"/>
+                                    <outlet property="delegate" destination="8p9-mP-QzF" id="B7d-Eg-it0"/>
+                                    <outlet property="prefetchDataSource" destination="8p9-mP-QzF" id="C7w-lA-eQn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="TextInsert" destination="GTd-SS-2Iv" id="0GG-2P-6Zp"/>
+                        <outlet property="viewTable" destination="nYQ-0v-OpV" id="4K8-F2-zgA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7QY-9c-WL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="2434"/>
         </scene>
         <!--Home-->
         <scene sceneID="0lp-Q1-B0G">
