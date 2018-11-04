@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ohR-2C-GQP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ohR-2C-GQP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -65,45 +66,57 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9i-Yr-LRe">
-                                <rect key="frame" x="16" y="88" width="343" height="114"/>
+                                <rect key="frame" x="16" y="88" width="343" height="80"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="114" id="VeQ-eY-ofT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="XLb-be-SKC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
                                 <state key="normal" title="Activities"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpA-3P-xyH">
-                                <rect key="frame" x="16" y="226" width="343" height="114"/>
+                                <rect key="frame" x="16" y="192" width="343" height="80"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="114" id="znT-ka-Sed"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="E8y-ys-f1E"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Tracker"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoW-H3-2HF">
-                                <rect key="frame" x="16" y="364" width="343" height="114"/>
+                                <rect key="frame" x="16" y="296" width="343" height="80"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="114" id="4w7-ZZ-fyM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="xiy-s2-dgq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Reminders"/>
+                                <connections>
+                                    <segue destination="yd8-BL-FKI" kind="presentation" id="SOa-gP-n8m"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending reminders: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm7-xh-2JD">
-                                <rect key="frame" x="111" y="439" width="153" height="18"/>
+                                <rect key="frame" x="111" y="348" width="153" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2af-Uj-G2U">
-                                <rect key="frame" x="266" y="268" width="51" height="31"/>
+                                <rect key="frame" x="266" y="217" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="OnTrackerSwitched:" destination="rdQ-cm-myB" eventType="valueChanged" id="5mc-wN-t6z"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZs-Xd-hhf">
+                                <rect key="frame" x="16" y="400" width="343" height="80"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="IHq-w9-eU6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Progress Report"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -111,15 +124,18 @@
                             <constraint firstAttribute="trailingMargin" secondItem="2af-Uj-G2U" secondAttribute="trailing" constant="44" id="90O-wD-xJy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FoW-H3-2HF" secondAttribute="trailing" id="Dc9-im-kdD"/>
                             <constraint firstItem="fpA-3P-xyH" firstAttribute="leading" secondItem="wrd-ml-WCx" secondAttribute="leadingMargin" id="Im0-7e-S8S"/>
-                            <constraint firstItem="2af-Uj-G2U" firstAttribute="top" secondItem="h9i-Yr-LRe" secondAttribute="bottom" constant="66" id="JHI-Ku-xkO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qm7-xh-2JD" secondAttribute="trailing" constant="95" id="Kib-mv-OsP"/>
                             <constraint firstItem="FoW-H3-2HF" firstAttribute="top" secondItem="fpA-3P-xyH" secondAttribute="bottom" constant="24" id="PbY-24-q0t"/>
                             <constraint firstItem="Qm7-xh-2JD" firstAttribute="leading" secondItem="wrd-ml-WCx" secondAttribute="leadingMargin" constant="95" id="QvQ-CG-fXc"/>
+                            <constraint firstItem="oZs-Xd-hhf" firstAttribute="leading" secondItem="wrd-ml-WCx" secondAttribute="leadingMargin" id="SU8-So-L2E"/>
                             <constraint firstItem="fpA-3P-xyH" firstAttribute="trailing" secondItem="wrd-ml-WCx" secondAttribute="trailingMargin" id="TSa-4y-1iX"/>
+                            <constraint firstItem="2af-Uj-G2U" firstAttribute="top" secondItem="h9i-Yr-LRe" secondAttribute="bottom" constant="49" id="d1V-yB-CmV"/>
                             <constraint firstItem="h9i-Yr-LRe" firstAttribute="top" secondItem="VVD-6J-Zol" secondAttribute="bottom" constant="24" id="iTL-0z-hq9"/>
                             <constraint firstItem="h9i-Yr-LRe" firstAttribute="leading" secondItem="wrd-ml-WCx" secondAttribute="leadingMargin" id="ieJ-8B-FC7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oZs-Xd-hhf" secondAttribute="trailing" id="kvC-iG-smG"/>
+                            <constraint firstItem="oZs-Xd-hhf" firstAttribute="top" secondItem="FoW-H3-2HF" secondAttribute="bottom" constant="24" id="ouT-IU-UdJ"/>
                             <constraint firstItem="FoW-H3-2HF" firstAttribute="leading" secondItem="wrd-ml-WCx" secondAttribute="leadingMargin" id="pZ9-cH-Q3y"/>
-                            <constraint firstItem="Qm7-xh-2JD" firstAttribute="top" secondItem="fpA-3P-xyH" secondAttribute="bottom" constant="99" id="snF-gR-Gk8"/>
+                            <constraint firstItem="Qm7-xh-2JD" firstAttribute="top" secondItem="fpA-3P-xyH" secondAttribute="bottom" constant="76" id="z8C-yV-OBz"/>
                             <constraint firstItem="h9i-Yr-LRe" firstAttribute="trailing" secondItem="wrd-ml-WCx" secondAttribute="trailingMargin" id="zEJ-Ec-1b5"/>
                         </constraints>
                         <variation key="default">
@@ -299,7 +315,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="MT0-cb-kym" detailTextLabel="HjE-eP-lu4" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="muo-O3-Y6T">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="MT0-cb-kym" detailTextLabel="HjE-eP-lu4" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="muo-O3-Y6T">
                                         <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="muo-O3-Y6T" id="wh7-2u-ilx">
@@ -333,9 +349,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="glV-KN-Bbf">
-                        <barButtonItem key="leftBarButtonItem" image="icons8-error-filled-25" id="kQT-48-6LY">
-                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem image="icons8-error-filled-25" id="kQT-48-6LY">
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                            <barButtonItem title="back" width="7" id="Uzz-to-afS">
+                                <connections>
+                                    <segue destination="ohR-2C-GQP" kind="presentation" id="FP7-xA-vVG"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Add reminder" id="ede-nv-Sgy">
                             <connections>
                                 <segue destination="fQ3-54-JQY" kind="presentation" id="svS-db-iPs"/>
@@ -561,4 +584,7 @@
         <image name="icons8-notification-filled-25" width="25" height="25"/>
         <image name="ms4" width="1000" height="1000"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="SOa-gP-n8m"/>
+    </inferredMetricsTieBreakers>
 </document>
