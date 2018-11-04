@@ -5,6 +5,9 @@
 //  Created by Mihai Lapuste on 2018-10-25.
 //  Copyright © 2018 Mihai Lapuste. All rights reserved.
 //
+// Worked on by: Puru and Milos
+// - Added core buttons and a reminder counter
+// Team Mindsafe
 
 import UIKit
 import CoreData

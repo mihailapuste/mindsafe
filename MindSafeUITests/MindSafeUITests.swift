@@ -6,8 +6,8 @@
 //  Copyright © 2018 Mihai Lapuste. All rights reserved.
 //
 // Worked on by: Oleg Strbac
-// - Created test for version 1 requirements
-// - Added additional tests
+// - Created tests for Application Home Page
+// - Created tests for Application User Reminders
 // Team MindSafe
 
 import XCTest
@@ -116,6 +116,29 @@ class MindSafeUITests: XCTestCase {
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["testing"]/*[[".cells.staticTexts[\"testing\"]",".staticTexts[\"testing\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeLeft()
         tablesQuery.buttons["Delete"].tap()
         XCTAssertFalse(text.exists)
+    }
+    
+    //Requirement 1.3
+    func testHomeButtons (){
+        
+        let progressReportButton = XCUIApplication().buttons["Progress Report"]
+        let element = XCUIApplication().children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element
+        let activitiesButton = element.buttons["Activities"]
+        let trackerButton = element.buttons["Tracker"]
+        let window = app.children(matching: .window).element(boundBy: 0)
+        let backButton = app.navigationBars["MindSafe.RemindersView"].buttons["back"]
+        let emptyListTable = app.tables["Empty list"]
+        
+        XCTAssertTrue(progressReportButton.isHittable)
+        XCTAssertTrue(activitiesButton.isHittable)
+        XCTAssertTrue(trackerButton.isHittable)
+
+        
+        window.children(matching: .other).element.children(matching: .other).element.buttons["Reminders"].tap()
+        
+        XCTAssertTrue(emptyListTable.exists)
+        backButton.tap()
+        XCTAssertFalse(emptyListTable.exists)
     }
     
 }
