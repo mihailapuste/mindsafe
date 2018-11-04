@@ -5,6 +5,10 @@
 //  Created by Mihai Lapuste on 2018-10-24.
 //  Copyright © 2018 Mihai Lapuste. All rights reserved.
 //
+// Worked on by: Oleg Strbac
+// - Created test for version 1 requirements
+// - Added additional tests
+// Team MindSafe
 
 import XCTest
 
@@ -35,17 +39,15 @@ class MindSafeUITests: XCTestCase {
         let tabBarsQuery = XCUIApplication().tabBars
         let homeButton = tabBarsQuery.buttons["Home"]
         let remindersButton = tabBarsQuery.buttons["Reminders"]
-        //let trackerButton = tabBarsQuery.buttons["Tracker"]
-        // let activitiesButton = tabBarsQuery.buttons["Activities"]
-        let homeElement = app.navigationBars["Home"].otherElements["Home"]
-        let addReminderButton = app.navigationBars["MindSafe.RemindersView"].buttons["Add reminder"]
+        let homeStaticText = XCUIApplication().navigationBars["Home"].staticTexts["Home"]
         homeButton.tap()
-        XCTAssertTrue(homeElement.exists)
+        XCTAssertTrue(homeStaticText.exists)
         remindersButton.tap()
-        XCTAssertTrue(addReminderButton.exists)
+        remindersButton.tap()
+        XCTAssertFalse(homeStaticText.exists)
         homeButton.tap()
         homeButton.tap()
-        XCTAssertTrue(homeElement.exists)
+        XCTAssertTrue(homeStaticText.exists)
     }
     
     //Requirement 3.1
@@ -86,7 +88,7 @@ class MindSafeUITests: XCTestCase {
         XCTAssertFalse(alertStaticText.exists)
     }
     
-    //Requirement 3.4.1
+    //Requirement 3.3 and 3.4.1
     func testNotificationCreation() {
         let remindersButton = app.tabBars.buttons["Reminders"]
         remindersButton.tap()
@@ -108,6 +110,12 @@ class MindSafeUITests: XCTestCase {
         nKey.tap()
         app/*@START_MENU_TOKEN@*/.keys["g"]/*[[".keyboards.keys[\"g\"]",".keys[\"g\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         XCUIApplication().tables/*@START_MENU_TOKEN@*/.buttons["Save"]/*[[".cells.buttons[\"Save\"]",".buttons[\"Save\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        let text = XCUIApplication().tables/*@START_MENU_TOKEN@*/.staticTexts["testing"]/*[[".cells.staticTexts[\"testing\"]",".staticTexts[\"testing\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        XCTAssertTrue(text.exists)
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["testing"]/*[[".cells.staticTexts[\"testing\"]",".staticTexts[\"testing\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeLeft()
+        tablesQuery.buttons["Delete"].tap()
+        XCTAssertFalse(text.exists)
     }
     
 }
