@@ -10,13 +10,14 @@ import UIKit
 import CoreData
 import UserNotifications
 
+
+
 class RemindersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var RemindersTableView: UITableView!
     
     var reminders: [Reminders] = [];
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         RemindersTableView.dataSource = self
@@ -24,12 +25,9 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // get the data from core data
-        getData()
-    
-        // reload table view
-        RemindersTableView.reloadData()
-        
+        getData() // get the data from core data
+        RemindersTableView.reloadData() // reload table view
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,37 +35,23 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = RemindersTableView.dequeueReusableCell(withIdentifier: "cell", for : indexPath)
-        
-        let isDaily = reminders[indexPath.row].value(forKey: "isDaily") as? Bool
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for : indexPath) as! ReminderTableViewCell
+//        let isDaily = reminders[indexPath.row].value(forKey: "isDaily") as? Bool
+        let enabled = reminders[indexPath.row].value(forKey: "enabled") as? Bool
         let note = reminders[indexPath.row].value(forKey: "note") as? String
+        let title = reminders[indexPath.row].value(forKey: "title") as? String
+        //        let date = reminders[indexPath.row].value(forKey: "date")
         
-        let date = reminders[indexPath.row].value(forKey: "date") as? Date
-//        let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: date!)
-     
-        if isDaily == true
-        {
-            if let title = reminders[indexPath.row].value(forKey: "title") as? String
-            {
-                cell.textLabel?.text = title
-                cell.detailTextLabel?.text = note
-//              print(triggerDate)
-            }
-        }
-        else
-        {
-            if let title = reminders[indexPath.row].value(forKey: "title") as? String
-            {
-                cell.textLabel?.text = title
-                cell.detailTextLabel?.text =  note
-            }
-        }
-        
-        return (cell)
+        cell.delegate = self as? CustomCellUpdater
+        cell.titleView?.text = title
+        cell.noteView?.text = note
+        cell.isEnabled?.isOn = enabled!
+//        cell.reminderReference? = reminders[indexPath.row]
+//        cell.tableViewReference? = RemindersTableView
+
+
+        return cell
     }
-    
-    
     
     func getData() {
         
@@ -100,8 +84,6 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
             
             context.delete(reminder);
             
-//            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [title!])
-            
             UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
                 var identifiers: [String] = []
                 for notification:UNNotificationRequest in notificationRequests {
@@ -129,7 +111,7 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
         
         RemindersTableView.reloadData()
     }
-    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
