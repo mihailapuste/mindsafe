@@ -37,7 +37,7 @@ class NewReminderTableViewController: UITableViewController {
             reminder.setValue(noteField.text!, forKey: "note")
             reminder.setValue(isDaily.isOn, forKey: "isDaily")
             reminder.setValue(reminderDate.date, forKey: "date")
-        
+            reminder.setValue(true, forKey: "enabled")
             // Save the data to core data
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             

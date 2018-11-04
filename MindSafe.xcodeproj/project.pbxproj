@@ -15,6 +15,7 @@
 		E76961AC218111F0005AC2EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76961AA218111F0005AC2EB /* LaunchScreen.storyboard */; };
 		E76961B7218111F1005AC2EB /* MindSafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76961B6218111F1005AC2EB /* MindSafeTests.swift */; };
 		E76961C2218111F1005AC2EB /* MindSafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76961C1218111F1005AC2EB /* MindSafeUITests.swift */; };
+		E76C8BB6218CC6740019F60B /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C8BB5218CC6740019F60B /* ReminderTableViewCell.swift */; };
 		E7CD8BB02184EB7600525AE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CD8BAF2184EB7600525AE8 /* HomeViewController.swift */; };
 		E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		E76961BD218111F1005AC2EB /* MindSafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindSafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76961C1218111F1005AC2EB /* MindSafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSafeUITests.swift; sourceTree = "<group>"; };
 		E76961C3218111F1005AC2EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E76C8BB5218CC6740019F60B /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
 		E7CD8BAF2184EB7600525AE8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemindersViewController.swift; path = ../RemindersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				E7CD8BAF2184EB7600525AE8 /* HomeViewController.swift */,
 				E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */,
 				E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */,
+				E76C8BB5218CC6740019F60B /* ReminderTableViewCell.swift */,
 				E76961A2218111F0005AC2EB /* Main.storyboard */,
 				E76961A8218111F0005AC2EB /* Assets.xcassets */,
 				E76961AA218111F0005AC2EB /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */,
+				E76C8BB6218CC6740019F60B /* ReminderTableViewCell.swift in Sources */,
 				E76961A7218111F0005AC2EB /* MindSafe.xcdatamodeld in Sources */,
 				E769619F218111F0005AC2EB /* AppDelegate.swift in Sources */,
 				E71E09F721852DA7001A30EC /* NewReminderTableViewController.swift in Sources */,
