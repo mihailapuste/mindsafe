@@ -10,6 +10,8 @@ import UIKit
 import UserNotifications
 
 class HomeViewController: UIViewController, UNUserNotificationCenterDelegate {
+    
+    var reminders: [Reminders] = [];
 
     @IBOutlet weak var trackerSwitch: UISwitch!
     @IBOutlet weak var pendingReminders: UILabel!
@@ -66,8 +68,8 @@ class HomeViewController: UIViewController, UNUserNotificationCenterDelegate {
         UNUserNotificationCenter.current().delegate = self
         
         //get and display number of pending/upcoming reminders
-        let numReminders = 78
-        pendingReminders.text = "\(numReminders) pending"
+        
+        pendingReminders.text = "\(getData()) pending"
         
         // This code below sets the mindsafe logo in the top navbar
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
@@ -76,6 +78,27 @@ class HomeViewController: UIViewController, UNUserNotificationCenterDelegate {
         imageView.image = image
         self.navigationItem.titleView = imageView
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        pendingReminders.text = "\(getData()) pending"
+    }
+    
+    func getData() -> Int{
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let context = appDelegate.persistentContainer.viewContext;
+        
+        do
+        {
+            reminders = try context.fetch(Reminders.fetchRequest())
+        }
+        catch
+        {
+            print("fetch failed!")
+        }
+        return reminders.count
     }
     
     override func didReceiveMemoryWarning() {

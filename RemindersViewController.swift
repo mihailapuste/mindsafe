@@ -15,7 +15,6 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var RemindersTableView: UITableView!
     
     var reminders: [Reminders] = [];
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
