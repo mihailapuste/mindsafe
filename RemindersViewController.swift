@@ -24,16 +24,18 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
         RemindersTableView.delegate = self
     }
     
+    //Constructor arguments -> getting data from coredata and reloading table content
     override func viewWillAppear(_ animated: Bool) {
         getData() // get the data from core data
         RemindersTableView.reloadData() // reload table view
-
     }
     
+    //Returning the number of rows needed for tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reminders.count
     }
     
+    //Returning each custom cell populated with its required data on table build/reload
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for : indexPath) as! ReminderTableViewCell
         let isDaily = reminders[indexPath.row].value(forKey: "isDaily") as? Bool
@@ -60,13 +62,11 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
         else{
             cell.dateView?.text = "\(Calendar.current.shortMonthSymbols[month-1]) \(date1) at \(hour)h:\(minute)m"
         }
-        //        cell.reminderReference? = reminders[indexPath.row]
-        //        cell.tableViewReference? = RemindersTableView
-        
         
         return cell
     }
     
+    //Getting all the data needed from coredata (used in constructor)
     func getData() {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -84,7 +84,7 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
 
-    
+    //Method for deleting list items along with associated notifications in coredata
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
