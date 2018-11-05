@@ -16,6 +16,7 @@ protocol CustomCellUpdater: class { // the name of the protocol you can put any
 
 class ReminderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dateView: UILabel!
     @IBOutlet weak var titleView: UILabel!
     @IBOutlet weak var noteView: UILabel!
     @IBOutlet weak var isEnabled: UISwitch!

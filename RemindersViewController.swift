@@ -36,20 +36,34 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for : indexPath) as! ReminderTableViewCell
-//        let isDaily = reminders[indexPath.row].value(forKey: "isDaily") as? Bool
+        let isDaily = reminders[indexPath.row].value(forKey: "isDaily") as? Bool
         let enabled = reminders[indexPath.row].value(forKey: "enabled") as? Bool
         let note = reminders[indexPath.row].value(forKey: "note") as? String
         let title = reminders[indexPath.row].value(forKey: "title") as? String
-        //        let date = reminders[indexPath.row].value(forKey: "date")
+        let date = reminders[indexPath.row].value(forKey: "date") as? Date
+        
+        //        let weekday = Calendar.current.component(.weekday, from: date!)
+        let month = Calendar.current.component(.month, from: date!)
+        let date1 = Calendar.current.component(.day, from: date!)
+        let hour = Calendar.current.component(.hour, from: date!)
+        let minute = Calendar.current.component(.minute, from: date!)
+        
         
         cell.delegate = self as? CustomCellUpdater
         cell.titleView?.text = title
         cell.noteView?.text = note
         cell.isEnabled?.isOn = enabled!
-//        cell.reminderReference? = reminders[indexPath.row]
-//        cell.tableViewReference? = RemindersTableView
-
-
+        
+        if (isDaily == true){
+            cell.dateView?.text = "(Daily) \(hour)h:\(minute)m"
+        }
+        else{
+            cell.dateView?.text = "\(Calendar.current.shortMonthSymbols[month-1]) \(date1) at \(hour)h:\(minute)m"
+        }
+        //        cell.reminderReference? = reminders[indexPath.row]
+        //        cell.tableViewReference? = RemindersTableView
+        
+        
         return cell
     }
     

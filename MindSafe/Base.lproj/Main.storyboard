@@ -245,8 +245,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCm-Ro-ep6">
-                                                    <rect key="frame" x="15" y="34" width="290" height="65"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCm-Ro-ep6">
+                                                    <rect key="frame" x="15" y="34" width="290" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -266,9 +266,17 @@
                                                         <action selector="enableSwitch:" destination="02s-SU-7hq" eventType="valueChanged" id="z3q-Dz-cpA"/>
                                                     </connections>
                                                 </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP0-4d-FXM">
+                                                    <rect key="frame" x="15" y="56" width="290" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.039215686270000001" green="0.37647058820000001" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateView" destination="fP0-4d-FXM" id="fa5-nh-tou"/>
                                             <outlet property="isEnabled" destination="8Yg-yk-Fyx" id="4vs-87-rFO"/>
                                             <outlet property="noteView" destination="tCm-Ro-ep6" id="gyd-Wy-6Rn"/>
                                             <outlet property="titleView" destination="0lX-HV-XcF" id="SGc-gI-RNW"/>
