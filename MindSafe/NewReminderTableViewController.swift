@@ -13,19 +13,20 @@ import UserNotifications
 
 class NewReminderTableViewController: UITableViewController {
 
-    @IBOutlet weak var titleField: UITextField! //
-    
+    // cell label outlets
+    @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var noteField: UITextView!
-    
     @IBOutlet weak var isDaily: UISwitch!
-    
     @IBOutlet weak var reminderDate: UIDatePicker!
     
+    // function popping view in case of cancel
     @IBAction func CancelNewReminder(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func SaveNewReminderButton(_ sender: AnyObject) {
-        if titleField.text != "" {
+       
+        if titleField.text != "" { // checking for no empty notification names
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             
@@ -53,7 +54,7 @@ class NewReminderTableViewController: UITableViewController {
             // Use date components to create a trigger time
             if isDaily.isOn
             {
-                triggerDate = Calendar.current.dateComponents([.second,], from: reminderDate.date)
+                triggerDate = Calendar.current.dateComponents([.hour,.minute,.second,], from: reminderDate.date)
                 print("Register: \(triggerDate)")
             }
             else
@@ -68,23 +69,13 @@ class NewReminderTableViewController: UITableViewController {
             
             // Schedule the notification.
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-
-//            let center = UNUserNotificationCenter.current()
-//            center.add(request) { (error) in
-//                // Handle error if necessary
-//                print("Notification Added")
-//            }
-
             
-            
-//          navigationController!.popViewController(animated: true) // use if not using modal transition
+            // dismiss view once notifcation is scheduled
             dismiss(animated: true, completion: nil) // use if using modal transition
             
         }
         
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,7 +16,7 @@ protocol CustomCellUpdater: class { // the name of the protocol you can put any
 
 class ReminderTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var dateView: UILabel!
+    @IBOutlet weak var dateView: UILabel! // label for date
     @IBOutlet weak var titleView: UILabel!
     @IBOutlet weak var noteView: UILabel!
     @IBOutlet weak var isEnabled: UISwitch!
@@ -24,12 +24,14 @@ class ReminderTableViewCell: UITableViewCell {
     weak var delegate: CustomCellUpdater?
     var reminders: [Reminders] = [];
     
+    // method for enabling/disabling notifcations for reminders
     @IBAction func enableSwitch(_ sender: Any) {
         
         let title = self.titleView.text
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext;
         
+        // Return all reminders, find the one being disabled and delete its notifcation request
             UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
                 var identifiers: [String] = []
                 for notification:UNNotificationRequest in notificationRequests {
@@ -40,32 +42,35 @@ class ReminderTableViewCell: UITableViewCell {
                 }
                 UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
                
-                modifydata()
+                modifydata() // modifying coredata related to enabled/disabled notification
             
     }
     
+    // function used to modify data from enable/disable request
     func modifydata(){
         do{
+            //fetch all reminders from coredata
             self.reminders = try context.fetch(Reminders.fetchRequest())
+           
             for reminder:Reminders in self.reminders {
-                if reminder.title == title {
+               
+                if reminder.title == title { // find the one being requested to modify
+                    
                     reminder.setValue(self.isEnabled.isOn, forKey: "enabled")
                     
-                    if(self.isEnabled.isOn == true){
+                    if(self.isEnabled.isOn == true){ // if user is enabling notification
                         
                         let content = UNMutableNotificationContent()
-                        
                         content.categoryIdentifier = "Reminders"
                         content.title = reminder.title!
                         content.body = reminder.note!
                         content.sound = UNNotificationSound.default()
-                        
                         var triggerDate = Calendar.current.dateComponents([.day,.hour,.minute,.second,], from: reminder.date! as Date)
                         
                         // Use date components to create a trigger time
                         if reminder.isDaily
                         {
-                            triggerDate = Calendar.current.dateComponents([.second,], from: reminder.date! as Date)
+                            triggerDate = Calendar.current.dateComponents([.hour,.minute,.second,], from: reminder.date! as Date)
                             print("Register: \(triggerDate)")
                         }
                         else
@@ -83,8 +88,10 @@ class ReminderTableViewCell: UITableViewCell {
                     }
                 }
             }
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            self.delegate?.updateTableView()
+            
+            (UIApplication.shared.delegate as! AppDelegate).saveContext() // save changes made to coredata
+            self.delegate?.updateTableView() // update table via reference
+            
         }
         catch
         {

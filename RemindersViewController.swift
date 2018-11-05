@@ -56,6 +56,7 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
         cell.noteView?.text = note
         cell.isEnabled?.isOn = enabled!
         
+        //Setting different display message for non daily reminders
         if (isDaily == true){
             cell.dateView?.text = "(Daily) \(hour)h:\(minute)m"
         }
