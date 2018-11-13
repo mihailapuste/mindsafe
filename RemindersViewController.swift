@@ -5,6 +5,10 @@
 //  Created by Mihai Lapuste on 2018-10-25.
 //  Copyright © 2018 Mihai Lapuste. All rights reserved.
 //
+// Worked on by: Mihai Lapuste
+// - Created view all created reminders in reminderstable
+// - Ability to delete reminders in table, and ability to navigate to add new reminders page
+// Team MindSafe
 
 import UIKit
 import CoreData
@@ -13,11 +17,11 @@ import UserNotifications
 
 
 class RemindersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var RemindersTableView: UITableView!
     
     var reminders: [Reminders] = [];
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         RemindersTableView.dataSource = self
@@ -84,7 +88,7 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
     }
-
+    
     //Method for deleting list items along with associated notifications in coredata
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
@@ -111,9 +115,9 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
                 UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
             }
             
-           
+            
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
-           
+            
             do
             {
                 reminders = try context.fetch(Reminders.fetchRequest())
@@ -126,12 +130,79 @@ class RemindersViewController: UIViewController, UITableViewDataSource, UITableV
         
         RemindersTableView.reloadData()
     }
+    
+    // sundowningReminders will create new temp reminders that will trigger 3 times from 2pm to 8pm for all existing reminders once daily.
+    func sundowningReminders() {
+        
+        UserDefaults.standard.set(Date(), forKey:"sundowningTime")
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext;
+        
+        do{
+            //fetch all reminders from coredata
+            reminders = try context.fetch(Reminders.fetchRequest())
+            var sundowningNotification = 1;
+            for reminder:Reminders in reminders {
+                
+                let content = UNMutableNotificationContent()
+                content.categoryIdentifier = "Reminders"
+                content.title = reminder.title! + String(sundowningNotification)
+                content.body = reminder.note!
+                content.sound = UNNotificationSound.default()
+                
+                // Use date components to create a trigger time
+                if reminder.isDaily == true
+                {
+                    var hour = 14; // starts at 2
+                    var index = 0;
+                    while index < 3 {
+                        
+                        let greg = Calendar(identifier: .gregorian)
+                        let now = Date()
+                        var components = greg.dateComponents([.year, .month, .day, .hour, .minute, .second], from: now)
+                        components.hour = hour
+                        components.minute = 0
+                        components.second = 0
 
-
+                        let date = greg.date(from: components)!
+                        
+                        let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+                        
+                        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+                        
+                        
+                        // Instantiate the notification request
+                        let request = UNNotificationRequest(identifier: reminder.title!, content: content, trigger: trigger)
+                        
+                        // Schedule the notification.
+                        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                        
+                        //incrementing index and hours
+                        sundowningNotification = sundowningNotification + 1;
+                        index = index + 1;
+                        hour = hour + 2; // inc hour by 2
+                        print(hour)
+                    }
+                }
+            }
+            
+            
+            
+        }
+        catch
+        {
+            print("fetch failed!")
+        }
+        
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }

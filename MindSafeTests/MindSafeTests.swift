@@ -5,32 +5,38 @@
 //  Created by Mihai Lapuste on 2018-10-24.
 //  Copyright © 2018 Mihai Lapuste. All rights reserved.
 //
-
+// Team Mindsafe
+//Worked on by: Oleg
+//Added unit test regarding Application User reminders.
 import XCTest
 @testable import MindSafe
 
 class MindSafeTests: XCTestCase {
-    
+    var unittest: RemindersViewController!
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        unittest = RemindersViewController()
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        unittest = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    //Requirement 3.3.1
+    func testReminderEmpty() {
+        let reminders: [Reminders] = [];
+        XCTAssert(reminders.count == 0)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    //Requirement 3.3.2
+    func testSundowning(){
+        let hour = 0
+        unittest.sundowningReminders(); //With no reminders assert hour is not changed
+        XCTAssert(hour == 0)
+        
+        
     }
-    
 }
