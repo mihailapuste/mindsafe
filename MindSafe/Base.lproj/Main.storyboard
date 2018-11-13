@@ -298,6 +298,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="uQy-of-lKc" kind="show" id="jN8-fH-XOQ"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" id="PDc-tO-Fne">
                                         <rect key="frame" x="0.0" y="493" width="375" height="44"/>
@@ -315,6 +318,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="3uo-E6-ede" kind="show" id="8Km-2a-aCq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -338,6 +344,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3y-0M-uzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="772" y="-307.1964017991005"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="p5S-WJ-fBI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Contacts" id="3uo-E6-ede" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="er1-E9-AoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="-194"/>
+        </scene>
+        <!--ProgressView-->
+        <scene sceneID="AzL-mW-o7f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProgressView" id="uQy-of-lKc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dte-0f-ooZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="-86"/>
         </scene>
         <!--Reminders-->
         <scene sceneID="aHe-gH-CGC">
