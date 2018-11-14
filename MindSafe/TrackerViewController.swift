@@ -15,6 +15,7 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
     
     let locationManager = CLLocationManager()
     
+    @IBOutlet weak var editSafeZoneSwitch: UISwitch!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -26,15 +27,22 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
     }
     
     @IBAction func addRegion(_ sender: Any) {
-        print("add region")
-        guard let longPress = sender as? UILongPressGestureRecognizer else { return }
-        let touchlocation = longPress.location(in: mapView)
-        let coordinate = mapView.convert(touchlocation, toCoordinateFrom: mapView)
-        let region = CLCircularRegion(center: coordinate, radius: 200, identifier: "GEOFENCE")
-        mapView.removeOverlays(mapView.overlays)
-        locationManager.startMonitoring(for: region)
-        let circle = MKCircle(center: coordinate, radius: region.radius)
-        mapView.add(circle)
+        if (editSafeZoneSwitch.isOn == true){
+            guard let longPress = sender as? UILongPressGestureRecognizer else { return }
+            let touchlocation = longPress.location(in: mapView)
+            let coordinate = mapView.convert(touchlocation, toCoordinateFrom: mapView)
+            let locationLat = NSNumber(value:coordinate.latitude)
+            let locationLon = NSNumber(value:coordinate.longitude)
+            UserDefaults.standard.set(["lat": locationLat, "lon": locationLon], forKey:"safeZoneCoordinate")
+            
+            let region = CLCircularRegion(center: coordinate, radius: 200, identifier: "GEOFENCE")
+            
+            mapView.removeOverlays(mapView.overlays)
+            locationManager.startMonitoring(for: region)
+            let circle = MKCircle(center: coordinate, radius: region.radius)
+            mapView.add(circle)
+            editSafeZoneSwitch.isOn = false;
+        }
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -63,7 +71,6 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
         content.body = body
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        
         let request = UNNotificationRequest(identifier: "Geofence notifiaction", content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
@@ -93,6 +100,17 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
+        
+        if let locationDictionary = UserDefaults.standard.object(forKey: "safeZoneCoordinate") as? Dictionary<String,NSNumber> {
+            let locationLat = locationDictionary["lat"]!.doubleValue
+            let locationLon = locationDictionary["lon"]!.doubleValue
+            let coordinate = CLLocationCoordinate2DMake(locationLat, locationLon)
+            let region = CLCircularRegion(center: coordinate, radius: 200, identifier: "GEOFENCE")
+            mapView.removeOverlays(mapView.overlays)
+            locationManager.startMonitoring(for: region)
+            let circle = MKCircle(center: coordinate, radius: region.radius)
+            mapView.add(circle)
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -105,7 +123,13 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
         self.mapView.showsUserLocation = true;
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+
         // Ignoring user
         UIApplication.shared.beginIgnoringInteractionEvents()
         // activity indicator
@@ -131,8 +155,6 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
             
             activityIndicator.stopAnimating()
             UIApplication.shared.endIgnoringInteractionEvents()
-            
-            
             
             if response == nil{
                 print("Error")

@@ -172,6 +172,7 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="editSafeZoneSwitch" destination="T5l-mf-30F" id="bge-a4-fgW"/>
                         <outlet property="mapView" destination="odS-QW-QXQ" id="LVh-7H-yjp"/>
                     </connections>
                 </viewController>
