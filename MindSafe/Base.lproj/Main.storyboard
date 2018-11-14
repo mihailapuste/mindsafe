@@ -99,7 +99,7 @@
                     <connections>
                         <segue destination="RwU-qO-j2s" kind="relationship" relationship="viewControllers" id="8gj-6t-9S0"/>
                         <segue destination="yd8-BL-FKI" kind="relationship" relationship="viewControllers" id="FuP-tZ-H4G"/>
-                        <segue destination="EJs-sn-4mY" kind="relationship" relationship="viewControllers" id="dVN-Wk-Rwx"/>
+                        <segue destination="9mf-lA-kfm" kind="relationship" relationship="viewControllers" id="dVN-Wk-Rwx"/>
                         <segue destination="Dwh-Y2-wOt" kind="relationship" relationship="viewControllers" id="vTz-eh-VrH"/>
                     </connections>
                 </tabBarController>
@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="-1119" y="20"/>
         </scene>
-        <!--Tracker-->
+        <!--Tracker View Controller-->
         <scene sceneID="jiy-Ft-eUp">
             <objects>
-                <viewController id="EJs-sn-4mY" sceneMemberID="viewController">
+                <viewController id="EJs-sn-4mY" customClass="TrackerViewController" customModule="MindSafe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SJs-Ff-Wwv"/>
                         <viewControllerLayoutGuide type="bottom" id="N5Z-Wc-ofw"/>
@@ -118,14 +118,39 @@
                     <view key="view" contentMode="scaleToFill" id="zxd-TF-3MA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="odS-QW-QXQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="478"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="EJs-sn-4mY" id="poo-jk-v6X"/>
+                                    <outletCollection property="gestureRecognizers" destination="bvg-43-w8h" appends="YES" id="RVG-6p-XCC"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tracker" image="icons8-marker-filled-25" id="YfB-9g-tUe"/>
+                    <navigationItem key="navigationItem" id="PyF-TJ-nVP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="MgE-3A-yM2">
+                            <connections>
+                                <action selector="searchButton:" destination="EJs-sn-4mY" id="k23-jh-oil"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="odS-QW-QXQ" id="LVh-7H-yjp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x80-DV-hTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="bvg-43-w8h">
+                    <connections>
+                        <action selector="addRegion:" destination="EJs-sn-4mY" id="ymA-B7-YjE"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-167" y="1512"/>
+            <point key="canvasLocation" x="772" y="1510.7946026986508"/>
         </scene>
         <!--Activities-->
         <scene sceneID="3Vc-4d-Zad">
@@ -674,6 +699,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edx-Sv-bE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1680.8" y="560.86956521739137"/>
+        </scene>
+        <!--Tracker-->
+        <scene sceneID="kfd-Qr-qjK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9mf-lA-kfm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tracker" image="icons8-marker-filled-25" id="YfB-9g-tUe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YEr-XF-svs">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EJs-sn-4mY" kind="relationship" relationship="rootViewController" id="jBx-6B-jjO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLg-1U-Wx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-167.19999999999999" y="1511.6941529235382"/>
         </scene>
     </scenes>
     <resources>
