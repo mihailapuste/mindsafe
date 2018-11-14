@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import UserNotifications
 
 class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
     
@@ -39,11 +40,47 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         guard let circleOverlay = overlay as? MKCircle else { return MKOverlayPathRenderer()}
         let circleRenderer = MKCircleRenderer(circle: circleOverlay)
-        circleRenderer.strokeColor = .red
-        circleRenderer.fillColor = .red
-        circleRenderer.alpha = 0.5
+        circleRenderer.strokeColor = .blue
+        circleRenderer.fillColor = .blue
+        circleRenderer.alpha = 0.3
         
         return circleRenderer
+    }
+    
+    // method creating alerts
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // method creating
+    func showNotification(title: String, subtitle: String, body: String){
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.subtitle = subtitle
+        content.body = body
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "Geofence notifiaction", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
+    }
+    
+    // Method triggered when ENTERING GEOFENCE
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        showAlert(title: "Safe Zone Entered", message: "You have entered your set Safe Zone!")
+        showNotification(title: "Safe Zone Entered", subtitle: "You have entered your set Safe Zone.", body:
+            "To change or disable your Safe Zone, go to the Tracker page.")
+    }
+    
+    // Method triggered when LEAVING GEOFENCE
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        showAlert(title: "Safe Zone Exited", message: "You have left your set Safe Zone! Emergency contacts will be notified.")
+        showNotification(title: "Safe Zone Exited", subtitle: "You have left your Safe Zone!", body:"Emergency contacts will be notified!")
     }
     
     override func viewDidLoad() {
