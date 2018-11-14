@@ -79,15 +79,21 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
     
     // Method triggered when ENTERING GEOFENCE
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        let safezone = UserDefaults.standard.object(forKey: "safeZoneNotifications") as? Bool
+        if safezone == true {
         showAlert(title: "Safe Zone Entered", message: "You have entered your set Safe Zone!")
         showNotification(title: "Safe Zone Entered", subtitle: "You have entered your set Safe Zone.", body:
             "To change or disable your Safe Zone, go to the Tracker page.")
+        }
     }
     
     // Method triggered when LEAVING GEOFENCE
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        let safezone = UserDefaults.standard.object(forKey: "safeZoneNotifications") as? Bool
+        if safezone == true {
         showAlert(title: "Safe Zone Exited", message: "You have left your set Safe Zone! Emergency contacts will be notified.")
         showNotification(title: "Safe Zone Exited", subtitle: "You have left your Safe Zone!", body:"Emergency contacts will be notified!")
+        }
     }
     
     override func viewDidLoad() {

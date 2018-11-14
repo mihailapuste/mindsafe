@@ -20,10 +20,22 @@ class SettingsTableTableViewController: UITableViewController {
         UserDefaults.standard.set(self.sunSwitch.isOn, forKey:"sundowning")
     }
     
+    @IBOutlet weak var safeZoneSwitch: UISwitch!
+    
+    @IBAction func safeZoneToggled(_ sender: Any) {
+    
+       UserDefaults.standard.set(self.safeZoneSwitch.isOn, forKey:"safeZoneNotifications")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.sunSwitch.isOn = UserDefaults.standard.object(forKey: "sundowning") as! Bool
+        
+        self.safeZoneSwitch.isOn = UserDefaults.standard.object(forKey: "safeZoneNotifications") as! Bool
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -33,15 +45,15 @@ class SettingsTableTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 2
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 1
+//    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

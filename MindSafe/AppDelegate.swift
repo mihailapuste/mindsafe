@@ -24,15 +24,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
             // track notification status in reference to user
         })
-
-//        UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
-//            
-//            if granted {
-//                UIApplication.shared.registerForRemoteNotifications()
-//            }
-//            
-//        }
         
+        // Default settings
+        
+        if let sundowning = UserDefaults.standard.object(forKey: "sundowning"){
+            print("Sundowning already set!")
+        }
+        else {
+            UserDefaults.standard.set(true, forKey:"safeZoneNotifications")
+        }
+        
+        if let safezone = UserDefaults.standard.object(forKey: "safeZoneNotifications"){
+            print("Safe Zone already set!")
+        }
+        else {
+              UserDefaults.standard.set(true, forKey:"safeZoneNotifications")
+        }
         // Override point for customization after application launch.
         return true
     }
