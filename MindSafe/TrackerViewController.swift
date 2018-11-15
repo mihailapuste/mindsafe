@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import UserNotifications
 
-class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
+class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UNUserNotificationCenterDelegate {
     
     let locationManager = CLLocationManager()
     
@@ -64,8 +64,20 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
     }
     
     // method creating
-    func showNotification(title: String, subtitle: String, body: String){
+    func showNotification(title: String, subtitle: String, body: String, leaving: Bool){
         let content = UNMutableNotificationContent()
+        
+        // Notification options
+        
+        if(leaving == true){
+            let goToPanicPage = UNNotificationAction(identifier: "goToPanicPage", title: "Panic mode", options: UNNotificationActionOptions.foreground)
+            let getDirectionsHome = UNNotificationAction(identifier: "getDirectionsHome", title: "Go home", options: UNNotificationActionOptions.foreground)
+            let emergencySOS = UNNotificationAction(identifier: "emergencySOS", title: "Emergency SOS", options: UNNotificationActionOptions.foreground)
+            let category = UNNotificationCategory(identifier: "leavingCategory", actions: [goToPanicPage, getDirectionsHome, emergencySOS], intentIdentifiers: [], options: [])
+            UNUserNotificationCenter.current().setNotificationCategories([category])
+            content.categoryIdentifier = "leavingCategory"
+        }
+        
         content.title = title
         content.subtitle = subtitle
         content.body = body
@@ -77,13 +89,23 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
         
     }
     
+    // catching notification responses NOT WORKING
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        print("yoooooo")
+        
+        completionHandler()
+        
+        
+    }
+    
     // Method triggered when ENTERING GEOFENCE
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         let safezone = UserDefaults.standard.object(forKey: "safeZoneNotifications") as? Bool
         if safezone == true {
         showAlert(title: "Safe Zone Entered", message: "You have entered your set Safe Zone!")
         showNotification(title: "Safe Zone Entered", subtitle: "You have entered your set Safe Zone.", body:
-            "To change or disable your Safe Zone, go to the Tracker page.")
+            "To change or disable your Safe Zone, go to the Tracker page.", leaving: false)
         }
     }
     
@@ -92,7 +114,7 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
         let safezone = UserDefaults.standard.object(forKey: "safeZoneNotifications") as? Bool
         if safezone == true {
         showAlert(title: "Safe Zone Exited", message: "You have left your set Safe Zone! Emergency contacts will be notified.")
-        showNotification(title: "Safe Zone Exited", subtitle: "You have left your Safe Zone!", body:"Emergency contacts will be notified!")
+        showNotification(title: "Safe Zone Exited", subtitle: "You have left your Safe Zone!", body:"Emergency contacts will be notified!", leaving: true)
         }
     }
     

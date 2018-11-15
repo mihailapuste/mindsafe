@@ -159,7 +159,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="sosEmergencyCall:" destination="HNJ-Jg-Nra" eventType="touchUpInside" id="57E-yg-GlV"/>
+                                    <action selector="sosEmergencyCall:" destination="HNJ-Jg-Nra" eventType="touchUpInside" id="PZv-Na-PXF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-KZ-UT4">
@@ -171,6 +171,9 @@
                                 <state key="normal" title="Get Directions Home">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goHomeButton:" destination="HNJ-Jg-Nra" eventType="touchUpInside" id="ccS-sH-Xw2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw5-Z3-ZdI">
                                 <rect key="frame" x="163" y="629" width="48" height="30"/>
@@ -183,6 +186,9 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Qvj-8u-c0G" id="wHR-A9-2oA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FD8-Cw-fnx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
