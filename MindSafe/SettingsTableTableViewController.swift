@@ -13,6 +13,18 @@ import UIKit
 
 class SettingsTableTableViewController: UITableViewController {
     
+    @IBOutlet weak var radiusLabel: UILabel!
+    
+    @IBOutlet weak var radiusOutlet: UIStepper!
+    
+    @IBAction func safeZoneRadius(_ sender: UIStepper) {
+        radiusLabel.text = String(Int(sender.value))
+        
+        let radius = Int(sender.value*100)
+        
+        UserDefaults.standard.set(radius, forKey:"safeZoneRadius")
+    }
+    
     @IBOutlet weak var sunSwitch: UISwitch!
     
     //Toggling sundowning
@@ -23,7 +35,6 @@ class SettingsTableTableViewController: UITableViewController {
     @IBOutlet weak var safeZoneSwitch: UISwitch!
     
     @IBAction func safeZoneToggled(_ sender: Any) {
-    
        UserDefaults.standard.set(self.safeZoneSwitch.isOn, forKey:"safeZoneNotifications")
     }
     
@@ -35,12 +46,12 @@ class SettingsTableTableViewController: UITableViewController {
         
         self.safeZoneSwitch.isOn = UserDefaults.standard.object(forKey: "safeZoneNotifications") as! Bool
         
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        var safeZoneRadius = UserDefaults.standard.object(forKey: "safeZoneRadius") as! Int
+        safeZoneRadius = (safeZoneRadius/100)
+        print(String(safeZoneRadius))
+        self.radiusLabel.text = String(safeZoneRadius)
+        self.radiusOutlet.value = Double(Int(safeZoneRadius))
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source

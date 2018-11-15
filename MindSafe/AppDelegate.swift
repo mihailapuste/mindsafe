@@ -40,6 +40,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
               UserDefaults.standard.set(true, forKey:"safeZoneNotifications")
         }
+        
+        if let safeZoneRadius = UserDefaults.standard.object(forKey: "safeZoneRadius"){
+            print("Safe Zone radius already set!")
+        }
+        else {
+            UserDefaults.standard.set(300, forKey:"safeZoneRadius")
+        }
+        
         // Override point for customization after application launch.
         return true
     }

@@ -34,8 +34,8 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
             let locationLat = NSNumber(value:coordinate.latitude)
             let locationLon = NSNumber(value:coordinate.longitude)
             UserDefaults.standard.set(["lat": locationLat, "lon": locationLon], forKey:"safeZoneCoordinate")
-            
-            let region = CLCircularRegion(center: coordinate, radius: 200, identifier: "GEOFENCE")
+            let safeZoneRadius = UserDefaults.standard.object(forKey: "safeZoneRadius") as! Int
+            let region = CLCircularRegion(center: coordinate, radius: Double(safeZoneRadius), identifier: "GEOFENCE")
             
             mapView.removeOverlays(mapView.overlays)
             locationManager.startMonitoring(for: region)
@@ -111,7 +111,9 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
             let locationLat = locationDictionary["lat"]!.doubleValue
             let locationLon = locationDictionary["lon"]!.doubleValue
             let coordinate = CLLocationCoordinate2DMake(locationLat, locationLon)
-            let region = CLCircularRegion(center: coordinate, radius: 200, identifier: "GEOFENCE")
+            let safeZoneRadius = UserDefaults.standard.object(forKey: "safeZoneRadius") as! Int
+            
+            let region = CLCircularRegion(center: coordinate, radius: Double(safeZoneRadius), identifier: "GEOFENCE")
             mapView.removeOverlays(mapView.overlays)
             locationManager.startMonitoring(for: region)
             let circle = MKCircle(center: coordinate, radius: region.radius)
