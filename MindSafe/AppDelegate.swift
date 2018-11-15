@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Sundowning already set!")
         }
         else {
-            UserDefaults.standard.set(true, forKey:"safeZoneNotifications")
+            UserDefaults.standard.set(true, forKey:"sundowning")
         }
         
         if let safezone = UserDefaults.standard.object(forKey: "safeZoneNotifications"){
