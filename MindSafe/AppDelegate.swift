@@ -5,11 +5,13 @@
 //  Created by Mihai Lapuste on 2018-10-24.
 //  Copyright © 2018 Mihai Lapuste. All rights reserved.
 //
+// Worked on by: Mihai Lapuste
+// - Created the ability update sundowning reminders daily
+// Team MindSafe
 
 import UIKit
 import CoreData
 import UserNotifications
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,20 +20,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        FirebaseApp.configure()
-        
+       
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
             // track notification status in reference to user
         })
-
-//        UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
-//            
-//            if granted {
-//                UIApplication.shared.registerForRemoteNotifications()
-//            }
-//            
-//        }
+        
+        // Default settings
+        
+        if let sundowning = UserDefaults.standard.object(forKey: "sundowning"){
+            print("Sundowning already set!")
+        }
+        else {
+            UserDefaults.standard.set(true, forKey:"sundowning")
+        }
+        
+        if let safezone = UserDefaults.standard.object(forKey: "safeZoneNotifications"){
+            print("Safe Zone already set!")
+        }
+        else {
+              UserDefaults.standard.set(true, forKey:"safeZoneNotifications")
+        }
+        
+        if let safeZoneRadius = UserDefaults.standard.object(forKey: "safeZoneRadius"){
+            print("Safe Zone radius already set!")
+        }
+        else {
+            UserDefaults.standard.set(300, forKey:"safeZoneRadius")
+        }
         
         // Override point for customization after application launch.
         return true
@@ -49,6 +64,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+
+        // setting all sundowning reminders once daily
+        if let date = UserDefaults.standard.object(forKey: "sundowningTime") as? Date {
+            if let diff = Calendar.current.dateComponents([.hour], from: date, to: Date()).hour, diff > 24 && UserDefaults.standard.object(forKey: "sundowning") as? Bool == true {
+                print("refreshing reminders");
+                let ViewController = RemindersViewController()
+                ViewController.sundowningReminders()
+            }
+        }
+        if UserDefaults.standard.object(forKey: "sundowningTime") == nil {
+            UserDefaults.standard.set(Date(), forKey:"sundowningTime")
+            UserDefaults.standard.set(true, forKey:"sundowning")
+        }
+       
+        
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
