@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E71E09F721852DA7001A30EC /* NewReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */; };
+		E738D365219BE362001DC316 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E738D364219BE362001DC316 /* MapKit.framework */; };
+		E738D367219BE37C001DC316 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738D366219BE37C001DC316 /* TrackerViewController.swift */; };
+		E738D369219CBE74001DC316 /* TrackerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738D368219CBE74001DC316 /* TrackerInfoViewController.swift */; };
+		E738D36B219D0624001DC316 /* PanicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738D36A219D0624001DC316 /* PanicViewController.swift */; };
+		E7659CD5218FE57F004E2736 /* SettingsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7659CD4218FE57F004E2736 /* SettingsTableTableViewController.swift */; };
+		E7659CD7218FFCC0004E2736 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7659CD6218FFCC0004E2736 /* HomeTableViewController.swift */; };
 		E769619F218111F0005AC2EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769619E218111F0005AC2EB /* AppDelegate.swift */; };
 		E76961A4218111F0005AC2EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76961A2218111F0005AC2EB /* Main.storyboard */; };
 		E76961A7218111F0005AC2EB /* MindSafe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E76961A5218111F0005AC2EB /* MindSafe.xcdatamodeld */; };
@@ -15,7 +21,9 @@
 		E76961AC218111F0005AC2EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76961AA218111F0005AC2EB /* LaunchScreen.storyboard */; };
 		E76961B7218111F1005AC2EB /* MindSafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76961B6218111F1005AC2EB /* MindSafeTests.swift */; };
 		E76961C2218111F1005AC2EB /* MindSafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76961C1218111F1005AC2EB /* MindSafeUITests.swift */; };
-		E7CD8BB02184EB7600525AE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CD8BAF2184EB7600525AE8 /* HomeViewController.swift */; };
+		E76C8BB6218CC6740019F60B /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C8BB5218CC6740019F60B /* ReminderTableViewCell.swift */; };
+		E7B56A53219B6E0B00DD3CF8 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */; };
+		E7B56A55219B70E300DD3CF8 /* ProgressView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */; };
 		E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +46,12 @@
 
 /* Begin PBXFileReference section */
 		E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewReminderTableViewController.swift; sourceTree = "<group>"; };
+		E738D364219BE362001DC316 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E738D366219BE37C001DC316 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
+		E738D368219CBE74001DC316 /* TrackerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerInfoViewController.swift; sourceTree = "<group>"; };
+		E738D36A219D0624001DC316 /* PanicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanicViewController.swift; sourceTree = "<group>"; };
+		E7659CD4218FE57F004E2736 /* SettingsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableTableViewController.swift; sourceTree = "<group>"; };
+		E7659CD6218FFCC0004E2736 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		E769619B218111F0005AC2EB /* MindSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E769619E218111F0005AC2EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E76961A3218111F0005AC2EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,7 +65,9 @@
 		E76961BD218111F1005AC2EB /* MindSafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindSafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76961C1218111F1005AC2EB /* MindSafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindSafeUITests.swift; sourceTree = "<group>"; };
 		E76961C3218111F1005AC2EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7CD8BAF2184EB7600525AE8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E76C8BB5218CC6740019F60B /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
+		E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgressView.storyboard; sourceTree = "<group>"; };
 		E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemindersViewController.swift; path = ../RemindersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E738D365219BE362001DC316 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E738D363219BE362001DC316 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E738D364219BE362001DC316 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E7696192218111F0005AC2EB = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +112,7 @@
 				E76961B5218111F1005AC2EB /* MindSafeTests */,
 				E76961C0218111F1005AC2EB /* MindSafeUITests */,
 				E769619C218111F0005AC2EB /* Products */,
+				E738D363219BE362001DC316 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,10 +130,17 @@
 			isa = PBXGroup;
 			children = (
 				E769619E218111F0005AC2EB /* AppDelegate.swift */,
-				E7CD8BAF2184EB7600525AE8 /* HomeViewController.swift */,
+				E7659CD6218FFCC0004E2736 /* HomeTableViewController.swift */,
+				E7659CD4218FE57F004E2736 /* SettingsTableTableViewController.swift */,
 				E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */,
 				E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */,
+				E76C8BB5218CC6740019F60B /* ReminderTableViewCell.swift */,
+				E738D366219BE37C001DC316 /* TrackerViewController.swift */,
+				E738D368219CBE74001DC316 /* TrackerInfoViewController.swift */,
+				E738D36A219D0624001DC316 /* PanicViewController.swift */,
 				E76961A2218111F0005AC2EB /* Main.storyboard */,
+				E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */,
+				E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */,
 				E76961A8218111F0005AC2EB /* Assets.xcassets */,
 				E76961AA218111F0005AC2EB /* LaunchScreen.storyboard */,
 				E76961AD218111F0005AC2EB /* Info.plist */,
@@ -203,6 +236,14 @@
 					E769619A218111F0005AC2EB = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E76961B1218111F0005AC2EB = {
 						CreatedOnToolsVersion = 8.0;
@@ -242,8 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76961AC218111F0005AC2EB /* LaunchScreen.storyboard in Resources */,
+				E7B56A53219B6E0B00DD3CF8 /* Contacts.storyboard in Resources */,
 				E76961A9218111F0005AC2EB /* Assets.xcassets in Resources */,
 				E76961A4218111F0005AC2EB /* Main.storyboard in Resources */,
+				E7B56A55219B70E300DD3CF8 /* ProgressView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +312,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */,
+				E738D367219BE37C001DC316 /* TrackerViewController.swift in Sources */,
+				E7659CD5218FE57F004E2736 /* SettingsTableTableViewController.swift in Sources */,
+				E76C8BB6218CC6740019F60B /* ReminderTableViewCell.swift in Sources */,
+				E738D36B219D0624001DC316 /* PanicViewController.swift in Sources */,
 				E76961A7218111F0005AC2EB /* MindSafe.xcdatamodeld in Sources */,
+				E7659CD7218FFCC0004E2736 /* HomeTableViewController.swift in Sources */,
+				E738D369219CBE74001DC316 /* TrackerInfoViewController.swift in Sources */,
 				E769619F218111F0005AC2EB /* AppDelegate.swift in Sources */,
 				E71E09F721852DA7001A30EC /* NewReminderTableViewController.swift in Sources */,
-				E7CD8BB02184EB7600525AE8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
