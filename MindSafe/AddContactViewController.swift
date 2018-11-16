@@ -16,7 +16,21 @@ class AddContactViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var relationTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    
+    
+    @IBAction func saveAndClose(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToContactList", sender: self )
+    }
+    
+    @IBAction func close(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToContactList", sender: self )
+    }
+    
     /*
     // MARK: - Navigation
 

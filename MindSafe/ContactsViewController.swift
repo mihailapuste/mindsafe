@@ -14,12 +14,10 @@ class ContactsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let john = Contact(name: "John Doe", phoneNum: "666-666-6666", relation: "Nephew", email: "abc@xyz.com", address: "445 Mount Eden Road, Mount Eden, Auckland")
-        
+        let john = Contact(name: "john doe", phoneNum: "66666666666", relation: "nephew", email: "jsgfuys", address: "kdufhsidhfu")
         contacts.append(john)
         tableView.reloadData()
-       
+        
     }
 
     // MARK: - Table view data source
@@ -39,9 +37,19 @@ class ContactsViewController: UITableViewController {
         
         let contact = contacts[indexPath.row]
         
-        cell.textLabel?.text = contact.name + " - " + contact.relation
+        cell.textLabel?.text = contact.name
         cell.detailTextLabel?.text = contact.phoneNum
         
         return cell
+    }
+    
+    @IBAction func unwindToContactList(segue: UIStoryboardSegue) {
+        guard let viewController = segue.source as? AddContactViewController else {return}
+        guard let name = viewController.nameTextField.text, let phone = viewController.phoneTextField.text, let email = viewController.emailTextField.text, let relation = viewController.relationTextField.text, let address = viewController.addressTextField.text else { return }
+        
+        let contact = Contact(name: name, phoneNum: phone, relation: relation, email: email, address: address)
+        
+        contacts.append(contact)
+        tableView.reloadData()
     }
 }
