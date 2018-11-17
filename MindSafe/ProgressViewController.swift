@@ -14,7 +14,7 @@ UIViewController {
     var handler2:DatabaseHandle!
     
     var array:[String] = []
-    var count = 0
+    
     
     @IBOutlet weak var LineChartView: LineChartView!
     
@@ -29,11 +29,10 @@ UIViewController {
         
         if myTextField1.text != ""
         {
-        ref?.child("Date1").child("\(count)").setValue(result)
+        ref?.child("Date1").childByAutoId().setValue(result)
             
             //months.append(result)
-            
-        ref?.child("epScore").child("\(count)").setValue(myTextField1.text)
+        ref?.child("epScore").childByAutoId().setValue(myTextField1.text)
             
             var myDouble = Double(myTextField1.text!)
             
@@ -41,20 +40,13 @@ UIViewController {
     
         myDouble = myDouble!+5.0
             
-        ref?.child("semScore").child("\(count)").setValue(String(myDouble!))
+        ref?.child("semScore").childByAutoId().setValue(String(myDouble!))
             
-        
             //semScore.append(myDouble!)
             
             myTextField1.text = ""
             
-            count=count+1
-            
-            
-            
         }
-        
-    
         
     }
     
@@ -62,12 +54,19 @@ UIViewController {
     @IBAction func updateChart(_ sender: Any) {
         self.viewDidLoad()
         self.viewWillAppear(true)
-
+        self.months.removeAll()
+        self.epScore.removeAll()
+        self.semScore.removeAll()
+        
     }
     
-    var months = ["1.11.2018", "2.11.2018", "3.11.2018", "4.11.2018", "5.11.2018"]
-    var epScore = [20.0, 4.0, 6.0, 3.0, 12.0]
-    var semScore = [10.0, 14.0, 60.0, 13.0, 2.0]
+    var months:[String] = []
+    //var months = ["1.11.2018", "2.11.2018", "3.11.2018", "4.11.2018", "5.11.2018"]
+    
+    var epScore:[Double] = []
+    var semScore:[Double] = []
+    //var epScore = [20.0, 4.0, 6.0, 3.0, 12.0]
+    //var semScore = [10.0, 14.0, 60.0, 13.0, 2.0]
     weak var axisFormatDelegate: IAxisValueFormatter?
     
    
@@ -78,12 +77,45 @@ UIViewController {
         
          ref=Database.database().reference()
         
-        ref.child("Date1").observeSingleEvent(of: .value, with: { (snapshot) in
+        
+        ref.child("Date1").observeSingleEvent(of: .value, with: { snapshot in
+            print(snapshot.childrenCount) // I got the expected number of items
+            let enumerator = snapshot.children
+            while let rest = enumerator.nextObject() as? DataSnapshot {
+                print(rest.value!)
+            
+            self.months.append(rest.value as! String)            }
+        })
+        
+        
+        ref.child("epScore").observeSingleEvent(of: .value, with: { snapshot in
+            print(snapshot.childrenCount) // I got the expected number of items
+            let enumerator = snapshot.children
+            while let rest = enumerator.nextObject() as? DataSnapshot {
+                print(rest.value!)
+                
+            self.epScore.append(Double(rest.value as! String)!)            }
+        })
+        
+        ref.child("semScore").observeSingleEvent(of: .value, with: { snapshot in
+            print(snapshot.childrenCount) // I got the expected number of items
+            let enumerator = snapshot.children
+            while let rest = enumerator.nextObject() as? DataSnapshot {
+                print(rest.value!)
+                
+                self.semScore.append(Double(rest.value as! String)!)
+                
+            }
+        })
+        
+        
+        
+       /* ref.child("Date1").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children {
                 let snap = child as! DataSnapshot
-                let key = snap.key
+                //let key = snap.key
                 let value = snap.value
-                print("key = \(key)  value = \(value!)")
+                //print("key = \(key)  value = \(value!)")
                 self.months.append(value as! String)
             }
         })
@@ -91,9 +123,9 @@ UIViewController {
         ref.child("epScore").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children {
                 let snap = child as! DataSnapshot
-                let key = snap.key
+                //let key = snap.key
                 let value = snap.value
-                print("key = \(key)  value = \(value!)")
+                //print("key = \(key)  value = \(value!)")
                 self.epScore.append(Double(value as! String)!)
             }
         })
@@ -101,15 +133,15 @@ UIViewController {
         ref.child("semScore").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children {
                 let snap = child as! DataSnapshot
-                let key = snap.key
+                //let key = snap.key
                 let value = snap.value
-                print("key = \(key)  value = \(value!)")
+                //print("key = \(key)  value = \(value!)")
                 self.semScore.append(Double(value as! String)!)
             }
         })
         
         
-        
+        */
         
         /*ref2=Database.database().reference()
         handler = ref?.child("Date1").observe(.childAdded, with: {(snapshot) in
