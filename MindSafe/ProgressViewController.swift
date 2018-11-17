@@ -14,8 +14,8 @@ UIViewController {
  
     
     let months = ["2018-11-1", "2018-11-2", "2018-11-3", "2018-11-4", "2018-11-5"]
-    let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0]
-    let unitsBought = [10.0, 14.0, 60.0, 13.0, 2.0]
+    let epScore = [20.0, 4.0, 6.0, 3.0, 12.0]
+    let semScore = [10.0, 14.0, 60.0, 13.0, 2.0]
     weak var axisFormatDelegate: IAxisValueFormatter?
     
     
@@ -80,10 +80,10 @@ UIViewController {
         
         for i in 0..<self.months.count {
             
-            let dataEntry = ChartDataEntry(x: Double(i) , y:self.self.unitsSold[i])
+            let dataEntry = ChartDataEntry(x: Double(i) , y:self.self.epScore[i])
             dataEntries.append(dataEntry)
             
-            let dataEntry1 = ChartDataEntry(x: Double(i) , y: self.self.unitsBought[i])
+            let dataEntry1 = ChartDataEntry(x: Double(i) , y: self.self.semScore[i])
             dataEntries1.append(dataEntry1)
             
             
