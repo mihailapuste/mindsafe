@@ -489,7 +489,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="3uo-E6-ede" kind="show" id="8Km-2a-aCq"/>
+                                            <segue destination="3uo-E6-ede" kind="presentation" id="MEB-l3-ZPl"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -523,8 +523,8 @@
         <!--Contacts-->
         <scene sceneID="p5S-WJ-fBI">
             <objects>
-                <viewControllerPlaceholder storyboardName="Contacts" id="3uo-E6-ede" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="er1-E9-AoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Contacts" id="3uo-E6-ede" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="1503" y="-194"/>
         </scene>
@@ -902,6 +902,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZSz-1y-GMg"/>
-        <segue reference="SrO-vr-LTL"/>
+        <segue reference="AAH-9I-gah"/>
     </inferredMetricsTieBreakers>
 </document>
