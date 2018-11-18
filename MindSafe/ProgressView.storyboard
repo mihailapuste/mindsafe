@@ -31,15 +31,15 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naI-JN-Eev" userLabel="savEp">
-                                <rect key="frame" x="171" y="464" width="32" height="30"/>
+                                <rect key="frame" x="149" y="464" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="save"/>
+                                <state key="normal" title="Save Score"/>
                                 <connections>
                                     <action selector="savBut1:" destination="njP-tC-1of" eventType="touchUpInside" id="NcI-9u-5ve"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSo-ij-AKW">
-                                <rect key="frame" x="248" y="465" width="111" height="30"/>
+                                <rect key="frame" x="248" y="464" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="UPDATE CHART"/>
                                 <connections>

@@ -1,3 +1,11 @@
+//
+//  ProgressViewController.swift
+//  MindSafe
+//
+//  Created by Mihai Lapuste on 2018-11-14.
+//  Copyright © 2018 Mihai Lapuste. All rights reserved.
+//
+//  Worked on by Bob Liu
 
 
 import UIKit
@@ -13,8 +21,7 @@ UIViewController {
     var handler:DatabaseHandle!
     var handler2:DatabaseHandle!
     
-    var array:[String] = []
-    
+   
     
     @IBOutlet weak var LineChartView: LineChartView!
     
@@ -27,6 +34,7 @@ UIViewController {
         formater.dateFormat="dd.MM.yyyy"
         let result = formater.string(from: date)
         
+        //When textfield is entered with a number
         if myTextField1.text != ""
         {
         ref?.child("Date1").childByAutoId().setValue(result)
@@ -50,7 +58,7 @@ UIViewController {
         
     }
     
-    
+    //Update button to refresh the chart view
     @IBAction func updateChart(_ sender: Any) {
         self.viewDidLoad()
         self.viewWillAppear(true)
@@ -60,13 +68,11 @@ UIViewController {
         
     }
     
+    //Initialized empty arrays for chart axis
     var months:[String] = []
-    //var months = ["1.11.2018", "2.11.2018", "3.11.2018", "4.11.2018", "5.11.2018"]
-    
     var epScore:[Double] = []
     var semScore:[Double] = []
-    //var epScore = [20.0, 4.0, 6.0, 3.0, 12.0]
-    //var semScore = [10.0, 14.0, 60.0, 13.0, 2.0]
+    
     weak var axisFormatDelegate: IAxisValueFormatter?
     
    
@@ -74,10 +80,10 @@ UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        //reference to database
          ref=Database.database().reference()
         
-        
+        //Pushback values from database when event occurs
         ref.child("Date1").observeSingleEvent(of: .value, with: { snapshot in
             print(snapshot.childrenCount) // I got the expected number of items
             let enumerator = snapshot.children
@@ -87,7 +93,7 @@ UIViewController {
             self.months.append(rest.value as! String)            }
         })
         
-        
+        //Pushback values from database when event occurs
         ref.child("epScore").observeSingleEvent(of: .value, with: { snapshot in
             print(snapshot.childrenCount) // I got the expected number of items
             let enumerator = snapshot.children
@@ -97,14 +103,13 @@ UIViewController {
             self.epScore.append(Double(rest.value as! String)!)            }
         })
         
+        //Pushback values from database when event occurs
         ref.child("semScore").observeSingleEvent(of: .value, with: { snapshot in
             print(snapshot.childrenCount) // I got the expected number of items
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? DataSnapshot {
                 print(rest.value!)
-                
                 self.semScore.append(Double(rest.value as! String)!)
-                
             }
         })
         
@@ -119,63 +124,8 @@ UIViewController {
                 self.months.append(value as! String)
             }
         })
-        
-        ref.child("epScore").observeSingleEvent(of: .value, with: { (snapshot) in
-            for child in snapshot.children {
-                let snap = child as! DataSnapshot
-                //let key = snap.key
-                let value = snap.value
-                //print("key = \(key)  value = \(value!)")
-                self.epScore.append(Double(value as! String)!)
-            }
-        })
-        
-        ref.child("semScore").observeSingleEvent(of: .value, with: { (snapshot) in
-            for child in snapshot.children {
-                let snap = child as! DataSnapshot
-                //let key = snap.key
-                let value = snap.value
-                //print("key = \(key)  value = \(value!)")
-                self.semScore.append(Double(value as! String)!)
-            }
-        })
-        
-        
         */
-        
-        /*ref2=Database.database().reference()
-        handler = ref?.child("Date1").observe(.childAdded, with: {(snapshot) in
-            if let data = snapshot.value as? String
-            {
-                self.months.append(data)
-               
-                
-            }
-        })
-        
-        handler2 = ref2?.child("epScore").observe(.childAdded, with: {(snapshot) in
-            if let data1 = snapshot.value as? Double
-            {
-                self.epScore.append(data1)
-                self.viewDidLoad()
-                self.viewWillAppear(true)
-            }
-        })
-        
-        */
-        
-        
-        
-        
-        
-        //ref.child("Date1").observe(.value, with: { snapshot in
-          //  if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
-           //     for value in snapshots {
-                    //print("Child: ", value)
-            //    }
-           // }
-            
-       // })
+ 
         
 
 
@@ -184,7 +134,7 @@ UIViewController {
         LineChartView.chartDescription?.text = ""
         
         
-        //legend
+        //legend design
         let legend = LineChartView.legend
         legend.enabled = true
         legend.horizontalAlignment = .right
@@ -195,7 +145,7 @@ UIViewController {
         legend.xOffset = 10.0;
         legend.yEntrySpace = 0.0;
         
-        
+        //X-axis design
         let xaxis = LineChartView.xAxis
         xaxis.valueFormatter = axisFormatDelegate
         //xaxis.drawGridLinesEnabled = true
@@ -204,10 +154,11 @@ UIViewController {
         xaxis.valueFormatter = IndexAxisValueFormatter(values:self.months)
         xaxis.granularity = 1
         xaxis.labelRotationAngle=CGFloat(-80.0)
-        
+
         let leftAxisFormatter = NumberFormatter()
         leftAxisFormatter.maximumFractionDigits = 1
         
+        //Y-axis design
         let yaxis = LineChartView.leftAxis
         yaxis.spaceTop = 0.35
         yaxis.axisMinimum = 0
@@ -223,13 +174,15 @@ UIViewController {
         setChart()
     }
     
+    //Setting up chart data insertion
     func setChart() {
-        LineChartView.noDataText = "You need to provide data for the chart."
+        
         var dataEntries: [ChartDataEntry] = []
         var dataEntries1: [ChartDataEntry] = []
         
+        //Inserting chart values
         for i in 0..<self.months.count {
-            
+    
             let dataEntry = ChartDataEntry(x: Double(i) , y:self.self.epScore[i])
             dataEntries.append(dataEntry)
             
@@ -248,14 +201,8 @@ UIViewController {
         
         let chartData = LineChartData(dataSets: dataSets)
         
-        
-        // (0.3 + 0.05) * 2 + 0.3 = 1.00 -> interval per "group"
-        
-        
-        
-    
+        //Alert chart, data has been changed
         LineChartView.notifyDataSetChanged()
-        
         LineChartView.data = chartData
         
     
