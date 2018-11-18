@@ -54,6 +54,7 @@ UIViewController {
             
             myTextField1.text = ""
             
+            
         }
         
     }
@@ -75,13 +76,9 @@ UIViewController {
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+    func setDatabase(){
         //reference to database
-         ref=Database.database().reference()
+        ref=Database.database().reference()
         
         //Pushback values from database when event occurs
         ref.child("Date1").observeSingleEvent(of: .value, with: { snapshot in
@@ -89,8 +86,8 @@ UIViewController {
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? DataSnapshot {
                 print(rest.value!)
-            
-            self.months.append(rest.value as! String)            }
+                
+                self.months.append(rest.value as! String)            }
         })
         
         //Pushback values from database when event occurs
@@ -100,9 +97,10 @@ UIViewController {
             while let rest = enumerator.nextObject() as? DataSnapshot {
                 print(rest.value!)
                 
-            self.epScore.append(Double(rest.value as! String)!)            }
+                self.epScore.append(Double(rest.value as! String)!)            }
         })
         
+       
         //Pushback values from database when event occurs
         ref.child("semScore").observeSingleEvent(of: .value, with: { snapshot in
             print(snapshot.childrenCount) // I got the expected number of items
@@ -113,8 +111,19 @@ UIViewController {
             }
         })
         
+    }
+   
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
+        setDatabase()
         
+      
+
+    
        /* ref.child("Date1").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children {
                 let snap = child as! DataSnapshot
@@ -126,28 +135,30 @@ UIViewController {
         })
         */
  
-        
-
 
         LineChartView.delegate = self as? ChartViewDelegate
-        LineChartView.noDataText = "You need to provide data for the chart."
+        LineChartView.noDataText = "Waiting for Data."
         LineChartView.chartDescription?.text = ""
         
+        //Delay to wait for database to finish appending arrays
+    
+     DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
         
         //legend design
-        let legend = LineChartView.legend
+        let legend = self.LineChartView.legend
         legend.enabled = true
+        legend.yOffset = 8.0;
+        legend.xOffset = 15.0;
+        legend.yEntrySpace = 0.0;
         legend.horizontalAlignment = .right
         legend.verticalAlignment = .top
         legend.orientation = .vertical
         legend.drawInside = true
-        legend.yOffset = 10.0;
-        legend.xOffset = 10.0;
-        legend.yEntrySpace = 0.0;
+        
         
         //X-axis design
-        let xaxis = LineChartView.xAxis
-        xaxis.valueFormatter = axisFormatDelegate
+            let xaxis = self.LineChartView.xAxis
+            xaxis.valueFormatter = self.axisFormatDelegate
         //xaxis.drawGridLinesEnabled = true
         xaxis.labelPosition = .bottom
         xaxis.centerAxisLabelsEnabled = false
@@ -159,19 +170,25 @@ UIViewController {
         leftAxisFormatter.maximumFractionDigits = 1
         
         //Y-axis design
-        let yaxis = LineChartView.leftAxis
-        yaxis.spaceTop = 0.35
+        let yaxis = self.LineChartView.leftAxis
+        yaxis.spaceTop = 0.30
         yaxis.axisMinimum = 0
         yaxis.axisMaximum = 100
         yaxis.drawGridLinesEnabled = false
         
-        LineChartView.rightAxis.enabled = true
-        let yaxisRight = LineChartView.rightAxis
-        yaxisRight.spaceTop = 0.35
+        self.LineChartView.rightAxis.enabled = true
+        let yaxisRight = self.LineChartView.rightAxis
+        yaxisRight.spaceTop = 0.30
         yaxisRight.axisMinimum = 0
         yaxisRight.axisMaximum = 100
         
-        setChart()
+        
+        self.setChart()
+        }
+        //setChart()
+        
+        
+        
     }
     
     //Setting up chart data insertion
@@ -205,14 +222,11 @@ UIViewController {
         LineChartView.notifyDataSetChanged()
         LineChartView.data = chartData
         
-    
-        
-        
         //background color
         LineChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
         
         //chart animation
-        LineChartView.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
+        LineChartView.animate(xAxisDuration: CATransaction.animationDuration(), yAxisDuration:CATransaction.animationDuration(), easingOption: .linear)
         
         
     
