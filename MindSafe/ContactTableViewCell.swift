@@ -8,26 +8,30 @@
 
 import UIKit
 
-var rowId = 0;
-
 class ContactTableViewCell: UITableViewCell {
-   
-    @IBOutlet weak var name: UILabel!
+
+    @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var relationship: UILabel!
-   
-    var cellID: Int = 0;
+    @IBOutlet weak var relationshipLabel: UILabel!
     
+    var phoneNumber = ""
+    
+    @IBAction func messageAction(_ sender: Any) {
+         let emergencyMessage = UserDefaults.standard.object(forKey: "emergencyMessage") as! String
+        let sms: String = "sms:+1\(phoneNumber)&body=\(emergencyMessage)"
+        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func callAction(_ sender: Any) {
+        print("Panic mode")
+        guard let url = URL(string: "telprompt://\(phoneNumber)") else { return }
+        UIApplication.shared.open(url)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-//
-//    @IBAction func viewContact(_ sender: Any) {
-//        rowId = cellID;
-//        self.navigationController.pushViewController(ViewContactTableViewController, animated: true)
-//    }
-    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

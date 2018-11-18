@@ -8,10 +8,39 @@
 
 import UIKit
 import MapKit
+import CoreData
 import MessageUI
 import CoreLocation
 
-class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
+class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate{
+    
+    var contacts: [Contacts] = [];
+    
+    @IBOutlet weak var contactsTable: UITableView!
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contacts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for : indexPath) as! ContactTableViewCell
+        
+        let firstName = contacts[indexPath.row].value(forKey: "firstName") as? String
+        let lastName = contacts[indexPath.row].value(forKey: "lastName") as? String
+        let contactRelationship = contacts[indexPath.row].value(forKey: "contactRelationship") as? String
+        let phoneNumber = contacts[indexPath.row].value(forKey: "phoneNumber") as? String
+//        let contactEmail = contacts[indexPath.row].value(forKey: "contactEmail") as? String
+//        let contactAddress = contacts[indexPath.row].value(forKey: "contactAddress") as? String
+        //        cell.title?.text =  String(firstName! + " " + lastName!)
+        //        cell.relationship?.text = contactRelationship
+        //        cell.cellID = indexPath.row
+        
+        cell.nameLabel?.text = String(firstName! + " " + lastName!)
+        cell.relationshipLabel?.text = contactRelationship
+        cell.phoneNumber = phoneNumber!
+        
+        return cell
+    }
+    
     
     let locationManager = CLLocationManager()
     
@@ -49,8 +78,30 @@ class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             locationManager.startUpdatingLocation()
         }
         
-
         // Do any additional setup after loading the view.
+    }
+    
+    //Constructor arguments -> getting data from coredata and reloading table content
+    override func viewWillAppear(_ animated: Bool) {
+        getData() // get the data from core data
+        contactsTable.reloadData() // reload table view
+    }
+    
+    func getData() {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let context = appDelegate.persistentContainer.viewContext;
+        
+        do
+        {
+            contacts = try context.fetch(Contacts.fetchRequest())
+        }
+        catch
+        {
+            print("fetch failed!")
+        }
+        
     }
     
     func getDirectionsHome() {

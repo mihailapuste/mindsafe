@@ -48,6 +48,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(300, forKey:"safeZoneRadius")
         }
         
+        if let emergencyMessage = UserDefaults.standard.object(forKey: "emergencyMessage"){
+            print("emergencyMessage already set!")
+        }
+        else {
+            UserDefaults.standard.set("Help! It's an emergency!", forKey:"emergencyMessage")
+        }
+        
         // Override point for customization after application launch.
         return true
     }
