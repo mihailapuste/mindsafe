@@ -489,7 +489,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="3uo-E6-ede" kind="presentation" id="MEB-l3-ZPl"/>
+                                            <segue destination="3uo-E6-ede" kind="popoverPresentation" popoverAnchorView="PDc-tO-Fne" id="HFQ-ck-mff">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -902,6 +904,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZSz-1y-GMg"/>
-        <segue reference="AAH-9I-gah"/>
+        <segue reference="CS1-pZ-Ml5"/>
     </inferredMetricsTieBreakers>
 </document>
