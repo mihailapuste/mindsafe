@@ -76,6 +76,7 @@ class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
+            
         }
         
         // Do any additional setup after loading the view.
@@ -106,24 +107,68 @@ class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     
     func getDirectionsHome() {
         
-        // Home coordinates
-        let latitude: CLLocationDegrees = 37.2
-        let longitude: CLLocationDegrees = 22.9
+        let street = UserDefaults.standard.object(forKey: "street") as? String
+        let city = UserDefaults.standard.object(forKey: "city") as? String
+        let provstate = UserDefaults.standard.object(forKey: "provstate") as? String
+        let zip = UserDefaults.standard.object(forKey: "zip") as? String
+        let country = UserDefaults.standard.object(forKey: "country") as? String
+        
+        if "\(street!)\(city!)\(provstate!)\(zip!)\(country!)" != "" {
         
         
-        let regionDistance:CLLocationDistance = 10000
-        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
-        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
-        let options = [
-            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
-        ]
-        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = "Place Name"
-        mapItem.openInMaps(launchOptions: options)
+        let address = "\(street!), \(city!), \(provstate!) \(zip!), \(country!)"
+        
+
+        
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString(address) { (placemarks, error) in
+            guard
+                let placemarks = placemarks,
+                let location = placemarks.first?.location
+                else {
+                    self.showAlert(title: "Location not found!", message: "Please ensure your address is properly filled in!")
+                    // handle no location found
+                    return
+            }
+            
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            print("Lat: \(lat), Lon: \(lon)")
+            // Use your location
+            
+            // Home coordinates
+            let latitude: CLLocationDegrees = lat
+            let longitude: CLLocationDegrees = lon
+            
+            
+            let regionDistance:CLLocationDistance = 10000
+            let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+            let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+            let options = [
+                MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+                MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+            ]
+            let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+            let mapItem = MKMapItem(placemark: placemark)
+           
+            let firstName = UserDefaults.standard.object(forKey: "firstName") as? String
+            
+            mapItem.name = "\(firstName!)'s Home"
+            mapItem.openInMaps(launchOptions: options)
+        }
+        }
+        else{
+             showAlert(title: "No home address found!", message: "Please ensure your personal address is provided in your personal information.")
+        }
+        
     }
     
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
