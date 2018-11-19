@@ -12,6 +12,8 @@
 // - Created tests for Tracker/Go home, Contacts Page and Progress viewer
 // Team MindSafe
 import XCTest
+import UIKit
+import CoreData
 
 class MindSafeUITests: XCTestCase {
     var app: XCUIApplication!

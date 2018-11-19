@@ -6,20 +6,33 @@ target 'MindSafe' do
   use_frameworks!
 
   # Pods for MindSafe
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Charts'
 
-  target 'MindSafeTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'MindSafeUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-
+	target 'MindSafeUITests' do
+	inherit! :search_paths
 	pod 'Firebase/Core'
-	pod 'Firebase/Database'
-	pod 'Charts'
+  	pod 'Firebase/Database'
+  	pod 'Charts'
+	end
 
+	target 'MindSafeTests' do
+	inherit! :search_paths
+	pod 'Firebase/Core'
+  	pod 'Firebase/Database'
+  	pod 'Charts'
+	end
+	
+  
 end
+
+
+
+
+
+
+
+	
+
+
