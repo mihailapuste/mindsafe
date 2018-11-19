@@ -22,22 +22,13 @@ class PersonalProfileTableViewController: UITableViewController, UITextFieldDele
     @IBOutlet weak var country: UITextField!
     
     @IBOutlet weak var zip: UITextField!
-//    firstName
-//    lastName
-//    
-//    phoneNumber
-//    email
-//    
-//    street
-//    city
-//    provstate
-//    zip
-//    country
     
+    // dimsiss action button
     @IBAction func dismissAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
+    // save action button saving data to userdefault settings
     @IBAction func saveAction(_ sender: Any) {
         
         if firstName.text != "" && lastName.text != "" && phoneNumber.text != "" && email.text != "" && street.text != "" && city.text != "" && provstate.text != "" && zip.text != "" && country.text != ""{
@@ -62,6 +53,7 @@ class PersonalProfileTableViewController: UITableViewController, UITextFieldDele
         }
     }
     
+    // function creating and setting alert
     func showAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -103,6 +95,7 @@ class PersonalProfileTableViewController: UITableViewController, UITextFieldDele
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    // hides keyboard on return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false

@@ -65,6 +65,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBAction func dismissView(_ sender: Any) {
     dismiss(animated: true, completion: nil)
     }
+    
     //Getting all the data needed from coredata (used in constructor)
     func getData() {
         

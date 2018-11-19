@@ -16,6 +16,7 @@ class ContactTableViewCell: UITableViewCell {
     
     var phoneNumber = ""
     
+    // button on cell that send user to messages with preloaded message to intended contact
     @IBAction func messageAction(_ sender: Any) {
          let emergencyMessage = UserDefaults.standard.object(forKey: "emergencyMessage") as! String
         let sms: String = "sms:+1\(phoneNumber)&body=\(emergencyMessage)"
@@ -23,11 +24,13 @@ class ContactTableViewCell: UITableViewCell {
         UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
     }
     
+     // button that calls contact
     @IBAction func callAction(_ sender: Any) {
         print("Panic mode")
         guard let url = URL(string: "telprompt://\(phoneNumber)") else { return }
         UIApplication.shared.open(url)
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

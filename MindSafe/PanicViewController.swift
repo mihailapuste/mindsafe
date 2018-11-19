@@ -17,6 +17,7 @@ class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     var contacts: [Contacts] = [];
     
     @IBOutlet weak var contactsTable: UITableView!
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
     }
@@ -46,6 +47,7 @@ class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     
     @IBOutlet weak var mapView: MKMapView!
     
+    // action calling emergency 911
     @IBAction func sosEmergencyCall(_ sender: Any) {
         print("Panic mode")
         guard let numberString = String("911"), let url = URL(string: "telprompt://\(numberString)") else { return }
@@ -56,13 +58,13 @@ class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
     }
     
-
+    // function calling getDirectionsHome()
     @IBAction func goHomeButton(_ sender: Any) {
         getDirectionsHome()
     }
     
     
-    
+    // dimiss page
     @IBAction func dismissButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -88,6 +90,7 @@ class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         contactsTable.reloadData() // reload table view
     }
     
+    // getting contacts from coredata
     func getData() {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -105,6 +108,7 @@ class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         
     }
     
+    // getting directions home -> sending user to apple maps with "home location" set
     func getDirectionsHome() {
         
         let street = UserDefaults.standard.object(forKey: "street") as? String
@@ -163,6 +167,7 @@ class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         
     }
     
+    // alert creation func
     func showAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -170,6 +175,7 @@ class PanicViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         present(alert, animated: true, completion: nil)
     }
     
+    // gets current location of user
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let locValue: CLLocationCoordinate2D = manager.location!.coordinate

@@ -19,6 +19,7 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
     
     @IBOutlet weak var mapView: MKMapView!
     
+    // shows search button upon click
     @IBAction func searchButton(_ sender: Any) {
         
         let searchController = UISearchController(searchResultsController: nil)
@@ -26,6 +27,7 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
         present(searchController, animated: true, completion: nil)
     }
     
+    // long press action setting region "safe zone"
     @IBAction func addRegion(_ sender: Any) {
         if (editSafeZoneSwitch.isOn == true){
             guard let longPress = sender as? UILongPressGestureRecognizer else { return }
@@ -45,6 +47,7 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
         }
     }
     
+    // declaring map view options & settings
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         guard let circleOverlay = overlay as? MKCircle else { return MKOverlayPathRenderer()}
         let circleRenderer = MKCircleRenderer(circle: circleOverlay)
@@ -143,6 +146,7 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
         }
     }
     
+    // setting location in map view
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let locValue: CLLocationCoordinate2D = manager.location!.coordinate
@@ -153,11 +157,13 @@ class TrackerViewController: UIViewController, UISearchBarDelegate, CLLocationMa
         self.mapView.showsUserLocation = true;
     }
     
+    // hides keyboard on "return"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
+    // canceling button sends search for location
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
 
         // Ignoring user

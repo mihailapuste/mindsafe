@@ -26,8 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // track notification status in reference to user
         })
         
-        // Default settings
-        
+        // Default settings upon app opening
         if let sundowning = UserDefaults.standard.object(forKey: "sundowning"){
             print("Sundowning already set!")
         }

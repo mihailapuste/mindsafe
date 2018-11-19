@@ -36,7 +36,7 @@ UIViewController, UITextFieldDelegate {
         return false
     }
     
-    
+    // action saving dummy data
     @IBAction func savBut1(_ sender: Any) {
         let date = Date()
         let formater = DateFormatter()
@@ -67,6 +67,7 @@ UIViewController, UITextFieldDelegate {
         }
     }
     
+    // action updating chart from firebase
     @IBAction func updateChart(_ sender: Any) {
         self.viewDidLoad()
         self.viewWillAppear(true)
@@ -88,6 +89,7 @@ UIViewController, UITextFieldDelegate {
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
+    // setting database in viewcontroller
     func setDatabase(){
         //reference to database
         ref=Database.database().reference()

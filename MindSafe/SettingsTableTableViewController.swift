@@ -17,6 +17,7 @@ class SettingsTableTableViewController: UITableViewController {
     
     @IBOutlet weak var radiusOutlet: UIStepper!
     
+    // action to set safe zone radius
     @IBAction func safeZoneRadius(_ sender: UIStepper) {
         radiusLabel.text = String(Int(sender.value))
         
@@ -34,6 +35,7 @@ class SettingsTableTableViewController: UITableViewController {
     
     @IBOutlet weak var safeZoneSwitch: UISwitch!
     
+    // action to toggle safezone reminders settings
     @IBAction func safeZoneToggled(_ sender: Any) {
        UserDefaults.standard.set(self.safeZoneSwitch.isOn, forKey:"safeZoneNotifications")
     }

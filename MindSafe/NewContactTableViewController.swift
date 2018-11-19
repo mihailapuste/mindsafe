@@ -27,16 +27,17 @@ class NewContactTableViewController: UITableViewController, UITextFieldDelegate 
         contactEmail.delegate = self
         contactAddress.delegate = self
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-    
+    // dismisses view
     @IBAction func cancelNewContact(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
+    // saves new contact to coredata
     @IBAction func saveNewContact(_ sender: Any) {
         
          if firstName.text != "" && contactAddress.text != "" && contactEmail.text != "" && phoneNumber.text != "" && lastName.text != ""{
@@ -62,6 +63,7 @@ class NewContactTableViewController: UITableViewController, UITextFieldDelegate 
         }
     }
     
+    // creates alert
     func showAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
