@@ -14,7 +14,7 @@ import FirebaseDatabase
 
 class ProgressViewController:
 
-UIViewController {
+UIViewController, UITextFieldDelegate {
     
     var ref: DatabaseReference!
     var ref2: DatabaseReference!
@@ -30,6 +30,11 @@ UIViewController {
   
     
     @IBOutlet weak var myTextField1: UITextField!
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
     
     @IBAction func savBut1(_ sender: Any) {
@@ -125,7 +130,7 @@ UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        myTextField1.delegate = self
         setDatabase()
         
         

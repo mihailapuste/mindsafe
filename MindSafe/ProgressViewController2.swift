@@ -15,8 +15,11 @@ import FirebaseDatabase
 
 class ProgressViewController2:
 
-UIViewController {
+UIViewController, UITextFieldDelegate {
     
+    @IBAction func dismissView(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     //var reminders: [Reminders] = [] //reminders.count
     
@@ -37,6 +40,10 @@ UIViewController {
     @IBOutlet weak var myTextField2: UITextField!
     
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
  
     
@@ -107,9 +114,10 @@ UIViewController {
     
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        myTextField2.delegate = self
         setDatabase()
         
         
