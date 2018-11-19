@@ -15,7 +15,7 @@ import CoreData
 import UserNotifications
 
 
-class NewReminderTableViewController: UITableViewController {
+class NewReminderTableViewController: UITableViewController, UITextFieldDelegate {
     
     // cell label outlets
     @IBOutlet weak var titleField: UITextField!
@@ -81,9 +81,15 @@ class NewReminderTableViewController: UITableViewController {
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.titleField.delegate = self
+        self.noteField.delegate = self as? UITextViewDelegate
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         

@@ -130,7 +130,7 @@ UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        myTextField1.delegate = self
+        self.myTextField1.delegate = self
         setDatabase()
         
         

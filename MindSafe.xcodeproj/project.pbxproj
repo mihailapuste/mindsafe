@@ -27,6 +27,9 @@
 		E759106A21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* ProgressViewController2.swift */; };
 		E759106B21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* ProgressViewController2.swift */; };
 		E759106C21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* ProgressViewController2.swift */; };
+		E759106E21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */; };
+		E759106F21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */; };
+		E759107021A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */; };
 		E7659CD5218FE57F004E2736 /* SettingsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7659CD4218FE57F004E2736 /* SettingsTableTableViewController.swift */; };
 		E7659CD7218FFCC0004E2736 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7659CD6218FFCC0004E2736 /* HomeTableViewController.swift */; };
 		E769619F218111F0005AC2EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769619E218111F0005AC2EB /* AppDelegate.swift */; };
@@ -81,6 +84,7 @@
 		E759106121A22CF100EEC8E5 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E759106521A2305D00EEC8E5 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		E759106921A242F300EEC8E5 /* ProgressViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController2.swift; sourceTree = "<group>"; };
+		E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileTableViewController.swift; sourceTree = "<group>"; };
 		E7659CD4218FE57F004E2736 /* SettingsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableTableViewController.swift; sourceTree = "<group>"; };
 		E7659CD6218FFCC0004E2736 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		E769619B218111F0005AC2EB /* MindSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +190,7 @@
 				E769619E218111F0005AC2EB /* AppDelegate.swift */,
 				E7659CD6218FFCC0004E2736 /* HomeTableViewController.swift */,
 				E7659CD4218FE57F004E2736 /* SettingsTableTableViewController.swift */,
+				E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */,
 				E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */,
 				E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */,
 				E76C8BB5218CC6740019F60B /* ReminderTableViewCell.swift */,
@@ -476,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E759106E21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */,
 				E759106621A2305D00EEC8E5 /* ProgressViewController.swift in Sources */,
 				E759106A21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */,
 				E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */,
@@ -502,6 +508,7 @@
 				E76961B7218111F1005AC2EB /* MindSafeTests.swift in Sources */,
 				E759106721A2305D00EEC8E5 /* ProgressViewController.swift in Sources */,
 				E759106B21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */,
+				E759106F21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +519,7 @@
 				E76961C2218111F1005AC2EB /* MindSafeUITests.swift in Sources */,
 				E759106821A2305D00EEC8E5 /* ProgressViewController.swift in Sources */,
 				E759106C21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */,
+				E759107021A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

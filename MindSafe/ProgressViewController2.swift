@@ -117,7 +117,7 @@ UIViewController, UITextFieldDelegate {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        myTextField2.delegate = self
+        self.myTextField2.delegate = self
         setDatabase()
         
         

@@ -135,7 +135,7 @@ class MindSafeUITests: XCTestCase {
         testingStaticText.swipeLeft()
         let deleteButton = tablesQuery.buttons["Delete"]
         deleteButton.tap()
-        XCTAssertFalse(testingSbtaticText.exists)
+        XCTAssertFalse(testingStaticText.exists)
     }
     
     //Requirement 3.1.3 and 3.1.2
