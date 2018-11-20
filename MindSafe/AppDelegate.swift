@@ -28,91 +28,91 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Default settings upon app opening
         if let sundowning = UserDefaults.standard.object(forKey: "sundowning"){
-            print("Sundowning already set!")
+            print(sundowning)
         }
         else {
             UserDefaults.standard.set(true, forKey:"sundowning")
         }
         
         if let safezone = UserDefaults.standard.object(forKey: "safeZoneNotifications"){
-            print("Safe Zone already set!")
+            print(safezone)
         }
         else {
               UserDefaults.standard.set(true, forKey:"safeZoneNotifications")
         }
         
         if let safeZoneRadius = UserDefaults.standard.object(forKey: "safeZoneRadius"){
-            print("Safe Zone radius already set!")
+            print(safeZoneRadius)
         }
         else {
             UserDefaults.standard.set(300, forKey:"safeZoneRadius")
         }
         
         if let emergencyMessage = UserDefaults.standard.object(forKey: "emergencyMessage"){
-            print("emergencyMessage already set!")
+            print(emergencyMessage)
         }
         else {
             UserDefaults.standard.set("Help! It's an emergency!", forKey:"emergencyMessage")
         }
         
         if let firstName = UserDefaults.standard.object(forKey: "firstName"){
-            print("firstName already set!")
+            print(firstName)
         }
         else {
             UserDefaults.standard.set("", forKey:"firstName")
         }
         
         if let lastName = UserDefaults.standard.object(forKey: "lastName"){
-            print("lastName already set!")
+            print(lastName)
         }
         else {
             UserDefaults.standard.set("", forKey:"lastName")
         }
         
         if let phoneNumber = UserDefaults.standard.object(forKey: "phoneNumber"){
-            print("phoneNumber already set!")
+            print(phoneNumber)
         }
         else {
             UserDefaults.standard.set("", forKey:"phoneNumber")
         }
         
         if let email = UserDefaults.standard.object(forKey: "email"){
-            print("email already set!")
+            print(email)
         }
         else {
             UserDefaults.standard.set("", forKey:"email")
         }
         
         if let street = UserDefaults.standard.object(forKey: "street"){
-            print("street already set!")
+            print(street)
         }
         else {
             UserDefaults.standard.set("", forKey:"street")
         }
         
         if let city = UserDefaults.standard.object(forKey: "city"){
-            print("city already set!")
+            print(city)
         }
         else {
             UserDefaults.standard.set("", forKey:"city")
         }
         
         if let provstate = UserDefaults.standard.object(forKey: "provstate"){
-            print("provstate already set!")
+            print(provstate)
         }
         else {
             UserDefaults.standard.set("", forKey:"provstate")
         }
         
         if let zip = UserDefaults.standard.object(forKey: "zip"){
-            print("zip already set!")
+            print(zip)
         }
         else {
             UserDefaults.standard.set("", forKey:"zip")
         }
         
         if let country = UserDefaults.standard.object(forKey: "country"){
-            print("country already set!")
+            print(country)
         }
         else {
             UserDefaults.standard.set("", forKey:"country")
