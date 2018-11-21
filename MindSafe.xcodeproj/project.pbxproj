@@ -45,6 +45,11 @@
 		E7B56A53219B6E0B00DD3CF8 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */; };
 		E7B56A55219B70E300DD3CF8 /* ProgressView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */; };
 		E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */; };
+		E7FD6E5E21A5DEE3007C1FA6 /* ActivitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */; };
+		E7FD6E6021A5E213007C1FA6 /* EpisodicActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7FD6E5F21A5E213007C1FA6 /* EpisodicActivity.storyboard */; };
+		E7FD6E6221A5E223007C1FA6 /* SemanticActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7FD6E6121A5E223007C1FA6 /* SemanticActivity.storyboard */; };
+		E7FD6E6421A5E2EF007C1FA6 /* EpisodicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD6E6321A5E2EF007C1FA6 /* EpisodicViewController.swift */; };
+		E7FD6E6621A5E305007C1FA6 /* SemanticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD6E6521A5E305007C1FA6 /* SemanticViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +113,11 @@
 		E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgressView.storyboard; sourceTree = "<group>"; };
 		E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemindersViewController.swift; path = ../RemindersViewController.swift; sourceTree = "<group>"; };
+		E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitesTableViewController.swift; sourceTree = "<group>"; };
+		E7FD6E5F21A5E213007C1FA6 /* EpisodicActivity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EpisodicActivity.storyboard; sourceTree = "<group>"; };
+		E7FD6E6121A5E223007C1FA6 /* SemanticActivity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SemanticActivity.storyboard; sourceTree = "<group>"; };
+		E7FD6E6321A5E2EF007C1FA6 /* EpisodicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodicViewController.swift; sourceTree = "<group>"; };
+		E7FD6E6521A5E305007C1FA6 /* SemanticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +217,12 @@
 				E7AA641021A12801003A4A8D /* ContactTableViewCell.swift */,
 				E759106521A2305D00EEC8E5 /* ProgressViewController.swift */,
 				E759106921A242F300EEC8E5 /* ProgressViewController2.swift */,
+				E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */,
+				E7FD6E6321A5E2EF007C1FA6 /* EpisodicViewController.swift */,
+				E7FD6E6521A5E305007C1FA6 /* SemanticViewController.swift */,
 				E76961A2218111F0005AC2EB /* Main.storyboard */,
+				E7FD6E6121A5E223007C1FA6 /* SemanticActivity.storyboard */,
+				E7FD6E5F21A5E213007C1FA6 /* EpisodicActivity.storyboard */,
 				E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */,
 				E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */,
 				E76961A8218111F0005AC2EB /* Assets.xcassets */,
@@ -361,6 +376,8 @@
 				E76961AC218111F0005AC2EB /* LaunchScreen.storyboard in Resources */,
 				E7B56A53219B6E0B00DD3CF8 /* Contacts.storyboard in Resources */,
 				E76961A9218111F0005AC2EB /* Assets.xcassets in Resources */,
+				E7FD6E6221A5E223007C1FA6 /* SemanticActivity.storyboard in Resources */,
+				E7FD6E6021A5E213007C1FA6 /* EpisodicActivity.storyboard in Resources */,
 				E76961A4218111F0005AC2EB /* Main.storyboard in Resources */,
 				E7B56A55219B70E300DD3CF8 /* ProgressView.storyboard in Resources */,
 				E759105E21A228DD00EEC8E5 /* GoogleService-Info.plist in Resources */,
@@ -545,6 +562,9 @@
 			files = (
 				E759106E21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */,
 				E759106621A2305D00EEC8E5 /* ProgressViewController.swift in Sources */,
+				E7FD6E6621A5E305007C1FA6 /* SemanticViewController.swift in Sources */,
+				E7FD6E6421A5E2EF007C1FA6 /* EpisodicViewController.swift in Sources */,
+				E7FD6E5E21A5DEE3007C1FA6 /* ActivitesTableViewController.swift in Sources */,
 				E759106A21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */,
 				E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */,
 				E724980721A0B16300196B00 /* ContactsViewController.swift in Sources */,
