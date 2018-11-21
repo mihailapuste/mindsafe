@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18660E5E21A5E7CF008DC773 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18660E5D21A5E7CF008DC773 /* testViewController.swift */; };
 		7F035F8807CDA2A9B3E992BC /* Pods_MindSafeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE317287FAC5C7E13F4E2A0 /* Pods_MindSafeUITests.framework */; };
 		AAE77571E571ECCB30B90DA8 /* Pods_MindSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44D13D649B027D024A4C117 /* Pods_MindSafe.framework */; };
 		B26AC3A68161877FA7571D51 /* Pods_MindSafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D71B4609F034386171ADC79 /* Pods_MindSafeTests.framework */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		0D71B4609F034386171ADC79 /* Pods_MindSafeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSafeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18660E5D21A5E7CF008DC773 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		1CE680534450D4B872353BEF /* Pods-MindSafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafeTests/Pods-MindSafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		252D0E88581E085333C0A590 /* Pods-MindSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafe/Pods-MindSafe.release.xcconfig"; sourceTree = "<group>"; };
 		5DE317287FAC5C7E13F4E2A0 /* Pods_MindSafeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSafeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +221,7 @@
 				E759106921A242F300EEC8E5 /* ProgressViewController2.swift */,
 				E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */,
 				E7FD6E6321A5E2EF007C1FA6 /* EpisodicViewController.swift */,
+				18660E5D21A5E7CF008DC773 /* testViewController.swift */,
 				E7FD6E6521A5E305007C1FA6 /* SemanticViewController.swift */,
 				E76961A2218111F0005AC2EB /* Main.storyboard */,
 				E7FD6E6121A5E223007C1FA6 /* SemanticActivity.storyboard */,
@@ -569,6 +572,7 @@
 				E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */,
 				E724980721A0B16300196B00 /* ContactsViewController.swift in Sources */,
 				E724980F21A0C82300196B00 /* NewContactTableViewController.swift in Sources */,
+				18660E5E21A5E7CF008DC773 /* testViewController.swift in Sources */,
 				E738D367219BE37C001DC316 /* TrackerViewController.swift in Sources */,
 				E7AA641121A12801003A4A8D /* ContactTableViewCell.swift in Sources */,
 				E7659CD5218FE57F004E2736 /* SettingsTableTableViewController.swift in Sources */,
