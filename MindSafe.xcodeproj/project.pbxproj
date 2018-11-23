@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18660E5E21A5E7CF008DC773 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18660E5D21A5E7CF008DC773 /* testViewController.swift */; };
 		7F035F8807CDA2A9B3E992BC /* Pods_MindSafeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE317287FAC5C7E13F4E2A0 /* Pods_MindSafeUITests.framework */; };
 		AAE77571E571ECCB30B90DA8 /* Pods_MindSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44D13D649B027D024A4C117 /* Pods_MindSafe.framework */; };
 		B26AC3A68161877FA7571D51 /* Pods_MindSafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D71B4609F034386171ADC79 /* Pods_MindSafeTests.framework */; };
@@ -72,7 +71,6 @@
 
 /* Begin PBXFileReference section */
 		0D71B4609F034386171ADC79 /* Pods_MindSafeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSafeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18660E5D21A5E7CF008DC773 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		1CE680534450D4B872353BEF /* Pods-MindSafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafeTests/Pods-MindSafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		252D0E88581E085333C0A590 /* Pods-MindSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafe/Pods-MindSafe.release.xcconfig"; sourceTree = "<group>"; };
 		5DE317287FAC5C7E13F4E2A0 /* Pods_MindSafeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSafeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +112,7 @@
 		E7AA641021A12801003A4A8D /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgressView.storyboard; sourceTree = "<group>"; };
-		E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemindersViewController.swift; path = ../RemindersViewController.swift; sourceTree = "<group>"; };
+		E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
 		E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitesTableViewController.swift; sourceTree = "<group>"; };
 		E7FD6E5F21A5E213007C1FA6 /* EpisodicActivity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EpisodicActivity.storyboard; sourceTree = "<group>"; };
 		E7FD6E6121A5E223007C1FA6 /* SemanticActivity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SemanticActivity.storyboard; sourceTree = "<group>"; };
@@ -204,32 +202,13 @@
 			isa = PBXGroup;
 			children = (
 				E769619E218111F0005AC2EB /* AppDelegate.swift */,
-				E7659CD6218FFCC0004E2736 /* HomeTableViewController.swift */,
-				E7659CD4218FE57F004E2736 /* SettingsTableTableViewController.swift */,
-				E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */,
-				E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */,
-				E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */,
-				E76C8BB5218CC6740019F60B /* ReminderTableViewCell.swift */,
-				E738D366219BE37C001DC316 /* TrackerViewController.swift */,
-				E738D368219CBE74001DC316 /* TrackerInfoViewController.swift */,
-				E738D36A219D0624001DC316 /* PanicViewController.swift */,
-				E724980621A0B16300196B00 /* ContactsViewController.swift */,
-				E724980E21A0C82300196B00 /* NewContactTableViewController.swift */,
-				E724981021A0EF1200196B00 /* ViewContactTableViewController.swift */,
-				E7AA641021A12801003A4A8D /* ContactTableViewCell.swift */,
-				E759106521A2305D00EEC8E5 /* ProgressViewController.swift */,
-				E759106921A242F300EEC8E5 /* ProgressViewController2.swift */,
-				E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */,
-				E7FD6E6321A5E2EF007C1FA6 /* EpisodicViewController.swift */,
-				18660E5D21A5E7CF008DC773 /* testViewController.swift */,
-				E7FD6E6521A5E305007C1FA6 /* SemanticViewController.swift */,
-				E76961A2218111F0005AC2EB /* Main.storyboard */,
-				E7FD6E6121A5E223007C1FA6 /* SemanticActivity.storyboard */,
-				E7FD6E5F21A5E213007C1FA6 /* EpisodicActivity.storyboard */,
-				E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */,
-				E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */,
+				E79ACAC621A8B32C005CD511 /* Home VCs */,
+				E79ACAC721A8B36A005CD511 /* Reminders VCs */,
+				E79ACACA21A8B3EA005CD511 /* Tracker VCs */,
+				E79ACACB21A8B3FE005CD511 /* Progress Viewer VCs */,
+				E79ACACC21A8B412005CD511 /* Activities VCs */,
+				E79ACACF21A8B4BB005CD511 /* Storyboards */,
 				E76961A8218111F0005AC2EB /* Assets.xcassets */,
-				E76961AA218111F0005AC2EB /* LaunchScreen.storyboard */,
 				E76961AD218111F0005AC2EB /* Info.plist */,
 				E76961A5218111F0005AC2EB /* MindSafe.xcdatamodeld */,
 				E759105D21A228DD00EEC8E5 /* GoogleService-Info.plist */,
@@ -253,6 +232,104 @@
 				E76961C3218111F1005AC2EB /* Info.plist */,
 			);
 			path = MindSafeUITests;
+			sourceTree = "<group>";
+		};
+		E79ACAC621A8B32C005CD511 /* Home VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E79ACAC821A8B3B5005CD511 /* Contacts VCs */,
+				E738D36A219D0624001DC316 /* PanicViewController.swift */,
+				E7659CD6218FFCC0004E2736 /* HomeTableViewController.swift */,
+				E79ACAC921A8B3D7005CD511 /* Settings VCs */,
+			);
+			path = "Home VCs";
+			sourceTree = "<group>";
+		};
+		E79ACAC721A8B36A005CD511 /* Reminders VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */,
+				E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */,
+				E76C8BB5218CC6740019F60B /* ReminderTableViewCell.swift */,
+			);
+			path = "Reminders VCs";
+			sourceTree = "<group>";
+		};
+		E79ACAC821A8B3B5005CD511 /* Contacts VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E724980621A0B16300196B00 /* ContactsViewController.swift */,
+				E724980E21A0C82300196B00 /* NewContactTableViewController.swift */,
+				E7AA641021A12801003A4A8D /* ContactTableViewCell.swift */,
+				E724981021A0EF1200196B00 /* ViewContactTableViewController.swift */,
+			);
+			path = "Contacts VCs";
+			sourceTree = "<group>";
+		};
+		E79ACAC921A8B3D7005CD511 /* Settings VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E7659CD4218FE57F004E2736 /* SettingsTableTableViewController.swift */,
+				E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */,
+			);
+			path = "Settings VCs";
+			sourceTree = "<group>";
+		};
+		E79ACACA21A8B3EA005CD511 /* Tracker VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E738D366219BE37C001DC316 /* TrackerViewController.swift */,
+				E738D368219CBE74001DC316 /* TrackerInfoViewController.swift */,
+			);
+			path = "Tracker VCs";
+			sourceTree = "<group>";
+		};
+		E79ACACB21A8B3FE005CD511 /* Progress Viewer VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E759106521A2305D00EEC8E5 /* ProgressViewController.swift */,
+				E759106921A242F300EEC8E5 /* ProgressViewController2.swift */,
+			);
+			path = "Progress Viewer VCs";
+			sourceTree = "<group>";
+		};
+		E79ACACC21A8B412005CD511 /* Activities VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */,
+				E79ACACE21A8B43D005CD511 /* Episodic Activity VCs */,
+				E79ACACD21A8B42C005CD511 /* Semantic Activity VCs */,
+			);
+			path = "Activities VCs";
+			sourceTree = "<group>";
+		};
+		E79ACACD21A8B42C005CD511 /* Semantic Activity VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E7FD6E6521A5E305007C1FA6 /* SemanticViewController.swift */,
+			);
+			path = "Semantic Activity VCs";
+			sourceTree = "<group>";
+		};
+		E79ACACE21A8B43D005CD511 /* Episodic Activity VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E7FD6E6321A5E2EF007C1FA6 /* EpisodicViewController.swift */,
+			);
+			path = "Episodic Activity VCs";
+			sourceTree = "<group>";
+		};
+		E79ACACF21A8B4BB005CD511 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E76961A2218111F0005AC2EB /* Main.storyboard */,
+				E7FD6E6121A5E223007C1FA6 /* SemanticActivity.storyboard */,
+				E7FD6E5F21A5E213007C1FA6 /* EpisodicActivity.storyboard */,
+				E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */,
+				E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */,
+				E76961AA218111F0005AC2EB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,7 +649,6 @@
 				E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */,
 				E724980721A0B16300196B00 /* ContactsViewController.swift in Sources */,
 				E724980F21A0C82300196B00 /* NewContactTableViewController.swift in Sources */,
-				18660E5E21A5E7CF008DC773 /* testViewController.swift in Sources */,
 				E738D367219BE37C001DC316 /* TrackerViewController.swift in Sources */,
 				E7AA641121A12801003A4A8D /* ContactTableViewCell.swift in Sources */,
 				E7659CD5218FE57F004E2736 /* SettingsTableTableViewController.swift in Sources */,

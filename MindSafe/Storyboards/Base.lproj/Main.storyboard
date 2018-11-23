@@ -409,7 +409,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-KZ-UT4">
-                                <rect key="frame" x="0.0" y="371" width="375" height="37"/>
+                                <rect key="frame" x="0.0" y="353" width="375" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.037278364867263866" blue="0.72840656725888331" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -421,22 +421,8 @@
                                     <action selector="goHomeButton:" destination="HNJ-Jg-Nra" eventType="touchUpInside" id="ccS-sH-Xw2"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xM3-0h-d2w">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Panic mode " id="CjT-Wi-ZA7">
-                                        <barButtonItem key="leftBarButtonItem" title="Exit" id="OMT-35-HxH">
-                                            <color key="tintColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <action selector="dismissButton:" destination="HNJ-Jg-Nra" id="wAd-IH-6p5"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGj-GH-Erb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="46"/>
+                                <rect key="frame" x="0.0" y="68" width="375" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.13025489244611466" blue="0.0" alpha="0.85442529965753422" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -459,37 +445,72 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr4-Iz-fQg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr4-Iz-fQg">
                                                     <rect key="frame" x="15" y="0.0" width="245" height="45"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="245" id="Nfo-IX-2C3"/>
+                                                        <constraint firstAttribute="height" constant="45" id="Tp2-rE-Lfo"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgU-Gx-BOR">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgU-Gx-BOR">
                                                     <rect key="frame" x="15" y="30" width="245" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="oiO-Rt-Kf2"/>
+                                                        <constraint firstAttribute="width" constant="245" id="ti5-9r-d4x"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0D-iP-T3u">
-                                                    <rect key="frame" x="323" y="19" width="37" height="37"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="icons8-phone-filled-50"/>
-                                                    <connections>
-                                                        <action selector="callAction:" destination="s84-qz-DCl" eventType="touchUpInside" id="VeH-Di-uh9"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scp-ey-eBo">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scp-ey-eBo">
                                                     <rect key="frame" x="269" y="20" width="37" height="37"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="37" id="DAq-G2-RMl"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="GoL-Ze-wGW"/>
+                                                        <constraint firstAttribute="width" secondItem="Scp-ey-eBo" secondAttribute="height" multiplier="1:1" id="KbP-Tj-swx"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="37" id="dQ6-MT-70l"/>
+                                                        <constraint firstAttribute="height" constant="37" id="hqZ-Ta-d3n"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="nFf-ad-xrH"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="37" id="nvr-YC-FEZ"/>
+                                                    </constraints>
                                                     <state key="normal" image="icons8-speech-bubble-filled-50"/>
                                                     <connections>
                                                         <action selector="messageAction:" destination="s84-qz-DCl" eventType="touchUpInside" id="bbz-gy-UwN"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0D-iP-T3u">
+                                                    <rect key="frame" x="323" y="19" width="37" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="FoZ-1Y-oht"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="I6u-kf-Mew"/>
+                                                        <constraint firstAttribute="width" secondItem="r0D-iP-T3u" secondAttribute="height" multiplier="1:1" id="Rdb-7K-Zyv"/>
+                                                        <constraint firstAttribute="width" constant="37" id="huQ-IP-HKf"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="n2s-FZ-vvE"/>
+                                                    </constraints>
+                                                    <state key="normal" image="icons8-phone-filled-50"/>
+                                                    <connections>
+                                                        <action selector="callAction:" destination="s84-qz-DCl" eventType="touchUpInside" id="VeH-Di-uh9"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="r0D-iP-T3u" firstAttribute="top" secondItem="6IF-bo-tjb" secondAttribute="topMargin" constant="8" id="0AJ-GQ-mpA"/>
+                                                <constraint firstAttribute="bottom" secondItem="OgU-Gx-BOR" secondAttribute="bottom" constant="2.5" id="5gt-OY-Kj6"/>
+                                                <constraint firstItem="Xr4-Iz-fQg" firstAttribute="top" secondItem="6IF-bo-tjb" secondAttribute="top" id="5n2-xe-MAP"/>
+                                                <constraint firstItem="Xr4-Iz-fQg" firstAttribute="leading" secondItem="6IF-bo-tjb" secondAttribute="leading" constant="15" id="5oi-QE-tcZ"/>
+                                                <constraint firstItem="Scp-ey-eBo" firstAttribute="top" secondItem="6IF-bo-tjb" secondAttribute="topMargin" constant="9" id="7CU-yf-S2q"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Scp-ey-eBo" secondAttribute="bottom" constant="8" id="8aA-pq-yxA"/>
+                                                <constraint firstItem="OgU-Gx-BOR" firstAttribute="leading" secondItem="6IF-bo-tjb" secondAttribute="leading" constant="15" id="LEF-Sa-cGt"/>
+                                                <constraint firstItem="r0D-iP-T3u" firstAttribute="trailing" secondItem="6IF-bo-tjb" secondAttribute="trailingMargin" id="PKn-be-NoT"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xr4-Iz-fQg" secondAttribute="bottom" constant="30.5" id="U93-58-kz1"/>
+                                                <constraint firstItem="r0D-iP-T3u" firstAttribute="leading" secondItem="Scp-ey-eBo" secondAttribute="trailing" constant="17" id="W1R-x0-26h"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="r0D-iP-T3u" secondAttribute="bottom" constant="9" id="Xaw-cR-2Ei"/>
+                                                <constraint firstItem="OgU-Gx-BOR" firstAttribute="top" secondItem="6IF-bo-tjb" secondAttribute="top" constant="30" id="kOH-6a-BxH"/>
+                                                <constraint firstItem="Scp-ey-eBo" firstAttribute="leading" secondItem="Xr4-Iz-fQg" secondAttribute="trailing" constant="9" id="ms8-we-NWT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="Xr4-Iz-fQg" id="883-AB-8uE"/>
@@ -502,6 +523,20 @@
                                     <outlet property="delegate" destination="HNJ-Jg-Nra" id="mh5-tp-6L1"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xM3-0h-d2w">
+                                <rect key="frame" x="0.0" y="24" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Panic mode " id="CjT-Wi-ZA7">
+                                        <barButtonItem key="leftBarButtonItem" title="Exit" id="OMT-35-HxH">
+                                            <color key="tintColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="dismissButton:" destination="HNJ-Jg-Nra" id="wAd-IH-6p5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
