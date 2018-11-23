@@ -9,7 +9,7 @@
 // - Created custom cells that interact with the reminderstable
 // - Created enabling and disabling support for reminders using the UISwitch
 // Team MindSafe
-
+//
 import UIKit
 import CoreData
 import UserNotifications
