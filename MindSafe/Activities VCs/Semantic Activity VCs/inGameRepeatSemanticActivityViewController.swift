@@ -11,9 +11,12 @@ import Speech
 
 class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet weak var microphoneButton: UIButton!
+    @IBOutlet weak var answerInput: UITextField!
     
     @IBOutlet weak var textView: UILabel!
     var wordsUsedList: [String]!
+    var answerList: [String] = []
+    var numberOfAnswers: Int = 0
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
@@ -21,37 +24,60 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        microphoneButton.isEnabled = false  //2
-        
-        speechRecognizer!.delegate = self  //3
-        
+        numberOfAnswers = self.wordsUsedList.count
+        print(numberOfAnswers)
+        microphoneButton.isEnabled = false
+        speechRecognizer!.delegate = self
         SFSpeechRecognizer.requestAuthorization { (authStatus) in  //4
-            
             var isButtonEnabled = false
-            
             switch authStatus {  //5
-            case .authorized:
-                isButtonEnabled = true
-                
-            case .denied:
-                isButtonEnabled = false
-                print("User denied access to speech recognition")
-                
-            case .restricted:
-                isButtonEnabled = false
-                print("Speech recognition restricted on this device")
-                
-            case .notDetermined:
-                isButtonEnabled = false
-                print("Speech recognition not yet authorized")
+                case .authorized:
+                    isButtonEnabled = true
+                case .denied:
+                    isButtonEnabled = false
+                    print("User denied access to speech recognition")
+                case .restricted:
+                    isButtonEnabled = false
+                    print("Speech recognition restricted on this device")
+                case .notDetermined:
+                    isButtonEnabled = false
+                    print("Speech recognition not yet authorized")
             }
-            
             OperationQueue.main.addOperation() {
                 self.microphoneButton.isEnabled = isButtonEnabled
             }
         }
     }
+    
+    // print(Set(self.wordsUsedList).intersection(self.answerList))
+    // print(Set(self.wordsUsedList).symmetricDifference(self.answerList))
+    @IBAction func submitAnswer(_ sender: Any) {
+        if self.answerInput.text != nil || self.answerInput.text != "" {
+            self.answerList.append(self.answerInput.text!)
+            self.answerInput.text = ""
+            if self.answerList.count == numberOfAnswers {
+                activityOver()
+            }
+        }
+    }
+    
+    func activityOver() {
+        let set1:Set<String> = Set(self.wordsUsedList)
+        let set2:Set<String> = Set(self.answerList)
+//        let answerArrayDifference =
+            print(set1.symmetricDifference(set2))
+        var finalScore = 0;
+        for (i, element_i) in self.wordsUsedList.enumerated() {
+            for (j, element_j) in self.answerList.enumerated() {
+                if element_i.lowercased() == element_j.lowercased() {
+                    finalScore = finalScore + 1
+                }
+            }
+        }
+        print("Final score is \(finalScore)/\(self.numberOfAnswers)")
+        self.textView.text = "Final score is \(finalScore)/\(self.numberOfAnswers)"
+    }
+    
     
     @IBAction func microphoneTapped(_ sender: Any) {
         if audioEngine.isRunning {
@@ -64,7 +90,6 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
             microphoneButton.setTitle("Stop Recording", for: .normal)
         }
     }
-    
     
     func startRecording() {
         
@@ -99,8 +124,9 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
             var isFinal = false
             
             if result != nil {
-                
-                self.textView.text = result?.bestTranscription.formattedString
+                let speech2TextResult = result?.bestTranscription.formattedString
+                self.textView.text = speech2TextResult
+                self.answerInput.text = speech2TextResult
                 isFinal = (result?.isFinal)!
             }
             
@@ -139,14 +165,5 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
             microphoneButton.isEnabled = false
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

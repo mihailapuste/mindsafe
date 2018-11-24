@@ -29,7 +29,7 @@ class InGameSemanticViewController: UIViewController {
     
     // Refreshes label content & uses text to speech
     @objc func refreshKeyWordData(){
-        if(index <= 1){
+        if(index <= 9){
             let keyword = randomizedList[index]
             let utterance = AVSpeechUtterance(string: keyword)
             let synth = AVSpeechSynthesizer()
