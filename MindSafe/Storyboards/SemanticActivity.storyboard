@@ -211,20 +211,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hA5-E7-csX">
-                                <rect key="frame" x="166" y="169" width="42" height="21"/>
+                                <rect key="frame" x="40" y="169" width="322" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFD-r0-1f2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Sematic Activity" id="Ynq-4I-8Sw">
+                                        <barButtonItem key="leftBarButtonItem" title="Quit" id="XL7-Ma-Nqq"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="LT8-bt-c8G"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7B-Ba-ZRn">
+                                <rect key="frame" x="109" y="318" width="157" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start recording"/>
+                                <connections>
+                                    <action selector="microphoneTapped:" destination="BNu-yj-MIZ" eventType="touchUpInside" id="okc-Jx-gH6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Dwc-IZ-QZc"/>
                     </view>
+                    <connections>
+                        <outlet property="microphoneButton" destination="g7B-Ba-ZRn" id="Tvd-UO-TMf"/>
+                        <outlet property="textView" destination="hA5-E7-csX" id="H5h-IX-ND6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ad-EW-PHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="159"/>
+            <point key="canvasLocation" x="1912.8" y="158.77061469265368"/>
         </scene>
     </scenes>
     <resources>
