@@ -9,14 +9,26 @@
 import UIKit
 import Speech
 
-class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechRecognizerDelegate {
+struct Answer {
+    var value: String = ""
+    var isValid: Bool = false
+}
+
+class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechRecognizerDelegate, UITableViewDataSource, UITableViewDelegate{
+    
+    // vc outlets
     @IBOutlet weak var microphoneButton: UIButton!
     @IBOutlet weak var answerInput: UITextField!
-    
     @IBOutlet weak var textView: UILabel!
+    @IBOutlet weak var answerTable: UITableView!
+    @IBOutlet weak var answersInputtedOutlet: UILabel!
+    
+    // var in charge of answers
     var wordsUsedList: [String]!
-    var answerList: [String] = []
+    var answerList: [Answer] = []
     var numberOfAnswers: Int = 0
+    
+    // speech vars
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
@@ -25,6 +37,7 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     override func viewDidLoad() {
         super.viewDidLoad()
         numberOfAnswers = self.wordsUsedList.count
+        self.answersInputtedOutlet.text = "0/\(numberOfAnswers) answers"
         print(numberOfAnswers)
         microphoneButton.isEnabled = false
         speechRecognizer!.delegate = self
@@ -49,36 +62,55 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
         }
     }
     
-    // print(Set(self.wordsUsedList).intersection(self.answerList))
-    // print(Set(self.wordsUsedList).symmetricDifference(self.answerList))
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return self.answerList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for : indexPath)
+        
+        cell.textLabel?.text = self.answerList[indexPath.row].value
+        if self.answerList[indexPath.row].isValid == true {
+             cell.textLabel?.textColor = UIColor(red: 0/255, green: 170/255, blue: 28/255, alpha: 1.0)
+        }else{
+            cell.textLabel?.textColor = .red
+        }
+       
+        return cell
+    }
+    
+    // action sending answer to answer array
     @IBAction func submitAnswer(_ sender: Any) {
-        if self.answerInput.text != nil || self.answerInput.text != "" {
-            self.answerList.append(self.answerInput.text!)
+        if self.answerInput.text != "" {
+            let item = self.answerInput.text!
+            var answer = Answer(value: item, isValid: false)
+            
+            if let index = wordsUsedList.index(of: item) {
+                wordsUsedList.remove(at: index)
+                answer.isValid = true
+            }
+            
+            self.answerList.append(answer)
+            answerTable.reloadData()
+            self.answersInputtedOutlet.text = "\(self.answerList.count)/\(numberOfAnswers) answers"
             self.answerInput.text = ""
+            
             if self.answerList.count == numberOfAnswers {
                 activityOver()
             }
         }
     }
     
+    
+    
+    // function terminting game and calculating final score
     func activityOver() {
-        let set1:Set<String> = Set(self.wordsUsedList)
-        let set2:Set<String> = Set(self.answerList)
-//        let answerArrayDifference =
-            print(set1.symmetricDifference(set2))
-        var finalScore = 0;
-        for (i, element_i) in self.wordsUsedList.enumerated() {
-            for (j, element_j) in self.answerList.enumerated() {
-                if element_i.lowercased() == element_j.lowercased() {
-                    finalScore = finalScore + 1
-                }
-            }
-        }
+        let finalScore = self.numberOfAnswers-wordsUsedList.count
         print("Final score is \(finalScore)/\(self.numberOfAnswers)")
         self.textView.text = "Final score is \(finalScore)/\(self.numberOfAnswers)"
     }
     
-    
+    // action controlling the microphone recording button
     @IBAction func microphoneTapped(_ sender: Any) {
         if audioEngine.isRunning {
             audioEngine.stop()
@@ -91,6 +123,7 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
         }
     }
     
+    // takes recorded speech and converts to text
     func startRecording() {
         
         if recognitionTask != nil {
