@@ -10,6 +10,21 @@ import UIKit
 
 class SemanticViewController: UIViewController {
 
+    @IBAction func dismissAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func startActivity(_ sender: Any) {
+       performSegue(withIdentifier: "semanticActivity", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
