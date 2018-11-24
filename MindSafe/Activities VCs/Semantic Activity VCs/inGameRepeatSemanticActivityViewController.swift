@@ -1,32 +1,23 @@
 //
-//  SemanticViewController.swift
+//  inGameRepeatSemanticActivityViewController.swift
 //  MindSafe
 //
-//  Created by Mihai Lapuste on 2018-11-21.
+//  Created by Mihai Lapuste on 2018-11-23.
 //  Copyright © 2018 Mihai Lapuste. All rights reserved.
 //
 
 import UIKit
 
-class SemanticViewController: UIViewController {
-
-    @IBAction func dismissAction(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+class inGameRepeatSemanticActivityViewController: UIViewController {
     
-    
-    @IBAction func startActivity(_ sender: Any) {
-       performSegue(withIdentifier: "semanticActivity", sender: self)
-    }
-    
+    var wordsUsedList: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(wordsUsedList)
         // Do any additional setup after loading the view.
     }
     
-
     /*
     // MARK: - Navigation
 

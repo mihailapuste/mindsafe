@@ -9,14 +9,18 @@
 import UIKit
 import AVFoundation
 
+
+
 class InGameSemanticViewController: UIViewController {
 
     var wordList: [String] = ["Apple", "Motorcycle", "Building", "Toothbrush", "Mirror", "Snow", "Candle", "Rug", "Wax", "Keyboard", "Dog", "Captain", "Computer", "Tile", "Bedroom"]
-    var activityList: [String] = []
+    var randomizedList: [String] = []
+    var wordsUsedList: [String] = []
     weak var timer: Timer?
     var index: Int = 0;
     @IBOutlet weak var pausedPage: UIView!
     
+    @IBOutlet weak var pausePlayButton: UIBarButtonItem!
     @IBOutlet weak var activityKeyWord: UILabel!
     
     func timeRefresh(){
@@ -25,39 +29,55 @@ class InGameSemanticViewController: UIViewController {
     
     // Refreshes label content & uses text to speech
     @objc func refreshKeyWordData(){
-        if(index <= 10){
-            let keyword = activityList[index]
+        if(index <= 1){
+            let keyword = randomizedList[index]
             let utterance = AVSpeechUtterance(string: keyword)
             let synth = AVSpeechSynthesizer()
-        
+           
             activityKeyWord.text = keyword
             utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
             synth.speak(utterance)
-
+            
+            wordsUsedList.append(keyword)
             index = index + 1;
         }else{
-            dismiss(animated: true, completion: nil)
+            timer?.invalidate()
+            performSegue(withIdentifier: "RepeatActivity", sender: self)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? inGameRepeatSemanticActivityViewController{
+            print(wordsUsedList)
+            vc.wordsUsedList = wordsUsedList
+        }
+    }
+
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        index = 0;
+        wordsUsedList.removeAll() // clear in case of restarded game
+        activityKeyWord.text = "Semantic Activity"
         self.pausedPage.isHidden = true;
-        activityList = wordList.shuffled()
-        print(activityList)
+        randomizedList = wordList.shuffled()
         timeRefresh()
-        
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func restartActivity(_ sender: Any) {
+        viewDidLoad()
+    }
+    
     @IBAction func pauseActivity(_ sender: Any) {
         timer?.invalidate()
         self.pausedPage.isHidden = false;
     }
     
     @IBAction func quitActivity(_ sender: Any) {
+        timer?.invalidate()
         dismiss(animated: true, completion: nil)
     }
     /*
