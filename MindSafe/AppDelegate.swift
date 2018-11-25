@@ -21,35 +21,104 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
             FirebaseApp.configure()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
             // track notification status in reference to user
         })
         
-        // Default settings
-        
+        // Default settings upon app opening
         if let sundowning = UserDefaults.standard.object(forKey: "sundowning"){
-            print("Sundowning already set!")
+            print(sundowning)
         }
         else {
             UserDefaults.standard.set(true, forKey:"sundowning")
         }
         
         if let safezone = UserDefaults.standard.object(forKey: "safeZoneNotifications"){
-            print("Safe Zone already set!")
+            print(safezone)
         }
         else {
               UserDefaults.standard.set(true, forKey:"safeZoneNotifications")
         }
         
         if let safeZoneRadius = UserDefaults.standard.object(forKey: "safeZoneRadius"){
-            print("Safe Zone radius already set!")
+            print(safeZoneRadius)
         }
         else {
             UserDefaults.standard.set(300, forKey:"safeZoneRadius")
         }
         
+        if let emergencyMessage = UserDefaults.standard.object(forKey: "emergencyMessage"){
+            print(emergencyMessage)
+        }
+        else {
+            UserDefaults.standard.set("Help! It's an emergency!", forKey:"emergencyMessage")
+        }
+        
+        if let firstName = UserDefaults.standard.object(forKey: "firstName"){
+            print(firstName)
+        }
+        else {
+            UserDefaults.standard.set("", forKey:"firstName")
+        }
+        
+        if let lastName = UserDefaults.standard.object(forKey: "lastName"){
+            print(lastName)
+        }
+        else {
+            UserDefaults.standard.set("", forKey:"lastName")
+        }
+        
+        if let phoneNumber = UserDefaults.standard.object(forKey: "phoneNumber"){
+            print(phoneNumber)
+        }
+        else {
+            UserDefaults.standard.set("", forKey:"phoneNumber")
+        }
+        
+        if let email = UserDefaults.standard.object(forKey: "email"){
+            print(email)
+        }
+        else {
+            UserDefaults.standard.set("", forKey:"email")
+        }
+        
+        if let street = UserDefaults.standard.object(forKey: "street"){
+            print(street)
+        }
+        else {
+            UserDefaults.standard.set("", forKey:"street")
+        }
+        
+        if let city = UserDefaults.standard.object(forKey: "city"){
+            print(city)
+        }
+        else {
+            UserDefaults.standard.set("", forKey:"city")
+        }
+        
+        if let provstate = UserDefaults.standard.object(forKey: "provstate"){
+            print(provstate)
+        }
+        else {
+            UserDefaults.standard.set("", forKey:"provstate")
+        }
+        
+        if let zip = UserDefaults.standard.object(forKey: "zip"){
+            print(zip)
+        }
+        else {
+            UserDefaults.standard.set("", forKey:"zip")
+        }
+        
+        if let country = UserDefaults.standard.object(forKey: "country"){
+            print(country)
+        }
+        else {
+            UserDefaults.standard.set("", forKey:"country")
+        }
+        
+
         // Override point for customization after application launch.
         return true
     }
@@ -73,6 +142,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("refreshing reminders");
                 let ViewController = RemindersViewController()
                 ViewController.sundowningReminders()
+                
+                
             }
         }
         if UserDefaults.standard.object(forKey: "sundowningTime") == nil {
