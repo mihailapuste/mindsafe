@@ -15,11 +15,15 @@ import FirebaseDatabase
 class ProgressViewController:
 
 UIViewController, UITextFieldDelegate {
+
     
     var ref: DatabaseReference!
-    var ref2: DatabaseReference!
     var handler:DatabaseHandle!
-    var handler2:DatabaseHandle!
+    //Initialized empty arrays for chart axis
+    var months:[String] = []
+    var epScore:[Double] = []
+    var semScore:[Double] = []
+    
     
     @IBAction func dismissButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -27,8 +31,7 @@ UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var LineChartView: LineChartView!
     
-  
-    
+
     @IBOutlet weak var myTextField1: UITextField!
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -46,23 +49,14 @@ UIViewController, UITextFieldDelegate {
         //When textfield is entered with a number
         if myTextField1.text != ""
         {
-            ref?.child("Date1").childByAutoId().setValue(result)
-            
+            ref?.child("Date1V5").childByAutoId().setValue(result)
             //months.append(result)
-            ref?.child("epScore").childByAutoId().setValue(myTextField1.text)
-            
+            ref?.child("epScoreV5").childByAutoId().setValue(myTextField1.text)
             var myDouble = Double(myTextField1.text!)
-            
             epScore.append(myDouble!)
-            
             myDouble = myDouble!+5.0
-            
-            ref?.child("semScore").childByAutoId().setValue(String(myDouble!))
-            
-            //semScore.append(myDouble!)
-            
+            ref?.child("semScoreV5").childByAutoId().setValue(String(myDouble!))
             myTextField1.text = ""
-            
             
         }
     }
@@ -82,10 +76,7 @@ UIViewController, UITextFieldDelegate {
     
   
     
-    //Initialized empty arrays for chart axis
-    var months:[String] = []
-    var epScore:[Double] = []
-    var semScore:[Double] = []
+    
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
@@ -95,7 +86,7 @@ UIViewController, UITextFieldDelegate {
         ref=Database.database().reference()
         
         //Pushback values from database when event occurs
-        ref.child("Date1").observeSingleEvent(of: .value, with: { snapshot in
+        ref.child("Date1V5").observeSingleEvent(of: .value, with: { snapshot in
             print(snapshot.childrenCount) // I got the expected number of items
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? DataSnapshot {
@@ -105,7 +96,7 @@ UIViewController, UITextFieldDelegate {
         })
         
         //Pushback values from database when event occurs
-        ref.child("epScore").observeSingleEvent(of: .value, with: { snapshot in
+        ref.child("epScoreV5").observeSingleEvent(of: .value, with: { snapshot in
             print(snapshot.childrenCount) // I got the expected number of items
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? DataSnapshot {
@@ -116,7 +107,7 @@ UIViewController, UITextFieldDelegate {
         
        
         //Pushback values from database when event occurs
-        ref.child("semScore").observeSingleEvent(of: .value, with: { snapshot in
+        ref.child("semScoreV5").observeSingleEvent(of: .value, with: { snapshot in
             print(snapshot.childrenCount) // I got the expected number of items
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? DataSnapshot {
@@ -124,6 +115,7 @@ UIViewController, UITextFieldDelegate {
                 self.semScore.append(Double(rest.value as! String)!)
             }
         })
+        
         
     }
    
@@ -133,8 +125,9 @@ UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.myTextField1.delegate = self
-        setDatabase()
         
+        
+        self.setDatabase()
         
         
         
@@ -149,59 +142,61 @@ UIViewController, UITextFieldDelegate {
          })
          */
         
-        
-        LineChartView.delegate = self as? ChartViewDelegate
-        LineChartView.noDataText = "Waiting for Data."
-        LineChartView.chartDescription?.text = ""
+       
+        self.LineChartView.delegate = self as? ChartViewDelegate
+        self.LineChartView.noDataText = "Waiting for Data."
+        self.LineChartView.chartDescription?.text = ""
         
         //Delay to wait for database to finish appending arrays
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
             
-            //legend design
-            let legend = self.LineChartView.legend
-            legend.enabled = true
-            legend.yOffset = 8.0;
-            legend.xOffset = 15.0;
-            legend.yEntrySpace = 0.0;
-            legend.horizontalAlignment = .right
-            legend.verticalAlignment = .top
-            legend.orientation = .vertical
-            legend.drawInside = true
-            
-            
-            //X-axis design
-            let xaxis = self.LineChartView.xAxis
-            xaxis.valueFormatter = self.axisFormatDelegate
-            //xaxis.drawGridLinesEnabled = true
-            xaxis.labelPosition = .bottom
-            xaxis.centerAxisLabelsEnabled = false
-            xaxis.valueFormatter = IndexAxisValueFormatter(values:self.months)
-            xaxis.granularity = 1
-            xaxis.labelRotationAngle=CGFloat(-80.0)
-            
-            let leftAxisFormatter = NumberFormatter()
-            leftAxisFormatter.maximumFractionDigits = 1
-            
-            //Y-axis design
-            let yaxis = self.LineChartView.leftAxis
-            yaxis.spaceTop = 0.30
-            yaxis.axisMinimum = 0
-            yaxis.axisMaximum = 100
-            yaxis.drawGridLinesEnabled = false
-            
-            self.LineChartView.rightAxis.enabled = true
-            let yaxisRight = self.LineChartView.rightAxis
-            yaxisRight.spaceTop = 0.30
-            yaxisRight.axisMinimum = 0
-            yaxisRight.axisMaximum = 100
-            
-            
-            self.setChart()
+        
+        self.setDesign()
+        self.setChart()
         }
-        //setChart()
+        
+    }
+    
+    
+    func setDesign(){
+        //legend design
+        let legend = self.LineChartView.legend
+        legend.enabled = true
+        legend.yOffset = 8.0;
+        legend.xOffset = 15.0;
+        legend.yEntrySpace = 0.0;
+        legend.horizontalAlignment = .right
+        legend.verticalAlignment = .top
+        legend.orientation = .vertical
+        legend.drawInside = true
         
         
+        //X-axis design
+        let xaxis = self.LineChartView.xAxis
+        xaxis.valueFormatter = self.axisFormatDelegate
+        //xaxis.drawGridLinesEnabled = true
+        xaxis.labelPosition = .bottom
+        xaxis.centerAxisLabelsEnabled = false
+        xaxis.valueFormatter = IndexAxisValueFormatter(values:self.months)
+        xaxis.granularity = 1
+        xaxis.labelRotationAngle=CGFloat(-80.0)
+        
+        let leftAxisFormatter = NumberFormatter()
+        leftAxisFormatter.maximumFractionDigits = 1
+        
+        //Y-axis design
+        let yaxis = self.LineChartView.leftAxis
+        yaxis.spaceTop = 0.30
+        yaxis.axisMinimum = 0
+        yaxis.axisMaximum = 100
+        yaxis.drawGridLinesEnabled = false
+        
+        self.LineChartView.rightAxis.enabled = true
+        let yaxisRight = self.LineChartView.rightAxis
+        yaxisRight.spaceTop = 0.30
+        yaxisRight.axisMinimum = 0
+        yaxisRight.axisMaximum = 100
         
     }
     
@@ -235,15 +230,16 @@ UIViewController, UITextFieldDelegate {
         //Alert chart, data has been changed
         LineChartView.notifyDataSetChanged()
         LineChartView.data = chartData
+        //Scrollable ChartView
+        LineChartView.setVisibleXRangeMaximum(4)
+        LineChartView.moveViewToX(Double(months.count - 5))
+        
         
         //background color
         LineChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
         
         //chart animation
         LineChartView.animate(xAxisDuration: CATransaction.animationDuration(), yAxisDuration:CATransaction.animationDuration(), easingOption: .linear)
-        
-        
-        
         
     }
     

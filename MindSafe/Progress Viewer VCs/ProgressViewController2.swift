@@ -56,10 +56,10 @@ UIViewController, UITextFieldDelegate {
 //        When textfield is entered with a number
         if myTextField2.text != ""
         {
-            ref?.child("remDates").childByAutoId().setValue(result)
+            ref?.child("remDatesV5").childByAutoId().setValue(result)
 
             //months.append(result)
-            ref?.child("missRem").childByAutoId().setValue(myTextField2.text)
+            ref?.child("missRemV5").childByAutoId().setValue(myTextField2.text)
 
             //semScore.append(myDouble!)
 
@@ -89,7 +89,7 @@ UIViewController, UITextFieldDelegate {
         ref=Database.database().reference()
         
         //Pushback values from database when event occurs
-        ref.child("remDates").observeSingleEvent(of: .value, with: { snapshot in
+        ref.child("remDatesV5").observeSingleEvent(of: .value, with: { snapshot in
             print(snapshot.childrenCount) // I got the expected number of items
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? DataSnapshot {
@@ -99,7 +99,7 @@ UIViewController, UITextFieldDelegate {
         })
         
         //Pushback values from database when event occurs
-        ref.child("missRem").observeSingleEvent(of: .value, with: { snapshot in
+        ref.child("missRemV5").observeSingleEvent(of: .value, with: { snapshot in
             print(snapshot.childrenCount) // I got the expected number of items
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? DataSnapshot {
@@ -202,6 +202,9 @@ UIViewController, UITextFieldDelegate {
         //Alert chart, data has been changed
         LineChartView.notifyDataSetChanged()
         LineChartView.data = chartData
+        //Scrollable Chart View
+        LineChartView.setVisibleXRangeMaximum(4)
+        LineChartView.moveViewToX(Double(months.count - 5))
         
         //background color
         LineChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
