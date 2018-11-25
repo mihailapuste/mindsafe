@@ -23,7 +23,9 @@ UIViewController, UITextFieldDelegate {
     var months:[String] = []
     var epScore:[Double] = []
     var semScore:[Double] = []
-    
+    var taskA = false
+    var taskB = false
+    var taskC = false
     
     @IBAction func dismissButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -63,11 +65,14 @@ UIViewController, UITextFieldDelegate {
     
     // action updating chart from firebase
     @IBAction func updateChart(_ sender: Any) {
-        self.viewDidLoad()
-        self.viewWillAppear(true)
+        self.taskA=false
+        self.taskB=false
+        self.taskC=false
         self.months.removeAll()
         self.epScore.removeAll()
         self.semScore.removeAll()
+        self.viewDidLoad()
+        self.viewWillAppear(true)
     }
     
     
@@ -83,6 +88,7 @@ UIViewController, UITextFieldDelegate {
     // setting database in viewcontroller
     func setDatabase(){
         //reference to database
+        //myGroup.enter()
         ref=Database.database().reference()
         
         //Pushback values from database when event occurs
@@ -91,8 +97,11 @@ UIViewController, UITextFieldDelegate {
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? DataSnapshot {
                 print(rest.value!)
+                self.months.append(rest.value as! String)
                 
-                self.months.append(rest.value as! String)            }
+            }
+            self.taskA = true
+            self.checkResult()
         })
         
         //Pushback values from database when event occurs
@@ -101,8 +110,11 @@ UIViewController, UITextFieldDelegate {
             let enumerator = snapshot.children
             while let rest = enumerator.nextObject() as? DataSnapshot {
                 print(rest.value!)
+                self.epScore.append(Double(rest.value as! String)!)
                 
-                self.epScore.append(Double(rest.value as! String)!)            }
+            }
+            self.taskB = true
+            self.checkResult()
         })
         
        
@@ -113,9 +125,12 @@ UIViewController, UITextFieldDelegate {
             while let rest = enumerator.nextObject() as? DataSnapshot {
                 print(rest.value!)
                 self.semScore.append(Double(rest.value as! String)!)
-            }
-        })
         
+            }
+            self.taskC = true
+            self.checkResult()
+        
+        })
         
     }
    
@@ -127,8 +142,9 @@ UIViewController, UITextFieldDelegate {
         self.myTextField1.delegate = self
         
         
-        self.setDatabase()
         
+        self.setDatabase()
+        //myGroup.leave()
         
         
         /* ref.child("Date1").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -149,12 +165,14 @@ UIViewController, UITextFieldDelegate {
         
         //Delay to wait for database to finish appending arrays
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+      
+        
+        //DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
             
         
-        self.setDesign()
-        self.setChart()
-        }
+        //self.setDesign()
+        //self.setChart()
+        //}
         
     }
     
@@ -240,6 +258,16 @@ UIViewController, UITextFieldDelegate {
         
         //chart animation
         LineChartView.animate(xAxisDuration: CATransaction.animationDuration(), yAxisDuration:CATransaction.animationDuration(), easingOption: .linear)
+        
+    }
+    
+    
+    func checkResult(){
+        if taskA && taskB && taskC {
+            setDesign()
+            setChart()
+            
+        }
         
     }
     

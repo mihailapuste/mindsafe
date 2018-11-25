@@ -27,6 +27,8 @@ UIViewController, UITextFieldDelegate {
     var handler:DatabaseHandle!
     var remDates:[String] = []
     var missRem:[Double] = []
+    var taskA = false
+    var taskB = false
     
 
     
@@ -57,12 +59,7 @@ UIViewController, UITextFieldDelegate {
         if myTextField2.text != ""
         {
             ref?.child("remDatesV5").childByAutoId().setValue(result)
-
-            //months.append(result)
             ref?.child("missRemV5").childByAutoId().setValue(myTextField2.text)
-
-            //semScore.append(myDouble!)
-
             myTextField2.text = ""
 
         }
@@ -71,11 +68,13 @@ UIViewController, UITextFieldDelegate {
     
     
     @IBAction func updateChart(_ sender: Any) {
-        
-        self.viewDidLoad()
-        self.viewWillAppear(true)
+        self.taskA = false
+        self.taskB = false
         self.remDates.removeAll()
         self.missRem.removeAll()
+        self.viewDidLoad()
+        self.viewWillAppear(true)
+        
     }
     
     
@@ -95,7 +94,11 @@ UIViewController, UITextFieldDelegate {
             while let rest = enumerator.nextObject() as? DataSnapshot {
                 print(rest.value!)
                 
-                self.remDates.append(rest.value as! String)            }
+                self.remDates.append(rest.value as! String)
+                
+            }
+            self.taskA = true
+            self.checkResult()
         })
         
         //Pushback values from database when event occurs
@@ -105,7 +108,11 @@ UIViewController, UITextFieldDelegate {
             while let rest = enumerator.nextObject() as? DataSnapshot {
                 print(rest.value!)
                 
-                self.missRem.append(Double(rest.value as! String)!)            }
+                self.missRem.append(Double(rest.value as! String)!)
+                
+            }
+            self.taskB = true
+            self.checkResult()
         }
         )
     }
@@ -127,54 +134,51 @@ UIViewController, UITextFieldDelegate {
 
 //        Delay to wait for database to finish appending arrays
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-
-            //legend design
-            let legend = self.LineChartView.legend
-            legend.enabled = true
-            legend.yOffset = 8.0;
-            legend.xOffset = 15.0;
-            legend.yEntrySpace = 0.0;
-            legend.horizontalAlignment = .right
-            legend.verticalAlignment = .top
-            legend.orientation = .vertical
-            legend.drawInside = true
-
-
-            //X-axis design
-            let xaxis = self.LineChartView.xAxis
-            xaxis.valueFormatter = self.axisFormatDelegate
-            //xaxis.drawGridLinesEnabled = true
-            xaxis.labelPosition = .bottom
-            xaxis.centerAxisLabelsEnabled = false
-            xaxis.valueFormatter = IndexAxisValueFormatter(values:self.remDates)
-            xaxis.granularity = 1
-            xaxis.labelRotationAngle=CGFloat(-80.0)
-
-            let leftAxisFormatter = NumberFormatter()
-            leftAxisFormatter.maximumFractionDigits = 0
-
-            //Y-axis design
-            let yaxis = self.LineChartView.leftAxis
-            yaxis.spaceTop = 0.30
-            yaxis.axisMinimum = 0
-            yaxis.axisMaximum = 100
-            yaxis.drawGridLinesEnabled = false
-
-            self.LineChartView.rightAxis.enabled = true
-            let yaxisRight = self.LineChartView.rightAxis
-            yaxisRight.spaceTop = 0.30
-            yaxisRight.axisMinimum = 0
-            yaxisRight.axisMaximum = 100
-
-
-            self.setChart()
-        }
-        //setChart()
         
-        
+    
+    
         
     }
+    
+    func setDesign()
+    {
+        //legend design
+        let legend = self.LineChartView.legend
+        legend.enabled = true
+        legend.yOffset = 8.0;
+        legend.xOffset = 15.0;
+        legend.yEntrySpace = 0.0;
+        legend.horizontalAlignment = .right
+        legend.verticalAlignment = .top
+        legend.orientation = .vertical
+        legend.drawInside = true
+        
+        
+        //X-axis design
+        let xaxis = self.LineChartView.xAxis
+        xaxis.valueFormatter = self.axisFormatDelegate
+        //xaxis.drawGridLinesEnabled = true
+        xaxis.labelPosition = .bottom
+        xaxis.centerAxisLabelsEnabled = false
+        xaxis.valueFormatter = IndexAxisValueFormatter(values:self.remDates)
+        xaxis.granularity = 1
+        xaxis.labelRotationAngle=CGFloat(-80.0)
+        
+        let leftAxisFormatter = NumberFormatter()
+        leftAxisFormatter.maximumFractionDigits = 0
+        
+        //Y-axis design
+        let yaxis = self.LineChartView.leftAxis
+        yaxis.spaceTop = 0.30
+        yaxis.axisMinimum = 0
+        yaxis.axisMaximum = 100
+        yaxis.drawGridLinesEnabled = false
+        
+        self.LineChartView.rightAxis.enabled = true
+        let yaxisRight = self.LineChartView.rightAxis
+        yaxisRight.spaceTop = 0.30
+        yaxisRight.axisMinimum = 0
+        yaxisRight.axisMaximum = 100    }
     
     //Setting up chart data insertion
     func setChart() {
@@ -204,7 +208,7 @@ UIViewController, UITextFieldDelegate {
         LineChartView.data = chartData
         //Scrollable Chart View
         LineChartView.setVisibleXRangeMaximum(4)
-        LineChartView.moveViewToX(Double(months.count - 5))
+        LineChartView.moveViewToX(Double(remDates.count - 5))
         
         //background color
         LineChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
@@ -216,4 +220,10 @@ UIViewController, UITextFieldDelegate {
         
     }
     
+    func checkResult(){
+        if taskA && taskB{
+            setDesign()
+            setChart()
+        }
+    }
 }
