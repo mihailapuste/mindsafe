@@ -10,6 +10,8 @@
 		7F035F8807CDA2A9B3E992BC /* Pods_MindSafeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE317287FAC5C7E13F4E2A0 /* Pods_MindSafeUITests.framework */; };
 		AAE77571E571ECCB30B90DA8 /* Pods_MindSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44D13D649B027D024A4C117 /* Pods_MindSafe.framework */; };
 		B26AC3A68161877FA7571D51 /* Pods_MindSafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D71B4609F034386171ADC79 /* Pods_MindSafeTests.framework */; };
+		C449C04921ABA4120003E815 /* SemanticProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449C04821ABA4120003E815 /* SemanticProgress.swift */; };
+		C449C04B21ABB7D40003E815 /* EpChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449C04A21ABB7D40003E815 /* EpChartData.swift */; };
 		E71E09F721852DA7001A30EC /* NewReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */; };
 		E724980721A0B16300196B00 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724980621A0B16300196B00 /* ContactsViewController.swift */; };
 		E724980F21A0C82300196B00 /* NewContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724980E21A0C82300196B00 /* NewContactTableViewController.swift */; };
@@ -21,12 +23,12 @@
 		E759105E21A228DD00EEC8E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E759105D21A228DD00EEC8E5 /* GoogleService-Info.plist */; };
 		E759105F21A228DD00EEC8E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E759105D21A228DD00EEC8E5 /* GoogleService-Info.plist */; };
 		E759106021A228DD00EEC8E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E759105D21A228DD00EEC8E5 /* GoogleService-Info.plist */; };
-		E759106621A2305D00EEC8E5 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106521A2305D00EEC8E5 /* ProgressViewController.swift */; };
-		E759106721A2305D00EEC8E5 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106521A2305D00EEC8E5 /* ProgressViewController.swift */; };
-		E759106821A2305D00EEC8E5 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106521A2305D00EEC8E5 /* ProgressViewController.swift */; };
-		E759106A21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* ProgressViewController2.swift */; };
-		E759106B21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* ProgressViewController2.swift */; };
-		E759106C21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* ProgressViewController2.swift */; };
+		E759106621A2305D00EEC8E5 /* EpisodicProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106521A2305D00EEC8E5 /* EpisodicProgress.swift */; };
+		E759106721A2305D00EEC8E5 /* EpisodicProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106521A2305D00EEC8E5 /* EpisodicProgress.swift */; };
+		E759106821A2305D00EEC8E5 /* EpisodicProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106521A2305D00EEC8E5 /* EpisodicProgress.swift */; };
+		E759106A21A242F300EEC8E5 /* NotificationProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* NotificationProgress.swift */; };
+		E759106B21A242F300EEC8E5 /* NotificationProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* NotificationProgress.swift */; };
+		E759106C21A242F300EEC8E5 /* NotificationProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* NotificationProgress.swift */; };
 		E759106E21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */; };
 		E759106F21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */; };
 		E759107021A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */; };
@@ -79,6 +81,8 @@
 		731E4774E50DFECCABFAB107 /* Pods-MindSafeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafeUITests/Pods-MindSafeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		97A7472D11DFDAF2348C90D5 /* Pods-MindSafeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafeTests/Pods-MindSafeTests.release.xcconfig"; sourceTree = "<group>"; };
 		A44D13D649B027D024A4C117 /* Pods_MindSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C449C04821ABA4120003E815 /* SemanticProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticProgress.swift; sourceTree = "<group>"; };
+		C449C04A21ABB7D40003E815 /* EpChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpChartData.swift; sourceTree = "<group>"; };
 		CA48E9DBFE3D477038735AFB /* Pods-MindSafeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafeUITests/Pods-MindSafeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E05D8AC395598FAED809BF83 /* Pods-MindSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafe/Pods-MindSafe.debug.xcconfig"; sourceTree = "<group>"; };
 		E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewReminderTableViewController.swift; sourceTree = "<group>"; };
@@ -91,8 +95,8 @@
 		E738D36A219D0624001DC316 /* PanicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanicViewController.swift; sourceTree = "<group>"; };
 		E759105D21A228DD00EEC8E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E759106121A22CF100EEC8E5 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E759106521A2305D00EEC8E5 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
-		E759106921A242F300EEC8E5 /* ProgressViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController2.swift; sourceTree = "<group>"; };
+		E759106521A2305D00EEC8E5 /* EpisodicProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodicProgress.swift; sourceTree = "<group>"; };
+		E759106921A242F300EEC8E5 /* NotificationProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationProgress.swift; sourceTree = "<group>"; };
 		E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileTableViewController.swift; sourceTree = "<group>"; };
 		E7659CD4218FE57F004E2736 /* SettingsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableTableViewController.swift; sourceTree = "<group>"; };
 		E7659CD6218FFCC0004E2736 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -291,8 +295,10 @@
 		E79ACACB21A8B3FE005CD511 /* Progress Viewer VCs */ = {
 			isa = PBXGroup;
 			children = (
-				E759106521A2305D00EEC8E5 /* ProgressViewController.swift */,
-				E759106921A242F300EEC8E5 /* ProgressViewController2.swift */,
+				E759106521A2305D00EEC8E5 /* EpisodicProgress.swift */,
+				C449C04821ABA4120003E815 /* SemanticProgress.swift */,
+				E759106921A242F300EEC8E5 /* NotificationProgress.swift */,
+				C449C04A21ABB7D40003E815 /* EpChartData.swift */,
 			);
 			path = "Progress Viewer VCs";
 			sourceTree = "<group>";
@@ -647,11 +653,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E759106E21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */,
-				E759106621A2305D00EEC8E5 /* ProgressViewController.swift in Sources */,
+				E759106621A2305D00EEC8E5 /* EpisodicProgress.swift in Sources */,
 				E7FD6E6621A5E305007C1FA6 /* SemanticViewController.swift in Sources */,
 				E7FD6E6421A5E2EF007C1FA6 /* EpisodicViewController.swift in Sources */,
 				E7FD6E5E21A5DEE3007C1FA6 /* ActivitesTableViewController.swift in Sources */,
-				E759106A21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */,
+				C449C04B21ABB7D40003E815 /* EpChartData.swift in Sources */,
+				E759106A21A242F300EEC8E5 /* NotificationProgress.swift in Sources */,
 				E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */,
 				E724980721A0B16300196B00 /* ContactsViewController.swift in Sources */,
 				E724980F21A0C82300196B00 /* NewContactTableViewController.swift in Sources */,
@@ -668,6 +675,7 @@
 				E738D369219CBE74001DC316 /* TrackerInfoViewController.swift in Sources */,
 				E769619F218111F0005AC2EB /* AppDelegate.swift in Sources */,
 				E71E09F721852DA7001A30EC /* NewReminderTableViewController.swift in Sources */,
+				C449C04921ABA4120003E815 /* SemanticProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,8 +684,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76961B7218111F1005AC2EB /* MindSafeTests.swift in Sources */,
-				E759106721A2305D00EEC8E5 /* ProgressViewController.swift in Sources */,
-				E759106B21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */,
+				E759106721A2305D00EEC8E5 /* EpisodicProgress.swift in Sources */,
+				E759106B21A242F300EEC8E5 /* NotificationProgress.swift in Sources */,
 				E759106F21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -687,8 +695,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76961C2218111F1005AC2EB /* MindSafeUITests.swift in Sources */,
-				E759106821A2305D00EEC8E5 /* ProgressViewController.swift in Sources */,
-				E759106C21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */,
+				E759106821A2305D00EEC8E5 /* EpisodicProgress.swift in Sources */,
+				E759106C21A242F300EEC8E5 /* NotificationProgress.swift in Sources */,
 				E759107021A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

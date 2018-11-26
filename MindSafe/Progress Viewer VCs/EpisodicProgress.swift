@@ -1,5 +1,5 @@
 //
-//  ProgressViewController.swift
+//  Episodic.swift
 //  MindSafe
 //
 //  Created by Mihai Lapuste on 2018-11-14.
@@ -12,7 +12,7 @@ import UIKit
 import Charts
 import FirebaseDatabase
 
-class ProgressViewController:
+class EpisodicProgViewController:
 
 UIViewController, UITextFieldDelegate {
 
@@ -25,7 +25,7 @@ UIViewController, UITextFieldDelegate {
     var semScore:[Double] = []
     var taskA = false
     var taskB = false
-    var taskC = false
+   
     
     @IBAction func dismissButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -52,12 +52,10 @@ UIViewController, UITextFieldDelegate {
         if myTextField1.text != ""
         {
             ref?.child("Date1V5").childByAutoId().setValue(result)
-            //months.append(result)
+            
             ref?.child("epScoreV5").childByAutoId().setValue(myTextField1.text)
-            var myDouble = Double(myTextField1.text!)
-            epScore.append(myDouble!)
-            myDouble = myDouble!+5.0
-            ref?.child("semScoreV5").childByAutoId().setValue(String(myDouble!))
+            
+        
             myTextField1.text = ""
             
         }
@@ -67,10 +65,8 @@ UIViewController, UITextFieldDelegate {
     @IBAction func updateChart(_ sender: Any) {
         self.taskA=false
         self.taskB=false
-        self.taskC=false
         self.months.removeAll()
         self.epScore.removeAll()
-        self.semScore.removeAll()
         self.viewDidLoad()
         self.viewWillAppear(true)
     }
@@ -118,20 +114,6 @@ UIViewController, UITextFieldDelegate {
         })
         
        
-        //Pushback values from database when event occurs
-        ref.child("semScoreV5").observeSingleEvent(of: .value, with: { snapshot in
-            print(snapshot.childrenCount) // I got the expected number of items
-            let enumerator = snapshot.children
-            while let rest = enumerator.nextObject() as? DataSnapshot {
-                print(rest.value!)
-                self.semScore.append(Double(rest.value as! String)!)
-        
-            }
-            self.taskC = true
-            self.checkResult()
-        
-        })
-        
     }
    
     
@@ -163,16 +145,6 @@ UIViewController, UITextFieldDelegate {
         self.LineChartView.noDataText = "Waiting for Data."
         self.LineChartView.chartDescription?.text = ""
         
-        //Delay to wait for database to finish appending arrays
-        
-      
-        
-        //DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-            
-        
-        //self.setDesign()
-        //self.setChart()
-        //}
         
     }
     
@@ -222,7 +194,7 @@ UIViewController, UITextFieldDelegate {
     func setChart() {
         
         var dataEntries: [ChartDataEntry] = []
-        var dataEntries1: [ChartDataEntry] = []
+        
         
         //Inserting chart values
         for i in 0..<self.months.count {
@@ -230,16 +202,12 @@ UIViewController, UITextFieldDelegate {
             let dataEntry = ChartDataEntry(x: Double(i) , y:self.self.epScore[i])
             dataEntries.append(dataEntry)
             
-            let dataEntry1 = ChartDataEntry(x: Double(i) , y: self.self.semScore[i])
-            dataEntries1.append(dataEntry1)
-            
-            
         }
         
         let chartDataSet = LineChartDataSet(values: dataEntries, label: "Episodic")
-        let chartDataSet1 = LineChartDataSet(values: dataEntries1, label: "Semantic")
         
-        let dataSets: [LineChartDataSet] = [chartDataSet,chartDataSet1]
+        
+        let dataSets: [LineChartDataSet] = [chartDataSet]
         chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
         
         
@@ -248,10 +216,12 @@ UIViewController, UITextFieldDelegate {
         //Alert chart, data has been changed
         LineChartView.notifyDataSetChanged()
         LineChartView.data = chartData
+        
         //Scrollable ChartView
+        if(months.count > 4){
         LineChartView.setVisibleXRangeMaximum(4)
         LineChartView.moveViewToX(Double(months.count - 5))
-        
+        }
         
         //background color
         LineChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
@@ -263,7 +233,7 @@ UIViewController, UITextFieldDelegate {
     
     
     func checkResult(){
-        if taskA && taskB && taskC {
+        if taskA && taskB {
             setDesign()
             setChart()
             

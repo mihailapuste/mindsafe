@@ -1,5 +1,5 @@
 //
-//  ProgressViewController.swift
+//  NotificationProgress.swift
 //  MindSafe
 //
 //  Created by Mihai Lapuste on 2018-11-14.
@@ -13,7 +13,7 @@ import Charts
 import CoreData
 import FirebaseDatabase
 
-class ProgressViewController2:
+class NotifProgViewController:
 
 UIViewController, UITextFieldDelegate {
     
@@ -207,8 +207,11 @@ UIViewController, UITextFieldDelegate {
         LineChartView.notifyDataSetChanged()
         LineChartView.data = chartData
         //Scrollable Chart View
+        
+        if(remDates.count > 4){
         LineChartView.setVisibleXRangeMaximum(4)
         LineChartView.moveViewToX(Double(remDates.count - 5))
+        }
         
         //background color
         LineChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
