@@ -9,6 +9,7 @@ target 'MindSafe' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Charts'
+  pod 'mailcore2-ios'
 
 	target 'MindSafeUITests' do
 	inherit! :search_paths
