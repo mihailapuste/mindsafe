@@ -11,6 +11,9 @@ import UIKit
 import Charts
 import FirebaseDatabase
 
+
+
+
 class EpChartDataViewController:
     
 UIViewController, UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource {
@@ -27,9 +30,6 @@ UIViewController, UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource 
     var taskB = false
 
 
-    @IBOutlet weak var column1: UILabel!
-    
-    @IBOutlet weak var column2: UILabel!
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,6 +40,8 @@ UIViewController, UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource 
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         
         cell.textLabel?.text = cellData[indexPath.row]
+        
+       
         
         cell.textLabel?.textAlignment = .center
         
@@ -115,7 +117,7 @@ UIViewController, UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource 
     
     func setCellData(){
         for i in 0..<self.months.count{
-            cellData.append("Date: "+months[i]+" Score: "+String(epScore[i]))
+            cellData.append("DATE: "+months[i]+"    SCORE: "+String(epScore[i]))
             
         }
     }
