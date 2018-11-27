@@ -8,13 +8,19 @@
 
 import UIKit
 import Speech
+import FirebaseDatabase
 
 struct Answer {
     var value: String = ""
     var isValid: Bool = false
 }
 
+
+
 class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechRecognizerDelegate, UITableViewDataSource, UITableViewDelegate{
+    
+    var ref: DatabaseReference!
+    var handler:DatabaseHandle!
     
     // vc outlets
     @IBOutlet weak var microphoneButton: UIButton!
@@ -132,11 +138,20 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     
     // function terminting game and calculating final score
     func activityOver() {
-        let finalScore = self.numberOfAnswers-wordsUsedList.count
+        let finalScore = String(self.numberOfAnswers-wordsUsedList.count)
         print("Final score is \(finalScore)/\(self.numberOfAnswers)")
         self.activityCompletedView.isHidden = false
         self.finalScoreLabel.text = "Final score: \(finalScore)/\(self.numberOfAnswers)"
         
+        // POST DATA
+        let date = Date()
+        let formater = DateFormatter()
+        formater.dateFormat="dd.MM.yyyy"
+        let result = formater.string(from: date)
+        
+        self.ref?.child("Date2V5").childByAutoId().setValue(result)
+        self.ref?.child("semScoreV5").childByAutoId().setValue(finalScore)
+
     }
     
     // action controlling the microphone recording button
