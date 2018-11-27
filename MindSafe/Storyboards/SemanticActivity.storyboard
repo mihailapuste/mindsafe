@@ -38,7 +38,7 @@
                                     <navigationItem title="Semantic Activity" id="xzA-um-Tsd">
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="39V-7J-AtX">
                                             <connections>
-                                                <action selector="dismissAction:" destination="imG-Vq-ofr" id="Ns6-Gl-o5O"/>
+                                                <action selector="cancelGame:" destination="imG-Vq-ofr" id="Ctm-On-f9g"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -228,10 +228,9 @@
                                     <navigationItem title="Sematic Activity" id="Ynq-4I-8Sw">
                                         <barButtonItem key="leftBarButtonItem" title="Quit" id="XL7-Ma-Nqq">
                                             <connections>
-                                                <action selector="DismissButton:" destination="BNu-yj-MIZ" id="ynd-d9-TJ0"/>
+                                                <action selector="doneActivityButton:" destination="BNu-yj-MIZ" id="9WT-Sm-ues"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="LT8-bt-c8G"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -331,37 +330,67 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity Complete!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q10-LJ-8vV">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0040291134165924003" green="0.14457513727585825" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final score : 3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-Ko-VBU">
-                                        <rect key="frame" x="0.0" y="231" width="375" height="93"/>
+                                        <rect key="frame" x="0.0" y="89" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.35338868944025176" blue="0.73264990482233505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKU-XO-FOH">
-                                        <rect key="frame" x="114" y="498" width="146" height="62"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owp-up-8A2">
+                                        <rect key="frame" x="43" y="241" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Done">
+                                        <color key="backgroundColor" red="0.001884520340982705" green="0.66368520109847706" blue="0.0029240048954309364" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="white-restart">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="imG-Vq-ofr" kind="show" id="csq-RI-64t"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owp-up-8A2">
-                                        <rect key="frame" x="114" y="382" width="146" height="62"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKU-XO-FOH">
+                                        <rect key="frame" x="211" y="241" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Restart">
+                                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="white-checkmark">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doneActivityButton:" destination="BNu-yj-MIZ" eventType="touchUpInside" id="Lrb-e7-FKH"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pes-ed-iLI">
+                                        <rect key="frame" x="59" y="369" width="89" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Done" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rk7-IE-Udf">
+                                        <rect key="frame" x="239" y="369" width="65" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.58546906403324639" blue="0.0072833478764917636" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -372,6 +401,7 @@
                         <outlet property="answerInput" destination="DZQ-uP-rqc" id="JZ9-T3-UQ9"/>
                         <outlet property="answerTable" destination="PJg-Eq-UvM" id="OJL-PW-9fe"/>
                         <outlet property="answersInputtedOutlet" destination="0mw-jW-EIG" id="TrZ-xp-gmU"/>
+                        <outlet property="finalScoreLabel" destination="DG8-Ko-VBU" id="n4O-r9-pgM"/>
                         <outlet property="microphoneButton" destination="g7B-Ba-ZRn" id="Tvd-UO-TMf"/>
                         <outlet property="microphoneLabel" destination="c3M-1K-ZV8" id="ZYB-fb-KcU"/>
                         <outlet property="microphoneOutlet" destination="g7B-Ba-ZRn" id="OY5-qd-Gc3"/>
@@ -386,5 +416,7 @@
         <image name="black-microphone" width="96" height="96"/>
         <image name="icons8-send-letter-48" width="36" height="36"/>
         <image name="semanticactivity" width="389" height="392"/>
+        <image name="white-checkmark" width="104" height="104"/>
+        <image name="white-restart" width="80" height="80"/>
     </resources>
 </document>

@@ -24,6 +24,7 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     @IBOutlet var activityCompletedView: UIView!
     @IBOutlet var microphoneOutlet: UIButton!
     @IBOutlet var microphoneLabel: UILabel!
+    @IBOutlet var finalScoreLabel: UILabel!
     // var in charge of answers
     var wordsUsedList: [String]!
     var answerList: [Answer] = []
@@ -35,8 +36,15 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     
+    
+    @IBAction func doneActivityButton(_ sender: Any) {
+            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         self.activityCompletedView.isHidden = true
         numberOfAnswers = self.wordsUsedList.count
         self.microphoneLabel.text = "Start Recording"
@@ -97,8 +105,8 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     // action sending answer to answer array
     @IBAction func submitAnswer(_ sender: Any) {
         if self.answerInput.text != "" {
-            let item = self.answerInput.text!.lowercased().capitalized
-//            item.localizedCapitalizedString()
+            let item = self.answerInput.text!.lowercased().capitalized.trimmingCharacters(in: .whitespaces)
+    
             var answer = Answer(value: item, isValid: false)
             
             if let index = wordsUsedList.index(of: item) {
@@ -124,7 +132,7 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
         let finalScore = self.numberOfAnswers-wordsUsedList.count
         print("Final score is \(finalScore)/\(self.numberOfAnswers)")
         self.activityCompletedView.isHidden = false
-//        self.textView.text = "Final score is \(finalScore)/\(self.numberOfAnswers)"
+        self.finalScoreLabel.text = "Final score: \(finalScore)/\(self.numberOfAnswers)"
         
     }
     

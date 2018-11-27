@@ -18,7 +18,7 @@ class InGameSemanticViewController: UIViewController {
     var wordsUsedList: [String] = []
     weak var timer: Timer?
     var index: Int = 0
-    let gameLength: Int = 2 // Number of words the user is prompted with
+    let gameLength: Int = 10 // Number of words the user is prompted with
     @IBOutlet weak var pausedPage: UIView!
     
     @IBOutlet weak var wordCount: UILabel!
@@ -82,8 +82,10 @@ class InGameSemanticViewController: UIViewController {
     
     @IBAction func quitActivity(_ sender: Any) {
         timer?.invalidate()
-        dismiss(animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
+    
+
     /*
     // MARK: - Navigation
 
