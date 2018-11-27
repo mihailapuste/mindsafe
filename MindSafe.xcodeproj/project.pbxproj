@@ -21,12 +21,6 @@
 		E759105E21A228DD00EEC8E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E759105D21A228DD00EEC8E5 /* GoogleService-Info.plist */; };
 		E759105F21A228DD00EEC8E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E759105D21A228DD00EEC8E5 /* GoogleService-Info.plist */; };
 		E759106021A228DD00EEC8E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E759105D21A228DD00EEC8E5 /* GoogleService-Info.plist */; };
-		E759106621A2305D00EEC8E5 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106521A2305D00EEC8E5 /* ProgressViewController.swift */; };
-		E759106721A2305D00EEC8E5 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106521A2305D00EEC8E5 /* ProgressViewController.swift */; };
-		E759106821A2305D00EEC8E5 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106521A2305D00EEC8E5 /* ProgressViewController.swift */; };
-		E759106A21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* ProgressViewController2.swift */; };
-		E759106B21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* ProgressViewController2.swift */; };
-		E759106C21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106921A242F300EEC8E5 /* ProgressViewController2.swift */; };
 		E759106E21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */; };
 		E759106F21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */; };
 		E759107021A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */; };
@@ -41,6 +35,12 @@
 		E76961C2218111F1005AC2EB /* MindSafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76961C1218111F1005AC2EB /* MindSafeUITests.swift */; };
 		E76C8BB6218CC6740019F60B /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C8BB5218CC6740019F60B /* ReminderTableViewCell.swift */; };
 		E77FD9D821A3687700C071E9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77FD9D721A3687700C071E9 /* Charts.framework */; };
+		E789255A21ADEB93001F4A89 /* EpisodicProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255421ADEB92001F4A89 /* EpisodicProgress.swift */; };
+		E789255B21ADEB93001F4A89 /* EpChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255521ADEB93001F4A89 /* EpChartData.swift */; };
+		E789255C21ADEB93001F4A89 /* NotifChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255621ADEB93001F4A89 /* NotifChartData.swift */; };
+		E789255D21ADEB93001F4A89 /* SemanticProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255721ADEB93001F4A89 /* SemanticProgress.swift */; };
+		E789255E21ADEB93001F4A89 /* NotificationProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255821ADEB93001F4A89 /* NotificationProgress.swift */; };
+		E789255F21ADEB93001F4A89 /* SemChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255921ADEB93001F4A89 /* SemChartData.swift */; };
 		E79ACAD321A8C91B005CD511 /* InGameSemanticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ACAD221A8C91B005CD511 /* InGameSemanticViewController.swift */; };
 		E79ACAD521A91F7E005CD511 /* inGameRepeatSemanticActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ACAD421A91F7E005CD511 /* inGameRepeatSemanticActivityViewController.swift */; };
 		E7AA641121A12801003A4A8D /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA641021A12801003A4A8D /* ContactTableViewCell.swift */; };
@@ -92,8 +92,6 @@
 		E738D36A219D0624001DC316 /* PanicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanicViewController.swift; sourceTree = "<group>"; };
 		E759105D21A228DD00EEC8E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E759106121A22CF100EEC8E5 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E759106521A2305D00EEC8E5 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
-		E759106921A242F300EEC8E5 /* ProgressViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController2.swift; sourceTree = "<group>"; };
 		E759106D21A2789000EEC8E5 /* PersonalProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileTableViewController.swift; sourceTree = "<group>"; };
 		E7659CD4218FE57F004E2736 /* SettingsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableTableViewController.swift; sourceTree = "<group>"; };
 		E7659CD6218FFCC0004E2736 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +110,12 @@
 		E76961C3218111F1005AC2EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E76C8BB5218CC6740019F60B /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
 		E77FD9D721A3687700C071E9 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E789255421ADEB92001F4A89 /* EpisodicProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodicProgress.swift; sourceTree = "<group>"; };
+		E789255521ADEB93001F4A89 /* EpChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpChartData.swift; sourceTree = "<group>"; };
+		E789255621ADEB93001F4A89 /* NotifChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifChartData.swift; sourceTree = "<group>"; };
+		E789255721ADEB93001F4A89 /* SemanticProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemanticProgress.swift; sourceTree = "<group>"; };
+		E789255821ADEB93001F4A89 /* NotificationProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationProgress.swift; sourceTree = "<group>"; };
+		E789255921ADEB93001F4A89 /* SemChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemChartData.swift; sourceTree = "<group>"; };
 		E79ACAD221A8C91B005CD511 /* InGameSemanticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InGameSemanticViewController.swift; sourceTree = "<group>"; };
 		E79ACAD421A91F7E005CD511 /* inGameRepeatSemanticActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inGameRepeatSemanticActivityViewController.swift; sourceTree = "<group>"; };
 		E7AA641021A12801003A4A8D /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
@@ -293,8 +297,12 @@
 		E79ACACB21A8B3FE005CD511 /* Progress Viewer VCs */ = {
 			isa = PBXGroup;
 			children = (
-				E759106521A2305D00EEC8E5 /* ProgressViewController.swift */,
-				E759106921A242F300EEC8E5 /* ProgressViewController2.swift */,
+				E789255521ADEB93001F4A89 /* EpChartData.swift */,
+				E789255421ADEB92001F4A89 /* EpisodicProgress.swift */,
+				E789255621ADEB93001F4A89 /* NotifChartData.swift */,
+				E789255821ADEB93001F4A89 /* NotificationProgress.swift */,
+				E789255721ADEB93001F4A89 /* SemanticProgress.swift */,
+				E789255921ADEB93001F4A89 /* SemChartData.swift */,
 			);
 			path = "Progress Viewer VCs";
 			sourceTree = "<group>";
@@ -650,16 +658,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E759106E21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */,
-				E759106621A2305D00EEC8E5 /* ProgressViewController.swift in Sources */,
+				E789255D21ADEB93001F4A89 /* SemanticProgress.swift in Sources */,
 				E7FD6E6621A5E305007C1FA6 /* SemanticViewController.swift in Sources */,
 				E7FD6E6421A5E2EF007C1FA6 /* EpisodicViewController.swift in Sources */,
 				E7FD6E5E21A5DEE3007C1FA6 /* ActivitesTableViewController.swift in Sources */,
-				E759106A21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */,
 				E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */,
+				E789255B21ADEB93001F4A89 /* EpChartData.swift in Sources */,
 				E724980721A0B16300196B00 /* ContactsViewController.swift in Sources */,
 				E724980F21A0C82300196B00 /* NewContactTableViewController.swift in Sources */,
 				E7EA649521ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift in Sources */,
 				E738D367219BE37C001DC316 /* TrackerViewController.swift in Sources */,
+				E789255E21ADEB93001F4A89 /* NotificationProgress.swift in Sources */,
 				E7AA641121A12801003A4A8D /* ContactTableViewCell.swift in Sources */,
 				E79ACAD321A8C91B005CD511 /* InGameSemanticViewController.swift in Sources */,
 				E7659CD5218FE57F004E2736 /* SettingsTableTableViewController.swift in Sources */,
@@ -671,7 +680,10 @@
 				E7659CD7218FFCC0004E2736 /* HomeTableViewController.swift in Sources */,
 				E738D369219CBE74001DC316 /* TrackerInfoViewController.swift in Sources */,
 				E769619F218111F0005AC2EB /* AppDelegate.swift in Sources */,
+				E789255A21ADEB93001F4A89 /* EpisodicProgress.swift in Sources */,
 				E71E09F721852DA7001A30EC /* NewReminderTableViewController.swift in Sources */,
+				E789255F21ADEB93001F4A89 /* SemChartData.swift in Sources */,
+				E789255C21ADEB93001F4A89 /* NotifChartData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,8 +692,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76961B7218111F1005AC2EB /* MindSafeTests.swift in Sources */,
-				E759106721A2305D00EEC8E5 /* ProgressViewController.swift in Sources */,
-				E759106B21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */,
 				E759106F21A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,8 +701,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76961C2218111F1005AC2EB /* MindSafeUITests.swift in Sources */,
-				E759106821A2305D00EEC8E5 /* ProgressViewController.swift in Sources */,
-				E759106C21A242F300EEC8E5 /* ProgressViewController2.swift in Sources */,
 				E759107021A2789000EEC8E5 /* PersonalProfileTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
