@@ -46,6 +46,7 @@
 		E7AA641121A12801003A4A8D /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA641021A12801003A4A8D /* ContactTableViewCell.swift */; };
 		E7B56A53219B6E0B00DD3CF8 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */; };
 		E7B56A55219B70E300DD3CF8 /* ProgressView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */; };
+		E7EA649521ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA649421ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift */; };
 		E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */; };
 		E7FD6E5E21A5DEE3007C1FA6 /* ActivitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */; };
 		E7FD6E6021A5E213007C1FA6 /* EpisodicActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7FD6E5F21A5E213007C1FA6 /* EpisodicActivity.storyboard */; };
@@ -116,6 +117,7 @@
 		E7AA641021A12801003A4A8D /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgressView.storyboard; sourceTree = "<group>"; };
+		E7EA649421ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanitcAnswerTableViewCell.swift; sourceTree = "<group>"; };
 		E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
 		E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitesTableViewController.swift; sourceTree = "<group>"; };
 		E7FD6E5F21A5E213007C1FA6 /* EpisodicActivity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EpisodicActivity.storyboard; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				E79ACAD221A8C91B005CD511 /* InGameSemanticViewController.swift */,
 				E79ACAD421A91F7E005CD511 /* inGameRepeatSemanticActivityViewController.swift */,
 				E7FD6E6521A5E305007C1FA6 /* SemanticViewController.swift */,
+				E7EA649421ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift */,
 			);
 			path = "Semantic Activity VCs";
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */,
 				E724980721A0B16300196B00 /* ContactsViewController.swift in Sources */,
 				E724980F21A0C82300196B00 /* NewContactTableViewController.swift in Sources */,
+				E7EA649521ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift in Sources */,
 				E738D367219BE37C001DC316 /* TrackerViewController.swift in Sources */,
 				E7AA641121A12801003A4A8D /* ContactTableViewCell.swift in Sources */,
 				E79ACAD321A8C91B005CD511 /* InGameSemanticViewController.swift in Sources */,

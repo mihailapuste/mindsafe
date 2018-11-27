@@ -19,10 +19,11 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     // vc outlets
     @IBOutlet weak var microphoneButton: UIButton!
     @IBOutlet weak var answerInput: UITextField!
-    @IBOutlet weak var textView: UILabel!
     @IBOutlet weak var answerTable: UITableView!
     @IBOutlet weak var answersInputtedOutlet: UILabel!
-    
+    @IBOutlet var activityCompletedView: UIView!
+    @IBOutlet var microphoneOutlet: UIButton!
+    @IBOutlet var microphoneLabel: UILabel!
     // var in charge of answers
     var wordsUsedList: [String]!
     var answerList: [Answer] = []
@@ -36,7 +37,10 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.activityCompletedView.isHidden = true
         numberOfAnswers = self.wordsUsedList.count
+        self.microphoneLabel.text = "Start Recording"
+        self.microphoneOutlet.setImage(UIImage(named: "black-microphone.png"), for: .normal)
         self.answersInputtedOutlet.text = "0/\(numberOfAnswers) answers"
         print(numberOfAnswers)
         microphoneButton.isEnabled = false
@@ -62,18 +66,29 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
         }
     }
     
+    @IBAction func DismissButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          return self.answerList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for : indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for : indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for : indexPath) as! SemanitcAnswerTableViewCell
         
-        cell.textLabel?.text = self.answerList[indexPath.row].value
+        cell.answerView?.text = self.answerList[indexPath.row].value
+        
         if self.answerList[indexPath.row].isValid == true {
-             cell.textLabel?.textColor = UIColor(red: 0/255, green: 170/255, blue: 28/255, alpha: 1.0)
+             cell.answerView?.textColor = UIColor(red: 0/255, green: 170/255, blue: 28/255, alpha: 1.0)
+            cell.backgroundColor = UIColor(hue: 0.3222, saturation: 0.1, brightness: 1, alpha: 1.0)
+            cell.checkErroView?.image = UIImage(named: "correct.png")
         }else{
-            cell.textLabel?.textColor = .red
+            cell.answerView?.textColor = .red
+            cell.backgroundColor = UIColor(hue: 0, saturation: 0.09, brightness: 1, alpha: 1.0)
+            cell.checkErroView?.image = UIImage(named: "error.png")
         }
        
         return cell
@@ -82,7 +97,8 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     // action sending answer to answer array
     @IBAction func submitAnswer(_ sender: Any) {
         if self.answerInput.text != "" {
-            let item = self.answerInput.text!
+            let item = self.answerInput.text!.lowercased().capitalized
+//            item.localizedCapitalizedString()
             var answer = Answer(value: item, isValid: false)
             
             if let index = wordsUsedList.index(of: item) {
@@ -107,7 +123,9 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     func activityOver() {
         let finalScore = self.numberOfAnswers-wordsUsedList.count
         print("Final score is \(finalScore)/\(self.numberOfAnswers)")
-        self.textView.text = "Final score is \(finalScore)/\(self.numberOfAnswers)"
+        self.activityCompletedView.isHidden = false
+//        self.textView.text = "Final score is \(finalScore)/\(self.numberOfAnswers)"
+        
     }
     
     // action controlling the microphone recording button
@@ -116,10 +134,15 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
             audioEngine.stop()
             recognitionRequest?.endAudio()
             microphoneButton.isEnabled = false
-            microphoneButton.setTitle("Start Recording", for: .normal)
+            self.microphoneLabel.text = "Start Recording"
+            self.microphoneOutlet.setImage(UIImage(named: "black-microphone.png"), for: .normal)
+//            microphoneButton.setTitle("Start Recording", for: .normal)
         } else {
             startRecording()
-            microphoneButton.setTitle("Stop Recording", for: .normal)
+            
+            self.microphoneLabel.text = "Stop Recording"
+            self.microphoneOutlet.setImage(UIImage(named: "red-microphone.png"), for: .normal)
+//            microphoneButton.setTitle("Stop Recording", for: .normal)
         }
     }
     
@@ -158,8 +181,8 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
             
             if result != nil {
                 let speech2TextResult = result?.bestTranscription.formattedString
-                self.textView.text = speech2TextResult
                 self.answerInput.text = speech2TextResult
+                print(speech2TextResult)
                 isFinal = (result?.isFinal)!
             }
             
@@ -186,8 +209,6 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
         } catch {
             print("audioEngine couldn't start because of an error.")
         }
-        
-        textView.text = "Say something, I'm listening!"
         
     }
     

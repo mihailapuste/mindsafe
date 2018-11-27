@@ -17,9 +17,11 @@ class InGameSemanticViewController: UIViewController {
     var randomizedList: [String] = []
     var wordsUsedList: [String] = []
     weak var timer: Timer?
-    var index: Int = 0;
+    var index: Int = 0
+    let gameLength: Int = 2 // Number of words the user is prompted with
     @IBOutlet weak var pausedPage: UIView!
     
+    @IBOutlet weak var wordCount: UILabel!
     @IBOutlet weak var pausePlayButton: UIBarButtonItem!
     @IBOutlet weak var activityKeyWord: UILabel!
     
@@ -29,7 +31,7 @@ class InGameSemanticViewController: UIViewController {
     
     // Refreshes label content & uses text to speech
     @objc func refreshKeyWordData(){
-        if(index <= 4){
+        if(index < gameLength){
             let keyword = randomizedList[index]
             let utterance = AVSpeechUtterance(string: keyword)
             let synth = AVSpeechSynthesizer()
@@ -40,6 +42,7 @@ class InGameSemanticViewController: UIViewController {
             
             wordsUsedList.append(keyword)
             index = index + 1;
+            wordCount.text = "\(index)/\(gameLength)"
         }else{
             timer?.invalidate()
             performSegue(withIdentifier: "RepeatActivity", sender: self)
@@ -60,7 +63,8 @@ class InGameSemanticViewController: UIViewController {
         super.viewDidLoad()
         index = 0;
         wordsUsedList.removeAll() // clear in case of restarded game
-        activityKeyWord.text = "Semantic Activity"
+        activityKeyWord.text = " "
+        wordCount.text = "0/\(gameLength)"
         self.pausedPage.isHidden = true;
         randomizedList = wordList.shuffled()
         timeRefresh()
