@@ -142,6 +142,7 @@
                                 <items>
                                     <navigationItem title="Semantic Activity" id="1ch-4j-Wra">
                                         <barButtonItem key="leftBarButtonItem" title="Quit" id="ngZ-CD-hRB">
+                                            <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="quitActivity:" destination="0P6-ga-i6r" id="yUd-Ez-zKw"/>
                                             </connections>
@@ -227,8 +228,14 @@
                                 <items>
                                     <navigationItem title="Sematic Activity" id="Ynq-4I-8Sw">
                                         <barButtonItem key="leftBarButtonItem" title="Quit" id="XL7-Ma-Nqq">
+                                            <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="doneActivityButton:" destination="BNu-yj-MIZ" id="9WT-Sm-ues"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Give up" id="3K6-dU-z0x">
+                                            <connections>
+                                                <action selector="giveUpAction:" destination="BNu-yj-MIZ" id="VYe-RJ-6J5"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

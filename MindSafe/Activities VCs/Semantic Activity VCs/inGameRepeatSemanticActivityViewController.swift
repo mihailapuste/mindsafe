@@ -126,6 +126,9 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     }
     
     
+    @IBAction func giveUpAction(_ sender: Any) {
+        activityOver()
+    }
     
     // function terminting game and calculating final score
     func activityOver() {
