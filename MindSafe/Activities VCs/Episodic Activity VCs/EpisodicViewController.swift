@@ -11,7 +11,7 @@ import UIKit
 //test
 class EpisodicViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-   
+    
     @IBOutlet var collectionView: UICollectionView!
     
     var model = CardModel()

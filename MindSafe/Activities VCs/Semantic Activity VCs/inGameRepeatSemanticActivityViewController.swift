@@ -209,7 +209,6 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
             if result != nil {
                 let speech2TextResult = result?.bestTranscription.formattedString
                 self.answerInput.text = speech2TextResult
-                print(speech2TextResult)
                 isFinal = (result?.isFinal)!
             }
             
