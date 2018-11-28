@@ -10,6 +10,9 @@
 		7F035F8807CDA2A9B3E992BC /* Pods_MindSafeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE317287FAC5C7E13F4E2A0 /* Pods_MindSafeUITests.framework */; };
 		AAE77571E571ECCB30B90DA8 /* Pods_MindSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44D13D649B027D024A4C117 /* Pods_MindSafe.framework */; };
 		B26AC3A68161877FA7571D51 /* Pods_MindSafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D71B4609F034386171ADC79 /* Pods_MindSafeTests.framework */; };
+		E70AF8B121AF2715007CC8FD /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AF8B021AF2715007CC8FD /* CardModel.swift */; };
+		E70AF8B321AF2871007CC8FD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AF8B221AF2871007CC8FD /* Card.swift */; };
+		E70AF8B521AF2E9C007CC8FD /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AF8B421AF2E9C007CC8FD /* CardCollectionViewCell.swift */; };
 		E71E09F721852DA7001A30EC /* NewReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */; };
 		E724980721A0B16300196B00 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724980621A0B16300196B00 /* ContactsViewController.swift */; };
 		E724980F21A0C82300196B00 /* NewContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724980E21A0C82300196B00 /* NewContactTableViewController.swift */; };
@@ -82,6 +85,9 @@
 		A44D13D649B027D024A4C117 /* Pods_MindSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA48E9DBFE3D477038735AFB /* Pods-MindSafeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafeUITests/Pods-MindSafeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E05D8AC395598FAED809BF83 /* Pods-MindSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindSafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindSafe/Pods-MindSafe.debug.xcconfig"; sourceTree = "<group>"; };
+		E70AF8B021AF2715007CC8FD /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardModel.swift; path = "MindSafe/Activities VCs/Episodic Activity VCs/CardModel.swift"; sourceTree = SOURCE_ROOT; };
+		E70AF8B221AF2871007CC8FD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		E70AF8B421AF2E9C007CC8FD /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewReminderTableViewController.swift; sourceTree = "<group>"; };
 		E724980621A0B16300196B00 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		E724980E21A0C82300196B00 /* NewContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactTableViewController.swift; sourceTree = "<group>"; };
@@ -331,7 +337,10 @@
 		E79ACACE21A8B43D005CD511 /* Episodic Activity VCs */ = {
 			isa = PBXGroup;
 			children = (
+				E70AF8B021AF2715007CC8FD /* CardModel.swift */,
 				E7FD6E6321A5E2EF007C1FA6 /* EpisodicViewController.swift */,
+				E70AF8B421AF2E9C007CC8FD /* CardCollectionViewCell.swift */,
+				E70AF8B221AF2871007CC8FD /* Card.swift */,
 			);
 			path = "Episodic Activity VCs";
 			sourceTree = "<group>";
@@ -674,15 +683,18 @@
 				E7659CD5218FE57F004E2736 /* SettingsTableTableViewController.swift in Sources */,
 				E76C8BB6218CC6740019F60B /* ReminderTableViewCell.swift in Sources */,
 				E738D36B219D0624001DC316 /* PanicViewController.swift in Sources */,
+				E70AF8B121AF2715007CC8FD /* CardModel.swift in Sources */,
 				E79ACAD521A91F7E005CD511 /* inGameRepeatSemanticActivityViewController.swift in Sources */,
 				E76961A7218111F0005AC2EB /* MindSafe.xcdatamodeld in Sources */,
 				E724981121A0EF1200196B00 /* ViewContactTableViewController.swift in Sources */,
 				E7659CD7218FFCC0004E2736 /* HomeTableViewController.swift in Sources */,
 				E738D369219CBE74001DC316 /* TrackerInfoViewController.swift in Sources */,
+				E70AF8B321AF2871007CC8FD /* Card.swift in Sources */,
 				E769619F218111F0005AC2EB /* AppDelegate.swift in Sources */,
 				E789255A21ADEB93001F4A89 /* EpisodicProgress.swift in Sources */,
 				E71E09F721852DA7001A30EC /* NewReminderTableViewController.swift in Sources */,
 				E789255F21ADEB93001F4A89 /* SemChartData.swift in Sources */,
+				E70AF8B521AF2E9C007CC8FD /* CardCollectionViewCell.swift in Sources */,
 				E789255C21ADEB93001F4A89 /* NotifChartData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

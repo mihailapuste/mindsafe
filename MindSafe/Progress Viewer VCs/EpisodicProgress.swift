@@ -13,19 +13,19 @@ import Charts
 import FirebaseDatabase
 
 class EpisodicProgViewController:
-
+    
 UIViewController, UITextFieldDelegate {
-
+    
     
     var ref: DatabaseReference!
     var handler:DatabaseHandle!
     //Initialized empty arrays for chart axis
     var months:[String] = []
     var epScore:[Double] = []
-    var semScore:[Double] = []
     var taskA = false
     var taskB = false
-   
+    
+    
     
     @IBAction func dismissButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -33,7 +33,7 @@ UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var LineChartView: LineChartView!
     
-
+    
     @IBOutlet weak var myTextField1: UITextField!
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -45,8 +45,8 @@ UIViewController, UITextFieldDelegate {
     @IBAction func savBut1(_ sender: Any) {
         if myTextField1.text != ""
         {
-          emailImage()
-          myTextField1.text = ""
+            emailImage()
+            myTextField1.text = ""
             
         }
         
@@ -58,9 +58,9 @@ UIViewController, UITextFieldDelegate {
         //When textfield is entered with a number
         //if myTextField1.text != ""
         //{
-         //   ref?.child("Date1V5").childByAutoId().setValue(result)
-          //  ref?.child("epScoreV5").childByAutoId().setValue(myTextField1.text)
-         //   myTextField1.text = ""
+        //   ref?.child("Date1V5").childByAutoId().setValue(result)
+        //  ref?.child("epScoreV5").childByAutoId().setValue(myTextField1.text)
+        //   myTextField1.text = ""
         //}
     }
     
@@ -115,11 +115,11 @@ UIViewController, UITextFieldDelegate {
             self.checkResult()
         })
         
-       
+        
     }
-   
     
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -128,8 +128,8 @@ UIViewController, UITextFieldDelegate {
         
         //call database setup
         self.setDatabase()
-       
-    
+        
+        
         /* ref.child("Date1").observeSingleEvent(of: .value, with: { (snapshot) in
          for child in snapshot.children {
          let snap = child as! DataSnapshot
@@ -188,6 +188,7 @@ UIViewController, UITextFieldDelegate {
         yaxisRight.axisMinimum = 0
         yaxisRight.axisMaximum = 100
         
+        
     }
     
     //Setting up chart data insertion
@@ -202,6 +203,7 @@ UIViewController, UITextFieldDelegate {
         }
         
         let chartDataSet = LineChartDataSet(values: dataEntries, label: "Episodic")
+        //chartDataSet.axisDependency=LineChartView.rightAxis.axisDependency
         
         let dataSets: [LineChartDataSet] = [chartDataSet]
         chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
@@ -213,9 +215,9 @@ UIViewController, UITextFieldDelegate {
         LineChartView.data = chartData
         
         //Scrollable ChartView
-        if(months.count > 4){
-        LineChartView.setVisibleXRangeMaximum(4)
-        LineChartView.moveViewToX(Double(months.count - 5))
+        if(months.count > 10){
+            LineChartView.setVisibleXRangeMaximum(10)
+            LineChartView.moveViewToX(Double(months.count - 11))
         }
         
         //background color
@@ -226,59 +228,95 @@ UIViewController, UITextFieldDelegate {
         
     }
     
+    
+    //func data analysis
+    func calcData(){
+        var dataHigh = 0.0
+        var dataLow = 0.0
+        var dataTotal = 0.0
+        var dataAvg = 0.0
+        dataLow = epScore.min()!
+        dataHigh = epScore.max()!
+        
+        for i in 0..<self.epScore.count{
+            dataTotal = dataTotal + epScore[i]
+        }
+        
+        dataAvg = dataTotal/Double(epScore.count)
+        
+        let High = ChartLimitLine(limit: dataHigh, label: "Max")
+        High.lineColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 1)
+        LineChartView.rightAxis.addLimitLine(High)
+        //High.lineDashLengths = [5.0]
+        
+        let Low = ChartLimitLine(limit: dataLow, label: "Min")
+        Low.lineColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
+        LineChartView.rightAxis.addLimitLine(Low)
+        Low.lineDashLengths = [5.0]
+        
+        let Avg = ChartLimitLine(limit: dataAvg, label: "Avg")
+        Avg.lineColor = UIColor(red: 0/255, green: 255/255, blue: 0/255, alpha: 1)
+        LineChartView.rightAxis.addLimitLine(Avg)
+        Avg.lineDashLengths = [5.0]
+        
+    }
+    
+    
+    
     //Email capabilities
     func emailImage(){
-//        let image = self.LineChartView.getChartImage(transparent: false)
-//        
-//        let smtpSession = MCOSMTPSession()
-//        smtpSession.hostname = "smtp.gmail.com"
-//        smtpSession.username = "mindsafe14@gmail.com"
-//        smtpSession.password = "mgroup14"
-//        smtpSession.port = 465
-//        smtpSession.authType = MCOAuthType.saslPlain
-//        smtpSession.connectionType = MCOConnectionType.TLS
-//        smtpSession.connectionLogger = {(connectionID, type, data) in
-//            if data != nil {
-//                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
-//                    NSLog("Connectionlogger: \(string)")
-//                }
-//            }
-//        }
-//        
-//        let builder = MCOMessageBuilder()
-//        builder.header.to = [MCOAddress(displayName: "Caretaker", mailbox: myTextField1.text)]
-//        builder.header.from = MCOAddress(displayName: "MINDSAFEAPP", mailbox: "mindsafe14@gmail.com")
-//        builder.header.subject = "IMAGE SENT"
-//        builder.htmlBody = "IMAGE SEND TEST!"
-//        
-//        
-//        var dataImage: NSData?
-//        dataImage = UIImageJPEGRepresentation(image!, 0.6)! as NSData
-//        let attachment = MCOAttachment()
-//        attachment.mimeType =  "image/jpg"
-//        attachment.filename = "EpisodicScoreChart.jpg"
-//        attachment.data = dataImage! as Data
-//        builder.addAttachment(attachment)
-//        
-//        let rfc822Data = builder.data()
-//        let sendOperation = smtpSession.sendOperation(with: rfc822Data!)
-//        sendOperation?.start { (error) -> Void in
-//            if (error != nil) {
-//                NSLog("Error sending email: \(String(describing: error))")
-//            } else {
-//                NSLog("Successfully sent email!")
-//            }
-//        }
+        //        let image = self.LineChartView.getChartImage(transparent: false)
+        //
+        //        let smtpSession = MCOSMTPSession()
+        //        smtpSession.hostname = "smtp.gmail.com"
+        //        smtpSession.username = "mindsafe14@gmail.com"
+        //        smtpSession.password = "mgroup14"
+        //        smtpSession.port = 465
+        //        smtpSession.authType = MCOAuthType.saslPlain
+        //        smtpSession.connectionType = MCOConnectionType.TLS
+        //        smtpSession.connectionLogger = {(connectionID, type, data) in
+        //            if data != nil {
+        //                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
+        //                    NSLog("Connectionlogger: \(string)")
+        //                }
+        //            }
+        //        }
+        //
+        //        let builder = MCOMessageBuilder()
+        //        builder.header.to = [MCOAddress(displayName: "Caretaker", mailbox: myTextField1.text)]
+        //        builder.header.from = MCOAddress(displayName: "MINDSAFEAPP", mailbox: "mindsafe14@gmail.com")
+        //        builder.header.subject = "IMAGE SENT"
+        //        builder.htmlBody = "IMAGE SEND TEST!"
+        //
+        //
+        //        var dataImage: NSData?
+        //        dataImage = UIImageJPEGRepresentation(image!, 0.6)! as NSData
+        //        let attachment = MCOAttachment()
+        //        attachment.mimeType =  "image/jpg"
+        //        attachment.filename = "EpisodicScoreChart.jpg"
+        //        attachment.data = dataImage! as Data
+        //        builder.addAttachment(attachment)
+        //
+        //        let rfc822Data = builder.data()
+        //        let sendOperation = smtpSession.sendOperation(with: rfc822Data!)
+        //        sendOperation?.start { (error) -> Void in
+        //            if (error != nil) {
+        //                NSLog("Error sending email: \(String(describing: error))")
+        //            } else {
+        //                NSLog("Successfully sent email!")
+        //            }
+        //        }
     }
     
     //waiting for database retrieval to complete
     func checkResult(){
         if taskA && taskB {
             setDesign()
+            calcData()
             setChart()
             
             //DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                
+            
             //})
         }
     }

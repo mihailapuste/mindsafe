@@ -9,15 +9,38 @@
 import UIKit
 
 //test
-class EpisodicViewController: UIViewController {
-    @IBAction func dismissAction(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+class EpisodicViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+   
+    @IBOutlet var collectionView: UICollectionView!
+    
+    var model = CardModel()
+    var cardArray =  [Card]() // empty card array
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        // call the getCardMethod of the CardModel
+        cardArray = model.getCard()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return cardArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // TODO
     }
     
 

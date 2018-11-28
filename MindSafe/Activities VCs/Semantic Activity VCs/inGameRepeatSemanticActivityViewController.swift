@@ -15,12 +15,9 @@ struct Answer {
     var isValid: Bool = false
 }
 
-
-
 class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechRecognizerDelegate, UITableViewDataSource, UITableViewDelegate{
-    
     var ref: DatabaseReference!
-    var handler:DatabaseHandle!
+    
     
     // vc outlets
     @IBOutlet weak var microphoneButton: UIButton!
@@ -44,13 +41,13 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     
     
     @IBAction func doneActivityButton(_ sender: Any) {
-            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         self.activityCompletedView.isHidden = true
         numberOfAnswers = self.wordsUsedList.count
         self.microphoneLabel.text = "Start Recording"
@@ -62,17 +59,17 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
         SFSpeechRecognizer.requestAuthorization { (authStatus) in  //4
             var isButtonEnabled = false
             switch authStatus {  //5
-                case .authorized:
-                    isButtonEnabled = true
-                case .denied:
-                    isButtonEnabled = false
-                    print("User denied access to speech recognition")
-                case .restricted:
-                    isButtonEnabled = false
-                    print("Speech recognition restricted on this device")
-                case .notDetermined:
-                    isButtonEnabled = false
-                    print("Speech recognition not yet authorized")
+            case .authorized:
+                isButtonEnabled = true
+            case .denied:
+                isButtonEnabled = false
+                print("User denied access to speech recognition")
+            case .restricted:
+                isButtonEnabled = false
+                print("Speech recognition restricted on this device")
+            case .notDetermined:
+                isButtonEnabled = false
+                print("Speech recognition not yet authorized")
             }
             OperationQueue.main.addOperation() {
                 self.microphoneButton.isEnabled = isButtonEnabled
@@ -86,17 +83,17 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return self.answerList.count
+        return self.answerList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for : indexPath)
+        //        let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for : indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for : indexPath) as! SemanitcAnswerTableViewCell
         
         cell.answerView?.text = self.answerList[indexPath.row].value
         
         if self.answerList[indexPath.row].isValid == true {
-             cell.answerView?.textColor = UIColor(red: 0/255, green: 170/255, blue: 28/255, alpha: 1.0)
+            cell.answerView?.textColor = UIColor(red: 0/255, green: 170/255, blue: 28/255, alpha: 1.0)
             cell.backgroundColor = UIColor(hue: 0.3222, saturation: 0.1, brightness: 1, alpha: 1.0)
             cell.checkErroView?.image = UIImage(named: "correct.png")
         }else{
@@ -104,7 +101,7 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
             cell.backgroundColor = UIColor(hue: 0, saturation: 0.09, brightness: 1, alpha: 1.0)
             cell.checkErroView?.image = UIImage(named: "error.png")
         }
-       
+        
         return cell
     }
     
@@ -112,7 +109,7 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     @IBAction func submitAnswer(_ sender: Any) {
         if self.answerInput.text != "" {
             let item = self.answerInput.text!.lowercased().capitalized.trimmingCharacters(in: .whitespaces)
-    
+            
             var answer = Answer(value: item, isValid: false)
             
             if let index = wordsUsedList.index(of: item) {
@@ -138,20 +135,24 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     
     // function terminting game and calculating final score
     func activityOver() {
-        let finalScore = String(self.numberOfAnswers-wordsUsedList.count)
+        let finalScore = self.numberOfAnswers-wordsUsedList.count
         print("Final score is \(finalScore)/\(self.numberOfAnswers)")
         self.activityCompletedView.isHidden = false
         self.finalScoreLabel.text = "Final score: \(finalScore)/\(self.numberOfAnswers)"
         
-        // POST DATA
+        
+        //Post
+        ref=Database.database().reference()
         let date = Date()
         let formater = DateFormatter()
         formater.dateFormat="dd.MM.yyyy"
         let result = formater.string(from: date)
         
-        self.ref?.child("Date2V5").childByAutoId().setValue(result)
-        self.ref?.child("semScoreV5").childByAutoId().setValue(finalScore)
-
+        
+        ref?.child("Date2V5").childByAutoId().setValue(result)
+        ref?.child("semScoreV5").childByAutoId().setValue(String(finalScore))
+        
+        
     }
     
     // action controlling the microphone recording button
@@ -162,13 +163,13 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
             microphoneButton.isEnabled = false
             self.microphoneLabel.text = "Start Recording"
             self.microphoneOutlet.setImage(UIImage(named: "black-microphone.png"), for: .normal)
-//            microphoneButton.setTitle("Start Recording", for: .normal)
+            //            microphoneButton.setTitle("Start Recording", for: .normal)
         } else {
             startRecording()
             
             self.microphoneLabel.text = "Stop Recording"
             self.microphoneOutlet.setImage(UIImage(named: "red-microphone.png"), for: .normal)
-//            microphoneButton.setTitle("Stop Recording", for: .normal)
+            //            microphoneButton.setTitle("Stop Recording", for: .normal)
         }
     }
     
@@ -245,5 +246,5 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
             microphoneButton.isEnabled = false
         }
     }
-
+    
 }

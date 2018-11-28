@@ -49,20 +49,20 @@ UIViewController, UITextFieldDelegate {
             
         }
         /*
-        let date = Date()
-        let formater = DateFormatter()
-        formater.dateFormat="dd.MM.yyyy"
-        let result = formater.string(from: date)
-    
-        //When textfield is entered with a number
-        if myTextField1.text != ""
-        {
-        ref?.child("Date2V5").childByAutoId().setValue(result)
-           
-        ref?.child("semScoreV5").childByAutoId().setValue(myTextField1.text)
-            myTextField1.text = ""
-            
-        }
+         let date = Date()
+         let formater = DateFormatter()
+         formater.dateFormat="dd.MM.yyyy"
+         let result = formater.string(from: date)
+         
+         //When textfield is entered with a number
+         if myTextField1.text != ""
+         {
+         ref?.child("Date2V5").childByAutoId().setValue(result)
+         
+         ref?.child("semScoreV5").childByAutoId().setValue(myTextField1.text)
+         myTextField1.text = ""
+         
+         }
          */
     }
     
@@ -180,14 +180,14 @@ UIViewController, UITextFieldDelegate {
         let yaxis = self.LineChartView.leftAxis
         yaxis.spaceTop = 0.30
         yaxis.axisMinimum = 0
-        yaxis.axisMaximum = 100
+        yaxis.axisMaximum = 10
         yaxis.drawGridLinesEnabled = false
         
         self.LineChartView.rightAxis.enabled = true
         let yaxisRight = self.LineChartView.rightAxis
         yaxisRight.spaceTop = 0.30
         yaxisRight.axisMinimum = 0
-        yaxisRight.axisMaximum = 100
+        yaxisRight.axisMaximum = 10
         
     }
     
@@ -220,9 +220,9 @@ UIViewController, UITextFieldDelegate {
         LineChartView.data = chartData
         
         //Scrollable ChartView
-        if(months.count > 4){
-        LineChartView.setVisibleXRangeMaximum(4)
-        LineChartView.moveViewToX(Double(months.count - 5))
+        if(months.count > 10){
+            LineChartView.setVisibleXRangeMaximum(10)
+            LineChartView.moveViewToX(Double(months.count - 11))
         }
         
         //background color
@@ -234,56 +234,91 @@ UIViewController, UITextFieldDelegate {
     }
     
     
+    //func data analysis
+    func calcData(){
+        var dataHigh = 0.0
+        var dataLow = 0.0
+        var dataTotal = 0.0
+        var dataAvg = 0.0
+        dataLow = semScore.min()!
+        dataHigh = semScore.max()!
+        
+        for i in 0..<self.semScore.count{
+            dataTotal = dataTotal + semScore[i]
+        }
+        
+        dataAvg = dataTotal/Double(semScore.count)
+        
+        let High = ChartLimitLine(limit: dataHigh, label: "Max")
+        High.lineColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 1)
+        LineChartView.rightAxis.addLimitLine(High)
+        //High.lineDashLengths = [5.0]
+        
+        let Low = ChartLimitLine(limit: dataLow, label: "Min")
+        Low.lineColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
+        LineChartView.rightAxis.addLimitLine(Low)
+        Low.lineDashLengths = [5.0]
+        
+        let Avg = ChartLimitLine(limit: dataAvg, label: "Avg")
+        Avg.lineColor = UIColor(red: 0/255, green: 255/255, blue: 0/255, alpha: 1)
+        LineChartView.rightAxis.addLimitLine(Avg)
+        Avg.lineDashLengths = [5.0]
+        
+    }
+    
     //Email capabilities
     func emailImage(){
-//        let image = self.LineChartView.getChartImage(transparent: false)
-//        
-//        let smtpSession = MCOSMTPSession()
-//        smtpSession.hostname = "smtp.gmail.com"
-//        smtpSession.username = "mindsafe14@gmail.com"
-//        smtpSession.password = "mgroup14"
-//        smtpSession.port = 465
-//        smtpSession.authType = MCOAuthType.saslPlain
-//        smtpSession.connectionType = MCOConnectionType.TLS
-//        smtpSession.connectionLogger = {(connectionID, type, data) in
-//            if data != nil {
-//                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
-//                    NSLog("Connectionlogger: \(string)")
-//                }
-//            }
-//        }
-//        
-//        let builder = MCOMessageBuilder()
-//        builder.header.to = [MCOAddress(displayName: "Caretaker", mailbox: myTextField1.text)]
-//        builder.header.from = MCOAddress(displayName: "MINDSAFEAPP", mailbox: "mindsafe14@gmail.com")
-//        builder.header.subject = "IMAGE SENT"
-//        builder.htmlBody = "IMAGE SEND TEST!"
-//        
-//        
-//        var dataImage: NSData?
-//        dataImage = UIImageJPEGRepresentation(image!, 0.6)! as NSData
-//        let attachment = MCOAttachment()
-//        attachment.mimeType =  "image/jpg"
-//        attachment.filename = "SemanticScoreChart.jpg"
-//        attachment.data = dataImage! as Data
-//        builder.addAttachment(attachment)
-//        
-//        let rfc822Data = builder.data()
-//        let sendOperation = smtpSession.sendOperation(with: rfc822Data!)
-//        sendOperation?.start { (error) -> Void in
-//            if (error != nil) {
-//                NSLog("Error sending email: \(String(describing: error))")
-//            } else {
-//                NSLog("Successfully sent email!")
-//            }
-//        }
+        //        let image = self.LineChartView.getChartImage(transparent: false)
+        //
+        //        let smtpSession = MCOSMTPSession()
+        //        smtpSession.hostname = "smtp.gmail.com"
+        //        smtpSession.username = "mindsafe14@gmail.com"
+        //        smtpSession.password = "mgroup14"
+        //        smtpSession.port = 465
+        //        smtpSession.authType = MCOAuthType.saslPlain
+        //        smtpSession.connectionType = MCOConnectionType.TLS
+        //        smtpSession.connectionLogger = {(connectionID, type, data) in
+        //            if data != nil {
+        //                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
+        //                    NSLog("Connectionlogger: \(string)")
+        //                }
+        //            }
+        //        }
+        //
+        //        let builder = MCOMessageBuilder()
+        //        builder.header.to = [MCOAddress(displayName: "Caretaker", mailbox: myTextField1.text)]
+        //        builder.header.from = MCOAddress(displayName: "MINDSAFEAPP", mailbox: "mindsafe14@gmail.com")
+        //        builder.header.subject = "IMAGE SENT"
+        //        builder.htmlBody = "IMAGE SEND TEST!"
+        //
+        //
+        //        var dataImage: NSData?
+        //        dataImage = UIImageJPEGRepresentation(image!, 0.6)! as NSData
+        //        let attachment = MCOAttachment()
+        //        attachment.mimeType =  "image/jpg"
+        //        attachment.filename = "SemanticScoreChart.jpg"
+        //        attachment.data = dataImage! as Data
+        //        builder.addAttachment(attachment)
+        //
+        //        let rfc822Data = builder.data()
+        //        let sendOperation = smtpSession.sendOperation(with: rfc822Data!)
+        //        sendOperation?.start { (error) -> Void in
+        //            if (error != nil) {
+        //                NSLog("Error sending email: \(String(describing: error))")
+        //            } else {
+        //                NSLog("Successfully sent email!")
+        //            }
+        //        }
     }
     
     //waiting for database retrieval to complete
     func checkResult(){
         if taskA && taskC {
             setDesign()
-            setChart()
+            if(semScore.count > 0){
+                calcData()
+                setChart()
+            }
         }
     }
     
