@@ -21,6 +21,18 @@ class CardCollectionViewCell: UICollectionViewCell {
         // keeps track of card getting passed in
         self.card = card
         
+        if card.isMatched == true {
+            // if the card has been matched, make the imageviews invisible
+            backImageView.alpha = 0
+            frontImageView.alpha = 0
+            
+            return
+        } else {
+            // if the card hasnt been matched, make imageviews visible
+            frontImageView.alpha = 1
+            frontImageView.alpha = 1
+        }
+        
         frontImageView.image = UIImage(named: card.imageName)
         
         // deteremine in card is in flipped up or down state
@@ -57,10 +69,15 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     func remove() {
         // removes both imageviews from being visible
+        backImageView.alpha = 0
         
         // TODO: Animate action
-        backImageView.alpha = 0
-        frontImageView.alpha = 0
+        UIView.animate(withDuration: 0.3, delay: 0.5, options: .curveEaseOut, animations: {
+           
+            self.frontImageView.alpha = 0
+            
+        }, completion: nil)
+        
         
     }
 }

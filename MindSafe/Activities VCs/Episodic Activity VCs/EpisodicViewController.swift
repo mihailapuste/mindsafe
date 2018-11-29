@@ -56,7 +56,7 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
         // get card we are trying to display
         let card = cardArray[indexPath.row]
         
-        if card.isFlipped == false {
+        if card.isFlipped == false && card.isMatched == false {
             
             // flip the card
             cell.flip()
@@ -72,6 +72,7 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
                 // this is the second card being flipped
                 
                 // TODO: Perform the matching logic
+                checkForMatches(indexPath)
             }
         }
         
@@ -115,6 +116,12 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
             cardOneCell?.flipBack()
             cardTwoCell?.flipBack()
         }
+        
+        // tell the collectionview to reload the view of the first card if it is nil
+        if cardOneCell == nil {
+            collectionView.reloadItems(at: [firstFlippedCardIndex!])
+        }
+        // reset the property that tracks the first card flipped
         
         firstFlippedCardIndex = nil
     }
