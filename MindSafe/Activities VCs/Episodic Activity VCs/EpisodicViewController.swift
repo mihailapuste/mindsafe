@@ -11,6 +11,7 @@ import UIKit
 //test
 class EpisodicViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet var timerLabel: UILabel!
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -19,12 +20,18 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var firstFlippedCardIndex: IndexPath?
     
+    var timer:Timer?
+    var milliseconds: Float = 180 * 1000 // 180 seconds
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        // create timer
+        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer!, forMode: .commonModes)
         // call the getCardMethod of the CardModel
         cardArray = model.getCard()
     }
@@ -51,6 +58,11 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
+        // check if there is any time left
+        if milliseconds <= 0 {
+            return
+        }
+        
         let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
         
         // get card we are trying to display
@@ -76,6 +88,27 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
             }
         }
         
+    }
+    // MARK: - Timer methods
+    
+    @objc func timerElapsed() {
+        
+        milliseconds -= 1;
+        
+        // Express in seconds (formatted to 2 dec places)
+        let seconds = String(format: "%.2f", milliseconds/1000)
+        timerLabel.text = "Time remaining: \(seconds)"
+        
+        // when timer reaches 0s ( stop timer )
+        if milliseconds <= 0 {
+            
+            // stop the timer
+            timer?.invalidate()
+            timerLabel.textColor = UIColor.red
+            
+            // check if there are any cards unmatched
+            checkGameEnded()
+        }
     }
     
     // MARK: - Game Logic Methods
@@ -104,6 +137,9 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
             cardOneCell?.remove()
             cardTwoCell?.remove()
             
+            // check if there are any cards left unmatched
+            checkGameEnded()
+            
         } else {
             
             // its not a match
@@ -124,6 +160,64 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
         // reset the property that tracks the first card flipped
         
         firstFlippedCardIndex = nil
+    }
+    
+    func checkGameEnded() {
+    
+    // Determine if there are any cards unmatched
+    var isWon = true
+        
+    for card in cardArray {
+        
+        if card.isMatched == false {
+            isWon = false
+            break
+        }
+            
+    }
+        
+    // Messaging alert
+    var title = ""
+    var message = ""
+        
+    // if not, then the user has one
+    if isWon == true {
+            
+        if milliseconds > 0 {
+            timer?.invalidate()
+        }
+        
+        title = "Congradulations!"
+        message = "You've won."
+            
+    }
+    else{
+    // if there are unmatched cards, check if there is any time left
+        
+        if milliseconds > 0 {
+            return
+        }
+        
+        title = "Game over!"
+        message = "You've lost."
+        
+    }
+   
+        
+    // show won or lost messaging
+    showAlert(title, message)
+ 
+    }
+    
+    func showAlert(_ title: String, _ message: String){
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        
+        alert.addAction(alertAction)
+        
+        present(alert, animated: true, completion: nil)
     }
 
 }
