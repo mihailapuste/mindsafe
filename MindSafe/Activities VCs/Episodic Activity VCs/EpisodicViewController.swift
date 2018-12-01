@@ -23,8 +23,6 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
     var timer:Timer?
     var milliseconds: Float = 180 * 1000 // 180 seconds
     
-    var soundManager = SoundManager()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,7 +40,7 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidAppear(_ animated: Bool) {
         
-        soundManager.playSound(.shuffle) // 19:38
+        SoundManager.playSound(.shuffle) // 19:38
         
     }
     
@@ -84,7 +82,7 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
             cell.flip()
             
             // play flip sound
-            soundManager.playSound(.flip)
+            SoundManager.playSound(.flip)
             
             
             card.isFlipped = true
@@ -145,7 +143,7 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
             // its a match
             
             // play flip sound
-            soundManager.playSound(.match)
+            SoundManager.playSound(.match)
             
             // set the statuses of the cards
             cardOne.isMatched = true
@@ -163,7 +161,7 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
             // its not a match
             
             // play flip sound
-            soundManager.playSound(.nomatch)
+            SoundManager.playSound(.nomatch)
             
             // set the statuses of the card
             cardOne.isFlipped = false

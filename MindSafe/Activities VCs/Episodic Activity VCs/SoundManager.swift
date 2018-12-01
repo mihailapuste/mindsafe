@@ -11,7 +11,7 @@ import AVFoundation
 
 class SoundManager {
     
-    var audioPlayer: AVAudioPlayer?
+    static var audioPlayer: AVAudioPlayer?
     
     enum SoundEffect {
         
@@ -22,7 +22,7 @@ class SoundManager {
         
     }
     
-    func playSound(_ effect:SoundEffect) {
+    static func playSound(_ effect:SoundEffect) {
         
         var soundFileName = ""
         
