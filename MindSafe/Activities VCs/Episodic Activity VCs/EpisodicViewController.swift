@@ -23,8 +23,13 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
     var timer:Timer?
     var milliseconds: Float = 180 * 1000 // 180 seconds
     
+    var soundManager = SoundManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // call the getCardMethod of the CardModel
+        cardArray = model.getCard()
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -32,8 +37,13 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
         // create timer
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
         RunLoop.main.add(timer!, forMode: .commonModes)
-        // call the getCardMethod of the CardModel
-        cardArray = model.getCard()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        soundManager.playSound(.shuffle) // 19:38
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -72,6 +82,11 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
             
             // flip the card
             cell.flip()
+            
+            // play flip sound
+            soundManager.playSound(.flip)
+            
+            
             card.isFlipped = true
             
             // determine if it is the first card or second card thats flipped over
@@ -129,6 +144,9 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
             
             // its a match
             
+            // play flip sound
+            soundManager.playSound(.match)
+            
             // set the statuses of the cards
             cardOne.isMatched = true
             cardTwo.isMatched = true
@@ -143,6 +161,9 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
         } else {
             
             // its not a match
+            
+            // play flip sound
+            soundManager.playSound(.nomatch)
             
             // set the statuses of the card
             cardOne.isFlipped = false

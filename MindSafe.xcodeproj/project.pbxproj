@@ -49,6 +49,12 @@
 		E7AA641121A12801003A4A8D /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA641021A12801003A4A8D /* ContactTableViewCell.swift */; };
 		E7B56A53219B6E0B00DD3CF8 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */; };
 		E7B56A55219B70E300DD3CF8 /* ProgressView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */; };
+		E7DD9E1F21B31EE5007F3C85 /* dingcorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = E7DD9E1B21B31EE4007F3C85 /* dingcorrect.wav */; };
+		E7DD9E2021B31EE5007F3C85 /* dingwrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = E7DD9E1C21B31EE4007F3C85 /* dingwrong.wav */; };
+		E7DD9E2121B31EE5007F3C85 /* shuffle.wav in Resources */ = {isa = PBXBuildFile; fileRef = E7DD9E1D21B31EE4007F3C85 /* shuffle.wav */; };
+		E7DD9E2221B31EE5007F3C85 /* cardflip.wav in Resources */ = {isa = PBXBuildFile; fileRef = E7DD9E1E21B31EE5007F3C85 /* cardflip.wav */; };
+		E7DD9E2421B31F27007F3C85 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DD9E2321B31F27007F3C85 /* AVFoundation.framework */; };
+		E7DD9E2621B31F6E007F3C85 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD9E2521B31F6E007F3C85 /* SoundManager.swift */; };
 		E7EA649521ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA649421ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift */; };
 		E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */; };
 		E7FD6E5E21A5DEE3007C1FA6 /* ActivitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */; };
@@ -127,6 +133,12 @@
 		E7AA641021A12801003A4A8D /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		E7B56A52219B6E0B00DD3CF8 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		E7B56A54219B70E300DD3CF8 /* ProgressView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgressView.storyboard; sourceTree = "<group>"; };
+		E7DD9E1B21B31EE4007F3C85 /* dingcorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingcorrect.wav; sourceTree = "<group>"; };
+		E7DD9E1C21B31EE4007F3C85 /* dingwrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingwrong.wav; sourceTree = "<group>"; };
+		E7DD9E1D21B31EE4007F3C85 /* shuffle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shuffle.wav; sourceTree = "<group>"; };
+		E7DD9E1E21B31EE5007F3C85 /* cardflip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cardflip.wav; sourceTree = "<group>"; };
+		E7DD9E2321B31F27007F3C85 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E7DD9E2521B31F6E007F3C85 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		E7EA649421ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanitcAnswerTableViewCell.swift; sourceTree = "<group>"; };
 		E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
 		E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitesTableViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DD9E2421B31F27007F3C85 /* AVFoundation.framework in Frameworks */,
 				E77FD9D821A3687700C071E9 /* Charts.framework in Frameworks */,
 				E738D365219BE362001DC316 /* MapKit.framework in Frameworks */,
 				AAE77571E571ECCB30B90DA8 /* Pods_MindSafe.framework in Frameworks */,
@@ -182,6 +195,7 @@
 		E738D363219BE362001DC316 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7DD9E2321B31F27007F3C85 /* AVFoundation.framework */,
 				E77FD9D721A3687700C071E9 /* Charts.framework */,
 				E738D364219BE362001DC316 /* MapKit.framework */,
 				A44D13D649B027D024A4C117 /* Pods_MindSafe.framework */,
@@ -217,6 +231,7 @@
 		E769619D218111F0005AC2EB /* MindSafe */ = {
 			isa = PBXGroup;
 			children = (
+				E7DD9E1A21B31E9B007F3C85 /* Sounds */,
 				E769619E218111F0005AC2EB /* AppDelegate.swift */,
 				E79ACAC621A8B32C005CD511 /* Home VCs */,
 				E79ACAC721A8B36A005CD511 /* Reminders VCs */,
@@ -341,6 +356,7 @@
 				E7FD6E6321A5E2EF007C1FA6 /* EpisodicViewController.swift */,
 				E70AF8B421AF2E9C007CC8FD /* CardCollectionViewCell.swift */,
 				E70AF8B221AF2871007CC8FD /* Card.swift */,
+				E7DD9E2521B31F6E007F3C85 /* SoundManager.swift */,
 			);
 			path = "Episodic Activity VCs";
 			sourceTree = "<group>";
@@ -356,6 +372,17 @@
 				E76961AA218111F0005AC2EB /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E7DD9E1A21B31E9B007F3C85 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				E7DD9E1E21B31EE5007F3C85 /* cardflip.wav */,
+				E7DD9E1B21B31EE4007F3C85 /* dingcorrect.wav */,
+				E7DD9E1C21B31EE4007F3C85 /* dingwrong.wav */,
+				E7DD9E1D21B31EE4007F3C85 /* shuffle.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,12 +508,16 @@
 			files = (
 				E76961AC218111F0005AC2EB /* LaunchScreen.storyboard in Resources */,
 				E7B56A53219B6E0B00DD3CF8 /* Contacts.storyboard in Resources */,
+				E7DD9E1F21B31EE5007F3C85 /* dingcorrect.wav in Resources */,
 				E76961A9218111F0005AC2EB /* Assets.xcassets in Resources */,
 				E7FD6E6221A5E223007C1FA6 /* SemanticActivity.storyboard in Resources */,
+				E7DD9E2221B31EE5007F3C85 /* cardflip.wav in Resources */,
 				E7FD6E6021A5E213007C1FA6 /* EpisodicActivity.storyboard in Resources */,
+				E7DD9E2021B31EE5007F3C85 /* dingwrong.wav in Resources */,
 				E76961A4218111F0005AC2EB /* Main.storyboard in Resources */,
 				E7B56A55219B70E300DD3CF8 /* ProgressView.storyboard in Resources */,
 				E759105E21A228DD00EEC8E5 /* GoogleService-Info.plist in Resources */,
+				E7DD9E2121B31EE5007F3C85 /* shuffle.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +716,7 @@
 				E738D36B219D0624001DC316 /* PanicViewController.swift in Sources */,
 				E70AF8B121AF2715007CC8FD /* CardModel.swift in Sources */,
 				E79ACAD521A91F7E005CD511 /* inGameRepeatSemanticActivityViewController.swift in Sources */,
+				E7DD9E2621B31F6E007F3C85 /* SoundManager.swift in Sources */,
 				E76961A7218111F0005AC2EB /* MindSafe.xcdatamodeld in Sources */,
 				E724981121A0EF1200196B00 /* ViewContactTableViewController.swift in Sources */,
 				E7659CD7218FFCC0004E2736 /* HomeTableViewController.swift in Sources */,
