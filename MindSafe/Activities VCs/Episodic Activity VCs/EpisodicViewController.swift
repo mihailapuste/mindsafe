@@ -11,7 +11,9 @@ import UIKit
 //test
 class EpisodicViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet var gameOverView: UIView!
     @IBOutlet var timerLabel: UILabel!
+    @IBOutlet var finalScoreLabel: UILabel!
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -21,11 +23,21 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
     var firstFlippedCardIndex: IndexPath?
     
     var timer:Timer?
-    var milliseconds: Float = 180 * 1000 // 180 seconds
+    var milliseconds: Float = 120 * 1000 // 120 seconds (2 minutes)
+    
+    @IBAction func quitActivity(_ sender: Any) {
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func restartActivity(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        gameOverView.isHidden = true
         // call the getCardMethod of the CardModel
         cardArray = model.getCard()
         
@@ -109,7 +121,7 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
         milliseconds -= 1;
         
         // Express in seconds (formatted to 2 dec places)
-        let seconds = String(format: "%.2f", milliseconds/1000)
+        let seconds = String(format: "%.0f", milliseconds/1000)
         timerLabel.text = "Time remaining: \(seconds)"
         
         // when timer reaches 0s ( stop timer )
@@ -194,10 +206,8 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
             
     }
+ 
         
-    // Messaging alert
-    var title = ""
-    var message = ""
         
     // if not, then the user has one
     if isWon == true {
@@ -206,9 +216,6 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
             timer?.invalidate()
         }
         
-        title = "Congradulations!"
-        message = "You've won."
-            
     }
     else{
     // if there are unmatched cards, check if there is any time left
@@ -216,15 +223,16 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
         if milliseconds > 0 {
             return
         }
-        
-        title = "Game over!"
-        message = "You've lost."
-        
+
     }
+    // show won or lost alert (optional)
+    // showAlert(title, message)
    
+    gameOverView.isHidden = false
+    let seconds = String(format: "%.0f", milliseconds/1000)
+    finalScoreLabel.text = "Final score: \(seconds)/120"
         
-    // show won or lost messaging
-    showAlert(title, message)
+ 
  
     }
     

@@ -51,10 +51,5 @@ class CardModel {
         // return the array
         return generatedCardsArray
         
-
-        
-        
-        
-        
     }
 }
