@@ -233,10 +233,10 @@
             </objects>
             <point key="canvasLocation" x="248.80000000000001" y="-57.121439280359823"/>
         </scene>
-        <!--View Controller-->
+        <!--Episodic Start Screen View Controller-->
         <scene sceneID="5XM-X5-Pjm">
             <objects>
-                <viewController id="aWe-4B-fTe" sceneMemberID="viewController">
+                <viewController id="aWe-4B-fTe" customClass="EpisodicStartScreenViewController" customModule="MindSafe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="epT-lQ-Yev">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,7 +261,7 @@
                                     <navigationItem title="Episodic Activity" id="FHw-xt-ATv">
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="1rX-ba-Sfc">
                                             <connections>
-                                                <action selector="cancelGame:" destination="aWe-4B-fTe" id="zw6-Ic-IMG"/>
+                                                <action selector="cancelActivity:" destination="aWe-4B-fTe" id="Km5-CU-O6V"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -273,8 +273,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmK-Ps-Zhz">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semantic Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5Y-8f-5B8">
-                                                <rect key="frame" x="49" y="29" width="277" height="42"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episodic Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5Y-8f-5B8">
+                                                <rect key="frame" x="56.5" y="29" width="262" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

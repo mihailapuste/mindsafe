@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 //test
 class EpisodicViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var ref: DatabaseReference!
+    
     
     @IBOutlet var gameOverView: UIView!
     @IBOutlet var timerLabel: UILabel!
@@ -231,9 +235,20 @@ class EpisodicViewController: UIViewController, UICollectionViewDelegate, UIColl
     gameOverView.isHidden = false
     let seconds = String(format: "%.0f", milliseconds/1000)
     finalScoreLabel.text = "Final score: \(seconds)/120"
+    
+    // push to firebase (value -> seconds)
         
- 
- 
+    ref=Database.database().reference()
+        
+    let date = Date()
+    let formater = DateFormatter()
+    formater.dateFormat="dd.MM.yyyy"
+    let result = formater.string(from: date)
+        
+    
+    ref?.child("Date1V5").childByAutoId().setValue(result)
+    ref?.child("epScoreV5").childByAutoId().setValue(seconds)
+        
     }
     
     func showAlert(_ title: String, _ message: String){

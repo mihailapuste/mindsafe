@@ -10,12 +10,15 @@
 
 import UIKit
 import Charts
+import CoreData
 import FirebaseDatabase
+import Accelerate
 
 class SemanticProgViewController:
     
 UIViewController, UITextFieldDelegate {
     
+    var contacts: [Contacts] = [];
     
     var ref: DatabaseReference!
     var handler:DatabaseHandle!
@@ -30,40 +33,18 @@ UIViewController, UITextFieldDelegate {
     }
     
     @IBOutlet weak var LineChartView: LineChartView!
-    
-    
-    @IBOutlet weak var myTextField1: UITextField!
+
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
-    // action saving dummy data
+    // Email to all contacts button
     @IBAction func savBut1(_ sender: Any) {
         
-        if myTextField1.text != ""
-        {
-            emailImage()
-            myTextField1.text = ""
-            
-        }
-        /*
-         let date = Date()
-         let formater = DateFormatter()
-         formater.dateFormat="dd.MM.yyyy"
-         let result = formater.string(from: date)
-         
-         //When textfield is entered with a number
-         if myTextField1.text != ""
-         {
-         ref?.child("Date2V5").childByAutoId().setValue(result)
-         
-         ref?.child("semScoreV5").childByAutoId().setValue(myTextField1.text)
-         myTextField1.text = ""
-         
-         }
-         */
+           emailAllContacts()
+
     }
     
     // action updating chart from firebase
@@ -123,8 +104,10 @@ UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getData() // gets contacts
+        
         // Do any additional setup after loading the view, typically from a nib.
-        self.myTextField1.delegate = self
         self.setDatabase()
         
         /* ref.child("Date1").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -221,8 +204,9 @@ UIViewController, UITextFieldDelegate {
         
         //Scrollable ChartView
         if(months.count > 10){
-            LineChartView.setVisibleXRangeMaximum(10)
-            LineChartView.moveViewToX(Double(months.count - 11))
+            LineChartView.setVisibleXRangeMaximum(9)
+            LineChartView.moveViewToX(Double(months.count - 10))
+            print(months.count)
         }
         
         //background color
@@ -240,6 +224,7 @@ UIViewController, UITextFieldDelegate {
         var dataLow = 0.0
         var dataTotal = 0.0
         var dataAvg = 0.0
+        var dataMedian = 0.0
         dataLow = semScore.min()!
         dataHigh = semScore.max()!
         
@@ -264,51 +249,128 @@ UIViewController, UITextFieldDelegate {
         LineChartView.rightAxis.addLimitLine(Avg)
         Avg.lineDashLengths = [5.0]
         
+        //Median Score
+        let sorted = semScore.sorted()
+        if sorted.count % 2 == 0{
+            dataMedian = (sorted[(sorted.count/2)]+sorted[((sorted.count/2)-1)])/2
+        }
+        else {
+            dataMedian = (sorted[(sorted.count-1)/2])
+        }
+        let Median = ChartLimitLine(limit: dataMedian, label: "Median")
+        Median.lineColor = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)
+        LineChartView.rightAxis.addLimitLine(Median)
+        Median.lineDashLengths = [5.0]
+        
+        var mn = 0.0
+        var sddev = 0.0
+        vDSP_normalizeD(semScore, 1, nil, 1, &mn, &sddev, vDSP_Length(semScore.count))
+        sddev *= sqrt(Double(semScore.count)/Double(semScore.count-1))
+        
+        //standard Deviation
+        let stdDev = ChartLimitLine(limit: sddev, label: "Std Deviation")
+        stdDev.lineColor = UIColor(red: 200/255, green: 50/255, blue: 200/255, alpha: 1)
+        LineChartView.rightAxis.addLimitLine(stdDev)
+        stdDev.lineDashLengths = [5.0]
+    }
+    
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - Emailing functions
+    
+    func emailAllContacts(){
+        let firstName = UserDefaults.standard.object(forKey: "firstName") as! String
+        let lastName = UserDefaults.standard.object(forKey: "lastName") as! String
+        
+        if firstName == "" {
+            showAlert(title: "No name!", message: "Set user first name in personal information.")
+            return
+        }
+     
+        
+        if lastName == "" {
+            showAlert(title: "No name!", message: "Set user last name in personal information.")
+            return
+        }
+        
+        
+        let subject = "Semantic Activity Progress from \(firstName) \(lastName)"
+        let body = "Here are my latest activity scores!"
+        for contact in contacts {
+            let name = "\(contact.firstName!) \(contact.lastName!)"
+            let email = contact.contactEmail!
+            print("email to \(contact.firstName!) \(contact.lastName!) - \(contact.contactEmail!)")
+            emailImage(displayName: name, toEmail: email, subject: subject, body: body)
+        }
+        
+    }
+    
+    // Retrieves comtacts from coredata
+    func getData() {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let context = appDelegate.persistentContainer.viewContext;
+        
+        do
+        {
+            contacts = try context.fetch(Contacts.fetchRequest())
+        }
+        catch
+        {
+            print("fetch failed!")
+        }
+        
     }
     
     //Email capabilities
-    func emailImage(){
-        //        let image = self.LineChartView.getChartImage(transparent: false)
-        //
-        //        let smtpSession = MCOSMTPSession()
-        //        smtpSession.hostname = "smtp.gmail.com"
-        //        smtpSession.username = "mindsafe14@gmail.com"
-        //        smtpSession.password = "mgroup14"
-        //        smtpSession.port = 465
-        //        smtpSession.authType = MCOAuthType.saslPlain
-        //        smtpSession.connectionType = MCOConnectionType.TLS
-        //        smtpSession.connectionLogger = {(connectionID, type, data) in
-        //            if data != nil {
-        //                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
-        //                    NSLog("Connectionlogger: \(string)")
-        //                }
-        //            }
-        //        }
-        //
-        //        let builder = MCOMessageBuilder()
-        //        builder.header.to = [MCOAddress(displayName: "Caretaker", mailbox: myTextField1.text)]
-        //        builder.header.from = MCOAddress(displayName: "MINDSAFEAPP", mailbox: "mindsafe14@gmail.com")
-        //        builder.header.subject = "IMAGE SENT"
-        //        builder.htmlBody = "IMAGE SEND TEST!"
-        //
-        //
-        //        var dataImage: NSData?
-        //        dataImage = UIImageJPEGRepresentation(image!, 0.6)! as NSData
-        //        let attachment = MCOAttachment()
-        //        attachment.mimeType =  "image/jpg"
-        //        attachment.filename = "SemanticScoreChart.jpg"
-        //        attachment.data = dataImage! as Data
-        //        builder.addAttachment(attachment)
-        //
-        //        let rfc822Data = builder.data()
-        //        let sendOperation = smtpSession.sendOperation(with: rfc822Data!)
-        //        sendOperation?.start { (error) -> Void in
-        //            if (error != nil) {
-        //                NSLog("Error sending email: \(String(describing: error))")
-        //            } else {
-        //                NSLog("Successfully sent email!")
-        //            }
-        //        }
+    func emailImage(displayName: String, toEmail: String, subject: String, body: String){
+        let image = self.LineChartView.getChartImage(transparent: false)
+        
+        let smtpSession = MCOSMTPSession()
+        smtpSession.hostname = "smtp.gmail.com"
+        smtpSession.username = "mindsafe14@gmail.com"
+        smtpSession.password = "mgroup14"
+        smtpSession.port = 465
+        smtpSession.authType = MCOAuthType.saslPlain
+        smtpSession.connectionType = MCOConnectionType.TLS
+        smtpSession.connectionLogger = {(connectionID, type, data) in
+            if data != nil {
+                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
+                    NSLog("Connectionlogger: \(string)")
+                }
+            }
+        }
+        
+        let builder = MCOMessageBuilder()
+        builder.header.to = [MCOAddress(displayName: displayName, mailbox: toEmail)]
+        builder.header.from = MCOAddress(displayName: "MINDSAFEAPP", mailbox: "mindsafe14@gmail.com")
+        builder.header.subject = subject
+        builder.htmlBody = body
+        
+        
+        var dataImage: NSData?
+        dataImage = UIImageJPEGRepresentation(image!, 0.6)! as NSData
+        let attachment = MCOAttachment()
+        attachment.mimeType =  "image/jpg"
+        attachment.filename = "SemanticScoreChart.jpg"
+        attachment.data = dataImage! as Data
+        builder.addAttachment(attachment)
+        
+        let rfc822Data = builder.data()
+        let sendOperation = smtpSession.sendOperation(with: rfc822Data!)
+        sendOperation?.start { (error) -> Void in
+            if (error != nil) {
+                NSLog("Error sending email: \(String(describing: error))")
+            } else {
+                NSLog("Successfully sent email!")
+            }
+        }
     }
     
     //waiting for database retrieval to complete

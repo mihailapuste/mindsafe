@@ -40,9 +40,7 @@
 		E77FD9D821A3687700C071E9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77FD9D721A3687700C071E9 /* Charts.framework */; };
 		E789255A21ADEB93001F4A89 /* EpisodicProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255421ADEB92001F4A89 /* EpisodicProgress.swift */; };
 		E789255B21ADEB93001F4A89 /* EpChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255521ADEB93001F4A89 /* EpChartData.swift */; };
-		E789255C21ADEB93001F4A89 /* NotifChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255621ADEB93001F4A89 /* NotifChartData.swift */; };
 		E789255D21ADEB93001F4A89 /* SemanticProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255721ADEB93001F4A89 /* SemanticProgress.swift */; };
-		E789255E21ADEB93001F4A89 /* NotificationProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255821ADEB93001F4A89 /* NotificationProgress.swift */; };
 		E789255F21ADEB93001F4A89 /* SemChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E789255921ADEB93001F4A89 /* SemChartData.swift */; };
 		E79ACAD321A8C91B005CD511 /* InGameSemanticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ACAD221A8C91B005CD511 /* InGameSemanticViewController.swift */; };
 		E79ACAD521A91F7E005CD511 /* inGameRepeatSemanticActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ACAD421A91F7E005CD511 /* inGameRepeatSemanticActivityViewController.swift */; };
@@ -55,6 +53,7 @@
 		E7DD9E2221B31EE5007F3C85 /* cardflip.wav in Resources */ = {isa = PBXBuildFile; fileRef = E7DD9E1E21B31EE5007F3C85 /* cardflip.wav */; };
 		E7DD9E2421B31F27007F3C85 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DD9E2321B31F27007F3C85 /* AVFoundation.framework */; };
 		E7DD9E2621B31F6E007F3C85 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD9E2521B31F6E007F3C85 /* SoundManager.swift */; };
+		E7DD9E2821B33837007F3C85 /* EpisodicStartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD9E2721B33837007F3C85 /* EpisodicStartScreenViewController.swift */; };
 		E7EA649521ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA649421ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift */; };
 		E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */; };
 		E7FD6E5E21A5DEE3007C1FA6 /* ActivitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */; };
@@ -124,9 +123,7 @@
 		E77FD9D721A3687700C071E9 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E789255421ADEB92001F4A89 /* EpisodicProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodicProgress.swift; sourceTree = "<group>"; };
 		E789255521ADEB93001F4A89 /* EpChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpChartData.swift; sourceTree = "<group>"; };
-		E789255621ADEB93001F4A89 /* NotifChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifChartData.swift; sourceTree = "<group>"; };
 		E789255721ADEB93001F4A89 /* SemanticProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemanticProgress.swift; sourceTree = "<group>"; };
-		E789255821ADEB93001F4A89 /* NotificationProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationProgress.swift; sourceTree = "<group>"; };
 		E789255921ADEB93001F4A89 /* SemChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemChartData.swift; sourceTree = "<group>"; };
 		E79ACAD221A8C91B005CD511 /* InGameSemanticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InGameSemanticViewController.swift; sourceTree = "<group>"; };
 		E79ACAD421A91F7E005CD511 /* inGameRepeatSemanticActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inGameRepeatSemanticActivityViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +136,7 @@
 		E7DD9E1E21B31EE5007F3C85 /* cardflip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cardflip.wav; sourceTree = "<group>"; };
 		E7DD9E2321B31F27007F3C85 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E7DD9E2521B31F6E007F3C85 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		E7DD9E2721B33837007F3C85 /* EpisodicStartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodicStartScreenViewController.swift; sourceTree = "<group>"; };
 		E7EA649421ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanitcAnswerTableViewCell.swift; sourceTree = "<group>"; };
 		E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
 		E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitesTableViewController.swift; sourceTree = "<group>"; };
@@ -318,11 +316,9 @@
 		E79ACACB21A8B3FE005CD511 /* Progress Viewer VCs */ = {
 			isa = PBXGroup;
 			children = (
-				E789255521ADEB93001F4A89 /* EpChartData.swift */,
 				E789255421ADEB92001F4A89 /* EpisodicProgress.swift */,
-				E789255621ADEB93001F4A89 /* NotifChartData.swift */,
-				E789255821ADEB93001F4A89 /* NotificationProgress.swift */,
 				E789255721ADEB93001F4A89 /* SemanticProgress.swift */,
+				E789255521ADEB93001F4A89 /* EpChartData.swift */,
 				E789255921ADEB93001F4A89 /* SemChartData.swift */,
 			);
 			path = "Progress Viewer VCs";
@@ -357,6 +353,7 @@
 				E70AF8B421AF2E9C007CC8FD /* CardCollectionViewCell.swift */,
 				E70AF8B221AF2871007CC8FD /* Card.swift */,
 				E7DD9E2521B31F6E007F3C85 /* SoundManager.swift */,
+				E7DD9E2721B33837007F3C85 /* EpisodicStartScreenViewController.swift */,
 			);
 			path = "Episodic Activity VCs";
 			sourceTree = "<group>";
@@ -708,7 +705,6 @@
 				E724980F21A0C82300196B00 /* NewContactTableViewController.swift in Sources */,
 				E7EA649521ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift in Sources */,
 				E738D367219BE37C001DC316 /* TrackerViewController.swift in Sources */,
-				E789255E21ADEB93001F4A89 /* NotificationProgress.swift in Sources */,
 				E7AA641121A12801003A4A8D /* ContactTableViewCell.swift in Sources */,
 				E79ACAD321A8C91B005CD511 /* InGameSemanticViewController.swift in Sources */,
 				E7659CD5218FE57F004E2736 /* SettingsTableTableViewController.swift in Sources */,
@@ -727,7 +723,7 @@
 				E71E09F721852DA7001A30EC /* NewReminderTableViewController.swift in Sources */,
 				E789255F21ADEB93001F4A89 /* SemChartData.swift in Sources */,
 				E70AF8B521AF2E9C007CC8FD /* CardCollectionViewCell.swift in Sources */,
-				E789255C21ADEB93001F4A89 /* NotifChartData.swift in Sources */,
+				E7DD9E2821B33837007F3C85 /* EpisodicStartScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +825,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = sendEmail_bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -870,6 +867,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = sendEmail_bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
