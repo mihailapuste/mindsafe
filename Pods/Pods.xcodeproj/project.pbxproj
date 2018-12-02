@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		003B634B4A806CB172E1BAE13E4519AA /* Pods-MindSafe-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A10C5833DC9AABF91016CB36F1593D /* Pods-MindSafe-dummy.m */; };
+		003B634B4A806CB172E1BAE13E4519AA /* Pods-MindSafe-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 404102CE8CA351561C72CA632030C3E9 /* Pods-MindSafe-dummy.m */; };
 		0076BACC2F0AF36E15FB247AA005CF60 /* FWriteRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = D77696F25853D557D47E0E9F7EC73A20 /* FWriteRecord.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		009D8E987B72AC718814C940C31AA86A /* FIRAnalyticsConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3632ABB224C48A23616F298E2EE39AA7 /* FIRAnalyticsConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		012CB4ADBBAA7DE57CCC7983D4F8BEEB /* ChartBaseDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1213BB9EBC73BC84DDF0973083353 /* ChartBaseDataSet.swift */; };
@@ -75,7 +75,6 @@
 		1C849F2F93DD4FB0FB09B5622D6B72D5 /* FListenProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E45684AD20F8D3BE54070D272D3667 /* FListenProvider.m */; };
 		1CEAB5B7698F0EB7EEFEC72B3BE26D1F /* FIROptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A24D43E3C61CC1F224625061DD8BF35 /* FIROptions.m */; };
 		1DCEE046C5FDF642FAE1C09536F72329 /* FTupleSetIdPath.h in Headers */ = {isa = PBXBuildFile; fileRef = E9795ED2494951B7D54FF20382067BD1 /* FTupleSetIdPath.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1EA0A803B7079735F1359783A623A2DB /* Pods-MindSafeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6ADF032C1A9639779FDEABC2C96582A /* Pods-MindSafeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FA21E031BA4203CC59F955E015C8B4D /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B473425F56812C8F97D78BEA28E69C /* Transformer.swift */; };
 		2001B9F27B5C4F512389BD0397B960C0 /* FIRLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 66398ACD2B35B4D75292F7F273D0F3AC /* FIRLogger.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		208786951517D087CD8B981338157E5E /* FIRDatabaseReference.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE86899865C8A8393B7F63A7EF0F4A0 /* FIRDatabaseReference.m */; };
@@ -120,7 +119,7 @@
 		357C54C1ED791CCFFD08616D1FB69D58 /* BubbleChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3D2A23E2FFFE8B0287C5EB31B9933 /* BubbleChartDataEntry.swift */; };
 		35C6F4C08F780ED82AD779644743E84F /* merger.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B2B9246E98A15EBFD012BACDD12F1EF /* merger.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		35EA02810BD8E554255704189C611C77 /* FIRAnalyticsConfiguration+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C9CF57C53D34D44FAA05F9B9BBF422 /* FIRAnalyticsConfiguration+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		367ADE83C5E6FF2337C89F56E0453109 /* Pods-MindSafeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 109411C884FB0BED0A39095514191F04 /* Pods-MindSafeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		367ADE83C5E6FF2337C89F56E0453109 /* Pods-MindSafeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A084A343D3212B34D7DA983E77A2D4B /* Pods-MindSafeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37FF5DF067E811FB5E86FB3FD6DF5326 /* hash.cc in Sources */ = {isa = PBXBuildFile; fileRef = 075373A0B2CDED4782EE26729B1E42E8 /* hash.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		393D167C70E9076D6523AC1401EB5AA4 /* FListenComplete.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEF03A6B4B8FAEE75D7CD7DDB704E67 /* FListenComplete.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		39530C3F489E2997186FFA7089C8F8AC /* FirebaseCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BB9A8453DD696BDBB6A2C28093DA814 /* FirebaseCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -223,7 +222,7 @@
 		6419A5C0B1C40E2EE4BCD10CA89878BE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B030D6436700C8660B63A83805ACB1 /* Security.framework */; };
 		661673F24D851884DD883A25B129AAA0 /* CandleChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E9A0C611126B742B8BC44E08C66C57 /* CandleChartDataEntry.swift */; };
 		66887C9CC169E3321B8F1A5EC339F816 /* FTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F6F1F657DEABFE3FA4EBAB2CE0184F /* FTree.m */; };
-		66FB8D4E8E289C87672C0E584F2191B7 /* Pods-MindSafeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A39DE017B560E4AF4C70BD8FDBC893 /* Pods-MindSafeTests-dummy.m */; };
+		66FB8D4E8E289C87672C0E584F2191B7 /* Pods-MindSafeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C12B2DDA7296CA344FF24B88C25860BD /* Pods-MindSafeTests-dummy.m */; };
 		6786F89FCE1A6939F280AC9AC3CE2B1B /* AxisRendererBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3055DC0D93E2784E9729D50EF8AE6959 /* AxisRendererBase.swift */; };
 		681CBE150BEC5038D0CFB5E0C5013FA4 /* FIROptionsInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 90A412BA5476B0E7C6205322E8BF6473 /* FIROptionsInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6846B4CCD619242F8FC5B69A9D4EE0D6 /* FWriteTreeRef.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D168422DCF89CB09FFCDBE69D65292 /* FWriteTreeRef.m */; };
@@ -291,6 +290,7 @@
 		8125922A100B8582C4F5AE3D4DAD82C3 /* iterator.h in Headers */ = {isa = PBXBuildFile; fileRef = ACAEAACD6648547DCA8CDC2C163886C0 /* iterator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81FAF3417BAF45B6A80EDBBFF50938D6 /* FirebaseDatabase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 23040629919BF0D330F679ABAA1B2A89 /* FirebaseDatabase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		825583CECA15F17165FC92308321598D /* FKeepSyncedEventRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = E087B178B005039BE27859A4D55846D0 /* FKeepSyncedEventRegistration.m */; };
+		8292B9D6B2B8BEB3076A822C0E509F25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECB487AEB0FA0779A2DC038D7A88E08 /* Foundation.framework */; };
 		82AAE2824469806B783BF30E400DAFC2 /* port_posix.h in Headers */ = {isa = PBXBuildFile; fileRef = 466B196CD78002E0C22971F4097009B4 /* port_posix.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		838940424AF1663AA97FA1C3F719077C /* FLevelDBStorageEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 3178D20B8C9B1AEC9E6E751BDB41BA0F /* FLevelDBStorageEngine.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8399CEE375A0D830CC93BEE7DA6B88AD /* ChartDataRendererBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29278CE38CD028B9308FF4AA73F0759 /* ChartDataRendererBase.swift */; };
@@ -298,7 +298,6 @@
 		844063DFB5DFA2E4495E173CFFDD8419 /* GULAppDelegateSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = DC23E04149286F6497FF844D91F4A22B /* GULAppDelegateSwizzler.m */; };
 		847A5543F08617E8D5808A57CB17BD95 /* YAxisRendererHorizontalBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADF429E43040A03F776C400649DE29 /* YAxisRendererHorizontalBarChart.swift */; };
 		849271A7C6D5A4B93DD940DC33815285 /* PieChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A369EA82FC1BA8A8C4B15B9CDB0976 /* PieChartDataSet.swift */; };
-		84E61B1CEA5491E4B9A9395F66CA19DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECB487AEB0FA0779A2DC038D7A88E08 /* Foundation.framework */; };
 		858C6BC6EB853D51297E2EF6465ACDBC /* CircleShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001376A2D31F9F1418D320710553A85 /* CircleShapeRenderer.swift */; };
 		85C91A467AAA393CA66DAE7AE11F56E9 /* LineScatterCandleRadarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C85920D925C8F8D2E88750AAAD3463 /* LineScatterCandleRadarRenderer.swift */; };
 		864373E1C009F9164ADBC52EC488119C /* FAtomicNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 6928C9400BB1CDD2DADB9401150D9B39 /* FAtomicNumber.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -364,7 +363,7 @@
 		A019A997D938068DF4815639E04988B4 /* db_iter.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B35AADE2690AEEC01B590E0F6C20C6 /* db_iter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A16E752298C31D72462181A0A7DE2B18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECB487AEB0FA0779A2DC038D7A88E08 /* Foundation.framework */; };
 		A1779172835EA7404D21590489DB161C /* dbformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC368314579A1F22BF56CD1D0AA2ECE /* dbformat.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A1A5DEE820B5317E08C05AC4F340C68C /* Pods-MindSafe-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE5B6B42254A0CCE5C2E4C227BEAEA44 /* Pods-MindSafe-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1A5DEE820B5317E08C05AC4F340C68C /* Pods-MindSafe-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 287275642353B9BDE52F7F924BD81449 /* Pods-MindSafe-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1DD66FA94D2AAB4B5118A36BC9DFF45 /* format.h in Headers */ = {isa = PBXBuildFile; fileRef = A86266BB39A471878F6EF2ADD5D660F0 /* format.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A236819885119BCC2D3DC332B39CDEB7 /* FServerValues.h in Headers */ = {isa = PBXBuildFile; fileRef = A6193AB01032E6BEFAEFAC98D498EF08 /* FServerValues.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A29A836462E29A741F79DFDF80909F2D /* FOperationSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A58B725E5DD5993A23276FAA332880EB /* FOperationSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -379,6 +378,7 @@
 		A681DB68439F2F29135F0975C5BBAF97 /* version_set.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3663C481BE53614E99772CCD66E881FE /* version_set.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		A6D44FE2587458EB7B5E2CC3994BE456 /* ChartDataEntryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5343B20620B1957C32F58C653185B790 /* ChartDataEntryBase.swift */; };
 		A75123EFBAD8DA76B6C933435784A3AB /* env.h in Headers */ = {isa = PBXBuildFile; fileRef = 7834F987A252DCF185DA93912ECFB54C /* env.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A75A7770B1900131BA1A4AC5C70B7622 /* Pods-MindSafe-MindSafeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EBF73C45112B126068D687B5F88E639 /* Pods-MindSafe-MindSafeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A78689FB49D9A9363AEB9C1D382005F2 /* ZoomViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4830EE54518DA82BFF6789ECA437E /* ZoomViewJob.swift */; };
 		A8239FEF007BC598BB21C8BF63BCC4CC /* BubbleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C656AEAA066DD651B27D23579582D4AA /* BubbleChartView.swift */; };
 		A8241FEFAB1775BB95E16A4E7993FB16 /* SquareShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4533CFE71686F70DECCBC52D05F28FCC /* SquareShapeRenderer.swift */; };
@@ -431,9 +431,9 @@
 		BB8FF0F9BDFA0AA632F7494BF815F100 /* block.cc in Sources */ = {isa = PBXBuildFile; fileRef = A1DAFD4A3BDF0110F33FA89A1F4C0AED /* block.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		BBADB862876DD16A6A380B963DE500F2 /* FConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FE010EB35A1A68A14012700BA73B8CD6 /* FConnection.m */; };
 		BCD36674F5249D7CB151A102F9346A4F /* FPendingPut.h in Headers */ = {isa = PBXBuildFile; fileRef = 91BAB6A1FF2848E86B8AF3012F5826DE /* FPendingPut.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BDC92D4722927E549942E5093E522D7A /* Pods-MindSafe-MindSafeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EB4DBBBDFE7702FE5D7A0B631ED25 /* Pods-MindSafe-MindSafeUITests-dummy.m */; };
 		BE158734B53B6A718EF1E1FA1677F8F5 /* cache.cc in Sources */ = {isa = PBXBuildFile; fileRef = 31257B3609BD4C69B397CDE295246341 /* cache.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		BE4E33085158A9497CC78D39BE64C9BC /* FTupleSetIdPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D13B8B8973E77C89773D884AE0BDE1F /* FTupleSetIdPath.m */; };
-		BE523E092F6CFC43BD8A3F8040A6B995 /* Pods-MindSafeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 737A57153E6D279D2BA7385514B7D71C /* Pods-MindSafeUITests-dummy.m */; };
 		BE9F2DA9E442EAD0FC82FB9D04476E88 /* FIRApp.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6F8D4F4687292FAE2FC4D874B805CD /* FIRApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEEBFD54499AE6FA7A301C620803A443 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F6AED08DBF90C1F02FEE83DC5AB53E /* Range.swift */; };
 		BF424B8B8A73D17262AD7846734B2F97 /* FLLRBValueNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CDA222BB05E59E3FA8FCF112FE2038C2 /* FLLRBValueNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -594,6 +594,13 @@
 			remoteGlobalIDString = 2B2CE33B441C5D4BD9A5A04D3087E5C8;
 			remoteInfo = GoogleUtilities;
 		};
+		06DB6F61C93C5419C1CC78A216D074BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B2CE33B441C5D4BD9A5A04D3087E5C8;
+			remoteInfo = GoogleUtilities;
+		};
 		3267F1AB8F9D0493FFA9E5607C6C383A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -608,20 +615,6 @@
 			remoteGlobalIDString = B8841C1CB84C43236CF55B42F805BE06;
 			remoteInfo = FirebaseDatabase;
 		};
-		359F61263BF732D4D761F84323CF6AFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE866D3318A5BE5366041B761F8CD7C2;
-			remoteInfo = "leveldb-library";
-		};
-		36751B35FAC799F079963F1D204FDD4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EBFD1DA8DB9C5E9C282BBCAD1778A64A;
-			remoteInfo = Charts;
-		};
 		37717C7CEA68680D7C4C1D77DA473F7A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -629,26 +622,26 @@
 			remoteGlobalIDString = B8841C1CB84C43236CF55B42F805BE06;
 			remoteInfo = FirebaseDatabase;
 		};
+		3A2179CD994861971E24D059B66F9142 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE866D3318A5BE5366041B761F8CD7C2;
+			remoteInfo = "leveldb-library";
+		};
+		43F41643A6CB445EEDC106CA727669D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBFD1DA8DB9C5E9C282BBCAD1778A64A;
+			remoteInfo = Charts;
+		};
 		4584054AAFE8AE5D713FBD6D13F11F44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8364BB258018143B83798DE31C13546D;
 			remoteInfo = nanopb;
-		};
-		51641EB6689E537ACC9F9E8E10E8ECE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2B314CE79DE127040F6257A4D37001E9;
-			remoteInfo = "Pods-MindSafe";
-		};
-		5F9F1F62C9F59B87F060E20FE0CD2DDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4338000AC6DBAF783F338F055DDE55C6;
-			remoteInfo = FirebaseCore;
 		};
 		6423BF7CDA76299773959456EA8477DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -685,6 +678,13 @@
 			remoteGlobalIDString = 2B2CE33B441C5D4BD9A5A04D3087E5C8;
 			remoteInfo = GoogleUtilities;
 		};
+		A95A6C00CEF3B0BC6B064CE9F4D9A0CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8841C1CB84C43236CF55B42F805BE06;
+			remoteInfo = FirebaseDatabase;
+		};
 		AD7B51FC1AF1D29DD48BAB8D838C7300 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -692,19 +692,12 @@
 			remoteGlobalIDString = 4338000AC6DBAF783F338F055DDE55C6;
 			remoteInfo = FirebaseCore;
 		};
-		BFF855358736F56301B14AC78CA3AE3B /* PBXContainerItemProxy */ = {
+		C3B37E7B52550D00E9DB785747921AC8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B8841C1CB84C43236CF55B42F805BE06;
-			remoteInfo = FirebaseDatabase;
-		};
-		C707C797F5390F0510EB3ACC5D32EE96 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2B2CE33B441C5D4BD9A5A04D3087E5C8;
-			remoteInfo = GoogleUtilities;
+			remoteGlobalIDString = 8364BB258018143B83798DE31C13546D;
+			remoteInfo = nanopb;
 		};
 		CBBA3439031D8EDD5AC1D867DA8EC6E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -741,6 +734,13 @@
 			remoteGlobalIDString = 4338000AC6DBAF783F338F055DDE55C6;
 			remoteInfo = FirebaseCore;
 		};
+		F1ABE64D1B3E743474D23D9CE5B2D144 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4338000AC6DBAF783F338F055DDE55C6;
+			remoteInfo = FirebaseCore;
+		};
 		F27A515939902BAEED938F4F8DC23162 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -748,22 +748,16 @@
 			remoteGlobalIDString = 2B314CE79DE127040F6257A4D37001E9;
 			remoteInfo = "Pods-MindSafe";
 		};
-		F7A8B3FD310D9BA632641681AB651EF0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8364BB258018143B83798DE31C13546D;
-			remoteInfo = nanopb;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		006601F0C2ED33FBE15AF456BB86224B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		00749F8E15AB9F01BE60FB4BDD7F09BA /* db_impl.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = db_impl.cc; path = db/db_impl.cc; sourceTree = "<group>"; };
+		00749F8E15AB9F01BE60FB4BDD7F09BA /* db_impl.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = db_impl.cc; path = db/db_impl.cc; sourceTree = "<group>"; };
 		00CBBAD700EBB455FC5FCE251179E81A /* FUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FUtilities.m; path = Firebase/Database/Utilities/FUtilities.m; sourceTree = "<group>"; };
 		00CEB8E553E0A71D822E365F4448BAE3 /* FWriteTreeRef.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FWriteTreeRef.h; path = Firebase/Database/Core/FWriteTreeRef.h; sourceTree = "<group>"; };
 		00E68F6075BCACBC66F1FE4AB7AD5E17 /* FChildChangeAccumulator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FChildChangeAccumulator.m; path = Firebase/Database/Core/View/Filter/FChildChangeAccumulator.m; sourceTree = "<group>"; };
 		0131AFF0564DA11FD78C156081B4BB28 /* FIndexedNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIndexedNode.h; path = Firebase/Database/Snapshot/FIndexedNode.h; sourceTree = "<group>"; };
+		018E23FE8D9FB5110303E3C839445AD2 /* Pods-MindSafe-MindSafeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MindSafe-MindSafeUITests.modulemap"; sourceTree = "<group>"; };
 		01ADF429E43040A03F776C400649DE29 /* YAxisRendererHorizontalBarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YAxisRendererHorizontalBarChart.swift; path = Source/Charts/Renderers/YAxisRendererHorizontalBarChart.swift; sourceTree = "<group>"; };
 		0217BD64373006A9375BD494D36DFCF6 /* FChange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FChange.h; path = Firebase/Database/Core/View/FChange.h; sourceTree = "<group>"; };
 		02F9B8D914B784AA5429A62FB23940D1 /* FirebaseCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseCore.modulemap; sourceTree = "<group>"; };
@@ -775,18 +769,21 @@
 		054678C91266469E6148BFF48B7FB068 /* CandleStickChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleStickChartView.swift; path = Source/Charts/Charts/CandleStickChartView.swift; sourceTree = "<group>"; };
 		0557F6F903D20DCFDDB3A4B122BA7CA1 /* Renderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = Source/Charts/Renderers/Renderer.swift; sourceTree = "<group>"; };
 		05B4830EE54518DA82BFF6789ECA437E /* ZoomViewJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZoomViewJob.swift; path = Source/Charts/Jobs/ZoomViewJob.swift; sourceTree = "<group>"; };
-		065191D9421E9673D95922D79234B4F0 /* arena.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = arena.cc; path = util/arena.cc; sourceTree = "<group>"; };
+		065191D9421E9673D95922D79234B4F0 /* arena.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = arena.cc; path = util/arena.cc; sourceTree = "<group>"; };
 		06BF9A18EF507988780F43DF9C60DE45 /* GULNetworkURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkURLSession.h; path = GoogleUtilities/Network/Private/GULNetworkURLSession.h; sourceTree = "<group>"; };
 		06C85920D925C8F8D2E88750AAAD3463 /* LineScatterCandleRadarRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineScatterCandleRadarRenderer.swift; path = Source/Charts/Renderers/LineScatterCandleRadarRenderer.swift; sourceTree = "<group>"; };
-		0744EFA0813FB3E570A42D2D5AF501C0 /* table_cache.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = table_cache.cc; path = db/table_cache.cc; sourceTree = "<group>"; };
-		075373A0B2CDED4782EE26729B1E42E8 /* hash.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = hash.cc; path = util/hash.cc; sourceTree = "<group>"; };
+		0744EFA0813FB3E570A42D2D5AF501C0 /* table_cache.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = table_cache.cc; path = db/table_cache.cc; sourceTree = "<group>"; };
+		075373A0B2CDED4782EE26729B1E42E8 /* hash.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = hash.cc; path = util/hash.cc; sourceTree = "<group>"; };
 		07EEE6DAE4839E35BBBEE25B90FAEDF6 /* FLimitedFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLimitedFilter.m; path = Firebase/Database/Core/View/Filter/FLimitedFilter.m; sourceTree = "<group>"; };
 		08640C9EA025FD2867CE2B7FF969C234 /* PieRadarHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieRadarHighlighter.swift; path = Source/Charts/Highlight/PieRadarHighlighter.swift; sourceTree = "<group>"; };
 		08E9D09EC82C2D39DD787F8C7C6F4164 /* RadarChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/RadarChartDataEntry.swift; sourceTree = "<group>"; };
+		08EAB6277D0098E6D1DD0756BBA66AD8 /* Pods-MindSafe-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MindSafe-acknowledgements.plist"; sourceTree = "<group>"; };
 		09175175FC5A4EC769E8B34B19F75E3F /* FSyncPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSyncPoint.h; path = Firebase/Database/Core/FSyncPoint.h; sourceTree = "<group>"; };
 		0918C3056DD1AF3B1923993D4795BD84 /* FValueIndex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FValueIndex.m; path = Firebase/Database/FValueIndex.m; sourceTree = "<group>"; };
-		0971D42CB7B767E1DA4F6089136EB931 /* testharness.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = testharness.cc; path = util/testharness.cc; sourceTree = "<group>"; };
+		0971D42CB7B767E1DA4F6089136EB931 /* testharness.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = testharness.cc; path = util/testharness.cc; sourceTree = "<group>"; };
 		09EC2611F00B23340256477C546CA0B0 /* TriangleShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TriangleShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/TriangleShapeRenderer.swift; sourceTree = "<group>"; };
+		0A084A343D3212B34D7DA983E77A2D4B /* Pods-MindSafeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MindSafeTests-umbrella.h"; sourceTree = "<group>"; };
+		0A3EB4DBBBDFE7702FE5D7A0B631ED25 /* Pods-MindSafe-MindSafeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MindSafe-MindSafeUITests-dummy.m"; sourceTree = "<group>"; };
 		0A850B181774A8C829DAACD9D75655A2 /* CandleStickChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleStickChartRenderer.swift; path = Source/Charts/Renderers/CandleStickChartRenderer.swift; sourceTree = "<group>"; };
 		0AAE32D6FE1B8FD0601F50BC3A40865B /* FIRApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRApp.m; path = Firebase/Core/FIRApp.m; sourceTree = "<group>"; };
 		0B0E7BA9CE6AFC5435A3B7BE96C40EF1 /* FEmptyNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEmptyNode.m; path = Firebase/Database/Snapshot/FEmptyNode.m; sourceTree = "<group>"; };
@@ -799,11 +796,11 @@
 		0D501E39688E41EB2D76665D24E77BB9 /* crc32c.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crc32c.h; path = util/crc32c.h; sourceTree = "<group>"; };
 		0D50EF4BE27C342F143F17CD9805E81B /* FTreeSortedDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTreeSortedDictionary.h; path = Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FTreeSortedDictionary.h; sourceTree = "<group>"; };
 		0DCB51954ACDBE770D10671437B48741 /* FIndexedNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIndexedNode.m; path = Firebase/Database/Snapshot/FIndexedNode.m; sourceTree = "<group>"; };
+		0E67795B5A228288A55CEA05C585E0A6 /* Pods-MindSafeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MindSafeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0E7A0D77F325A390F8CF9A236C5CF603 /* GULNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULNSData+zlib.h"; path = "GoogleUtilities/NSData+zlib/GULNSData+zlib.h"; sourceTree = "<group>"; };
-		0E92722918D778BD35AC808AAAE59EFC /* histogram.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = histogram.cc; path = util/histogram.cc; sourceTree = "<group>"; };
+		0E92722918D778BD35AC808AAAE59EFC /* histogram.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = histogram.cc; path = util/histogram.cc; sourceTree = "<group>"; };
 		0EAB0CD452F9AB3D4FDD349981C0CA0C /* FIndexedFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIndexedFilter.m; path = Firebase/Database/Core/View/Filter/FIndexedFilter.m; sourceTree = "<group>"; };
 		0F6B7FF498C9694C3EC46281D35F7608 /* FIRConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRConfiguration.m; path = Firebase/Core/FIRConfiguration.m; sourceTree = "<group>"; };
-		109411C884FB0BED0A39095514191F04 /* Pods-MindSafeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MindSafeTests-umbrella.h"; sourceTree = "<group>"; };
 		10A369EA82FC1BA8A8C4B15B9CDB0976 /* PieChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/PieChartDataSet.swift; sourceTree = "<group>"; };
 		11447D01F6EF22B713163EBF728BBE33 /* ChartLimitLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartLimitLine.swift; path = Source/Charts/Components/ChartLimitLine.swift; sourceTree = "<group>"; };
 		115069524EB70D383FA12848408AFE6A /* RadarChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartData.swift; path = Source/Charts/Data/Implementations/Standard/RadarChartData.swift; sourceTree = "<group>"; };
@@ -813,25 +810,22 @@
 		140C2C3A43DC93DC837014B7E2C409FD /* FLLRBEmptyNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLLRBEmptyNode.h; path = Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FLLRBEmptyNode.h; sourceTree = "<group>"; };
 		14609044FCF4D734DB2E335EB70C75A1 /* FIRComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponent.h; path = Firebase/Core/Private/FIRComponent.h; sourceTree = "<group>"; };
 		149FD3E761F4FDF67A16000400B917F2 /* FUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FUtilities.h; path = Firebase/Database/Utilities/FUtilities.h; sourceTree = "<group>"; };
-		153BA6E8D8E4A975572468BE633CE77E /* two_level_iterator.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = two_level_iterator.cc; path = table/two_level_iterator.cc; sourceTree = "<group>"; };
-		16382906A0CABED148B7227F74A2F643 /* Pods-MindSafeTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafeTests-resources.sh"; sourceTree = "<group>"; };
+		153BA6E8D8E4A975572468BE633CE77E /* two_level_iterator.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = two_level_iterator.cc; path = table/two_level_iterator.cc; sourceTree = "<group>"; };
 		17420F6215F712C44D054C959403FF58 /* FTreeSortedDictionaryEnumerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTreeSortedDictionaryEnumerator.m; path = Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FTreeSortedDictionaryEnumerator.m; sourceTree = "<group>"; };
 		17FAF089B404111EBFBE870A7F50CF1C /* FIRNoopAuthTokenProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNoopAuthTokenProvider.h; path = Firebase/Database/Login/FIRNoopAuthTokenProvider.h; sourceTree = "<group>"; };
-		187D8CB0E6BE19EF2965EFA7B56D0A86 /* Pods-MindSafe-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MindSafe-acknowledgements.markdown"; sourceTree = "<group>"; };
 		189256961FBD51E67D2C9B88C3E5BCAC /* iterator_wrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iterator_wrapper.h; path = table/iterator_wrapper.h; sourceTree = "<group>"; };
-		18BD1117EF3622D443C3C687682A158E /* table_builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = table_builder.cc; path = table/table_builder.cc; sourceTree = "<group>"; };
+		18BD1117EF3622D443C3C687682A158E /* table_builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = table_builder.cc; path = table/table_builder.cc; sourceTree = "<group>"; };
 		18BFCCA3386D935B98E4A4AC6957FD7B /* ChartUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartUtils.swift; path = Source/Charts/Utils/ChartUtils.swift; sourceTree = "<group>"; };
 		19DF8C85DD0E5B3B450999589288A0DB /* ChartAnimationEasing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartAnimationEasing.swift; path = Source/Charts/Animation/ChartAnimationEasing.swift; sourceTree = "<group>"; };
-		1A6DED3F91CFE4151BBF2D18C38F0CF2 /* Pods-MindSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafe.debug.xcconfig"; sourceTree = "<group>"; };
 		1ADA02A6B97D9A519C9AA85516752568 /* FWriteTree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FWriteTree.h; path = Firebase/Database/Core/FWriteTree.h; sourceTree = "<group>"; };
 		1B4F7E5C82BC78E6A61A60827FE05D57 /* BubbleChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartRenderer.swift; path = Source/Charts/Renderers/BubbleChartRenderer.swift; sourceTree = "<group>"; };
 		1B78C7138CAFE4E9EC7A02969C66A37B /* FWebSocketConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FWebSocketConnection.h; path = Firebase/Database/Realtime/FWebSocketConnection.h; sourceTree = "<group>"; };
 		1C0ACA26C8666DDBD606F7CA929917B7 /* FTupleObjects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleObjects.h; path = Firebase/Database/Utilities/Tuples/FTupleObjects.h; sourceTree = "<group>"; };
 		1D22240E70857DEF3125120B1B754AE3 /* ComponentBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComponentBase.swift; path = Source/Charts/Components/ComponentBase.swift; sourceTree = "<group>"; };
 		1DD25282312B083560EEF157E640BA80 /* Charts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Charts.modulemap; sourceTree = "<group>"; };
-		1DE79C4DD086782412EBBD9B218CAF52 /* memtable.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = memtable.cc; path = db/memtable.cc; sourceTree = "<group>"; };
+		1DE79C4DD086782412EBBD9B218CAF52 /* memtable.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = memtable.cc; path = db/memtable.cc; sourceTree = "<group>"; };
 		1E988C79DDF7EDF7FCC805E6E063B7A2 /* GoogleUtilities-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleUtilities-dummy.m"; sourceTree = "<group>"; };
-		1F0594F1E7EDBA88E46A74ECF7E28F28 /* APLevelDB.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = APLevelDB.mm; path = "Firebase/Database/third_party/Wrap-leveldb/APLevelDB.mm"; sourceTree = "<group>"; };
+		1F0594F1E7EDBA88E46A74ECF7E28F28 /* APLevelDB.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = APLevelDB.mm; path = "Firebase/Database/third_party/Wrap-leveldb/APLevelDB.mm"; sourceTree = "<group>"; };
 		1F20035A81144A05AA4BDB1A631FD7F3 /* LineChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/LineChartDataSet.swift; sourceTree = "<group>"; };
 		1FEF693EC855DFB411684A8E36266B4D /* FIRComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRComponent.m; path = Firebase/Core/FIRComponent.m; sourceTree = "<group>"; };
 		205BB775590FC3D07F81F0BD82C2AA26 /* FIRMutableData_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMutableData_Private.h; path = Firebase/Database/Api/Private/FIRMutableData_Private.h; sourceTree = "<group>"; };
@@ -846,25 +840,28 @@
 		2303DF6BBA36363B191E88617B97AEEA /* FIRErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRErrors.h; path = Firebase/Core/Private/FIRErrors.h; sourceTree = "<group>"; };
 		23040629919BF0D330F679ABAA1B2A89 /* FirebaseDatabase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseDatabase-umbrella.h"; sourceTree = "<group>"; };
 		23912CCB18FAE17F6CF5423C0D9CE6CB /* FQueryParams.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FQueryParams.m; path = Firebase/Database/Core/FQueryParams.m; sourceTree = "<group>"; };
-		23DD54AB317D9E9ACE0E4F34EBBCD140 /* merger.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = merger.cc; path = table/merger.cc; sourceTree = "<group>"; };
+		23DD54AB317D9E9ACE0E4F34EBBCD140 /* merger.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = merger.cc; path = table/merger.cc; sourceTree = "<group>"; };
 		2425B8608F321302E82BC5C5985CDF11 /* FViewProcessorResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FViewProcessorResult.m; path = Firebase/Database/FViewProcessorResult.m; sourceTree = "<group>"; };
 		246A7ABA1C9D803D288DE9CA08F04532 /* GULReachabilityMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULReachabilityMessageCode.h; path = GoogleUtilities/Reachability/Private/GULReachabilityMessageCode.h; sourceTree = "<group>"; };
-		25549BEBDF2B6F9624D40D3B81D33255 /* Pods-MindSafeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MindSafeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		24ED6EDD168930F2AAEE1D6FAA4DEFA0 /* Pods-MindSafeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafeTests.release.xcconfig"; sourceTree = "<group>"; };
 		256E52D4EAD2529F317D8673CB4D5AE8 /* FTupleObjects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTupleObjects.m; path = Firebase/Database/Utilities/Tuples/FTupleObjects.m; sourceTree = "<group>"; };
 		25A5A680F4B7D9C746C8D84C4D90C2F4 /* PieChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/PieChartDataEntry.swift; sourceTree = "<group>"; };
 		25D5A3601228255F98D354577F4F5FA1 /* XShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/XShapeRenderer.swift; sourceTree = "<group>"; };
 		270F0394751E7ABBE5BB57FA468A97D5 /* FTupleUserCallback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleUserCallback.h; path = Firebase/Database/Utilities/Tuples/FTupleUserCallback.h; sourceTree = "<group>"; };
 		27A7526551D1042804F843E414487996 /* GULMutableDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULMutableDictionary.m; path = GoogleUtilities/Network/GULMutableDictionary.m; sourceTree = "<group>"; };
 		27BFDC5649828AA37D23F9EECD8B3C46 /* FNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FNode.h; path = Firebase/Database/Snapshot/FNode.h; sourceTree = "<group>"; };
+		287275642353B9BDE52F7F924BD81449 /* Pods-MindSafe-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MindSafe-umbrella.h"; sourceTree = "<group>"; };
 		28A9C895E3CC4BDF02CD126E2E15FAFE /* filename.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = filename.h; path = db/filename.h; sourceTree = "<group>"; };
 		28C920C53ABD72EEF6CF3D9C65F24242 /* BubbleChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartData.swift; path = Source/Charts/Data/Implementations/Standard/BubbleChartData.swift; sourceTree = "<group>"; };
 		297C8FBE0F363C127F588CF476FD27E7 /* HorizontalBarChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalBarChartRenderer.swift; path = Source/Charts/Renderers/HorizontalBarChartRenderer.swift; sourceTree = "<group>"; };
 		29B6559969BB5ED055B3C2C7F3A488D3 /* DefaultFillFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultFillFormatter.swift; path = Source/Charts/Formatters/DefaultFillFormatter.swift; sourceTree = "<group>"; };
 		29D4875A7AA69AD4E766DB98785BC970 /* GULAppDelegateSwizzler_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler_Private.h; path = GoogleUtilities/AppDelegateSwizzler/Internal/GULAppDelegateSwizzler_Private.h; sourceTree = "<group>"; };
-		2A73CFA9E83BF2E8C4B914F6E68652F4 /* fbase64.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fbase64.c; path = Firebase/Database/third_party/SocketRocket/fbase64.c; sourceTree = "<group>"; };
+		2A73CFA9E83BF2E8C4B914F6E68652F4 /* fbase64.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = fbase64.c; path = Firebase/Database/third_party/SocketRocket/fbase64.c; sourceTree = "<group>"; };
+		2A9EA154DCE460AFAEDEB0636CCD175F /* Pods-MindSafe-MindSafeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafe-MindSafeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2AE6309AFCC034183EE19B006CD89BA9 /* port.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = port.h; path = port/port.h; sourceTree = "<group>"; };
 		2B05C06F0BCADA98EC0290129320E9DD /* db.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = db.h; path = include/leveldb/db.h; sourceTree = "<group>"; };
 		2C589FD39C9CD1EDA4BFF89609A63FF9 /* ViewPortHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewPortHandler.swift; path = Source/Charts/Utils/ViewPortHandler.swift; sourceTree = "<group>"; };
+		2C842038ABFEF954889BFA0573091139 /* Pods-MindSafe-MindSafeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MindSafe-MindSafeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2C9DF4ECFDA806E3EBF603726873DDEA /* leveldb-library.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "leveldb-library.modulemap"; sourceTree = "<group>"; };
 		2CA8CEEB96D68002CB793E5FBE839F73 /* block.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = block.h; path = table/block.h; sourceTree = "<group>"; };
 		2CBAA696993A7C8630B585E061FF6513 /* FTransformedEnumerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTransformedEnumerator.m; path = Firebase/Database/FTransformedEnumerator.m; sourceTree = "<group>"; };
@@ -876,47 +873,46 @@
 		3055DC0D93E2784E9729D50EF8AE6959 /* AxisRendererBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AxisRendererBase.swift; path = Source/Charts/Renderers/AxisRendererBase.swift; sourceTree = "<group>"; };
 		30E09063564A207C69520C62BD6973A1 /* FKeepSyncedEventRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FKeepSyncedEventRegistration.h; path = Firebase/Database/Core/View/FKeepSyncedEventRegistration.h; sourceTree = "<group>"; };
 		310C489964F4A73D58578EAE6C855AF1 /* CombinedChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedChartView.swift; path = Source/Charts/Charts/CombinedChartView.swift; sourceTree = "<group>"; };
-		31257B3609BD4C69B397CDE295246341 /* cache.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = cache.cc; path = util/cache.cc; sourceTree = "<group>"; };
+		31257B3609BD4C69B397CDE295246341 /* cache.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = cache.cc; path = util/cache.cc; sourceTree = "<group>"; };
 		3178D20B8C9B1AEC9E6E751BDB41BA0F /* FLevelDBStorageEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLevelDBStorageEngine.h; path = Firebase/Database/Persistence/FLevelDBStorageEngine.h; sourceTree = "<group>"; };
 		330A953469EBEA45A93ABB8F477EB0FF /* FStorageEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FStorageEngine.h; path = Firebase/Database/Persistence/FStorageEngine.h; sourceTree = "<group>"; };
 		337154A6A9DB6CBC1E97BD045B7B8198 /* DataApproximator+N.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DataApproximator+N.swift"; path = "Source/Charts/Filters/DataApproximator+N.swift"; sourceTree = "<group>"; };
-		338304C3AF7B3606FA16E6FCB120A3A9 /* Pods-MindSafeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafeUITests-frameworks.sh"; sourceTree = "<group>"; };
 		339E52FDE7A1195DC0CD9AF3C3E7EF21 /* FCompoundHash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FCompoundHash.m; path = Firebase/Database/Core/FCompoundHash.m; sourceTree = "<group>"; };
 		347FB5C44CE790A88E387BB59449A8AF /* env_posix_test_helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = env_posix_test_helper.h; path = util/env_posix_test_helper.h; sourceTree = "<group>"; };
 		3489CD51535AF39D00C73DA7176A6415 /* FSyncTree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSyncTree.h; path = Firebase/Database/Core/FSyncTree.h; sourceTree = "<group>"; };
-		34CEDFFBDE2DC465E1A49F37920AF91A /* Pods-MindSafeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MindSafeTests.modulemap"; sourceTree = "<group>"; };
 		34E19EB9A2436F1B07F53E8700EFA79B /* FIRRetryHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRRetryHelper.m; path = Firebase/Database/Core/Utilities/FIRRetryHelper.m; sourceTree = "<group>"; };
 		352FD9788CC94222BFE86E36DEFEFB62 /* ChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartDataProvider.swift; path = Source/Charts/Interfaces/ChartDataProvider.swift; sourceTree = "<group>"; };
 		355AB75B94B127590E6B715228C71CB8 /* FTuplePathValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTuplePathValue.m; path = Firebase/Database/Utilities/Tuples/FTuplePathValue.m; sourceTree = "<group>"; };
 		3588C610BE7E2E01597A615773984122 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		359CB4F4CECA3B9C38D21F4327058514 /* FMerge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMerge.m; path = Firebase/Database/Core/Operation/FMerge.m; sourceTree = "<group>"; };
 		3632ABB224C48A23616F298E2EE39AA7 /* FIRAnalyticsConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAnalyticsConfiguration.h; path = Firebase/Core/Public/FIRAnalyticsConfiguration.h; sourceTree = "<group>"; };
-		3663C481BE53614E99772CCD66E881FE /* version_set.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = version_set.cc; path = db/version_set.cc; sourceTree = "<group>"; };
-		37D95D92E254F60E504BCFE0C4640E21 /* options.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = options.cc; path = util/options.cc; sourceTree = "<group>"; };
-		3809BBCFAAAED4FCB2FEC6F7EBB42381 /* filter_policy.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = filter_policy.cc; path = util/filter_policy.cc; sourceTree = "<group>"; };
+		3662892367886C0167384654DF3A7D09 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3663C481BE53614E99772CCD66E881FE /* version_set.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = version_set.cc; path = db/version_set.cc; sourceTree = "<group>"; };
+		37D95D92E254F60E504BCFE0C4640E21 /* options.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = options.cc; path = util/options.cc; sourceTree = "<group>"; };
+		3809BBCFAAAED4FCB2FEC6F7EBB42381 /* filter_policy.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = filter_policy.cc; path = util/filter_policy.cc; sourceTree = "<group>"; };
 		3912C72CD80351056CEE5C1B62AC9003 /* FAuthTokenProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAuthTokenProvider.h; path = Firebase/Database/Login/FAuthTokenProvider.h; sourceTree = "<group>"; };
 		398BF311CC6A1045E3C92D9DD37DB1D7 /* FTupleBoolBlock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTupleBoolBlock.m; path = Firebase/Database/Utilities/Tuples/FTupleBoolBlock.m; sourceTree = "<group>"; };
 		39A12C3C9E13D2D462E3ED261F5F115A /* FServerValues.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FServerValues.m; path = Firebase/Database/Core/FServerValues.m; sourceTree = "<group>"; };
 		39D7BB87A318C3C25EFCE596DD6EBFC7 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Frameworks/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
 		39EEEAB7386773EA2AA3C5C06A650476 /* FTreeSortedDictionaryEnumerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTreeSortedDictionaryEnumerator.h; path = Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FTreeSortedDictionaryEnumerator.h; sourceTree = "<group>"; };
 		3A3AAB812FBE6E3B7276CA4CB8176A57 /* FValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FValidation.h; path = Firebase/Database/Utilities/FValidation.h; sourceTree = "<group>"; };
-		3ABF6E273D9F5BC72A6AA4E3CA80BBDA /* Pods-MindSafe-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafe-frameworks.sh"; sourceTree = "<group>"; };
 		3AEC70706C44D956E2DEAD5EFD5EF8D3 /* FIRDatabase_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabase_Private.h; path = Firebase/Database/Api/Private/FIRDatabase_Private.h; sourceTree = "<group>"; };
-		3B2F22B7E845051FB1ECEB9F4963BDD3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BBC8124B8270B3FA05747DB15040B7B /* MarkerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkerView.swift; path = Source/Charts/Components/MarkerView.swift; sourceTree = "<group>"; };
 		3C47EF94DA62A2C31B4ACDE35F218AED /* FView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FView.h; path = Firebase/Database/Core/View/FView.h; sourceTree = "<group>"; };
 		3C989B2C58ACFE7F8EFED67FADCFCF6F /* table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = table.h; path = include/leveldb/table.h; sourceTree = "<group>"; };
 		3CB687A957C41D9035E845BFBEBD1258 /* RadarChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartView.swift; path = Source/Charts/Charts/RadarChartView.swift; sourceTree = "<group>"; };
-		3CE4A03086133946A68CA1F6D4268620 /* Pods-MindSafeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MindSafeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3D13B8B8973E77C89773D884AE0BDE1F /* FTupleSetIdPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTupleSetIdPath.m; path = Firebase/Database/Utilities/Tuples/FTupleSetIdPath.m; sourceTree = "<group>"; };
 		3DB27E35FD775A404910A44D1B09F382 /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
+		3E1E9C0F72F1BCE78FDDA5955BEF2FF7 /* Pods-MindSafe-MindSafeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafe-MindSafeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E3958CAC830270F6F423AFD90797D4F /* FQueryParams.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FQueryParams.h; path = Firebase/Database/Core/FQueryParams.h; sourceTree = "<group>"; };
 		3E44EA157CEEC027ED8EE9060EBA270C /* GULUserDefaults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULUserDefaults.h; path = GoogleUtilities/UserDefaults/Private/GULUserDefaults.h; sourceTree = "<group>"; };
+		3E48E70F7B69EC44C6AE7A760C71F5F2 /* Pods-MindSafeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MindSafeTests.modulemap"; sourceTree = "<group>"; };
 		3E72EE7F1CC83709F96FCEBF0662A31D /* FWebSocketConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FWebSocketConnection.m; path = Firebase/Database/Realtime/FWebSocketConnection.m; sourceTree = "<group>"; };
 		3ECCEDE12604AE2AF118AC00FF5B87A6 /* Description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Description.swift; path = Source/Charts/Components/Description.swift; sourceTree = "<group>"; };
 		3F1EA82E3626CFD3E587ABEA0504BB80 /* FCancelEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FCancelEvent.h; path = Firebase/Database/Core/View/FCancelEvent.h; sourceTree = "<group>"; };
 		3F56A64857B2C875C73D1874B2305B2C /* FEventRaiser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FEventRaiser.h; path = Firebase/Database/Core/View/FEventRaiser.h; sourceTree = "<group>"; };
 		3FAACDD5B1A33FC43D8E664F3155F4A6 /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
+		404102CE8CA351561C72CA632030C3E9 /* Pods-MindSafe-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MindSafe-dummy.m"; sourceTree = "<group>"; };
 		404B9381B6866CC801D5608CF5782F58 /* FSnapshotHolder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSnapshotHolder.h; path = Firebase/Database/Core/FSnapshotHolder.h; sourceTree = "<group>"; };
 		4098A401BFB897E97B159BB927DF9752 /* FLeafNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLeafNode.m; path = Firebase/Database/Snapshot/FLeafNode.m; sourceTree = "<group>"; };
 		40AA178A345D419DB38A00161E032E46 /* GoogleUtilities-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleUtilities-umbrella.h"; sourceTree = "<group>"; };
@@ -938,7 +934,7 @@
 		466B196CD78002E0C22971F4097009B4 /* port_posix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = port_posix.h; path = port/port_posix.h; sourceTree = "<group>"; };
 		4682F8DBB211A22B056E639C50E2D14F /* FParsedUrl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FParsedUrl.m; path = Firebase/Database/Utilities/FParsedUrl.m; sourceTree = "<group>"; };
 		46E9AC45206577801D77ADDF52EE2002 /* FClock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FClock.m; path = Firebase/Database/FClock.m; sourceTree = "<group>"; };
-		4791CC42541DF549416CF49568472E3D /* comparator.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = comparator.cc; path = util/comparator.cc; sourceTree = "<group>"; };
+		4791CC42541DF549416CF49568472E3D /* comparator.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = comparator.cc; path = util/comparator.cc; sourceTree = "<group>"; };
 		47D96E873BEF1116C427FFE65400E545 /* ScatterChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/ScatterChartDataSet.swift; sourceTree = "<group>"; };
 		47ED04ACBD094452367693BAE10DE163 /* FIRDatabaseConfig_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabaseConfig_Private.h; path = Firebase/Database/FIRDatabaseConfig_Private.h; sourceTree = "<group>"; };
 		48DFDA088113B780237284C006A8E810 /* libMailCore-ios.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libMailCore-ios.a"; path = "lib/libMailCore-ios.a"; sourceTree = "<group>"; };
@@ -952,6 +948,7 @@
 		4C430ADF5791A1167B10E48B31CFE674 /* FPriorityIndex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPriorityIndex.h; path = Firebase/Database/FPriorityIndex.h; sourceTree = "<group>"; };
 		4C6C2E7591DFD1E60EB67ADE5139A4E1 /* Highlight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Highlight.swift; path = Source/Charts/Highlight/Highlight.swift; sourceTree = "<group>"; };
 		4C8BE11F1A0F452EC4C5DAF622F47F4C /* FLLRBValueNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLLRBValueNode.m; path = Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FLLRBValueNode.m; sourceTree = "<group>"; };
+		4C913B297B7CD17BFF1B7EF63A75566E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D2C10708D86990D94C3E2982B30B3E4 /* GULNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GULNSData+zlib.m"; path = "GoogleUtilities/NSData+zlib/GULNSData+zlib.m"; sourceTree = "<group>"; };
 		4E1B551079EAF7814A1F675E81BFCA60 /* FRangedFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FRangedFilter.h; path = Firebase/Database/FRangedFilter.h; sourceTree = "<group>"; };
 		4F399555CFA76C3CBB70414B9B0630D3 /* BarChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartData.swift; path = Source/Charts/Data/Implementations/Standard/BarChartData.swift; sourceTree = "<group>"; };
@@ -964,6 +961,7 @@
 		510EC43A7CEFCC4F25625E8CB0C35110 /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+SRB64Additions.h"; path = "Firebase/Database/third_party/SocketRocket/NSData+SRB64Additions.h"; sourceTree = "<group>"; };
 		51B6BD5154F106DB52DE7D7E7B9C69E5 /* FIndex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIndex.h; path = Firebase/Database/FIndex.h; sourceTree = "<group>"; };
 		51BDADE0A3FFD69EEBDC0009D1B49040 /* FIRComponentContainerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentContainerInternal.h; path = Firebase/Core/Private/FIRComponentContainerInternal.h; sourceTree = "<group>"; };
+		51ECEA725F3D446B13726FF7B7689005 /* Pods-MindSafe-MindSafeUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafe-MindSafeUITests-resources.sh"; sourceTree = "<group>"; };
 		5295EB81F1C5B377DBD29CCF97342F31 /* IHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IHighlighter.swift; path = Source/Charts/Highlight/IHighlighter.swift; sourceTree = "<group>"; };
 		52AAB203AD2106DE8A7A0DFA743359F2 /* FOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FOperation.h; path = Firebase/Database/Core/Operation/FOperation.h; sourceTree = "<group>"; };
 		52E8488C907B4386E4A21372DBBC0D1C /* FListenComplete.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FListenComplete.m; path = Firebase/Database/FListenComplete.m; sourceTree = "<group>"; };
@@ -977,8 +975,8 @@
 		54FBA0CFC6306FC28F59FB6EBDCBE0DF /* BarChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartDataProvider.swift; path = Source/Charts/Interfaces/BarChartDataProvider.swift; sourceTree = "<group>"; };
 		5514983D631CC3230B274F5882AE2BFE /* GULLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLoggerLevel.h; path = GoogleUtilities/Logger/Public/GULLoggerLevel.h; sourceTree = "<group>"; };
 		563C45F7F3C37D6764911B43264E450D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56CB34415A4D037F63072F8868E06112 /* Pods-MindSafeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		56EB8C5309B8F409517E564BA31119CF /* FIRLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRLogger.m; path = Firebase/Core/FIRLogger.m; sourceTree = "<group>"; };
+		571CAE92625877C2B91C475E393ED207 /* Pods-MindSafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		572948A430340134DB1A2667C1E89205 /* log_writer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log_writer.h; path = db/log_writer.h; sourceTree = "<group>"; };
 		57A5CC4070FEE920593C4D807D6729BA /* FConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FConstants.h; path = Firebase/Database/Constants/FConstants.h; sourceTree = "<group>"; };
 		57F43312BE399F9AB08C28DBAF00393B /* posix_logger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = posix_logger.h; path = util/posix_logger.h; sourceTree = "<group>"; };
@@ -987,7 +985,8 @@
 		5898EF1672FED1119455201D856251A1 /* Charts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Charts-umbrella.h"; sourceTree = "<group>"; };
 		58B2B8D94D21636CBEAABC458DF9B4E2 /* FIRDatabaseConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRDatabaseConfig.m; path = Firebase/Database/Api/FIRDatabaseConfig.m; sourceTree = "<group>"; };
 		598595CC3199AACE305370595D43507E /* FSRWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSRWebSocket.m; path = Firebase/Database/third_party/SocketRocket/FSRWebSocket.m; sourceTree = "<group>"; };
-		59D414007485BDBE7CE32FAC3B719AC1 /* env.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = env.cc; path = util/env.cc; sourceTree = "<group>"; };
+		59D414007485BDBE7CE32FAC3B719AC1 /* env.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = env.cc; path = util/env.cc; sourceTree = "<group>"; };
+		5A06FCBE74C4741F70314A38306F77A6 /* Pods-MindSafeTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafeTests-resources.sh"; sourceTree = "<group>"; };
 		5A24D43E3C61CC1F224625061DD8BF35 /* FIROptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIROptions.m; path = Firebase/Core/FIROptions.m; sourceTree = "<group>"; };
 		5B1752FAB824EB56FAE0716A2DDCBB73 /* GULSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULSwizzler.m; path = GoogleUtilities/MethodSwizzler/GULSwizzler.m; sourceTree = "<group>"; };
 		5C150997FC2C16B4B8E245F158EE7D88 /* filter_block.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = filter_block.h; path = table/filter_block.h; sourceTree = "<group>"; };
@@ -1000,49 +999,45 @@
 		5E6A44D13D78E217FE32049FB2FEF4D6 /* slice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = slice.h; path = include/leveldb/slice.h; sourceTree = "<group>"; };
 		5E877D4006BF906BC6CAC094A2A06516 /* FListenProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FListenProvider.h; path = Firebase/Database/Core/FListenProvider.h; sourceTree = "<group>"; };
 		5F3AF2CD843AB4219800786521E94311 /* FEmptyNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FEmptyNode.h; path = Firebase/Database/Snapshot/FEmptyNode.h; sourceTree = "<group>"; };
-		5F655891A5CB76EE2BD9A39AF64206C3 /* coding.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = coding.cc; path = util/coding.cc; sourceTree = "<group>"; };
-		5F94519F7F292403934344420EF4BCD1 /* builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = builder.cc; path = db/builder.cc; sourceTree = "<group>"; };
+		5F655891A5CB76EE2BD9A39AF64206C3 /* coding.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = coding.cc; path = util/coding.cc; sourceTree = "<group>"; };
+		5F94519F7F292403934344420EF4BCD1 /* builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = builder.cc; path = db/builder.cc; sourceTree = "<group>"; };
 		5FB3A3222C25ECBFE89549708DDB50B6 /* FTupleUserCallback.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTupleUserCallback.m; path = Firebase/Database/Utilities/Tuples/FTupleUserCallback.m; sourceTree = "<group>"; };
 		5FDA6EA346DCA33D8C7BCD7D340379AC /* FTupleObjectNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleObjectNode.h; path = Firebase/Database/Utilities/Tuples/FTupleObjectNode.h; sourceTree = "<group>"; };
 		602C047637FC0CC70570A8A21FE46560 /* FirebaseDatabase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseDatabase.modulemap; sourceTree = "<group>"; };
 		6099E8D1516D89147679722461D0A3CF /* ILineChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ILineChartDataSet.swift; path = Source/Charts/Data/Interfaces/ILineChartDataSet.swift; sourceTree = "<group>"; };
-		60C9753A168944FD15EC5A2B00995452 /* log_reader.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = log_reader.cc; path = db/log_reader.cc; sourceTree = "<group>"; };
+		60C9753A168944FD15EC5A2B00995452 /* log_reader.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = log_reader.cc; path = db/log_reader.cc; sourceTree = "<group>"; };
 		61D38EB662CEC315D6ED4D81B485015D /* CandleChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/CandleChartDataSet.swift; sourceTree = "<group>"; };
 		61DA0E258211656B8C560124E6244B0C /* FTupleOnDisconnect.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTupleOnDisconnect.m; path = Firebase/Database/Utilities/Tuples/FTupleOnDisconnect.m; sourceTree = "<group>"; };
 		6263FD13E8C911B62A3FCDEFB389E6F3 /* GULSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULSwizzler.h; path = GoogleUtilities/MethodSwizzler/Private/GULSwizzler.h; sourceTree = "<group>"; };
 		631114055624C241637BCACD9845B3EB /* FirebaseCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseCore.xcconfig; sourceTree = "<group>"; };
-		632469F2AC8DC886F45C274791CB1A35 /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = leveldb.framework; path = "leveldb-library.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		635729A33FFB5B69D7B4C40FD4F2ECED /* write_batch_internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = write_batch_internal.h; path = db/write_batch_internal.h; sourceTree = "<group>"; };
+		6407F986CD53140D1D0064ED6E4176CE /* Pods-MindSafe-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafe-resources.sh"; sourceTree = "<group>"; };
 		64D56C994E9384C6ECB75EB0AE47D3C6 /* FIRComponentRegistrant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentRegistrant.h; path = Firebase/Core/Private/FIRComponentRegistrant.h; sourceTree = "<group>"; };
 		64E45684AD20F8D3BE54070D272D3667 /* FListenProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FListenProvider.m; path = Firebase/Database/Core/FListenProvider.m; sourceTree = "<group>"; };
 		64EF87F8FC4A2EAF2A574314EC877AC1 /* FQuerySpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FQuerySpec.h; path = Firebase/Database/Core/FQuerySpec.h; sourceTree = "<group>"; };
 		656C9FF509269621A7A7FAB315B1BA7E /* FIRConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRConfiguration.h; path = Firebase/Core/Public/FIRConfiguration.h; sourceTree = "<group>"; };
-		657C5E4E7E89242FEC7A86871DD2CB57 /* Pods-MindSafe.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MindSafe.modulemap"; sourceTree = "<group>"; };
 		65C48B80AD427CD61F4A39C6318F644D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		660193A5A056C39A2882D0B779074F8F /* Pods-MindSafeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MindSafeUITests.modulemap"; sourceTree = "<group>"; };
-		6635D5A91CCF73F1F0F2A917C770BDEC /* Pods_MindSafeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MindSafeUITests.framework; path = "Pods-MindSafeUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66398ACD2B35B4D75292F7F273D0F3AC /* FIRLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLogger.h; path = Firebase/Core/Private/FIRLogger.h; sourceTree = "<group>"; };
 		67406F5967CE329D29AF06F199FA8312 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Source/Charts/Animation/Animator.swift; sourceTree = "<group>"; };
 		679E017C81D549EB6653C03C62D18B30 /* FTupleTSN.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTupleTSN.m; path = Firebase/Database/Utilities/Tuples/FTupleTSN.m; sourceTree = "<group>"; };
-		67D9132E63C5890C894E1D3E24BD0DE3 /* Pods-MindSafeUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafeUITests-resources.sh"; sourceTree = "<group>"; };
 		6928C9400BB1CDD2DADB9401150D9B39 /* FAtomicNumber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAtomicNumber.h; path = Firebase/Database/Utilities/FAtomicNumber.h; sourceTree = "<group>"; };
 		69FC8D162653CFF98900E9C83BA13503 /* FTupleCallbackStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleCallbackStatus.h; path = Firebase/Database/Utilities/Tuples/FTupleCallbackStatus.h; sourceTree = "<group>"; };
 		6A278C78CB110ED84F78F0FF12B54003 /* snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = snapshot.h; path = db/snapshot.h; sourceTree = "<group>"; };
-		6A2A346FF44F4E76321C283DDFCAE560 /* env_posix.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = env_posix.cc; path = util/env_posix.cc; sourceTree = "<group>"; };
+		6A2A346FF44F4E76321C283DDFCAE560 /* env_posix.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = env_posix.cc; path = util/env_posix.cc; sourceTree = "<group>"; };
 		6BA11D8B5BC05D42721B6C54862F3282 /* dumpfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dumpfile.h; path = include/leveldb/dumpfile.h; sourceTree = "<group>"; };
 		6BB9A8453DD696BDBB6A2C28093DA814 /* FirebaseCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseCore.h; path = Firebase/Core/Public/FirebaseCore.h; sourceTree = "<group>"; };
 		6C0BBBF2C11C01BA55298C5368ED003C /* leveldb-library.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "leveldb-library.xcconfig"; sourceTree = "<group>"; };
 		6C53197BB35A9A52443640B0205C0FD8 /* FTrackedQueryManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTrackedQueryManager.h; path = Firebase/Database/Persistence/FTrackedQueryManager.h; sourceTree = "<group>"; };
 		6D2C44A36D0124EA30FA40E4A2EE5BD1 /* XAxis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxis.swift; path = Source/Charts/Components/XAxis.swift; sourceTree = "<group>"; };
-		6E74D9C5469A1E66AC4F6A7F72DFD771 /* dbformat.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = dbformat.cc; path = db/dbformat.cc; sourceTree = "<group>"; };
+		6E74D9C5469A1E66AC4F6A7F72DFD771 /* dbformat.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = dbformat.cc; path = db/dbformat.cc; sourceTree = "<group>"; };
 		6EA54298615C4852C19E4AB0FAAE89B5 /* FIRNoopAuthTokenProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRNoopAuthTokenProvider.m; path = Firebase/Database/Login/FIRNoopAuthTokenProvider.m; sourceTree = "<group>"; };
 		6EB4C79476A904A7C629B301279BD47E /* PieRadarChartViewBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieRadarChartViewBase.swift; path = Source/Charts/Charts/PieRadarChartViewBase.swift; sourceTree = "<group>"; };
 		6F16ABE7D3F5A8844EE2BF13823688BB /* c.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = c.h; path = include/leveldb/c.h; sourceTree = "<group>"; };
 		7130F92DF597C170EF299A73A1278409 /* FIRDatabaseQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRDatabaseQuery.m; path = Firebase/Database/Api/FIRDatabaseQuery.m; sourceTree = "<group>"; };
+		71486E5DB4A47B47DC7FE75D44F2BD8B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7283EB8171707F3CBC3F0C61FDB91F39 /* FImmutableSortedSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FImmutableSortedSet.h; path = Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FImmutableSortedSet.h; sourceTree = "<group>"; };
 		72BF716170BC1854AE1F123BB8F84D3C /* FSyncPoint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSyncPoint.m; path = Firebase/Database/Core/FSyncPoint.m; sourceTree = "<group>"; };
 		7336FD34682E7DF4ED9D70D1B3212ECA /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
-		737A57153E6D279D2BA7385514B7D71C /* Pods-MindSafeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MindSafeUITests-dummy.m"; sourceTree = "<group>"; };
 		73DC196289FEF9F429417B9704FFE0B3 /* XAxisRendererRadarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XAxisRendererRadarChart.swift; path = Source/Charts/Renderers/XAxisRendererRadarChart.swift; sourceTree = "<group>"; };
 		73F74E8DC821423E986D405DEB28F1D0 /* FIRLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLoggerLevel.h; path = Firebase/Core/Public/FIRLoggerLevel.h; sourceTree = "<group>"; };
 		7409E1AF78A19C6F5A9642AF657F1590 /* FSnapshotHolder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSnapshotHolder.m; path = Firebase/Database/Core/FSnapshotHolder.m; sourceTree = "<group>"; };
@@ -1056,7 +1051,6 @@
 		78B030D6436700C8660B63A83805ACB1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		78CE9C149DCB7AF8A47D2168B0E10D78 /* BarLineScatterCandleBubbleRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLineScatterCandleBubbleRenderer.swift; path = Source/Charts/Renderers/BarLineScatterCandleBubbleRenderer.swift; sourceTree = "<group>"; };
 		791688809C65E6EDD8807D011E7389FC /* FTupleObjectNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTupleObjectNode.m; path = Firebase/Database/Utilities/Tuples/FTupleObjectNode.m; sourceTree = "<group>"; };
-		791A5C366F35400E67458E2E05A8A7CB /* Pods_MindSafeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MindSafeTests.framework; path = "Pods-MindSafeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		794D8094038CDAAEDE7C8CA20112B7F5 /* FIRVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRVersion.m; path = Firebase/Core/FIRVersion.m; sourceTree = "<group>"; };
 		798D95AAE7A4BADE1A38D838624F715D /* arena.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = arena.h; path = util/arena.h; sourceTree = "<group>"; };
 		7A4EC8AE888E5F25092BEBB2A3EE8024 /* FPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPath.h; path = Firebase/Database/Core/Utilities/FPath.h; sourceTree = "<group>"; };
@@ -1065,12 +1059,13 @@
 		7AFEA59833B9F42DCB498BEF5942405E /* FViewProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FViewProcessor.m; path = Firebase/Database/FViewProcessor.m; sourceTree = "<group>"; };
 		7B2B9246E98A15EBFD012BACDD12F1EF /* merger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = merger.h; path = table/merger.h; sourceTree = "<group>"; };
 		7B53D64A65BBF5385A9AE0EFA7F5A835 /* FPriorityIndex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPriorityIndex.m; path = Firebase/Database/FPriorityIndex.m; sourceTree = "<group>"; };
-		7C3A4975DA4A2AF8A6F7310B2CB64E2D /* bloom.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = bloom.cc; path = util/bloom.cc; sourceTree = "<group>"; };
-		7C7D35776B3E8982806B149130CFB619 /* port_posix_sse.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = port_posix_sse.cc; path = port/port_posix_sse.cc; sourceTree = "<group>"; };
+		7C3A4975DA4A2AF8A6F7310B2CB64E2D /* bloom.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = bloom.cc; path = util/bloom.cc; sourceTree = "<group>"; };
+		7C7D35776B3E8982806B149130CFB619 /* port_posix_sse.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = port_posix_sse.cc; path = port/port_posix_sse.cc; sourceTree = "<group>"; };
 		7CA00FEDE818EAC0657EFF1624B80E42 /* LineChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartDataProvider.swift; path = Source/Charts/Interfaces/LineChartDataProvider.swift; sourceTree = "<group>"; };
 		7D62D7AB77B562EDC4FCB2E0D772B048 /* YAxisRendererRadarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YAxisRendererRadarChart.swift; path = Source/Charts/Renderers/YAxisRendererRadarChart.swift; sourceTree = "<group>"; };
 		7D6695DCD03B89A19DB7BC76B455AD3E /* FIRAppInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppInternal.h; path = Firebase/Core/Private/FIRAppInternal.h; sourceTree = "<group>"; };
 		7D970DD257DA82BB581C655F76ADE3DE /* FPruneForest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPruneForest.m; path = Firebase/Database/Persistence/FPruneForest.m; sourceTree = "<group>"; };
+		7E56E0A0266765B08CD0B57795B74B62 /* Pods-MindSafe-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MindSafe-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7E7CFE8867867D78FBAB08449C64B62F /* GULOriginalIMPConvenienceMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULOriginalIMPConvenienceMacros.h; path = GoogleUtilities/MethodSwizzler/Private/GULOriginalIMPConvenienceMacros.h; sourceTree = "<group>"; };
 		7ED686A30C8733C52DD0A862DB3D13A4 /* FTupleRemovedQueriesEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleRemovedQueriesEvents.h; path = Firebase/Database/Utilities/Tuples/FTupleRemovedQueriesEvents.h; sourceTree = "<group>"; };
 		7EF1213BB9EBC73BC84DDF0973083353 /* ChartBaseDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartBaseDataSet.swift; path = Source/Charts/Data/Implementations/ChartBaseDataSet.swift; sourceTree = "<group>"; };
@@ -1079,15 +1074,14 @@
 		7F7248BD13342A342D5370E8397A5157 /* GULLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULLogger.m; path = GoogleUtilities/Logger/GULLogger.m; sourceTree = "<group>"; };
 		7F94B162EEC604CD192EB3A6741649B2 /* FTypedefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTypedefs.h; path = Firebase/Database/Utilities/FTypedefs.h; sourceTree = "<group>"; };
 		800DA6ED776C13FE9AE1631A173537C9 /* FOverwrite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FOverwrite.m; path = Firebase/Database/Core/Operation/FOverwrite.m; sourceTree = "<group>"; };
-		80AB9316616687E179ECE64F5A7ED4F0 /* testutil.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = testutil.cc; path = util/testutil.cc; sourceTree = "<group>"; };
+		80AB9316616687E179ECE64F5A7ED4F0 /* testutil.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = testutil.cc; path = util/testutil.cc; sourceTree = "<group>"; };
 		810007F5F47704F3A450C6BC838EEA00 /* ChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartData.swift; path = Source/Charts/Data/Implementations/Standard/ChartData.swift; sourceTree = "<group>"; };
 		84175248E25590878EB190C7630D2D4D /* FTrackedQueryManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTrackedQueryManager.m; path = Firebase/Database/Persistence/FTrackedQueryManager.m; sourceTree = "<group>"; };
 		844274B7CD117DFD32328C30F64B6F6D /* Platform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.swift; path = Source/Charts/Utils/Platform.swift; sourceTree = "<group>"; };
-		851B372B06D6287A45FE8CA3265F3178 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseCore.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86AD4AB45A4F31656A906322A1D9B08E /* FArraySortedDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FArraySortedDictionary.h; path = Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FArraySortedDictionary.h; sourceTree = "<group>"; };
 		86B2631FBC21C6BBDFC301F42982A53D /* FConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FConnection.h; path = Firebase/Database/Realtime/FConnection.h; sourceTree = "<group>"; };
 		86F66D14E659DE8B250DB240937B4D1F /* FCacheNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FCacheNode.h; path = Firebase/Database/Core/View/FCacheNode.h; sourceTree = "<group>"; };
-		87A9F655D78414287096F35C54231A92 /* logging.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = logging.cc; path = util/logging.cc; sourceTree = "<group>"; };
+		87A9F655D78414287096F35C54231A92 /* logging.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = logging.cc; path = util/logging.cc; sourceTree = "<group>"; };
 		87ED6C98B78E237249A810888740CA29 /* Charts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Charts.xcconfig; sourceTree = "<group>"; };
 		87F2D5B4894866B6AC23143F029C03F5 /* atomic_pointer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = atomic_pointer.h; path = port/atomic_pointer.h; sourceTree = "<group>"; };
 		88A49BBC0507B83EA35D10A90DDEEEDE /* leveldb-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "leveldb-library-dummy.m"; sourceTree = "<group>"; };
@@ -1096,23 +1090,23 @@
 		8C88D4C41A61FCF7E4F9D9340FF0C823 /* FTupleFirebase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTupleFirebase.m; path = Firebase/Database/Utilities/Tuples/FTupleFirebase.m; sourceTree = "<group>"; };
 		8E073E17126F17D04BFECF91B1886AF8 /* LineScatterCandleRadarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineScatterCandleRadarChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/LineScatterCandleRadarChartDataSet.swift; sourceTree = "<group>"; };
 		8E4143AADF9CF05D2600818C041DE318 /* FTupleNodePath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleNodePath.h; path = Firebase/Database/Utilities/Tuples/FTupleNodePath.h; sourceTree = "<group>"; };
+		8EBF73C45112B126068D687B5F88E639 /* Pods-MindSafe-MindSafeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MindSafe-MindSafeUITests-umbrella.h"; sourceTree = "<group>"; };
+		8FF66CA6DC5D1D6D34F920520DE04BFB /* Pods-MindSafe.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MindSafe.modulemap"; sourceTree = "<group>"; };
 		9062989A1BB03DF615D94350A9F324FC /* FEventGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FEventGenerator.h; path = Firebase/Database/FEventGenerator.h; sourceTree = "<group>"; };
 		909996B6AEA73E7A0765A1F04612FC2B /* FTupleTransaction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleTransaction.h; path = Firebase/Database/Utilities/Tuples/FTupleTransaction.h; sourceTree = "<group>"; };
 		90A412BA5476B0E7C6205322E8BF6473 /* FIROptionsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROptionsInternal.h; path = Firebase/Core/Private/FIROptionsInternal.h; sourceTree = "<group>"; };
 		91BAB6A1FF2848E86B8AF3012F5826DE /* FPendingPut.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPendingPut.h; path = Firebase/Database/Persistence/FPendingPut.h; sourceTree = "<group>"; };
 		92360DAEC3D921FA9DFCEB71565198FD /* log_format.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log_format.h; path = db/log_format.h; sourceTree = "<group>"; };
-		926991481E8F3901ACFB4304847F7755 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92E07DBFE1A0C2E1459C70B11F778563 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		933F4C17282E91C8447A70DA33C77296 /* BubbleChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartDataProvider.swift; path = Source/Charts/Interfaces/BubbleChartDataProvider.swift; sourceTree = "<group>"; };
 		9344B2D6E26429E9CC41A0DBD430D7E9 /* FTupleBoolBlock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleBoolBlock.h; path = Firebase/Database/Utilities/Tuples/FTupleBoolBlock.h; sourceTree = "<group>"; };
-		93A10C5833DC9AABF91016CB36F1593D /* Pods-MindSafe-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MindSafe-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93AB505DDE6A3069BDFA18FE862482C9 /* dumpfile.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = dumpfile.cc; path = db/dumpfile.cc; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93AB505DDE6A3069BDFA18FE862482C9 /* dumpfile.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = dumpfile.cc; path = db/dumpfile.cc; sourceTree = "<group>"; };
 		94876176625532B61C7B30034F1CA7E8 /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = nanopb.modulemap; sourceTree = "<group>"; };
 		94CDE9F12CBF67D067B3FD1042A0140A /* FWriteRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FWriteRecord.m; path = Firebase/Database/Core/FWriteRecord.m; sourceTree = "<group>"; };
 		9557B0A3A7AE6092B2A68078F5D18C4B /* MarkerImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkerImage.swift; path = Source/Charts/Components/MarkerImage.swift; sourceTree = "<group>"; };
 		9569F8154ADB98ADA0E64E98BC5459B3 /* GULAppEnvironmentUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppEnvironmentUtil.h; path = GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.h; sourceTree = "<group>"; };
-		960B56D7D8BFC63C57986E603B23AF8E /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
+		960B56D7D8BFC63C57986E603B23AF8E /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_decode.c; sourceTree = "<group>"; };
 		961B7A009F7C99828F33E0A2648D59A5 /* FTrackedQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTrackedQuery.m; path = Firebase/Database/Persistence/FTrackedQuery.m; sourceTree = "<group>"; };
 		962A57322E25EBE95ACC245AECE4E2B5 /* FIRDataSnapshot_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDataSnapshot_Private.h; path = Firebase/Database/Api/Private/FIRDataSnapshot_Private.h; sourceTree = "<group>"; };
 		96A304DFD1CDFCBDA0F46BF6DA5B4250 /* write_batch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = write_batch.h; path = include/leveldb/write_batch.h; sourceTree = "<group>"; };
@@ -1121,15 +1115,12 @@
 		977A74FFA0E553DFE0B15219EDC0F181 /* FTreeNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTreeNode.h; path = Firebase/Database/Core/Utilities/FTreeNode.h; sourceTree = "<group>"; };
 		97BA3C18C34D80037AC0F3107D2D0D06 /* FView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FView.m; path = Firebase/Database/Core/View/FView.m; sourceTree = "<group>"; };
 		982D253D4F4190724C08665ECCE90239 /* GULReachabilityChecker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULReachabilityChecker.h; path = GoogleUtilities/Reachability/Private/GULReachabilityChecker.h; sourceTree = "<group>"; };
-		98577784D53395A74714D51CECB1CBE4 /* format.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = format.cc; path = table/format.cc; sourceTree = "<group>"; };
-		98821C9638E51F27ECEC65D8811B9DD6 /* Pods-MindSafe-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MindSafe-acknowledgements.plist"; sourceTree = "<group>"; };
+		98577784D53395A74714D51CECB1CBE4 /* format.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = format.cc; path = table/format.cc; sourceTree = "<group>"; };
 		9885E747B6EA425764DAE922E79FDCC7 /* IRadarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IRadarChartDataSet.swift; path = Source/Charts/Data/Interfaces/IRadarChartDataSet.swift; sourceTree = "<group>"; };
 		98CB5B298FF570725D41AF45735B72AA /* FIRServerValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRServerValue.m; path = Firebase/Database/Api/FIRServerValue.m; sourceTree = "<group>"; };
 		990E9EC6500052E55EA00A0F1E916CE0 /* FSnapshotUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSnapshotUtilities.m; path = Firebase/Database/Snapshot/FSnapshotUtilities.m; sourceTree = "<group>"; };
 		99781D547D7AB03FF4529A3CA7002494 /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
-		99B365DC1994FF9E0052A6240F5E2661 /* Pods-MindSafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99D1F763358624323D4BFE7B4949AC3D /* FTrackedQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTrackedQuery.h; path = Firebase/Database/Persistence/FTrackedQuery.h; sourceTree = "<group>"; };
-		9A2DCFDF43363AFDF23D37F11AAF1752 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleUtilities.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACB3767B76CF2D38A871C8E84969532 /* LineChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartData.swift; path = Source/Charts/Data/Implementations/Standard/LineChartData.swift; sourceTree = "<group>"; };
 		9B4041C17BCF2DD6A16BD59CCC703869 /* ScatterChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartData.swift; path = Source/Charts/Data/Implementations/Standard/ScatterChartData.swift; sourceTree = "<group>"; };
 		9BE6B876D30DA8EDBDAE36978BD91C07 /* FirebaseCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FirebaseCore-dummy.m"; sourceTree = "<group>"; };
@@ -1137,27 +1128,26 @@
 		9C173129670D7FAB56CBCAAE0959D0AA /* IScatterChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IScatterChartDataSet.swift; path = Source/Charts/Data/Interfaces/IScatterChartDataSet.swift; sourceTree = "<group>"; };
 		9C17CF087FABECE1692610DA93F72680 /* FValueEventRegistration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FValueEventRegistration.m; path = Firebase/Database/Core/View/FValueEventRegistration.m; sourceTree = "<group>"; };
 		9C5082353629C48E2D9A1AD6EB2190EB /* GULAppEnvironmentUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppEnvironmentUtil.m; path = GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.m; sourceTree = "<group>"; };
-		9D68E90C40116580CBBEC47F89F93E43 /* Pods-MindSafeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafeTests-frameworks.sh"; sourceTree = "<group>"; };
 		9DB82E04326E957CEAD5B23925CE16D8 /* FIRTransactionResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRTransactionResult.m; path = Firebase/Database/Api/FIRTransactionResult.m; sourceTree = "<group>"; };
 		9DE43AD42B9D8049A479581B426EEB84 /* GULLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLogger.h; path = GoogleUtilities/Logger/Private/GULLogger.h; sourceTree = "<group>"; };
-		9E4CADD2EA679310AB3C82BE75721B3E /* status.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = status.cc; path = util/status.cc; sourceTree = "<group>"; };
+		9E4CADD2EA679310AB3C82BE75721B3E /* status.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = status.cc; path = util/status.cc; sourceTree = "<group>"; };
 		9F2C7095181796CDC6F7B88F9A390268 /* FNamedNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FNamedNode.m; path = Firebase/Database/FNamedNode.m; sourceTree = "<group>"; };
-		9FB88B085CA8086171D9107904EDEF45 /* Pods-MindSafeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9F3B05911F3FFD38D50B11524E584070 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1086285138F85A7D6AE44EA8BCD6700 /* PieChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartRenderer.swift; path = Source/Charts/Renderers/PieChartRenderer.swift; sourceTree = "<group>"; };
 		A1522A167A9A57F717FDABBCFA3D6054 /* cache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cache.h; path = include/leveldb/cache.h; sourceTree = "<group>"; };
 		A17FF3140DCE07B46B97BC20522D8B8F /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		A1DAFD4A3BDF0110F33FA89A1F4C0AED /* block.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = block.cc; path = table/block.cc; sourceTree = "<group>"; };
+		A1DAFD4A3BDF0110F33FA89A1F4C0AED /* block.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = block.cc; path = table/block.cc; sourceTree = "<group>"; };
 		A1FEA5510A0A12605913996069D894C3 /* FIRMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMutableData.h; path = Firebase/Database/Public/FIRMutableData.h; sourceTree = "<group>"; };
 		A2034FA1E73E00544A17012EC331161E /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
 		A261BFBDB2108C64403CF05C7A16AB06 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		A297AF51630894FB355679E9E1CF844C /* Pods-MindSafeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafeTests-frameworks.sh"; sourceTree = "<group>"; };
 		A3097F1A05467124DE3AB291CF805700 /* BarChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/BarChartDataEntry.swift; sourceTree = "<group>"; };
 		A37F2507C72E1DD9B245F74D51697021 /* coding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = coding.h; path = util/coding.h; sourceTree = "<group>"; };
 		A3FA8F6928C543B1054621D141E4FBA2 /* GULNetworkConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkConstants.m; path = GoogleUtilities/Network/GULNetworkConstants.m; sourceTree = "<group>"; };
-		A41128C0C40BB223C0263D4B82EA9A9B /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A431363C333AC6F5A778A39A72528410 /* fbase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fbase64.h; path = Firebase/Database/third_party/SocketRocket/fbase64.h; sourceTree = "<group>"; };
 		A46AE1CE2F4A688A1945C5DD032063AC /* FIRDatabaseReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabaseReference.h; path = Firebase/Database/Public/FIRDatabaseReference.h; sourceTree = "<group>"; };
 		A490DD29C4F31ED1383EE867436ACC0B /* FLevelDBStorageEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLevelDBStorageEngine.m; path = Firebase/Database/Persistence/FLevelDBStorageEngine.m; sourceTree = "<group>"; };
-		A4E8574F8111F9A40D3389CF1DA0BC10 /* port_posix.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = port_posix.cc; path = port/port_posix.cc; sourceTree = "<group>"; };
+		A4E8574F8111F9A40D3389CF1DA0BC10 /* port_posix.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = port_posix.cc; path = port/port_posix.cc; sourceTree = "<group>"; };
 		A58B725E5DD5993A23276FAA332880EB /* FOperationSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FOperationSource.h; path = Firebase/Database/Core/Operation/FOperationSource.h; sourceTree = "<group>"; };
 		A5FEAF87FC971A4E0EAD1F964947D256 /* FRepoManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FRepoManager.h; path = Firebase/Database/Core/FRepoManager.h; sourceTree = "<group>"; };
 		A6193AB01032E6BEFAEFAC98D498EF08 /* FServerValues.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FServerValues.h; path = Firebase/Database/Core/FServerValues.h; sourceTree = "<group>"; };
@@ -1170,7 +1160,6 @@
 		A8DC25090A1097FEF6475E4D2989CA18 /* TransformerHorizontalBarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformerHorizontalBarChart.swift; path = Source/Charts/Utils/TransformerHorizontalBarChart.swift; sourceTree = "<group>"; };
 		A91467BF7C15C628FF4266298106791F /* APLevelDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APLevelDB.h; path = "Firebase/Database/third_party/Wrap-leveldb/APLevelDB.h"; sourceTree = "<group>"; };
 		A92545690A996728CFB77D02125B8F83 /* FIRAnalyticsConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAnalyticsConfiguration.m; path = Firebase/Core/FIRAnalyticsConfiguration.m; sourceTree = "<group>"; };
-		A96CC58D109AE9F37FFF594B8C31D0FC /* Pods-MindSafeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafeTests.release.xcconfig"; sourceTree = "<group>"; };
 		A97A8269EAD438BA34DBFB870FA7B391 /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+SRB64Additions.m"; path = "Firebase/Database/third_party/SocketRocket/NSData+SRB64Additions.m"; sourceTree = "<group>"; };
 		AA2AD432A4F7FFE9A73C78F3A41B1CA2 /* FIRDependency.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDependency.h; path = Firebase/Core/Private/FIRDependency.h; sourceTree = "<group>"; };
 		AA8D14E629E1F8A9A747386CEC16996B /* Charts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Charts-dummy.m"; sourceTree = "<group>"; };
@@ -1184,28 +1173,27 @@
 		AE327D4184D081803C9CAAE18C0169FC /* FRepo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FRepo.h; path = Firebase/Database/Core/FRepo.h; sourceTree = "<group>"; };
 		AE3526D134E158B24247D01C8052E358 /* ChartViewBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartViewBase.swift; path = Source/Charts/Charts/ChartViewBase.swift; sourceTree = "<group>"; };
 		AE9E59F01F11347787171F1C11C95B9F /* PieChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartData.swift; path = Source/Charts/Data/Implementations/Standard/PieChartData.swift; sourceTree = "<group>"; };
-		AEA87DE4FD373089D9FB47991A338C49 /* c.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = c.cc; path = db/c.cc; sourceTree = "<group>"; };
+		AEA87DE4FD373089D9FB47991A338C49 /* c.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = c.cc; path = db/c.cc; sourceTree = "<group>"; };
 		AF2607AFF8AA1EF7025C36570305F489 /* FViewCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FViewCache.m; path = Firebase/Database/Core/View/FViewCache.m; sourceTree = "<group>"; };
 		AFC0D50052B3AF0E456C84ED31037608 /* ChartHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartHighlighter.swift; path = Source/Charts/Highlight/ChartHighlighter.swift; sourceTree = "<group>"; };
 		B001376A2D31F9F1418D320710553A85 /* CircleShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/CircleShapeRenderer.swift; sourceTree = "<group>"; };
-		B010FA15D76CB472695E161EBCCA0E2F /* Pods-MindSafe-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafe-resources.sh"; sourceTree = "<group>"; };
 		B01D84F0229654A6D3570F4639986E57 /* FDataEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FDataEvent.h; path = Firebase/Database/Core/View/FDataEvent.h; sourceTree = "<group>"; };
 		B03A9215D6BAE8484811FBA3C22D888A /* FIRDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRDatabase.m; path = Firebase/Database/Api/FIRDatabase.m; sourceTree = "<group>"; };
-		B0BBAE5335EE2D929B21C9624CE9D9AB /* filter_block.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = filter_block.cc; path = table/filter_block.cc; sourceTree = "<group>"; };
+		B0BBAE5335EE2D929B21C9624CE9D9AB /* filter_block.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = filter_block.cc; path = table/filter_block.cc; sourceTree = "<group>"; };
+		B0FD0BF5D5DD1FE1BE4710153C39893E /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1285E64BF7466AD3A2EBF4E731DE37D /* FValidation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FValidation.m; path = Firebase/Database/Utilities/FValidation.m; sourceTree = "<group>"; };
 		B13C82947EE1B0DB74CDA4C6F51BA0F5 /* GULNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetwork.h; path = GoogleUtilities/Network/Private/GULNetwork.h; sourceTree = "<group>"; };
+		B187BF0F9009BA143DF8E1EDE94C51D4 /* Pods_MindSafeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSafeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C121181E392352B1E92B2822826634 /* CombinedHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedHighlighter.swift; path = Source/Charts/Highlight/CombinedHighlighter.swift; sourceTree = "<group>"; };
-		B2C15BEE004E4F8AE633B3E5C7FB81A4 /* Pods_MindSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MindSafe.framework; path = "Pods-MindSafe.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32A932DB81AA81F78D604F1302A3072 /* FIndexedFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIndexedFilter.h; path = Firebase/Database/Core/View/Filter/FIndexedFilter.h; sourceTree = "<group>"; };
 		B34AC811ECCAAD69FD887CB5318EEF80 /* comparator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = comparator.h; path = include/leveldb/comparator.h; sourceTree = "<group>"; };
 		B35365BB0C5B564B07258BEF2EB9A314 /* ChartColorTemplates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartColorTemplates.swift; path = Source/Charts/Utils/ChartColorTemplates.swift; sourceTree = "<group>"; };
 		B3EBACC2BAF3E4F0708192F00053DD3E /* MoveViewJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoveViewJob.swift; path = Source/Charts/Jobs/MoveViewJob.swift; sourceTree = "<group>"; };
 		B4133C2F2204B789E0EBDC5AF04E5580 /* FParsedUrl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FParsedUrl.h; path = Firebase/Database/Utilities/FParsedUrl.h; sourceTree = "<group>"; };
-		B4734CD7FD5CDB24CA8A0C8849C7E914 /* Pods-MindSafeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MindSafeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B5137816A8BC7DC4B0044182D61406CD /* FTupleNodePath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTupleNodePath.m; path = Firebase/Database/Utilities/Tuples/FTupleNodePath.m; sourceTree = "<group>"; };
 		B52042528C75AF4DDE838FFF1E11A25C /* FCompleteChildSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FCompleteChildSource.h; path = Firebase/Database/Core/View/Filter/FCompleteChildSource.h; sourceTree = "<group>"; };
 		B56364B14559540053EC783F2387F898 /* FChildEventRegistration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FChildEventRegistration.m; path = Firebase/Database/Core/View/FChildEventRegistration.m; sourceTree = "<group>"; };
-		B59B5E3C5A87EF58021D2298FD906662 /* table.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = table.cc; path = table/table.cc; sourceTree = "<group>"; };
+		B59B5E3C5A87EF58021D2298FD906662 /* table.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = table.cc; path = table/table.cc; sourceTree = "<group>"; };
 		B61326D502B812EBA071798DD29393D5 /* FWriteTree.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FWriteTree.m; path = Firebase/Database/Core/FWriteTree.m; sourceTree = "<group>"; };
 		B620A12732934A4E1329A2191BFE4134 /* IBubbleChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IBubbleChartDataSet.swift; path = Source/Charts/Data/Interfaces/IBubbleChartDataSet.swift; sourceTree = "<group>"; };
 		B6CBEE8975A8B718AD50B6C216BC5E04 /* hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hash.h; path = util/hash.h; sourceTree = "<group>"; };
@@ -1214,14 +1202,17 @@
 		B779A93CAC334462ACB0B3956AC74977 /* LineRadarRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineRadarRenderer.swift; path = Source/Charts/Renderers/LineRadarRenderer.swift; sourceTree = "<group>"; };
 		B7A7FC9D49443B9C57AA851986E8ABA4 /* GoogleUtilities.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GoogleUtilities.modulemap; sourceTree = "<group>"; };
 		B7B00E4DA3FF078DBC6BDB05583565E1 /* table_cache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = table_cache.h; path = db/table_cache.h; sourceTree = "<group>"; };
-		B7C6E7607C52B00C24D9B96EB100A8FB /* write_batch.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = write_batch.cc; path = db/write_batch.cc; sourceTree = "<group>"; };
+		B7C6E7607C52B00C24D9B96EB100A8FB /* write_batch.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = write_batch.cc; path = db/write_batch.cc; sourceTree = "<group>"; };
 		B7F7EE787893030E399BE78EF2D90CA9 /* FNamedNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FNamedNode.h; path = Firebase/Database/FNamedNode.h; sourceTree = "<group>"; };
+		B849FE0A56F3F62B0F5489408868058F /* Pods-MindSafeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MindSafeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B899B5904708944DDDE0C555CCE445F7 /* FMerge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMerge.h; path = Firebase/Database/Core/Operation/FMerge.h; sourceTree = "<group>"; };
 		B8C43CB665EB707FF6E3D0D2BBAF1A68 /* port_example.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = port_example.h; path = port/port_example.h; sourceTree = "<group>"; };
 		B8D168422DCF89CB09FFCDBE69D65292 /* FWriteTreeRef.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FWriteTreeRef.m; path = Firebase/Database/Core/FWriteTreeRef.m; sourceTree = "<group>"; };
 		B91FDB36F4D7701BDC8C64338E79025E /* LegendEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegendEntry.swift; path = Source/Charts/Components/LegendEntry.swift; sourceTree = "<group>"; };
 		B9309CFC52821CE8B9649DAAE28AE84A /* BarHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarHighlighter.swift; path = Source/Charts/Highlight/BarHighlighter.swift; sourceTree = "<group>"; };
+		BA4324DA00C7DB26426C1CFBA7FDA05E /* Pods-MindSafe-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafe-frameworks.sh"; sourceTree = "<group>"; };
 		BA5DCC3B9085EBFA4E7ECE0B70B5B426 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		BADC9699F8464F3779318B8EBC37012C /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = leveldb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFE0D068BD3DB7998109A85625EE7DA /* IMarker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMarker.swift; path = Source/Charts/Components/IMarker.swift; sourceTree = "<group>"; };
 		BB4A6EC6936FF2459B849D7B9B9CA11F /* IBarLineScatterCandleBubbleChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IBarLineScatterCandleBubbleChartDataSet.swift; path = Source/Charts/Data/Interfaces/IBarLineScatterCandleBubbleChartDataSet.swift; sourceTree = "<group>"; };
 		BC6F8D4F4687292FAE2FC4D874B805CD /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = Firebase/Core/Public/FIRApp.h; sourceTree = "<group>"; };
@@ -1233,7 +1224,7 @@
 		BF7EC74A4B434E80596398095932400C /* DataApproximator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataApproximator.swift; path = Source/Charts/Filters/DataApproximator.swift; sourceTree = "<group>"; };
 		C018A6CC35EECD07CFCD6CE5C5061C54 /* FIRErrorCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRErrorCode.h; path = Firebase/Core/Private/FIRErrorCode.h; sourceTree = "<group>"; };
 		C081BBD488F992743A6BE75A2FDC5F4A /* FChildrenNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FChildrenNode.m; path = Firebase/Database/Snapshot/FChildrenNode.m; sourceTree = "<group>"; };
-		C1BA8B2A453D5A146F1E2453EE7EB4C8 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseDatabase.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C12B2DDA7296CA344FF24B88C25860BD /* Pods-MindSafeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MindSafeTests-dummy.m"; sourceTree = "<group>"; };
 		C1EED74AF63C991004DC7C7A24457A14 /* status.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = status.h; path = include/leveldb/status.h; sourceTree = "<group>"; };
 		C1F062C3FACEA51377C58C41B7EABF70 /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
 		C202CD90EC0A3BCD9BBC75B206DA3E3F /* version_edit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version_edit.h; path = db/version_edit.h; sourceTree = "<group>"; };
@@ -1245,7 +1236,7 @@
 		C3A0E1BDAB2CF1CEE5C39C9F810ABF02 /* FRepoInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FRepoInfo.h; path = Firebase/Database/Core/FRepoInfo.h; sourceTree = "<group>"; };
 		C3ADE3CAB1E576DFFB6A93E24EF0A6E0 /* FIRComponentContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentContainer.h; path = Firebase/Core/Private/FIRComponentContainer.h; sourceTree = "<group>"; };
 		C4106548A290DBDF3DB57346B7D02629 /* FIRBundleUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRBundleUtil.h; path = Firebase/Core/Private/FIRBundleUtil.h; sourceTree = "<group>"; };
-		C48054121D72B04E900FAA134DD92C8A /* Pods-MindSafeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MindSafeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C476C2E3A6523D285C9508A834737459 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F84E5BB47AAD3CB995040EA43AB3B8 /* GoogleUtilities-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleUtilities-prefix.pch"; sourceTree = "<group>"; };
 		C51B6F7C39A07DA3899325E87E37F5B6 /* FPathIndex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPathIndex.h; path = Firebase/Database/FPathIndex.h; sourceTree = "<group>"; };
 		C5ED5ED10A3B753B6907EE7B1D2F5F7C /* FStringUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FStringUtilities.m; path = Firebase/Database/Utilities/FStringUtilities.m; sourceTree = "<group>"; };
@@ -1255,27 +1246,25 @@
 		C6D31EDE98CF915B5445A20EA4638C28 /* version_set.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version_set.h; path = db/version_set.h; sourceTree = "<group>"; };
 		C711C6BACE62D5B501B7684D7078F987 /* AxisBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AxisBase.swift; path = Source/Charts/Components/AxisBase.swift; sourceTree = "<group>"; };
 		C75960D96C2D6C5F8C6B65D5A10674C1 /* ChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/ChartDataEntry.swift; sourceTree = "<group>"; };
-		C7A39DE017B560E4AF4C70BD8FDBC893 /* Pods-MindSafeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MindSafeTests-dummy.m"; sourceTree = "<group>"; };
 		C87F7FE7B72F4EA22093F8D65F9E9B37 /* FViewProcessorResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FViewProcessorResult.h; path = Firebase/Database/FViewProcessorResult.h; sourceTree = "<group>"; };
 		C8C9CF57C53D34D44FAA05F9B9BBF422 /* FIRAnalyticsConfiguration+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRAnalyticsConfiguration+Internal.h"; path = "Firebase/Core/Private/FIRAnalyticsConfiguration+Internal.h"; sourceTree = "<group>"; };
 		C8FC697DF04E82E177338559BCC88DEE /* leveldb-library-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "leveldb-library-umbrella.h"; sourceTree = "<group>"; };
 		C9AA6879DE70412BFE8CE121927E9102 /* GULNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetwork.m; path = GoogleUtilities/Network/GULNetwork.m; sourceTree = "<group>"; };
-		CA5E9A3624264967003C8F3EBCC5A63D /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
-		CAB4F13511151EF4175747396730F4A5 /* version_edit.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = version_edit.cc; path = db/version_edit.cc; sourceTree = "<group>"; };
+		CA5E9A3624264967003C8F3EBCC5A63D /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_encode.c; sourceTree = "<group>"; };
+		CAB4F13511151EF4175747396730F4A5 /* version_edit.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = version_edit.cc; path = db/version_edit.cc; sourceTree = "<group>"; };
 		CABEBECED7CF37B65EB203C5496A5CDC /* FRepoManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FRepoManager.m; path = Firebase/Database/Core/FRepoManager.m; sourceTree = "<group>"; };
 		CAC03FBEB2CC7F57991F85CEF1679E28 /* skiplist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = skiplist.h; path = db/skiplist.h; sourceTree = "<group>"; };
 		CAFE0A99DC42F99B21C705E633F81779 /* FImmutableSortedDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FImmutableSortedDictionary.h; path = Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FImmutableSortedDictionary.h; sourceTree = "<group>"; };
 		CBA80D3A0876B038CEC540A63A3D7F60 /* FDataEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FDataEvent.m; path = Firebase/Database/Core/View/FDataEvent.m; sourceTree = "<group>"; };
-		CBB8FDAEB9CFC108FB5A3D0BDAB70315 /* Pods-MindSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafe.release.xcconfig"; sourceTree = "<group>"; };
 		CCCAD36C4312AB3F9812BE9FB6999227 /* FEventRaiser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEventRaiser.m; path = Firebase/Database/Core/View/FEventRaiser.m; sourceTree = "<group>"; };
 		CCD33596A938CE2B428DC621D1C392F1 /* IFillFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IFillFormatter.swift; path = Source/Charts/Formatters/IFillFormatter.swift; sourceTree = "<group>"; };
 		CDA222BB05E59E3FA8FCF112FE2038C2 /* FLLRBValueNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLLRBValueNode.h; path = Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FLLRBValueNode.h; sourceTree = "<group>"; };
 		CDE4F66A2388DA7F1A001FA3295B0DB4 /* FIRErrors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRErrors.m; path = Firebase/Core/FIRErrors.m; sourceTree = "<group>"; };
 		CE19FAEA0D9192365FE4151A9C9EAFC8 /* BarChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartView.swift; path = Source/Charts/Charts/BarChartView.swift; sourceTree = "<group>"; };
 		CE4061B9CE3C3FA46BB45C2D49298940 /* RadarChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartRenderer.swift; path = Source/Charts/Renderers/RadarChartRenderer.swift; sourceTree = "<group>"; };
-		CE5B6B42254A0CCE5C2E4C227BEAEA44 /* Pods-MindSafe-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MindSafe-umbrella.h"; sourceTree = "<group>"; };
 		CE825E204E4FFF02A2BB0729ED3B489E /* GULReachabilityChecker+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULReachabilityChecker+Internal.h"; path = "GoogleUtilities/Reachability/GULReachabilityChecker+Internal.h"; sourceTree = "<group>"; };
 		CE96E2433E204E81E4C89BACFCC595F0 /* FLLRBNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLLRBNode.h; path = Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FLLRBNode.h; sourceTree = "<group>"; };
+		CF1FEBDF84D36A4119DA929B48860A8A /* Pods_MindSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF588E87240C03EF97E3DA5FEAF3F84F /* FIRDatabaseQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabaseQuery.h; path = Firebase/Database/Public/FIRDatabaseQuery.h; sourceTree = "<group>"; };
 		CFE86899865C8A8393B7F63A7EF0F4A0 /* FIRDatabaseReference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRDatabaseReference.m; path = Firebase/Database/FIRDatabaseReference.m; sourceTree = "<group>"; };
 		D01F8C7AAE1149A6B7C54C5109264241 /* FPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPath.m; path = Firebase/Database/Core/Utilities/FPath.m; sourceTree = "<group>"; };
@@ -1289,22 +1278,24 @@
 		D29278CE38CD028B9308FF4AA73F0759 /* ChartDataRendererBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartDataRendererBase.swift; path = Source/Charts/Renderers/ChartDataRendererBase.swift; sourceTree = "<group>"; };
 		D2DB555C53764AAE600F24002D9ED7A7 /* YAxisRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YAxisRenderer.swift; path = Source/Charts/Renderers/YAxisRenderer.swift; sourceTree = "<group>"; };
 		D33CBA5607521B3851B6B32810B552C1 /* table_builder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = table_builder.h; path = include/leveldb/table_builder.h; sourceTree = "<group>"; };
+		D3A4A15D4441432A55C639D78E4209C8 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C96D489B13D5D9828A0D5EA7732E6A /* GULNetworkLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkLoggerProtocol.h; path = GoogleUtilities/Network/Private/GULNetworkLoggerProtocol.h; sourceTree = "<group>"; };
 		D41C0AF12DA4351D3C85CBE417FC6D6F /* testharness.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = testharness.h; path = util/testharness.h; sourceTree = "<group>"; };
 		D47C728B649363B35A0949AA4BA3C239 /* GULNetworkURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkURLSession.m; path = GoogleUtilities/Network/GULNetworkURLSession.m; sourceTree = "<group>"; };
 		D4E9A732E8DC0B14CC36BC3FDB4A8130 /* FTree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTree.h; path = Firebase/Database/Core/Utilities/FTree.h; sourceTree = "<group>"; };
 		D4F1215118285C1FB47E16F1B84C7635 /* FSparseSnapshotTree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSparseSnapshotTree.h; path = Firebase/Database/Core/FSparseSnapshotTree.h; sourceTree = "<group>"; };
+		D4FEEF0C0EDF76DA24258555315F7F95 /* Pods-MindSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafe.release.xcconfig"; sourceTree = "<group>"; };
 		D51817AAA477A75A23D30A97045D9D2A /* memtable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = memtable.h; path = db/memtable.h; sourceTree = "<group>"; };
 		D5BC49CFB0B2A8C6D8E2B05C5772BCA5 /* FEventEmitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FEventEmitter.h; path = Firebase/Database/Utilities/FEventEmitter.h; sourceTree = "<group>"; };
 		D5FD9365BF63341F1CA8E0B588206032 /* FValueIndex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FValueIndex.h; path = Firebase/Database/FValueIndex.h; sourceTree = "<group>"; };
-		D63061BDFC2433A475C298430395635E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D68DA1BE56CF65953B6007BB5E9D66D6 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6994E8A43305CCBFCB8951AD561B6ED /* DefaultValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValueFormatter.swift; path = Source/Charts/Formatters/DefaultValueFormatter.swift; sourceTree = "<group>"; };
-		D6ADF032C1A9639779FDEABC2C96582A /* Pods-MindSafeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MindSafeUITests-umbrella.h"; sourceTree = "<group>"; };
 		D6E1ADFE7EA7B6D9CDAE5B483EFEA39A /* FSRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSRWebSocket.h; path = Firebase/Database/third_party/SocketRocket/FSRWebSocket.h; sourceTree = "<group>"; };
 		D6F83BF3BDEF6F121AECE27276FD535B /* builder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = builder.h; path = db/builder.h; sourceTree = "<group>"; };
 		D77696F25853D557D47E0E9F7EC73A20 /* FWriteRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FWriteRecord.h; path = Firebase/Database/Core/FWriteRecord.h; sourceTree = "<group>"; };
 		D839BE5FE4E1917278D65EA61F212FD7 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = CoreOnly/Sources/Firebase.h; sourceTree = "<group>"; };
 		D860E89B1494F6C74747E876D8B0558A /* FChildChangeAccumulator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FChildChangeAccumulator.h; path = Firebase/Database/Core/View/Filter/FChildChangeAccumulator.h; sourceTree = "<group>"; };
+		D871BB7D9BF7894E7F9280A713F2640A /* Pods-MindSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MindSafe.debug.xcconfig"; sourceTree = "<group>"; };
 		D8B08F257D95FA4A5D6D3A52F4AD5C49 /* BarLineChartViewBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLineChartViewBase.swift; path = Source/Charts/Charts/BarLineChartViewBase.swift; sourceTree = "<group>"; };
 		D8B35AADE2690AEEC01B590E0F6C20C6 /* db_iter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = db_iter.h; path = db/db_iter.h; sourceTree = "<group>"; };
 		DADEFA6AB1EB72A19751E98A38E91D10 /* FLLRBEmptyNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLLRBEmptyNode.m; path = Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FLLRBEmptyNode.m; sourceTree = "<group>"; };
@@ -1319,34 +1310,35 @@
 		DEC8BA8036F6320CED0404FE3937372E /* thread_annotations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = thread_annotations.h; path = port/thread_annotations.h; sourceTree = "<group>"; };
 		DECB487AEB0FA0779A2DC038D7A88E08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DF5EF1A5FDDA516B6CF7609B99A500BE /* FIRDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabase.h; path = Firebase/Database/Public/FIRDatabase.h; sourceTree = "<group>"; };
-		E063D0C25B30D0994778069D0F11956A /* log_writer.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = log_writer.cc; path = db/log_writer.cc; sourceTree = "<group>"; };
+		E063D0C25B30D0994778069D0F11956A /* log_writer.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = log_writer.cc; path = db/log_writer.cc; sourceTree = "<group>"; };
 		E087B178B005039BE27859A4D55846D0 /* FKeepSyncedEventRegistration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FKeepSyncedEventRegistration.m; path = Firebase/Database/Core/View/FKeepSyncedEventRegistration.m; sourceTree = "<group>"; };
 		E09DFE964F8FA2C6C0A33A2870A5389C /* histogram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = histogram.h; path = util/histogram.h; sourceTree = "<group>"; };
 		E1B3750682097B924DD801758F38D6BB /* FPersistenceManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPersistenceManager.m; path = Firebase/Database/Persistence/FPersistenceManager.m; sourceTree = "<group>"; };
 		E1C4BE295C73922D340B2BA9EA511174 /* FRangeMerge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FRangeMerge.m; path = Firebase/Database/Core/FRangeMerge.m; sourceTree = "<group>"; };
-		E1F2BC2F3D6623EFD2DE1E04F930D516 /* iterator.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = iterator.cc; path = table/iterator.cc; sourceTree = "<group>"; };
+		E1F2BC2F3D6623EFD2DE1E04F930D516 /* iterator.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = iterator.cc; path = table/iterator.cc; sourceTree = "<group>"; };
 		E2D7205BFD5724A7C09464D36ACBF2E1 /* DefaultAxisValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultAxisValueFormatter.swift; path = Source/Charts/Formatters/DefaultAxisValueFormatter.swift; sourceTree = "<group>"; };
 		E337EA56701EEA0BBD68BB63158F6D4D /* FAtomicNumber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAtomicNumber.m; path = Firebase/Database/Utilities/FAtomicNumber.m; sourceTree = "<group>"; };
 		E3D2560EBFFCE8CB82BDDEC13F15DA90 /* FRangedFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FRangedFilter.m; path = Firebase/Database/FRangedFilter.m; sourceTree = "<group>"; };
-		E41573FB1796B47A5F64F49DE2072020 /* block_builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = block_builder.cc; path = table/block_builder.cc; sourceTree = "<group>"; };
+		E41573FB1796B47A5F64F49DE2072020 /* block_builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = block_builder.cc; path = table/block_builder.cc; sourceTree = "<group>"; };
 		E415E9F51580A290A896BD5D207E5752 /* BarChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartRenderer.swift; path = Source/Charts/Renderers/BarChartRenderer.swift; sourceTree = "<group>"; };
 		E4276F2B214ACA10AAF9577D206B1877 /* FChange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FChange.m; path = Firebase/Database/Core/View/FChange.m; sourceTree = "<group>"; };
 		E44714C1FE111B8446C34AD31EC367F4 /* FirebaseCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseCore-umbrella.h"; sourceTree = "<group>"; };
 		E47B34D92F96075794135B994920ED7C /* block_builder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = block_builder.h; path = table/block_builder.h; sourceTree = "<group>"; };
 		E68D745DC4B6707374C2C9F351E6FE70 /* BarLineScatterCandleBubbleChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLineScatterCandleBubbleChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/BarLineScatterCandleBubbleChartDataSet.swift; sourceTree = "<group>"; };
+		E6BC5682A698B5452BE48A3502735766 /* Pods-MindSafe-MindSafeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MindSafe-MindSafeUITests-frameworks.sh"; sourceTree = "<group>"; };
 		E7052E46D9C0D68C21D79C1866F74EEC /* FCancelEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FCancelEvent.m; path = Firebase/Database/Core/View/FCancelEvent.m; sourceTree = "<group>"; };
 		E86AAA7ECFEE3491D12915A7B70A3A87 /* logging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = logging.h; path = util/logging.h; sourceTree = "<group>"; };
 		E918035DA470A6491B8276135113E5B0 /* FIRDataEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDataEventType.h; path = Firebase/Database/Public/FIRDataEventType.h; sourceTree = "<group>"; };
 		E9795ED2494951B7D54FF20382067BD1 /* FTupleSetIdPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleSetIdPath.h; path = Firebase/Database/Utilities/Tuples/FTupleSetIdPath.h; sourceTree = "<group>"; };
 		E9BC7AE6FE1E67EACC20556FACEB7FBE /* LineRadarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineRadarChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/LineRadarChartDataSet.swift; sourceTree = "<group>"; };
 		E9F6AED08DBF90C1F02FEE83DC5AB53E /* Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Range.swift; path = Source/Charts/Highlight/Range.swift; sourceTree = "<group>"; };
-		EA559A610E276AA33A3F0044D9297B24 /* repair.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = repair.cc; path = db/repair.cc; sourceTree = "<group>"; };
+		EA559A610E276AA33A3F0044D9297B24 /* repair.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = repair.cc; path = db/repair.cc; sourceTree = "<group>"; };
 		EA5A3A371915B6BFF2CB62CCFD4D7266 /* HorizontalBarChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalBarChartView.swift; path = Source/Charts/Charts/HorizontalBarChartView.swift; sourceTree = "<group>"; };
 		EAE8DD6A329973D3EE56503BB74C1A6D /* ChevronDownShapeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChevronDownShapeRenderer.swift; path = Source/Charts/Renderers/Scatter/ChevronDownShapeRenderer.swift; sourceTree = "<group>"; };
 		EB574AFDD9C622B281165B1F1A04C183 /* leveldb-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "leveldb-library-prefix.pch"; sourceTree = "<group>"; };
-		EC065704355ED91A6840FDEA5AF4B940 /* db_iter.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = db_iter.cc; path = db/db_iter.cc; sourceTree = "<group>"; };
+		EC065704355ED91A6840FDEA5AF4B940 /* db_iter.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = db_iter.cc; path = db/db_iter.cc; sourceTree = "<group>"; };
 		EC331BAB1704A087C4013F30BCBB6E52 /* ScatterChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartView.swift; path = Source/Charts/Charts/ScatterChartView.swift; sourceTree = "<group>"; };
-		EE092D221077ACA915E728EDE0FC1981 /* crc32c.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = crc32c.cc; path = util/crc32c.cc; sourceTree = "<group>"; };
+		EE092D221077ACA915E728EDE0FC1981 /* crc32c.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = crc32c.cc; path = util/crc32c.cc; sourceTree = "<group>"; };
 		EE1754AA5ABD33635BD4E0A1EAE56720 /* FIRComponentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRComponentType.m; path = Firebase/Core/FIRComponentType.m; sourceTree = "<group>"; };
 		EF25AE5F2280A2CB92CF3040B4095CB8 /* FIRDependency.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRDependency.m; path = Firebase/Core/FIRDependency.m; sourceTree = "<group>"; };
 		EFB54CCF9226D55903F3D32A3821708C /* FRepo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FRepo.m; path = Firebase/Database/Core/FRepo.m; sourceTree = "<group>"; };
@@ -1359,16 +1351,17 @@
 		F32A145C6EC34993B860705C3FB8D0DD /* FTupleCallbackStatus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTupleCallbackStatus.m; path = Firebase/Database/Utilities/Tuples/FTupleCallbackStatus.m; sourceTree = "<group>"; };
 		F34AEE9DCEF8A4B5BD7C3C56A452781D /* FPendingPut.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPendingPut.m; path = Firebase/Database/Persistence/FPendingPut.m; sourceTree = "<group>"; };
 		F363AF98D4C6213D1045EAAE970564F7 /* FEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FEvent.h; path = Firebase/Database/Core/View/FEvent.h; sourceTree = "<group>"; };
+		F363F48335D51B039637CD92EBB82B0B /* Pods-MindSafe-MindSafeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MindSafe-MindSafeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F3EC444D7F2B198C86E13CE2175C3190 /* AnimatedViewPortJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedViewPortJob.swift; path = Source/Charts/Jobs/AnimatedViewPortJob.swift; sourceTree = "<group>"; };
+		F44CCA85855D9BAE30DFBAC502E77BAF /* Pods_MindSafe_MindSafeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindSafe_MindSafeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47B5239B2516BDE2F5D1FA05519B1B2 /* FViewProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FViewProcessor.h; path = Firebase/Database/FViewProcessor.h; sourceTree = "<group>"; };
-		F5F18142C34D9192D330DB4DC84E486D /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
+		F5F18142C34D9192D330DB4DC84E486D /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_common.c; sourceTree = "<group>"; };
 		F74E1D565372E5B125D226F888981AD2 /* GULAppDelegateSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler.h; path = GoogleUtilities/AppDelegateSwizzler/Private/GULAppDelegateSwizzler.h; sourceTree = "<group>"; };
 		F764A4DDA0A605513931100FF851B3B6 /* log_reader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log_reader.h; path = db/log_reader.h; sourceTree = "<group>"; };
 		F78CA6B682CF56207E9E54727F8D57F3 /* FEventEmitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEventEmitter.m; path = Firebase/Database/Utilities/FEventEmitter.m; sourceTree = "<group>"; };
 		F7965F55E952FECA14E915C6967019EF /* GULUserDefaults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULUserDefaults.m; path = GoogleUtilities/UserDefaults/GULUserDefaults.m; sourceTree = "<group>"; };
-		F82B4098CC6C197C5A5A8974F944046B /* filename.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = filename.cc; path = db/filename.cc; sourceTree = "<group>"; };
+		F82B4098CC6C197C5A5A8974F944046B /* filename.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = filename.cc; path = db/filename.cc; sourceTree = "<group>"; };
 		F88F0C6BA69DC31D3E7FFC0F3C108028 /* FCachePolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FCachePolicy.m; path = Firebase/Database/Persistence/FCachePolicy.m; sourceTree = "<group>"; };
-		F99FEF00EEDAAB93D2707580E0542A75 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Charts.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF1C87C4A6D8DBCC283CB699C315EEF /* FIRDatabaseQuery_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabaseQuery_Private.h; path = Firebase/Database/Api/Private/FIRDatabaseQuery_Private.h; sourceTree = "<group>"; };
 		FAF6F713C790578AE8AFF9C1F9457AEF /* FNextPushId.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FNextPushId.h; path = Firebase/Database/Utilities/FNextPushId.h; sourceTree = "<group>"; };
 		FB4455D832D87697C562794C6EE222B0 /* options.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = options.h; path = include/leveldb/options.h; sourceTree = "<group>"; };
@@ -1404,6 +1397,14 @@
 				D18240BA54E461124434EFD643641C3B /* Foundation.framework in Frameworks */,
 				DFB8EF9D4E31B89A01D43CE409D85561 /* Security.framework in Frameworks */,
 				69CE23E8A31A986EE8D5EA0FBC8D77A4 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4003B20646BDDD2633691218DBD86FF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8292B9D6B2B8BEB3076A822C0E509F25 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1455,14 +1456,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				276011DAB35EF0DC71C2D4B331A9FC29 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD7F1EFBAFDEFB8AF3BE46F3B8AD62F0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84E61B1CEA5491E4B9A9395F66CA19DE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1629,30 +1622,38 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		0FC8CA05422A2C80E5FD556ED82792A9 /* Products */ = {
+		11396CE1714E8647164E07F66800E2A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F99FEF00EEDAAB93D2707580E0542A75 /* Charts.framework */,
-				851B372B06D6287A45FE8CA3265F3178 /* FirebaseCore.framework */,
-				C1BA8B2A453D5A146F1E2453EE7EB4C8 /* FirebaseDatabase.framework */,
-				9A2DCFDF43363AFDF23D37F11AAF1752 /* GoogleUtilities.framework */,
-				632469F2AC8DC886F45C274791CB1A35 /* leveldb.framework */,
-				A41128C0C40BB223C0263D4B82EA9A9B /* nanopb.framework */,
-				B2C15BEE004E4F8AE633B3E5C7FB81A4 /* Pods_MindSafe.framework */,
-				791A5C366F35400E67458E2E05A8A7CB /* Pods_MindSafeTests.framework */,
-				6635D5A91CCF73F1F0F2A917C770BDEC /* Pods_MindSafeUITests.framework */,
+				D68DA1BE56CF65953B6007BB5E9D66D6 /* Charts.framework */,
+				3662892367886C0167384654DF3A7D09 /* FirebaseCore.framework */,
+				B0FD0BF5D5DD1FE1BE4710153C39893E /* FirebaseDatabase.framework */,
+				D3A4A15D4441432A55C639D78E4209C8 /* GoogleUtilities.framework */,
+				BADC9699F8464F3779318B8EBC37012C /* leveldb.framework */,
+				C476C2E3A6523D285C9508A834737459 /* nanopb.framework */,
+				CF1FEBDF84D36A4119DA929B48860A8A /* Pods_MindSafe.framework */,
+				F44CCA85855D9BAE30DFBAC502E77BAF /* Pods_MindSafe_MindSafeUITests.framework */,
+				B187BF0F9009BA143DF8E1EDE94C51D4 /* Pods_MindSafeTests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		10494FF1FF61C527983A568E26A42A69 /* Targets Support Files */ = {
+		13244AA5203FE1B012F5D874B10B1B6C /* Pods-MindSafeTests */ = {
 			isa = PBXGroup;
 			children = (
-				F5178870BB510E8DA6CCD392C15A7FED /* Pods-MindSafe */,
-				18722474FA246293165FDC0CF95D600C /* Pods-MindSafeTests */,
-				DD950B0E7988888A346F1BACE9AA34F7 /* Pods-MindSafeUITests */,
+				4C913B297B7CD17BFF1B7EF63A75566E /* Info.plist */,
+				3E48E70F7B69EC44C6AE7A760C71F5F2 /* Pods-MindSafeTests.modulemap */,
+				0E67795B5A228288A55CEA05C585E0A6 /* Pods-MindSafeTests-acknowledgements.markdown */,
+				B849FE0A56F3F62B0F5489408868058F /* Pods-MindSafeTests-acknowledgements.plist */,
+				C12B2DDA7296CA344FF24B88C25860BD /* Pods-MindSafeTests-dummy.m */,
+				A297AF51630894FB355679E9E1CF844C /* Pods-MindSafeTests-frameworks.sh */,
+				5A06FCBE74C4741F70314A38306F77A6 /* Pods-MindSafeTests-resources.sh */,
+				0A084A343D3212B34D7DA983E77A2D4B /* Pods-MindSafeTests-umbrella.h */,
+				571CAE92625877C2B91C475E393ED207 /* Pods-MindSafeTests.debug.xcconfig */,
+				24ED6EDD168930F2AAEE1D6FAA4DEFA0 /* Pods-MindSafeTests.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-MindSafeTests";
+			path = "Target Support Files/Pods-MindSafeTests";
 			sourceTree = "<group>";
 		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
@@ -1661,24 +1662,6 @@
 				2D0B5B2A73E666D96A14C156422AF353 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		18722474FA246293165FDC0CF95D600C /* Pods-MindSafeTests */ = {
-			isa = PBXGroup;
-			children = (
-				D63061BDFC2433A475C298430395635E /* Info.plist */,
-				34CEDFFBDE2DC465E1A49F37920AF91A /* Pods-MindSafeTests.modulemap */,
-				25549BEBDF2B6F9624D40D3B81D33255 /* Pods-MindSafeTests-acknowledgements.markdown */,
-				3CE4A03086133946A68CA1F6D4268620 /* Pods-MindSafeTests-acknowledgements.plist */,
-				C7A39DE017B560E4AF4C70BD8FDBC893 /* Pods-MindSafeTests-dummy.m */,
-				9D68E90C40116580CBBEC47F89F93E43 /* Pods-MindSafeTests-frameworks.sh */,
-				16382906A0CABED148B7227F74A2F643 /* Pods-MindSafeTests-resources.sh */,
-				109411C884FB0BED0A39095514191F04 /* Pods-MindSafeTests-umbrella.h */,
-				99B365DC1994FF9E0052A6240F5E2661 /* Pods-MindSafeTests.debug.xcconfig */,
-				A96CC58D109AE9F37FFF594B8C31D0FC /* Pods-MindSafeTests.release.xcconfig */,
-			);
-			name = "Pods-MindSafeTests";
-			path = "Target Support Files/Pods-MindSafeTests";
 			sourceTree = "<group>";
 		};
 		24F47CC5B6607C34E79C3B9818A6B785 /* FirebaseCore */ = {
@@ -1721,7 +1704,6 @@
 				794D8094038CDAAEDE7C8CA20112B7F5 /* FIRVersion.m */,
 				39DD3C2352CEF4347502AB22E005CBD0 /* Support Files */,
 			);
-			name = FirebaseCore;
 			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
@@ -1792,7 +1774,6 @@
 			children = (
 				0FACB565B708AE7B9C80A3EAADC24846 /* Frameworks */,
 			);
-			name = GoogleAppMeasurement;
 			path = GoogleAppMeasurement;
 			sourceTree = "<group>";
 		};
@@ -1826,7 +1807,6 @@
 			children = (
 				3541206DCAF5C3F2C4807387412A66A4 /* Frameworks */,
 			);
-			name = FirebaseAnalytics;
 			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
@@ -1843,7 +1823,6 @@
 				6591B7941DF008510DC1216A6FE2EDC1 /* Support Files */,
 				DEE50D1DCE310F81B6942243D41E584D /* UserDefaults */,
 			);
-			name = GoogleUtilities;
 			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
@@ -1947,7 +1926,6 @@
 				635729A33FFB5B69D7B4C40FD4F2ECED /* write_batch_internal.h */,
 				B29E6CA77E6B6B0F5F6A78D33CCD38D8 /* Support Files */,
 			);
-			name = "leveldb-library";
 			path = "leveldb-library";
 			sourceTree = "<group>";
 		};
@@ -1992,9 +1970,27 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
 				758C7A9A2CCB5A224C417E6C3D1CD2BD /* Pods */,
-				0FC8CA05422A2C80E5FD556ED82792A9 /* Products */,
-				10494FF1FF61C527983A568E26A42A69 /* Targets Support Files */,
+				11396CE1714E8647164E07F66800E2A2 /* Products */,
+				E958C0745D4C731AE95495EBECBAC47E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		97F1D9C44057484297B2579225108323 /* Pods-MindSafe */ = {
+			isa = PBXGroup;
+			children = (
+				9F3B05911F3FFD38D50B11524E584070 /* Info.plist */,
+				8FF66CA6DC5D1D6D34F920520DE04BFB /* Pods-MindSafe.modulemap */,
+				7E56E0A0266765B08CD0B57795B74B62 /* Pods-MindSafe-acknowledgements.markdown */,
+				08EAB6277D0098E6D1DD0756BBA66AD8 /* Pods-MindSafe-acknowledgements.plist */,
+				404102CE8CA351561C72CA632030C3E9 /* Pods-MindSafe-dummy.m */,
+				BA4324DA00C7DB26426C1CFBA7FDA05E /* Pods-MindSafe-frameworks.sh */,
+				6407F986CD53140D1D0064ED6E4176CE /* Pods-MindSafe-resources.sh */,
+				287275642353B9BDE52F7F924BD81449 /* Pods-MindSafe-umbrella.h */,
+				D871BB7D9BF7894E7F9280A713F2640A /* Pods-MindSafe.debug.xcconfig */,
+				D4FEEF0C0EDF76DA24258555315F7F95 /* Pods-MindSafe.release.xcconfig */,
+			);
+			name = "Pods-MindSafe";
+			path = "Target Support Files/Pods-MindSafe";
 			sourceTree = "<group>";
 		};
 		9B50DC4152690D8289F813B7DA8E4477 /* Logger */ = {
@@ -2254,8 +2250,25 @@
 				A97A8269EAD438BA34DBFB870FA7B391 /* NSData+SRB64Additions.m */,
 				30EE457C03BADEA0B700987995A97793 /* Support Files */,
 			);
-			name = FirebaseDatabase;
 			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		A7EFEB40908059D2ED3636ACB4EF7FB6 /* Pods-MindSafe-MindSafeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				71486E5DB4A47B47DC7FE75D44F2BD8B /* Info.plist */,
+				018E23FE8D9FB5110303E3C839445AD2 /* Pods-MindSafe-MindSafeUITests.modulemap */,
+				2C842038ABFEF954889BFA0573091139 /* Pods-MindSafe-MindSafeUITests-acknowledgements.markdown */,
+				F363F48335D51B039637CD92EBB82B0B /* Pods-MindSafe-MindSafeUITests-acknowledgements.plist */,
+				0A3EB4DBBBDFE7702FE5D7A0B631ED25 /* Pods-MindSafe-MindSafeUITests-dummy.m */,
+				E6BC5682A698B5452BE48A3502735766 /* Pods-MindSafe-MindSafeUITests-frameworks.sh */,
+				51ECEA725F3D446B13726FF7B7689005 /* Pods-MindSafe-MindSafeUITests-resources.sh */,
+				8EBF73C45112B126068D687B5F88E639 /* Pods-MindSafe-MindSafeUITests-umbrella.h */,
+				3E1E9C0F72F1BCE78FDDA5955BEF2FF7 /* Pods-MindSafe-MindSafeUITests.debug.xcconfig */,
+				2A9EA154DCE460AFAEDEB0636CCD175F /* Pods-MindSafe-MindSafeUITests.release.xcconfig */,
+			);
+			name = "Pods-MindSafe-MindSafeUITests";
+			path = "Target Support Files/Pods-MindSafe-MindSafeUITests";
 			sourceTree = "<group>";
 		};
 		ABE49B3FE2F56581799555E721B8425D /* mailcore2-ios */ = {
@@ -2263,7 +2276,6 @@
 			children = (
 				C4395BA365A252CA70F67C7D5C569C24 /* Frameworks */,
 			);
-			name = "mailcore2-ios";
 			path = "mailcore2-ios";
 			sourceTree = "<group>";
 		};
@@ -2294,7 +2306,6 @@
 			children = (
 				787BED545579806EF2C029138F600238 /* Frameworks */,
 			);
-			name = FirebaseInstanceID;
 			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
@@ -2303,7 +2314,6 @@
 			children = (
 				B3CA5A2220DEE48C9D603FCFE0C5176D /* CoreOnly */,
 			);
-			name = Firebase;
 			path = Firebase;
 			sourceTree = "<group>";
 		};
@@ -2313,7 +2323,6 @@
 				0FB46B504C4C398B379E70E7FD2BE572 /* Core */,
 				E633DA07B68D6473FC831362A1D4F301 /* Support Files */,
 			);
-			name = Charts;
 			path = Charts;
 			sourceTree = "<group>";
 		};
@@ -2360,24 +2369,6 @@
 			name = encode;
 			sourceTree = "<group>";
 		};
-		DD950B0E7988888A346F1BACE9AA34F7 /* Pods-MindSafeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				926991481E8F3901ACFB4304847F7755 /* Info.plist */,
-				660193A5A056C39A2882D0B779074F8F /* Pods-MindSafeUITests.modulemap */,
-				B4734CD7FD5CDB24CA8A0C8849C7E914 /* Pods-MindSafeUITests-acknowledgements.markdown */,
-				C48054121D72B04E900FAA134DD92C8A /* Pods-MindSafeUITests-acknowledgements.plist */,
-				737A57153E6D279D2BA7385514B7D71C /* Pods-MindSafeUITests-dummy.m */,
-				338304C3AF7B3606FA16E6FCB120A3A9 /* Pods-MindSafeUITests-frameworks.sh */,
-				67D9132E63C5890C894E1D3E24BD0DE3 /* Pods-MindSafeUITests-resources.sh */,
-				D6ADF032C1A9639779FDEABC2C96582A /* Pods-MindSafeUITests-umbrella.h */,
-				9FB88B085CA8086171D9107904EDEF45 /* Pods-MindSafeUITests.debug.xcconfig */,
-				56CB34415A4D037F63072F8868E06112 /* Pods-MindSafeUITests.release.xcconfig */,
-			);
-			name = "Pods-MindSafeUITests";
-			path = "Target Support Files/Pods-MindSafeUITests";
-			sourceTree = "<group>";
-		};
 		DEE50D1DCE310F81B6942243D41E584D /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -2401,22 +2392,14 @@
 			path = "../Target Support Files/Charts";
 			sourceTree = "<group>";
 		};
-		F5178870BB510E8DA6CCD392C15A7FED /* Pods-MindSafe */ = {
+		E958C0745D4C731AE95495EBECBAC47E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B2F22B7E845051FB1ECEB9F4963BDD3 /* Info.plist */,
-				657C5E4E7E89242FEC7A86871DD2CB57 /* Pods-MindSafe.modulemap */,
-				187D8CB0E6BE19EF2965EFA7B56D0A86 /* Pods-MindSafe-acknowledgements.markdown */,
-				98821C9638E51F27ECEC65D8811B9DD6 /* Pods-MindSafe-acknowledgements.plist */,
-				93A10C5833DC9AABF91016CB36F1593D /* Pods-MindSafe-dummy.m */,
-				3ABF6E273D9F5BC72A6AA4E3CA80BBDA /* Pods-MindSafe-frameworks.sh */,
-				B010FA15D76CB472695E161EBCCA0E2F /* Pods-MindSafe-resources.sh */,
-				CE5B6B42254A0CCE5C2E4C227BEAEA44 /* Pods-MindSafe-umbrella.h */,
-				1A6DED3F91CFE4151BBF2D18C38F0CF2 /* Pods-MindSafe.debug.xcconfig */,
-				CBB8FDAEB9CFC108FB5A3D0BDAB70315 /* Pods-MindSafe.release.xcconfig */,
+				97F1D9C44057484297B2579225108323 /* Pods-MindSafe */,
+				A7EFEB40908059D2ED3636ACB4EF7FB6 /* Pods-MindSafe-MindSafeUITests */,
+				13244AA5203FE1B012F5D874B10B1B6C /* Pods-MindSafeTests */,
 			);
-			name = "Pods-MindSafe";
-			path = "Target Support Files/Pods-MindSafe";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		FE707006933EEF0472C15306ECDB8CE8 /* Support Files */ = {
@@ -2447,7 +2430,6 @@
 				D91E96B6DCCFD530A1221A67F0D3E967 /* encode */,
 				FE707006933EEF0472C15306ECDB8CE8 /* Support Files */,
 			);
-			name = nanopb;
 			path = nanopb;
 			sourceTree = "<group>";
 		};
@@ -2590,6 +2572,14 @@
 				5457F6C774471084A19040FC137451D8 /* FWriteTree.h in Headers */,
 				2A8DB1006BD6D7A0EFD53FED630B6C33 /* FWriteTreeRef.h in Headers */,
 				9FA8FFABDE8A018669B32288593DBC9F /* NSData+SRB64Additions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278B7279D495A6AC0B1801E405C07A39 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75A7770B1900131BA1A4AC5C70B7622 /* Pods-MindSafe-MindSafeUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2739,14 +2729,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3D9C3CB366DDEE2ACCC7E1C33366A8A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1EA0A803B7079735F1359783A623A2DB /* Pods-MindSafeUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F94AAA5C7D31176E0DBFDED5653A2517 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2773,7 +2755,7 @@
 			);
 			name = GoogleUtilities;
 			productName = GoogleUtilities;
-			productReference = 9A2DCFDF43363AFDF23D37F11AAF1752 /* GoogleUtilities.framework */;
+			productReference = D3A4A15D4441432A55C639D78E4209C8 /* GoogleUtilities.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2B314CE79DE127040F6257A4D37001E9 /* Pods-MindSafe */ = {
@@ -2797,7 +2779,7 @@
 			);
 			name = "Pods-MindSafe";
 			productName = "Pods-MindSafe";
-			productReference = B2C15BEE004E4F8AE633B3E5C7FB81A4 /* Pods_MindSafe.framework */;
+			productReference = CF1FEBDF84D36A4119DA929B48860A8A /* Pods_MindSafe.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4338000AC6DBAF783F338F055DDE55C6 /* FirebaseCore */ = {
@@ -2816,32 +2798,31 @@
 			);
 			name = FirebaseCore;
 			productName = FirebaseCore;
-			productReference = 851B372B06D6287A45FE8CA3265F3178 /* FirebaseCore.framework */;
+			productReference = 3662892367886C0167384654DF3A7D09 /* FirebaseCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7B355B8F51B84C07740A7661073FAE73 /* Pods-MindSafeUITests */ = {
+		7CB1515A452E2B3FD2B1E55C55794E99 /* Pods-MindSafe-MindSafeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6734C84847A9DC80BB55C377D89B573 /* Build configuration list for PBXNativeTarget "Pods-MindSafeUITests" */;
+			buildConfigurationList = 0F74505862CEB36EDEF2359D4F5D59B9 /* Build configuration list for PBXNativeTarget "Pods-MindSafe-MindSafeUITests" */;
 			buildPhases = (
-				D3D9C3CB366DDEE2ACCC7E1C33366A8A /* Headers */,
-				1D60461B3F33743A00EA2751AD650C4B /* Sources */,
-				FD7F1EFBAFDEFB8AF3BE46F3B8AD62F0 /* Frameworks */,
-				EA0BFC5115A89CD6A8BCE1441CBD3976 /* Resources */,
+				278B7279D495A6AC0B1801E405C07A39 /* Headers */,
+				E62390378F7FE9AC9529D3DF67A1069F /* Sources */,
+				4003B20646BDDD2633691218DBD86FF9 /* Frameworks */,
+				4DCF6023411087150A854C55C7E21584 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D5482860C17A4D2E9E163E2C35CAD151 /* PBXTargetDependency */,
-				832AE76567FDBDC42FFF00E27688212D /* PBXTargetDependency */,
-				E74F1EAD1FC3F6549E7FB0D3D4260B71 /* PBXTargetDependency */,
-				502C9FC404D325F6AD31045AEA1490C0 /* PBXTargetDependency */,
-				F5A985D1A6E6218235EDF5B35718ED13 /* PBXTargetDependency */,
-				12CED763EEAD0B933BDEE231EEA1ED5A /* PBXTargetDependency */,
-				D85619F9E74CFF3C4277F2642CEA3FC5 /* PBXTargetDependency */,
+				102FCBE09F1A3DBC07FE7DD8F937AF41 /* PBXTargetDependency */,
+				F2ADA832ED43641F87FA756F026F6948 /* PBXTargetDependency */,
+				1C4262B4BEEDFE0D0FA164DF61174574 /* PBXTargetDependency */,
+				0450A5E3D6ECA12798B14BB98CA0C0AB /* PBXTargetDependency */,
+				33BEDDA5F4DF685D0836728F87CEA5E2 /* PBXTargetDependency */,
+				8E5B83DF33340A5E49F89A2BA62FD3B9 /* PBXTargetDependency */,
 			);
-			name = "Pods-MindSafeUITests";
-			productName = "Pods-MindSafeUITests";
-			productReference = 6635D5A91CCF73F1F0F2A917C770BDEC /* Pods_MindSafeUITests.framework */;
+			name = "Pods-MindSafe-MindSafeUITests";
+			productName = "Pods-MindSafe-MindSafeUITests";
+			productReference = F44CCA85855D9BAE30DFBAC502E77BAF /* Pods_MindSafe_MindSafeUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8364BB258018143B83798DE31C13546D /* nanopb */ = {
@@ -2859,7 +2840,7 @@
 			);
 			name = nanopb;
 			productName = nanopb;
-			productReference = A41128C0C40BB223C0263D4B82EA9A9B /* nanopb.framework */;
+			productReference = C476C2E3A6523D285C9508A834737459 /* nanopb.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9B68AD4E0495BB6439CB9E7844D24FB2 /* Pods-MindSafeTests */ = {
@@ -2884,7 +2865,7 @@
 			);
 			name = "Pods-MindSafeTests";
 			productName = "Pods-MindSafeTests";
-			productReference = 791A5C366F35400E67458E2E05A8A7CB /* Pods_MindSafeTests.framework */;
+			productReference = B187BF0F9009BA143DF8E1EDE94C51D4 /* Pods_MindSafeTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B8841C1CB84C43236CF55B42F805BE06 /* FirebaseDatabase */ = {
@@ -2905,7 +2886,7 @@
 			);
 			name = FirebaseDatabase;
 			productName = FirebaseDatabase;
-			productReference = C1BA8B2A453D5A146F1E2453EE7EB4C8 /* FirebaseDatabase.framework */;
+			productReference = B0FD0BF5D5DD1FE1BE4710153C39893E /* FirebaseDatabase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DE866D3318A5BE5366041B761F8CD7C2 /* leveldb-library */ = {
@@ -2923,7 +2904,7 @@
 			);
 			name = "leveldb-library";
 			productName = "leveldb-library";
-			productReference = 632469F2AC8DC886F45C274791CB1A35 /* leveldb.framework */;
+			productReference = BADC9699F8464F3779318B8EBC37012C /* leveldb.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EBFD1DA8DB9C5E9C282BBCAD1778A64A /* Charts */ = {
@@ -2941,7 +2922,7 @@
 			);
 			name = Charts;
 			productName = Charts;
-			productReference = F99FEF00EEDAAB93D2707580E0542A75 /* Charts.framework */;
+			productReference = D68DA1BE56CF65953B6007BB5E9D66D6 /* Charts.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -2961,7 +2942,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 0FC8CA05422A2C80E5FD556ED82792A9 /* Products */;
+			productRefGroup = 11396CE1714E8647164E07F66800E2A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -2972,8 +2953,8 @@
 				DE866D3318A5BE5366041B761F8CD7C2 /* leveldb-library */,
 				8364BB258018143B83798DE31C13546D /* nanopb */,
 				2B314CE79DE127040F6257A4D37001E9 /* Pods-MindSafe */,
+				7CB1515A452E2B3FD2B1E55C55794E99 /* Pods-MindSafe-MindSafeUITests */,
 				9B68AD4E0495BB6439CB9E7844D24FB2 /* Pods-MindSafeTests */,
-				7B355B8F51B84C07740A7661073FAE73 /* Pods-MindSafeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -3000,6 +2981,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DCF6023411087150A854C55C7E21584 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6609B2FC3FE461870D129770AB74BC25 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3015,13 +3003,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A63D3C58D67DE74B0EA50834770DF868 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA0BFC5115A89CD6A8BCE1441CBD3976 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3197,14 +3178,6 @@
 				3552218D2E421ECA1909B93DE2FB959A /* pb_common.c in Sources */,
 				E1331724A7D92526AA8714A62C353932 /* pb_decode.c in Sources */,
 				C46B7BDE25252D8EB990DEB9FE7CD98A /* pb_encode.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D60461B3F33743A00EA2751AD650C4B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE523E092F6CFC43BD8A3F8040A6B995 /* Pods-MindSafeUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3414,6 +3387,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E62390378F7FE9AC9529D3DF67A1069F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC92D4722927E549942E5093E522D7A /* Pods-MindSafe-MindSafeUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6EFDA8D1ED33B5160CC3F4C5CE9C0A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3436,6 +3417,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0450A5E3D6ECA12798B14BB98CA0C0AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleUtilities;
+			target = 2B2CE33B441C5D4BD9A5A04D3087E5C8 /* GoogleUtilities */;
+			targetProxy = 06DB6F61C93C5419C1CC78A216D074BC /* PBXContainerItemProxy */;
+		};
 		08BCCAE2E83ADA49A9D8C74C0E070973 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Charts;
@@ -3448,23 +3435,29 @@
 			target = 2B314CE79DE127040F6257A4D37001E9 /* Pods-MindSafe */;
 			targetProxy = F27A515939902BAEED938F4F8DC23162 /* PBXContainerItemProxy */;
 		};
-		12CED763EEAD0B933BDEE231EEA1ED5A /* PBXTargetDependency */ = {
+		102FCBE09F1A3DBC07FE7DD8F937AF41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			target = EBFD1DA8DB9C5E9C282BBCAD1778A64A /* Charts */;
+			targetProxy = 43F41643A6CB445EEDC106CA727669D3 /* PBXContainerItemProxy */;
+		};
+		1C4262B4BEEDFE0D0FA164DF61174574 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FirebaseDatabase;
+			target = B8841C1CB84C43236CF55B42F805BE06 /* FirebaseDatabase */;
+			targetProxy = A95A6C00CEF3B0BC6B064CE9F4D9A0CC /* PBXContainerItemProxy */;
+		};
+		33BEDDA5F4DF685D0836728F87CEA5E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "leveldb-library";
 			target = DE866D3318A5BE5366041B761F8CD7C2 /* leveldb-library */;
-			targetProxy = 359F61263BF732D4D761F84323CF6AFB /* PBXContainerItemProxy */;
+			targetProxy = 3A2179CD994861971E24D059B66F9142 /* PBXContainerItemProxy */;
 		};
 		3CFDFC9D728C57ABC0BA72CF2ECBD0F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleUtilities;
 			target = 2B2CE33B441C5D4BD9A5A04D3087E5C8 /* GoogleUtilities */;
 			targetProxy = D7E20E29847EAD81D627C196DA9AF51C /* PBXContainerItemProxy */;
-		};
-		502C9FC404D325F6AD31045AEA1490C0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleUtilities;
-			target = 2B2CE33B441C5D4BD9A5A04D3087E5C8 /* GoogleUtilities */;
-			targetProxy = C707C797F5390F0510EB3ACC5D32EE96 /* PBXContainerItemProxy */;
 		};
 		62619CF878B7CCFDECA9C7CABF37A126 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3496,11 +3489,11 @@
 			target = DE866D3318A5BE5366041B761F8CD7C2 /* leveldb-library */;
 			targetProxy = CBBA3439031D8EDD5AC1D867DA8EC6E3 /* PBXContainerItemProxy */;
 		};
-		832AE76567FDBDC42FFF00E27688212D /* PBXTargetDependency */ = {
+		8E5B83DF33340A5E49F89A2BA62FD3B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = FirebaseCore;
-			target = 4338000AC6DBAF783F338F055DDE55C6 /* FirebaseCore */;
-			targetProxy = 5F9F1F62C9F59B87F060E20FE0CD2DDB /* PBXContainerItemProxy */;
+			name = nanopb;
+			target = 8364BB258018143B83798DE31C13546D /* nanopb */;
+			targetProxy = C3B37E7B52550D00E9DB785747921AC8 /* PBXContainerItemProxy */;
 		};
 		99C5DFDE1CC3A374BCC261FF3BEFF3B8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3532,29 +3525,11 @@
 			target = 2B2CE33B441C5D4BD9A5A04D3087E5C8 /* GoogleUtilities */;
 			targetProxy = 3267F1AB8F9D0493FFA9E5607C6C383A /* PBXContainerItemProxy */;
 		};
-		D5482860C17A4D2E9E163E2C35CAD151 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Charts;
-			target = EBFD1DA8DB9C5E9C282BBCAD1778A64A /* Charts */;
-			targetProxy = 36751B35FAC799F079963F1D204FDD4F /* PBXContainerItemProxy */;
-		};
-		D85619F9E74CFF3C4277F2642CEA3FC5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = nanopb;
-			target = 8364BB258018143B83798DE31C13546D /* nanopb */;
-			targetProxy = F7A8B3FD310D9BA632641681AB651EF0 /* PBXContainerItemProxy */;
-		};
 		DB9F562B325153733A50C264BE15B7D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Charts;
 			target = EBFD1DA8DB9C5E9C282BBCAD1778A64A /* Charts */;
 			targetProxy = D6F6A3478B26EE93BB992BFA458275E1 /* PBXContainerItemProxy */;
-		};
-		E74F1EAD1FC3F6549E7FB0D3D4260B71 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FirebaseDatabase;
-			target = B8841C1CB84C43236CF55B42F805BE06 /* FirebaseDatabase */;
-			targetProxy = BFF855358736F56301B14AC78CA3AE3B /* PBXContainerItemProxy */;
 		};
 		E7CD42B8BC2F47E719335B5ACADA2849 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3562,17 +3537,17 @@
 			target = 4338000AC6DBAF783F338F055DDE55C6 /* FirebaseCore */;
 			targetProxy = E5E9267482FA9DBB5A643C274B86632D /* PBXContainerItemProxy */;
 		};
+		F2ADA832ED43641F87FA756F026F6948 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FirebaseCore;
+			target = 4338000AC6DBAF783F338F055DDE55C6 /* FirebaseCore */;
+			targetProxy = F1ABE64D1B3E743474D23D9CE5B2D144 /* PBXContainerItemProxy */;
+		};
 		F4CBCA49898E0F03ADC80CB4A6EE4D00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleUtilities;
 			target = 2B2CE33B441C5D4BD9A5A04D3087E5C8 /* GoogleUtilities */;
 			targetProxy = 05E26F3DCAECB2BD02C47C15ECC3E1FC /* PBXContainerItemProxy */;
-		};
-		F5A985D1A6E6218235EDF5B35718ED13 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-MindSafe";
-			target = 2B314CE79DE127040F6257A4D37001E9 /* Pods-MindSafe */;
-			targetProxy = 51641EB6689E537ACC9F9E8E10E8ECE5 /* PBXContainerItemProxy */;
 		};
 		FE77D949E36316C678E60692573EC3EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3614,11 +3589,11 @@
 			};
 			name = Release;
 		};
-		3C648C502BDB3E1F8FE650C459A38B29 /* Release */ = {
+		368FA2B519342C167FA98C2DD3510522 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56CB34415A4D037F63072F8868E06112 /* Pods-MindSafeUITests.release.xcconfig */;
+			baseConfigurationReference = 3E1E9C0F72F1BCE78FDDA5955BEF2FF7 /* Pods-MindSafe-MindSafeUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3629,12 +3604,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MindSafeUITests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-MindSafe-MindSafeUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MindSafeUITests/Pods-MindSafeUITests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-MindSafe-MindSafeUITests/Pods-MindSafe-MindSafeUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -3643,11 +3618,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		4191195969AC465CA9A2339437607768 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -3774,7 +3748,7 @@
 		};
 		762AF2FE7FAA70614CB59367F60633EC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A96CC58D109AE9F37FFF594B8C31D0FC /* Pods-MindSafeTests.release.xcconfig */;
+			baseConfigurationReference = 24ED6EDD168930F2AAEE1D6FAA4DEFA0 /* Pods-MindSafeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -3874,6 +3848,7 @@
 		8DDFA5FA8D4131BFD96E5E26F3672644 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -4029,9 +4004,44 @@
 			};
 			name = Debug;
 		};
+		C323F88F59125E1AB6E84E585DE8A5F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A9EA154DCE460AFAEDEB0636CCD175F /* Pods-MindSafe-MindSafeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MindSafe-MindSafeUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MindSafe-MindSafeUITests/Pods-MindSafe-MindSafeUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		CD4FCE79BD302D2F89887C44E621EBCD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99B365DC1994FF9E0052A6240F5E2661 /* Pods-MindSafeTests.debug.xcconfig */;
+			baseConfigurationReference = 571CAE92625877C2B91C475E393ED207 /* Pods-MindSafeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -4066,6 +4076,7 @@
 		D5F759C82752B2EB010DB3CD3D69707C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -4118,50 +4129,15 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		E5C5A3507CB9032A9579B09CF1592079 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FB88B085CA8086171D9107904EDEF45 /* Pods-MindSafeUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MindSafeUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MindSafeUITests/Pods-MindSafeUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		EA876080E429D1311E55DD7584D7C65E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A6DED3F91CFE4151BBF2D18C38F0CF2 /* Pods-MindSafe.debug.xcconfig */;
+			baseConfigurationReference = D871BB7D9BF7894E7F9280A713F2640A /* Pods-MindSafe.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -4195,7 +4171,7 @@
 		};
 		F8EF4C6916CCF707534E9DE8BA2F19B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBB8FDAEB9CFC108FB5A3D0BDAB70315 /* Pods-MindSafe.release.xcconfig */;
+			baseConfigurationReference = D4FEEF0C0EDF76DA24258555315F7F95 /* Pods-MindSafe.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -4295,6 +4271,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0F74505862CEB36EDEF2359D4F5D59B9 /* Build configuration list for PBXNativeTarget "Pods-MindSafe-MindSafeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				368FA2B519342C167FA98C2DD3510522 /* Debug */,
+				C323F88F59125E1AB6E84E585DE8A5F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1EC5848751F5E2F820B7628A2EE5EA30 /* Build configuration list for PBXNativeTarget "FirebaseDatabase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -4372,15 +4357,6 @@
 			buildConfigurations = (
 				4191195969AC465CA9A2339437607768 /* Debug */,
 				8640DF1ECAB22F084716A405AD42BB4F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F6734C84847A9DC80BB55C377D89B573 /* Build configuration list for PBXNativeTarget "Pods-MindSafeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E5C5A3507CB9032A9579B09CF1592079 /* Debug */,
-				3C648C502BDB3E1F8FE650C459A38B29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

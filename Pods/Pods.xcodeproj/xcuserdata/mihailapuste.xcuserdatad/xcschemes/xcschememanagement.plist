@@ -24,17 +24,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-MindSafe-MindSafeUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MindSafe.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-MindSafeTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-MindSafeUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
