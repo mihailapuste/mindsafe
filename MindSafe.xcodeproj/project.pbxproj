@@ -16,7 +16,6 @@
 		E71E09F721852DA7001A30EC /* NewReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */; };
 		E724980721A0B16300196B00 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724980621A0B16300196B00 /* ContactsViewController.swift */; };
 		E724980F21A0C82300196B00 /* NewContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724980E21A0C82300196B00 /* NewContactTableViewController.swift */; };
-		E724981121A0EF1200196B00 /* ViewContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724981021A0EF1200196B00 /* ViewContactTableViewController.swift */; };
 		E738D365219BE362001DC316 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E738D364219BE362001DC316 /* MapKit.framework */; };
 		E738D367219BE37C001DC316 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738D366219BE37C001DC316 /* TrackerViewController.swift */; };
 		E738D369219CBE74001DC316 /* TrackerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738D368219CBE74001DC316 /* TrackerInfoViewController.swift */; };
@@ -95,7 +94,6 @@
 		E71E09F621852DA7001A30EC /* NewReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewReminderTableViewController.swift; sourceTree = "<group>"; };
 		E724980621A0B16300196B00 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		E724980E21A0C82300196B00 /* NewContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactTableViewController.swift; sourceTree = "<group>"; };
-		E724981021A0EF1200196B00 /* ViewContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContactTableViewController.swift; sourceTree = "<group>"; };
 		E738D364219BE362001DC316 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E738D366219BE37C001DC316 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
 		E738D368219CBE74001DC316 /* TrackerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerInfoViewController.swift; sourceTree = "<group>"; };
@@ -286,7 +284,6 @@
 				E724980621A0B16300196B00 /* ContactsViewController.swift */,
 				E724980E21A0C82300196B00 /* NewContactTableViewController.swift */,
 				E7AA641021A12801003A4A8D /* ContactTableViewCell.swift */,
-				E724981021A0EF1200196B00 /* ViewContactTableViewController.swift */,
 			);
 			path = "Contacts VCs";
 			sourceTree = "<group>";
@@ -712,7 +709,6 @@
 				E79ACAD521A91F7E005CD511 /* inGameRepeatSemanticActivityViewController.swift in Sources */,
 				E7DD9E2621B31F6E007F3C85 /* SoundManager.swift in Sources */,
 				E76961A7218111F0005AC2EB /* MindSafe.xcdatamodeld in Sources */,
-				E724981121A0EF1200196B00 /* ViewContactTableViewController.swift in Sources */,
 				E7659CD7218FFCC0004E2736 /* HomeTableViewController.swift in Sources */,
 				E738D369219CBE74001DC316 /* TrackerInfoViewController.swift in Sources */,
 				E70AF8B321AF2871007CC8FD /* Card.swift in Sources */,

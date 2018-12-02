@@ -15,7 +15,7 @@ struct Answer {
     var isValid: Bool = false
 }
 
-class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechRecognizerDelegate, UITableViewDataSource, UITableViewDelegate{
+class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechRecognizerDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate{
     var ref: DatabaseReference!
     
     
@@ -44,9 +44,16 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
+    // hides keyboard on return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.answerInput.delegate = self
         
         self.activityCompletedView.isHidden = true
         numberOfAnswers = self.wordsUsedList.count
@@ -135,6 +142,7 @@ class inGameRepeatSemanticActivityViewController: UIViewController, SFSpeechReco
     
     // function terminting game and calculating final score
     func activityOver() {
+        textFieldShouldReturn(self.answerInput)
         let finalScore = self.numberOfAnswers-wordsUsedList.count
         print("Final score is \(finalScore)/\(self.numberOfAnswers)")
         self.activityCompletedView.isHidden = false

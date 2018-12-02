@@ -13,7 +13,7 @@ import AVFoundation
 
 class InGameSemanticViewController: UIViewController {
 
-    var wordList: [String] = ["Apple", "Motorcycle", "Building", "Toothbrush", "Mirror", "Snow", "Candle", "Rug", "Wax", "Keyboard", "Dog", "Captain", "Computer", "Tile", "Bedroom", "Car", "Lamp", "Desk", "Plum", "Book", "Switch", "Camera", "Shelf", "Ocean", "Breeze", "Sand", "Shell", "Tree", "Television", "Couch", "Ball", "Table", "Boat", "Rope", "Canvas", "Brush", "Mountain", "Grass", "Branch", "Bush", "Leaf", "Paper", "Glass", "Rock", "Scissors", "Hand", "Face", "Hair", "Mouth", "Orange", "Fish", "Space", "Frame", "Goggles", "Box", "Bed", "Kayak", "Roof", "Window", "Door", "Chair", "Column", "Row", "Needle","Yarn", "Barn", "Horse", "Chicken", "Cow", "Black", "Yellow", "Green", "White", "Purple", "Pink", "Brown", "Light", "Dark", "Art", "Cold", "Warm", "Hot"]
+    var wordList: [String] = ["Apple", "Motorcycle", "Building", "Toothbrush", "Mirror", "Snow", "Candle", "Rug", "Wax", "Keyboard", "Dog", "Captain", "Computer", "Tile", "Bedroom", "Car", "Lamp", "Desk", "Plum", "Book", "Switch", "Camera", "Shelf", "Ocean", "Breeze", "Shell", "Tree", "Television", "Couch", "Ball", "Table", "Boat", "Rope", "Canvas", "Brush", "Mountain", "Grass", "Branch", "Bush", "Leaf", "Paper", "Glass", "Rock", "Scissors", "Hand", "Face", "Hair", "Mouth", "Orange", "Fish", "Space", "Frame", "Goggles", "Box", "Bed", "Kayak", "Roof", "Window", "Door", "Chair", "Column", "Row", "Needle","Yarn", "Barn", "Horse", "Chicken", "Cow", "Black", "Yellow", "Green", "White", "Purple", "Pink", "Brown", "Light", "Dark", "Art", "Cold", "Warm", "Hot"]
     var randomizedList: [String] = []
     var wordsUsedList: [String] = []
     weak var timer: Timer?
