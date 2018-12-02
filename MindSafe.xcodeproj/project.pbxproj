@@ -54,6 +54,7 @@
 		E7DD9E2421B31F27007F3C85 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DD9E2321B31F27007F3C85 /* AVFoundation.framework */; };
 		E7DD9E2621B31F6E007F3C85 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD9E2521B31F6E007F3C85 /* SoundManager.swift */; };
 		E7DD9E2821B33837007F3C85 /* EpisodicStartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD9E2721B33837007F3C85 /* EpisodicStartScreenViewController.swift */; };
+		E7DD9E2A21B35972007F3C85 /* ProgressInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD9E2921B35972007F3C85 /* ProgressInfoViewController.swift */; };
 		E7EA649521ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA649421ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift */; };
 		E7F2039D218289AB00BFC8F8 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */; };
 		E7FD6E5E21A5DEE3007C1FA6 /* ActivitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */; };
@@ -137,6 +138,7 @@
 		E7DD9E2321B31F27007F3C85 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E7DD9E2521B31F6E007F3C85 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		E7DD9E2721B33837007F3C85 /* EpisodicStartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodicStartScreenViewController.swift; sourceTree = "<group>"; };
+		E7DD9E2921B35972007F3C85 /* ProgressInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInfoViewController.swift; sourceTree = "<group>"; };
 		E7EA649421ACE27C005ADDFA /* SemanitcAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanitcAnswerTableViewCell.swift; sourceTree = "<group>"; };
 		E7F2039C218289AB00BFC8F8 /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
 		E7FD6E5D21A5DEE3007C1FA6 /* ActivitesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitesTableViewController.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				E789255721ADEB93001F4A89 /* SemanticProgress.swift */,
 				E789255521ADEB93001F4A89 /* EpChartData.swift */,
 				E789255921ADEB93001F4A89 /* SemChartData.swift */,
+				E7DD9E2921B35972007F3C85 /* ProgressInfoViewController.swift */,
 			);
 			path = "Progress Viewer VCs";
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				E76C8BB6218CC6740019F60B /* ReminderTableViewCell.swift in Sources */,
 				E738D36B219D0624001DC316 /* PanicViewController.swift in Sources */,
 				E70AF8B121AF2715007CC8FD /* CardModel.swift in Sources */,
+				E7DD9E2A21B35972007F3C85 /* ProgressInfoViewController.swift in Sources */,
 				E79ACAD521A91F7E005CD511 /* inGameRepeatSemanticActivityViewController.swift in Sources */,
 				E7DD9E2621B31F6E007F3C85 /* SoundManager.swift in Sources */,
 				E76961A7218111F0005AC2EB /* MindSafe.xcdatamodeld in Sources */,

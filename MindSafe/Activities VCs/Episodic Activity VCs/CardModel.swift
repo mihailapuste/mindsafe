@@ -46,7 +46,7 @@ class CardModel {
         }
         
         // randomize the array
-        //generatedCardsArray.shuffle()
+        generatedCardsArray.shuffle()
         
         // return the array
         return generatedCardsArray
